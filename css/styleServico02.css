@@ -1,0 +1,50 @@
+.principal{
+  background-color: red;
+  width: 100%;
+  height: auto;
+  min-height: 1000px;
+  overflow: hidden;
+}
+
+
+.container_servico_suporte_info{
+  width: 100%;
+  height: auto;
+  min-height: 580px;
+  background-color: blue;
+  overflow: hidden;
+}
+
+
+#suporte{
+  max-width: 1200px;
+  height: auto;
+  min-height: 500px;
+  overflow: hidden;
+  margin: auto;
+  min-height: 580px;
+  background-color: blue;
+}
+#texto{
+  width: 1200px;
+  height: 50px;
+  background-color: #900900;
+}
+#imagem{
+  width: 250px;
+  height: 200px;
+  background-color: #456667;
+  margin-left: 15px;
+}
+#descricao{
+  width: 900px;
+  height: 200px;
+  background-color: #dddccc;
+  margin-top: -200px;
+  margin-left: 280px;
+}
+#segundoTexto{
+  width: 1200px;
+  height: 100px;
+  background-color: #333fff;
+}

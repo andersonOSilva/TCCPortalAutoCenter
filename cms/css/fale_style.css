@@ -1,0 +1,25 @@
+.tbl_consulta{
+  width: 850px;
+  height: 450px;
+  background-color: green;
+  margin: auto;
+}
+
+.tbl_consulta_titulos{
+  width: 422px;
+  height: 30px;
+  border:1px solid;
+  float: left;
+}
+
+.tbl_consulta_registros{
+  width: 850px;
+  height: 30px;
+}
+
+.tbl_consulta_registro{
+  width: 422px;
+  height: 30px;
+  border:1px solid;
+  float: left;
+}

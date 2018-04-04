@@ -1,0 +1,67 @@
+body{
+  padding: 0px;
+  margin: 0px;
+}
+/*Serviços (barra de pesquisa, titulo)*/
+.container_conteudo_servico{
+  width: 1200px;
+  height: auto;
+  min-height: 580px;
+  margin: auto;
+  background-color: green;
+  padding-top: 100px;
+}
+#conteudo_servico{
+  width: 100%;
+  height: 50px;
+}
+#barraPesquisa{
+  width: 600px;
+  height: 30px;
+  border-radius: 4px;
+  background-color: yellow;
+  float: left;
+  position: relative;
+  margin-top: -20px;
+  margin-right: 80px;
+  margin-left: 250px;
+}
+#titulo_servico{
+  width: 100%;
+  height:50px;
+  background-color: red;
+}
+#titulo_servico h1{
+  margin: 0px;
+}
+
+/*Conteudo geral*/
+#container_geral{
+  width: 100%;
+  height: auto;
+  min-height: 580px;
+  background-color: red;
+  margin: auto;
+}
+
+#conteudo_informacao_servico{
+  max-width: 1200px;
+  height: auto;
+  background-color: orange;
+  min-height:580px;
+  margin: auto;
+}
+
+/*area de imagem e descrição do serviço*/
+.area_imagem{
+  width: 200px;
+  height: 200px;
+  background-color: black;
+  float: 4px;
+}
+
+/*area_descritiva{
+  width: 500px;
+  height: 200px;
+  background-color: yellow;
+}*/

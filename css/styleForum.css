@@ -1,0 +1,277 @@
+.principal{
+  /* background-color: red; */
+
+}
+
+.cabecalho_forum{
+    padding-top: 100px;
+  width: 100%;
+  height: auto;
+  min-height: 300px;
+  overflow: hidden;
+  /* background-color: purple; */
+}
+
+.descricao_cabecalho_forum{
+  max-width: 1200px;
+  height: auto;
+  min-height: 300px;
+  overflow: hidden;
+  /* background-color: brown; */
+  margin: auto;
+}
+
+.titulo_forum{
+  width: 100%;
+  height: auto;
+  min-height: 100px;
+  overflow:hidden;
+  /* background-color: pink; */
+
+}
+
+.titulo_forum h1{
+  margin: auto;
+  font-size: 100px;
+  text-align: center;
+  font-family: 'Permanent Marker', cursive;
+
+}
+
+.regras_forum{
+  width: 100%;
+  height: auto;
+  min-width: 100px;
+  overflow: hidden;
+  /* background-color: #CF0cf0; */
+}
+
+.regras_forum p{
+    margin: 0px;
+    text-align: left;
+    font-size: 20px;
+    font-weight: 200;
+    font-family: 'Karla', sans-serif;
+}
+
+.mande_sua_pergunta{
+  width: 100%;
+  height: 120px;
+  /* background-color: #f0cc05; */
+}
+
+.escrita_pergunta{
+  max-width: 1200px;
+  height: 120px;
+  margin: auto;
+  /* background-color: red; */
+}
+
+.title_forum{
+  width: 100%;
+  height: 70px;
+  /* background-color: #ffccc0; */
+}
+
+.title_forum p{
+  margin: 0px;
+  padding: 0px;
+  text-align: center;
+  font-size: 50px;
+}
+
+.Butom_Fazer_Pergunta{
+  width: 100%;
+  height: 50px;
+  /* background-color:#fdc02d; */
+}
+
+.btnAbrirModal{
+  width: 190px;
+  height: 30px;
+  background-color: #F09900;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: 600;
+    padding-top: 10px;
+    margin-left: 950px;
+}
+
+.btnAbrirModal a{
+  text-decoration: none;
+  color: #fff;
+  font-size: 20px;
+
+}
+
+
+/* FEED de perguntas */
+
+.container_conteudo_Forum{
+  width: 100%;
+  height: auto;
+  min-height: 500px;
+  overflow: hidden;
+  /* background-color: #9b0000; */
+}
+
+.conteudo_Forum{
+  max-width: 1200px;
+  height: auto;
+  min-height: 500px;
+  overflow: hidden;
+  margin: auto;
+  /* background-color: #009b88; */
+}
+
+
+.filtros_forum{
+  width: 400px;
+  height: auto;
+  min-height: 200px;
+  overflow: hidden;
+  /* background-color: #0a9b00; */
+  /*float: left;*/
+}
+
+.perguntas_forum{
+  width:390px;
+  height: auto;
+  min-height: 200px;
+  overflow: hidden;
+   /*background-color: #ff4305;*/
+  /*margin-left: 400px;*/
+  float: left;
+}
+
+.pergunta_user_forum{
+  width: 300px;
+  height: auto;
+  min-height: 100px;
+  overflow: hidden;
+  /* background-color: #680000; */
+  margin-left: 50px;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  border: 1px solid #ccc;
+}
+
+.dados_user{
+  width: 100%;
+  height: 200px;
+   /*background-color: #006805;*/
+}
+
+.img_user{
+  width: 150px;
+  height: 150px;
+  margin-left: auto;
+  margin-right: auto;
+  /*float: left;*/
+  /*margin-left: 10px;*/
+}
+
+.img_user img{
+  width: 100%;
+  height: 100%;
+  border-radius: 100px;
+
+
+}
+
+.dados_user_tema{
+  width: 100%;
+  height: 30px;;
+   /*background-color: #006268;*/
+  /*float: left;*/
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.dados_user_tema p{
+  font-size: 25px;
+  font-weight: 600;
+  text-align: center;
+  font-weight: bold;
+  font-family: 'Karla', sans-serif;
+}
+
+.pergunta_user_forum p{
+  padding: 0px;
+  margin: 0px;
+
+}
+
+.dados_user_tempo{
+  width: 50px;
+  height: 100%;
+  /* background-color: #ff5268; */
+  float: left;
+}
+
+.dados_user_comentarios{
+  width: 180px;
+  height: 100%;
+  /* background-color: #cc6268; */
+  float: left;
+}
+
+.dados_pergunta{
+  width: 100%;
+  height: auto;
+  min-height: 100px;
+  overflow: hidden;
+   /*background-color: #686800;*/
+  /*margin-left: 80px;*/
+}
+
+.dados_pergunta p{
+  padding: 0px;
+  margin: 0px;
+  font-style: italic;
+  text-align: center;
+  font-size: 15px;
+  line-height: 1.5;
+  color:#9E9E9E;
+  font-family: 'Karla', sans-serif;
+}
+
+.aspas{
+  font-family: 'Coustard', serif;
+  font-size: 50px;
+  margin: 0px;
+}
+
+.dados_pergunta img{
+
+  width: 30px;
+  height: 30px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.segura_btnResponder{
+  width: 100%;
+  height: 40px;
+  /* background-color: #ffc; */
+}
+
+.btnResponder{
+  width: 100px;
+  height: 25px;
+  box-shadow: 0 1px 4px 0 rgba(0,0,0,0.2);
+  text-align: center;
+  padding-top: 5px;
+  margin: auto;
+}
+
+.btnResponder a{
+  text-decoration: none;
+  font-size: 15px;
+  color: #13436b;
+}
+
+.btnResponder:hover{
+  box-shadow: 0 4px 4px 0 rgba(0,0,0,0.2);
+
+}

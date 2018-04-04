@@ -1,0 +1,446 @@
+/* Conteudo Carbook */
+.container_conteudo_carBook{
+  width: 100%;
+  height: auto;
+  min-height: 1000px;
+  padding-top: 100px;
+
+}
+
+
+/* Menu CarBook */
+
+.fixador_menu{
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 999;
+}
+
+.menu_CarBook_principal{
+  width: 100%;
+  height: 100px;
+  background-color: #e68a00;
+    /*border-top: 5px solid #F09900;*/
+}
+
+#menu_carBook{
+  max-width: 1200px;
+  height: 100px;
+  margin: auto;
+  /* background-color: blue; */
+  padding: 0px;
+
+
+}
+
+.logo_carBook{
+  width: 100px;
+  height: 100px;
+  margin-left: 100px;
+  float: left;
+}
+
+.logo_carBook img{
+  width: 100%;
+  height: 100%;
+
+}
+
+.nomeLogo{
+  width: 200px;
+  height:100%;
+  float: left;
+}
+
+.nomeLogo img{
+  width: 100%;
+  height:50px;
+  margin-top:30px;
+}
+
+.menu{
+  position: absolute;
+}
+
+.dados_user{
+  width: 50px;
+  height: 50px;
+  float: left;
+  /* margin-left: 650px; */
+  margin-top: 25px;
+}
+
+
+.dados_user img{
+  width: 50px;
+  height: 50px;
+}
+
+.barra_buscar{
+  width: 650px;
+  height: 100%;
+  float: left;
+}
+
+.FrmBuscarUser{
+  margin-left: 50px;
+  margin-top: 38px;
+}
+
+.BarraTXT{
+  width: 400px;
+  border: none;
+  height: 30px;
+  float: left;
+}
+
+.segura_botao{
+  float: left;
+
+}
+
+.btnBuscar{
+  width: 45px;
+  height: 32px;
+  border: none;
+  margin-left:-4px;
+  border-radius: 0px 20px 20px 0px;
+}
+
+
+/* Novo POST */
+
+.container_novo_post{
+  width: 100%;
+  height: 200px;
+  /* background-color: blue; */
+}
+
+.post{
+  max-width: 1200px;
+  height: 100%;
+  /* background-color: green; */
+  margin: auto;
+
+}
+
+.segura_post{
+  width: 810px;
+  height: 180px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  padding-top: 10px;
+  /* background-color:pink; */
+  border: 1px solid #000;
+
+}
+
+.escrita_post{
+  width: 100%;
+  height: 100px;
+  /* background-color: #f3f3f3; */
+}
+
+.imagen_user_post{
+  width: 200px;
+  height: 100%;
+  /* background-color: purple; */
+  float: left;
+}
+
+.imagen_user_post img{
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+  margin-left: 50px;
+
+}
+
+.texto_post{
+  width: 610px;
+  height: 100%;
+  float: left;
+  /* background-color: #c0c0c0; */
+
+}
+
+.textPost{
+  border: none;
+  height: 95%;
+}
+
+.imagen_post{
+  width: 100%;
+  height: 80px;
+  border-top: 1px solid #000;
+  /* background-color: blue; */
+}
+
+.filePost{
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+  background-image: url(../imagens/cam.png);
+  background-size: 50px;
+  background-repeat: no-repeat;
+  float: left;
+  margin-left: 200px;
+}
+
+.filePost input[type=file]{
+  width: 50px;
+  height: 50px;
+  opacity: 0;
+}
+
+.preview_img{
+  width: 100px;
+  height: 100%;
+  margin-left: 20px;
+  float: left;
+}
+
+.buttom_enviar{
+  width: 100px;
+  height: 50px;
+  float: left;
+  margin-left: 200px;
+  margin-top: 30px;
+}
+
+#btnEnviar{
+  width: 80px;
+  height: 30px;
+  background:red;
+  color:#fff;
+  box-shadow:0 5px 0 #d20000;
+ border:none;
+ cursor: pointer;
+  display:inline-block;
+  text-decoration: none;
+  border-radius: 10px;
+
+
+}
+
+#btnEnviar:active{
+  position:relative;
+  top:5px;
+  box-shadow:none;
+}
+
+#btnEnviar:hover{
+  background:#d20000;
+  box-shadow:0 5px 0 #b00000;
+}
+
+
+/* Post dos usuarios */
+.container_posts{
+  width: 100%;
+  height: auto;
+  min-height: 700px;
+  overflow: hidden;
+  background-color: #fafafa;
+}
+
+.user_posts{
+  max-width: 1200px;
+  height: auto;
+  min-height: 700px;
+  overflow: hidden;
+  /* background-color: blue; */
+  margin: auto;
+}
+
+/* Post dos usuarios */
+.view_post{
+  width: 600px;
+  height: auto;
+  min-height: 700px;
+  overflow: hidden;
+  background-color: #fff;
+  margin-left: 100px;
+  margin-top: 50px;
+  border: 1px solid #ccc;
+    padding: center;
+}
+
+.titulo_user{
+  width: 100%;
+  height: 50px;
+  /* background-color: purple; */
+}
+
+.imagen_user_titulo{
+  width: 50px;
+  height: 100%;
+  /* background-color: blue; */
+  margin-left: 20px;
+  float: left;
+}
+
+.imagen_user_titulo img{
+  width: 50px;
+  height: 100%;
+  border-radius: 100px;
+}
+
+.nome_titulo_user{
+  width: 200px;
+  height: 100%;
+  float: left;
+  margin-left: 10px;
+}
+
+.nome_titulo_user p{
+  font-size: 20px;
+  padding-top: 15px;
+  margin: 0px;
+  font-weight: bold;
+}
+
+.imagen_post_user{
+  width: 100%;
+  height: 500px;
+}
+
+.imagen_post_user img{
+  width: 100%;
+  height: 100%;
+  margin-top:10px;
+}
+
+.total_curtidas{
+    margin-top: 10px;
+  width: 100%;
+  height: 30px;
+  /* background-color: red; */
+}
+
+.img_like{
+  width: 20px;
+  height: 100%;
+  /* background-color: #ccc; */
+
+  float: left;
+}
+
+.img_like img{
+  width: 100%;
+  height: 100%;
+  float: left;
+}
+
+.img_like {
+  font-size: 10px;
+  font-weight: bold;
+
+}
+
+.total_like{
+  width: 100px;
+  height: 100%;
+  /* background-color: gray; */
+  float: left;
+}
+
+.total_like p{
+  margin: 0px;
+  padding-top: 7px;
+  font-weight: bold;
+}
+
+.descricao_post{
+  width: 100%;
+  height: auto;
+  min-height: 30px;
+  overflow: hidden;
+  /* background-color: brown; */
+}
+
+.nome_descricao_poster{
+  width: 100px;
+  height: 5px;
+  float: left;
+}
+
+.nome_descricao_poster p{
+  margin: 0px;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.descricao_post_txt{
+  width: 500px;
+  height: auto;
+  min-height:30px;
+  overflow: hidden;
+  /* background-color: red; */
+}
+
+.descricao_post_txt p{
+  margin: 0px;
+  font-size: 16px;
+
+}
+
+.carregar_mais{
+  width: 100%;
+  height: 20px;
+}
+
+.carregar_mais a{
+  text-decoration: none;
+  color: #000;
+  font-size: 15px;
+}
+
+.enviar_comentario{
+  width: 100%;
+  height: 60px;
+  /* background-color: #c0c0c0; */
+}
+
+.texto_comentario{
+  width: 500px;
+  height: 60px;
+  /* background-color: blue; */
+  float: left;
+}
+
+.btnComentario{
+  width: 80px;
+  height: 100px;
+  /* background-color: blue; */
+  float: left;
+}
+
+#btnEnviarComentario{
+  margin-left: 15px;
+  width: 80px;
+  height: 30px;
+  background:red;
+  color:#fff;
+  box-shadow:0 5px 0 #d20000;
+ border:none;
+ cursor: pointer;
+  display:inline-block;
+  text-decoration: none;
+  border-radius: 10px;
+
+
+}
+
+#btnEnviarComentario:active{
+  position:relative;
+  top:5px;
+  box-shadow:none;
+}
+
+#btnEnviarComentario:hover{
+  background:#d20000;
+  box-shadow:0 5px 0 #b00000;
+}
