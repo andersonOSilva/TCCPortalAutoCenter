@@ -324,12 +324,13 @@ nav ul li a{
 
 .modal{
 	width:700px;
-	height:500px;
-	background-color:#ffffff;
+	height:600px;
+	/*background-color:#000;*/
 	/* margin:auto; */
-  margin-top: 150px;
-  margin-left: auto;
-  margin-right: auto;
+  margin-top: 180px;
+  /*margin-left: auto;
+  margin-right: auto;*/
+  margin-left: 300px;
 
 
 }
@@ -337,7 +338,7 @@ nav ul li a{
 .modalContainer{
 	width:100%;
 	height:100vh;
-	background: rgba(0, 0, 0, 0.7);
+	/*background: rgba(0, 0, 0, 0.7);*/
 	position:fixed;
   /* margin: auto; */
 	display:none;
@@ -504,12 +505,56 @@ nav ul li a{
 
 }
 
+.cabecalho_planos{
+  width: 600px;
+  height: 50px;
+  /*background: #000;*/
+}
+
+.titulo_planos {
+  width: 500px;
+  height: 50px;
+  /*background: red;*/
+  float: left;
+}
+
+.titulo_planos h1{
+  padding: 0px;
+  margin: 0px;
+  /*color: #fff;*/
+  text-align: center;
+}
+
+.sair{
+  width: 100px;
+  height: 50px;
+  float: left;
+  /*background-color: blue;*/
+}
+
+.fechar{
+  width: 30px;
+  height: 30px;
+  margin-left: 70px;
+  margin-bottom: 70px;
+}
+
+.fechar img{
+  width: 30px;
+  height: 30px;
+
+}
+
 .cadastro_plano{
-  width: 100%;
+  width: 600px;
   height: auto;
   min-height: 500px;
   overflow: hidden;
   background-color: #fff;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid #BDBDBD;
+   box-shadow: 5px 10px 8px #888888;
 }
 
 .entrada_dado{

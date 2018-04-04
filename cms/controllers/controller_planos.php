@@ -51,27 +51,28 @@
 
       $idPlano=$_GET['id'];
 
-      echo $idPlano;
+      //echo $idPlano;
 
       $plano= new Plano();
 
       $plano->id = $idPlano;
 
-      $retornoModel = $plano::selectById($plano);
-
+      return $plano::selectById($plano);
+      /*
       $nome=$retornoModel->nome;
       $preco=$retornoModel->preco;
       $descricao=$retornoModel->descricao;
       $foto=$retornoModel->imagem;
-      //
+      */
       // echo $preco;
 
 
       //var_dump ($retornoModel);
-
+      /*
       var_dump (require_once('../views/cadastro_plano.php'));
 
         echo "passou";
+        */
     }
 
     // editar

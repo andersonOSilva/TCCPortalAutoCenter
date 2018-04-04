@@ -37,7 +37,7 @@ $mensagen=Null;
 
                         <div class="modo">
                           <a href="router.php?controller=faleconosco&modo=excluir&id=<?php
-                          echo($listFaleConosco[$cont]->id) ?>" onclick="return confirm('deseja realmente excluir');"> <img src="imagens/delet.png" alt="edit"></a>
+                          echo($listFaleConosco[$cont]->id) ?>" onclick="return confirm('deseja realmente excluir');"> <img src="imagens/delet.png" alt="delet"></a>
                         </div>
                       </div>
 

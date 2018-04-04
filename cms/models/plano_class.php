@@ -21,7 +21,7 @@
                       '".$plano_dados->descricao."',
                       '".$plano_dados->foto."')";
 
-                      echo $sql;
+                    //  echo $sql;
 
 
                       $conex = new Mysql_db();
@@ -157,7 +157,15 @@
 
 
     if ($PDO_conex->query($sql)) {
-      header('location:index.php?pag=plano');
+
+        require_once('views/planos/conteudo_planos.php');
+
+        // echo "
+        // <script src='js/jquery7.min.js'></script>
+        // <script  src='js/jcarousellite.js'></script>
+        // <script  src='js/carrossel.js'></script>
+        //     ";
+
     }else{
       echo "erro ao deletar";
     }

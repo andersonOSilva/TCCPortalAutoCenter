@@ -5,7 +5,7 @@
     <title>Portal Auto Center - CMS</title>
     <link rel="stylesheet" href="css/styleGeral.css">
     <link rel="stylesheet" href="css/style_prestadora.css">
-
+    <link rel="stylesheet" href="css/styleUsuario.css">
     <!-- Import das bibliotecas JQuery -->
     <script src="js/jquery7.min.js"></script>
     <script  src="js/jcarousellite.js"></script>
@@ -44,7 +44,7 @@
                   <li><a href="?pag=servicos">Servicos</a></li>
                   <li><a href="?pag=plano">Plano</a></li>
                   <li><a href="?pag=prestadora">Prestadora</a></li>
-                  <li><a href="?pag=home">Menu</a></li>
+                  <li><a href="?pag=usuario">Usuário</a></li>
                   <li><a href="?pag=home">Menu</a></li>
                   <li><a href="?pag=home">Menu</a></li>
                 </ul>
@@ -64,12 +64,16 @@
                   break;
 
                 case 'plano':
-                  require_once 'views/planos_view.php';
+                  require_once 'views/planos/planos_view.php';
                   break;
 
                 case 'prestadora':
                   require_once 'views/prestadoras_view.php';
                   break;
+
+                  case 'usuario':
+                    require_once 'views/usuario_view.php';
+                    break;
               }
              ?>
           </div>
