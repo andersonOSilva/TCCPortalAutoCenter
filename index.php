@@ -16,6 +16,37 @@
 			<script src="js/coin-slider.js"></script>
 	</head>
 	<body>
+		<script>
+				$(document).ready(function () {
+
+
+					//Efeito para abrir a div Container com timer de 2 segundos (Novo Registro)
+					$(".novo").click(function(){
+						 $(".modalContainer").slideToggle(2000);
+
+					});
+
+					//Efeito para abrir a div Container com timer de 2 segundos (Novo Registro)
+						$(".editar").click(function(){
+							 $(".modalContainer").fadeIn(2000);
+
+						});
+
+
+
+				});
+
+
+				function escolha(){
+	          $.ajax({
+	              type: "POST",
+	              url: "login_modal.php",
+	              success: function(dados){
+	                  $('.modal').html(dados);
+	              }
+	          });
+	      }
+		</script>
 			<div class="principal">
 					<!-- <div class="menu_info">
 						<nav id="itens_menu">
@@ -63,7 +94,7 @@
 											</nav>
 
 												<div class="login">
-														<p><a><span id="entre">Entre</span> <span id="cadastro">ou cadastre-se</span></a></p>
+														<p><a><span id="entre" ><a href="#" class="novo" onclick="escolha();">Entre</a></span> <span id="cadastro">ou cadastre-se</span></a></p>
 												</div>
 												<div class="mais">
 														<img src="imagens/menuIcon.png" alt="menu mais">
@@ -108,10 +139,19 @@
 							</div>
 					</div>
 
+					<!-- Modal -->
+
+					<div class="modalContainer">
+						<div class="modal">
+
+						</div>
+					</div>
+
+
 					<!-- SLIDER -->
 					<div class="container_slider">
 							<div id="slider">
-					   <div class="barra_buscar_dados">
+					   				<div class="barra_buscar_dados">
                         <form class="FrmBuscarDados" action="index.html" method="post" style="margin-top:200px;" >
                             <input class="BarraTXTdados" placeholder="O que esta Procurando" type="text" name="txtBuscar" value="" style="margin-top:10px;" >
 
@@ -435,6 +475,73 @@ Web Standards é um conjunto de normas, diretrizes, recomendações, notas, arti
 					<span id="back-to-top">
 							<img src="imagens/arrowtop.png" alt="voltar ao topo" title="Voltar para o topo">
 					</span>
+
+					<div id="bot">
+						<div class="chat_bot">
+								<img class="imag_pulsar" src="imagens/chat-alt-flat.png" alt="">
+
+
+								<div class="container_bot">
+										<div class="user_bot">
+											<div class="segura_foto">
+												<div class="foto_bot">
+
+												</div>
+											</div>
+
+										</div>
+
+										<div id="conteudo_bot">
+												<div class="balao2">
+
+												</div>
+
+												<div class="balao3">
+
+												</div>
+
+												<div class="balao2">
+
+												</div>
+
+												<div class="balao2">
+
+												</div>
+
+												<div class="balao2">
+
+												</div>
+
+												<div class="balao2">
+
+												</div>
+
+												<div class="balao2">
+
+												</div>
+										</div>
+
+										<div class="chat_mensagen">
+													<form class="" action="index.html" method="post">
+
+														<div class="entrada_dado_chat">
+										          <input maxlength="40" placeholder="Qual sua pergunta" required type="text" name="txtpergunat" value="">
+										        </div>
+
+														<div class="buttom_enviar_mensagen">
+										          <input id="btnEnviar" type="submit" name="btnEnviar" value="">
+										        </div>
+
+
+													</form>
+										</div>
+								</div>
+						</div>
+
+
+					</div>
+
+
 
 
 					<?php
