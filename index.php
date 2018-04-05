@@ -216,72 +216,50 @@
 										</div>
 										<div id="carrossel_prestadora_principal">
 
-                                            <ul>
-													<!-- coluna do carrosel de prestadoras -->
-													<li>
-
-                                                        <div class="foto_prestadora">
-																	<img src="imagens/manutencao.jpg" alt="mecanica">
-															</div>
-															<div class="descricao_prestadora" >
-																	<p>Histórias são efetivamente um meio de comunicação da humanidade. Criamos filmes e desenvolvemos álbuns para guardar .</p>
-															</div>
-															<div class="ver_mais">
-																	<a href="#"> ver mais</a>
-															</div>
-													</li>
+                        <ul>
 
 													<!-- coluna do carrosel de prestadoras -->
 													<li>
+														<div class="flip">
 															<div class="foto_prestadora">
 																	<img src="imagens/manutencao.jpg" alt="mecanica">
 															</div>
-															<div class="descricao_prestadora">
+
+															<div class="foto_prestadora_fundo">
+																	<img src="imagens/manutencao.jpg" alt="mecanica">
+															</div>
+														</div>
+
+															<!-- <div class="descricao_prestadora">
 																	<p>Histórias são efetivamente um meio de comunicação da humanidade. Criamos filmes e desenvolvemos álbuns para guardar .</p>
 															</div>
 															<div class="ver_mais">
 																	<a href="#"> ver mais</a>
-															</div>
+															</div> -->
 													</li>
 
 													<!-- coluna do carrosel de prestadoras -->
 													<li>
+														<div class="flip">
+															<div class="foto_prestadora_fundo">
+																	<img src="imagens/manutencao.jpg" alt="mecanica">
+																			<h2>Histórias são efetivamente um meio de comunicação da humanidade. Criamos filmes e desenvolvemos álbuns para guardar .</h2>
+															</div>
 															<div class="foto_prestadora">
 																	<img src="imagens/manutencao.jpg" alt="mecanica">
 															</div>
-															<div class="descricao_prestadora">
-																	<p>Histórias são efetivamente um meio de comunicação da humanidade. Criamos filmes e desenvolvemos álbuns para guardar .</p>
+
+
+																	<!-- <div class="ver_mais">
+																			<a href="#"> ver mais</a>
+																	</div> -->
 															</div>
-															<div class="ver_mais">
-																	<a href="#"> ver mais</a>
-															</div>
+														</div>
+
+
 													</li>
 
-													<!-- coluna do carrosel de prestadoras -->
-													<li>
-															<div class="foto_prestadora">
-																	<img src="imagens/manutencao.jpg" alt="mecanica">
-															</div>
-															<div class="descricao_prestadora">
-																	<p>Histórias são efetivamente um meio de comunicação da humanidade. Criamos filmes e desenvolvemos álbuns para guardar .</p>
-															</div>
-															<div class="ver_mais">
-																	<a href="#"> ver mais</a>
-															</div>
-													</li>
 
-													<!-- coluna do carrosel de prestadoras -->
-													<li>
-															<div class="foto_prestadora">
-																	<img src="imagens/manutencao.jpg" alt="mecanica">
-															</div>
-															<div class="descricao_prestadora">
-																	<p>Histórias são efetivamente um meio de comunicação da humanidade. Criamos filmes e desenvolvemos álbuns para guardar .</p>
-															</div>
-															<div class="ver_mais">
-																	<a href="#"> ver mais</a>
-															</div>
-													</li>
 												</ul>
 										</div>
 										<div class="passar_carrosel ">
@@ -311,100 +289,160 @@
 													<ul>
 														<!-- coluna do carrosel de Produtos -->
 														<li >
+															<a href="#">
+																<div class="segura_produto">
+																	<div class="foto_produto">
+																			<img src="imagens/shopping.jpg" alt="mecanica">
+																	</div>
 
-                                                                <div class="foto_prestadora">
-																		<img src="imagens/shopping.jpg" alt="mecanica">
-																</div>
+																	<div class="descricao_produto" >
+																			<p >
+																				Notebook Positivo Intel Pentium 4GB 32GB eMMC Windows 10 Home Tela 14" Stilo Colors XC5634 Vermelho
 
-																<div class="descricao_produto" >
-																		<p >	<a href="#" >
-																			Notebook Positivo Intel Pentium 4GB 32GB eMMC Windows 10 Home Tela 14" Stilo Colors XC5634 Vermelho
-																		</a>
-																		</p>
-																</div>
-																<div class="valor_produto">
-																		<p><span class="sifrao">R$</span> 100,00</p>
+																			</p>
+																	</div>
+																	<div class="valor_produto">
+																			<p><span class="sifrao">R$</span> 100,00</p>
+																	</div>
+
 																</div>
 																<div class="comprar_produto">
-																		<a href="#"> Comprar</a>
+																		 Adicionar no Carrinho
 																</div>
+															</a>
+
 														</li>
 
 														<!-- coluna do carrosel de Produtos -->
-														<li>
-																<div class="foto_prestadora">
-																		<img src="imagens/shopping.jpg" alt="mecanica">
-																</div>
-																<div class="descricao_produto">
-																		<p>	<a href="#">
-																			Notebook Positivo Intel Pentium 4GB 32GB eMMC Windows 10 Home Tela 14" Stilo Colors XC5634 Vermelho
-																		</a>
-																		</p>
-																</div>
-																<div class="valor_produto">
-																		<p><span class="sifrao">R$</span> 100,00</p>
+														<li >
+															<a href="#">
+																<div class="segura_produto">
+																	<div class="foto_produto">
+																			<img src="imagens/shopping.jpg" alt="mecanica">
+																	</div>
+
+																	<div class="descricao_produto" >
+																			<p >
+																				Notebook Positivo Intel Pentium 4GB 32GB eMMC Windows 10 Home Tela 14" Stilo Colors XC5634 Vermelho
+
+																			</p>
+																	</div>
+																	<div class="valor_produto">
+																			<p><span class="sifrao">R$</span> 100,00</p>
+																	</div>
+
 																</div>
 																<div class="comprar_produto">
-																		<a href="#"> Comprar</a>
+																		 Adicionar no Carrinho
 																</div>
+															</a>
+
 														</li>
 
 														<!-- coluna do carrosel de Produtos -->
-														<li>
-																<div class="foto_prestadora">
-																		<img src="imagens/shopping.jpg" alt="mecanica">
-																</div>
-																<div class="descricao_produto">
-																		<p>	<a href="#">
-																			Notebook Positivo Intel Pentium 4GB 32GB eMMC Windows 10 Home Tela 14" Stilo Colors XC5634 Vermelho
-																		</a>
-																		</p>
-																</div>
-																<div class="valor_produto">
-																		<p><span class="sifrao">R$</span> 100,00</p>
+														<li >
+															<a href="#">
+																<div class="segura_produto">
+																	<div class="foto_produto">
+																			<img src="imagens/shopping.jpg" alt="mecanica">
+																	</div>
+
+																	<div class="descricao_produto" >
+																			<p >
+																				Notebook Positivo Intel Pentium 4GB 32GB eMMC Windows 10 Home Tela 14" Stilo Colors XC5634 Vermelho
+
+																			</p>
+																	</div>
+																	<div class="valor_produto">
+																			<p><span class="sifrao">R$</span> 100,00</p>
+																	</div>
+
 																</div>
 																<div class="comprar_produto">
-																		<a href="#"> Comprar</a>
+																		 Adicionar no Carrinho
 																</div>
+															</a>
+
 														</li>
 
 														<!-- coluna do carrosel de Produtos -->
-														<li>
-																<div class="foto_prestadora">
-																		<img src="imagens/shopping.jpg" alt="mecanica">
-																</div>
-																<div class="descricao_produto">
-																		<p>	<a href="#">
-																			Notebook Positivo Intel Pentium 4GB 32GB eMMC Windows 10 Home Tela 14" Stilo Colors XC5634 Vermelho
-																		</a>
-																		</p>
-																</div>
-																<div class="valor_produto">
-																		<p><span class="sifrao">R$</span> 100,00</p>
+														<li >
+															<a href="#">
+																<div class="segura_produto">
+																	<div class="foto_produto">
+																			<img src="imagens/shopping.jpg" alt="mecanica">
+																	</div>
+
+																	<div class="descricao_produto" >
+																			<p >
+																				Notebook Positivo Intel Pentium 4GB 32GB eMMC Windows 10 Home Tela 14" Stilo Colors XC5634 Vermelho
+
+																			</p>
+																	</div>
+																	<div class="valor_produto">
+																			<p><span class="sifrao">R$</span> 100,00</p>
+																	</div>
+
 																</div>
 																<div class="comprar_produto">
-																		<a href="#"> Comprar</a>
+																		 Adicionar no Carrinho
 																</div>
+															</a>
+
 														</li>
 
 														<!-- coluna do carrosel de Produtos -->
-														<li>
-																<div class="foto_prestadora">
-																		<img src="imagens/shopping.jpg" alt="mecanica">
-																</div>
-																<div class="descricao_produto">
-																		<p>	<a href="#">
-																			Notebook Positivo Intel Pentium 4GB 32GB eMMC Windows 10 Home Tela 14" Stilo Colors XC5634 Vermelho
-																		</a>
-																		</p>
-																</div>
-																<div class="valor_produto">
-																		<p><span class="sifrao">R$</span> 100,00</p>
+														<li >
+															<a href="#">
+																<div class="segura_produto">
+																	<div class="foto_produto">
+																			<img src="imagens/shopping.jpg" alt="mecanica">
+																	</div>
+
+																	<div class="descricao_produto" >
+																			<p >
+																				Notebook Positivo Intel Pentium 4GB 32GB eMMC Windows 10 Home Tela 14" Stilo Colors XC5634 Vermelho
+
+																			</p>
+																	</div>
+																	<div class="valor_produto">
+																			<p><span class="sifrao">R$</span> 100,00</p>
+																	</div>
+
 																</div>
 																<div class="comprar_produto">
-																		<a href="#"> Comprar</a>
+																		 Adicionar no Carrinho
 																</div>
+															</a>
+
 														</li>
+
+														<!-- coluna do carrosel de Produtos -->
+														<li >
+															<a href="#">
+																<div class="segura_produto">
+																	<div class="foto_produto">
+																			<img src="imagens/shopping.jpg" alt="mecanica">
+																	</div>
+
+																	<div class="descricao_produto" >
+																			<p >
+																				Notebook Positivo Intel Pentium 4GB 32GB eMMC Windows 10 Home Tela 14" Stilo Colors XC5634 Vermelho
+
+																			</p>
+																	</div>
+																	<div class="valor_produto">
+																			<p><span class="sifrao">R$</span> 100,00</p>
+																	</div>
+
+																</div>
+																<div class="comprar_produto">
+																		 Adicionar no Carrinho
+																</div>
+															</a>
+
+														</li>
+
 													</ul>
 											</div>
 											<div class="passar_carrosel ">

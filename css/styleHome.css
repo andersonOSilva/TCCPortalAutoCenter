@@ -367,58 +367,71 @@ body{
 
 #carrossel_prestadora_principal ul li {
 	width: 270px;
-	height: 370px;
+	height: 300px;
 	float: left;
 	margin: 0 25px;
-    background-color:#000;
+    /* background-color:#000; */
     transition: 1s;
     color: aliceblue;
     transition:1s;
-    box-shadow: 1px 2px 2px #eca020;
+
+    /* box-shadow: 1px 2px 2px #eca020; */
   /* background-color: blue; */
 }
-#carrossel_prestadora_principal ul li:hover {
 
-    transition: 1s;
-/*    background-color: #eca020;*/
-
-/*    background:linear-gradient(black,black,#D28F1F,#D28F1F) ;*/
-    background-color: #eca003;
-    color: black;
-    box-shadow: 1px 2px 2px #000;
-
-
-}
-
-
-.foto_prestadora{
+.flip{
   width: 230px;
   height: 230px;
-  margin-left:20px;
-  margin-top: 10px;
+  float: left;
+  perspective: 230px;
+    border-radius: 100%;
+}
+
+.flip img{
+  width: 230px;
+  height: 230px;
+}
+
+
+.flip .foto_prestadora{
+
   /* background-color: black; */
-  border-radius: 10px  10px 0  0;
+
+  position: absolute;
+  transform: rotateY(0deg);
+  backface-visibility: hidden;
+  transition: all .4s linear;
 }
 
-.foto_prestadora img{
+.flip .foto_prestadora_fundo{
+
+  position: absolute;
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+  transition: all .4s linear;
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+}
+
+.flip:hover .foto_prestadora{
+  transform: rotateY(-180deg);
+  cursor: pointer;
+}
+
+.flip:hover .foto_prestadora_fundo{
+  transform: rotateY(0deg);
+  cursor: pointer;
+}
+
+
+
+
+
+.flip  h2{
   width: 100%;
-  height: 100%;
-  border-radius: 10px 10px 0  0;
-}
-
-.descricao_prestadora{
-  width: 100%;
-  height: 90px;
-
-  /* background-color: yellow; */
-}
-
-.descricao_prestadora p{
-  text-align: justify;
-  margin: 0px;
-  padding: 10px;
-  font-weight: 400;
-    margin-left: 20px;
+  bottom: 35px;
+  color: #fff;
+  font-size: 10px;
 }
 
 .mais:hover>.mais_menu{
@@ -552,15 +565,43 @@ margin-left: 1000px;
 }
 
 #carrossel_produtos_principal ul li {
-	width: 270px;
-	height: 370px;
-	float: left;
-	margin: 0 30px;
-    background-color:#020201;
-    transition: 1s;
-    color: aliceblue;
-    box-shadow: 1px 2px 2px #eca020;
+  width: 270px;
+  height: 360px;
+  margin: 0 30px;
+  float: left;
+    /* box-shadow: 1px 2px 2px #eca020; */
   /* background-color: blue; */
+}
+
+.foto_produto{
+  width: 230px;
+  height: 230px;
+  margin-left:20px;
+  margin-top: 10px;
+  /* background-color: black; */
+  border-radius: 10px  10px 0  0;
+}
+
+.foto_produto img{
+  width: 100%;
+  height: 100%;
+  border-radius: 10px 10px 0  0;
+}
+
+.segura_produto{
+  width: 268px;
+	height: auto;
+  min-height: 300px;
+  overflow: hidden;
+  background-color:#020201;
+  transition: 1s;
+  color: aliceblue;
+  border: 1px solid #eca020;
+}
+
+#carrossel_produtos_principal ul li a{
+  text-decoration: none;
+  color: #ccc;
 }
 /*
 #carrossel_produtos_principal ul li:hover {
@@ -588,11 +629,6 @@ margin-left: 1000px;
     margin-left: 20px;
 }
 
-.descricao_produto p a{
-  text-decoration: none;
-  color: aliceblue;
-
-}
 
 .valor_produto{
   width: 100%;
@@ -612,25 +648,40 @@ margin-left: 1000px;
 }
 
 .comprar_produto {
-  width: 130px;
+  width: 100%;
   height: 30px;
-  background-color: #77a502;
+  /* background-color: #77a502; */
+  color: #77a502;
   text-align: center;
   padding-top: 10px;
-  border-radius: 10px;
   margin: auto;
-
-}
-
-.comprar_produto:hover {
-  background-color: #c3841c;
-}
-
-.comprar_produto a{
-  text-decoration: none;
-  color: #fff;
+  color: #77a502;
   font-size: 20px;
+  display: none;
 }
+
+#carrossel_produtos_principal li:hover{
+  -webkit-box-shadow: 0 0 10px #eca020;
+          box-shadow: 0 0 10px #eca020;
+}
+
+#carrossel_produtos_principal li a:hover>.comprar_produto {
+  display: block;
+}
+
+.comprar_produto:hover{
+  background-color: #77a502;
+  color: #fff;
+}
+
+
+/* .comprar_produto a{
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: #77a502;
+  font-size: 20px;
+} */
 
 /* CarBook */
 
@@ -791,6 +842,7 @@ textarea{
   width: 60px;
   height: 60px;
   opacity:0.65;
+
 }
 
 #back-to-top img:hover{
