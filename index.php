@@ -8,6 +8,7 @@
 		<title>Home</title>
 		<link rel="stylesheet" type="text/css" href="css/styleHome.css">
 		<link rel="stylesheet" type="text/css" href="css/styleMenus.css">
+		<link href="css/jquery.FlowupLabels.css" rel='stylesheet' type='text/css'>
 
 	   <!-- <script src="js/jquery-3.3.1.min.js"> </script>  -->
 		  <script src="js/jquery7.min.js"></script>
@@ -32,6 +33,11 @@
 
 						});
 
+						$(".novo_cadastro").click(function(){
+							 $(".modalContainer_cadastro").slideToggle(2000);
+
+						});
+
 
 
 				});
@@ -46,6 +52,17 @@
 	              }
 	          });
 	      }
+
+				function cadastro(){
+	          $.ajax({
+	              type: "POST",
+	              url: "cadastro_modal.php",
+	              success: function(dados){
+	                  $('.modal_cadastro').html(dados);
+	              }
+	          });
+	      }
+
 		</script>
 			<div class="principal">
 					<!-- <div class="menu_info">
@@ -94,7 +111,8 @@
 											</nav>
 
 												<div class="login">
-														<p><a><span id="entre" ><a href="#" class="novo" onclick="escolha();">Entre</a></span> <span id="cadastro">ou cadastre-se</span></a></p>
+														<p><a href="#" class="novo" onclick="escolha();">Entre</a> <a href="#" class="novo_cadastro" onclick="cadastro();">ou cadastre-se</a>
+														</p>
 												</div>
 												<div class="mais">
 														<img src="imagens/menuIcon.png" alt="menu mais">
@@ -143,6 +161,12 @@
 
 					<div class="modalContainer">
 						<div class="modal">
+
+						</div>
+					</div>
+
+					<div class="modalContainer_cadastro">
+						<div class="modal_cadastro">
 
 						</div>
 					</div>
