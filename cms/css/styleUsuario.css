@@ -9,20 +9,87 @@ h1{
 .suporte_titulo{
   width: 1000px;
   height: 800px;
-  background: green;
+  /*background: green;*/
 }
 .titulo_usuario{
   width:1000px;
   height: 50px;
   margin: auto;
-  background-color: pink;
+  /*background-color: pink;*/
 }
 .titulo_usuario h1{
   padding: 0px;
   margin: 0px;
 }
+
 #conteudo_usuario{
   width: 1200px;
-  height: 700px;
+  height: 50px;
+  background-color: #636568;
+}
+
+.dados_user{
+  width: 180px;
+  /*background-color: #ccc;*/
+  height: 40px;
+  float: left;
+  font-size: 25px;
+  text-align: center;
+  padding-top: 10px;
+  font-weight: bold;
+}
+
+.dados_user_view{
+  width: 180px;
+  /*background-color: #ccc;*/
+  height: 40px;
+  float: left;
+  font-size: 20px;
+  text-align: center;
+  padding-top: 10px;
+  /*font-weight: bold;*/
+}
+
+.email_view{
+  width: 280px;
+  /*background-color: #c0c0c0;*/
+  height: 40px;
+  float: left;
+  font-size: 20px;
+  text-align: center;
+  padding-top: 10px;
+
+}
+
+.email{
+  width: 280px;
+  /*background-color: #c0c0c0;*/
+  height: 40px;
+  float: left;
+  font-size: 25px;
+  text-align: center;
+  padding-top: 10px;
+  font-weight: bold;
+}
+
+.dados_user_modo{
+  width: 280px;
+  /*background-color: #00cc00;*/
+  height: 50px;
+  float: left;
+  margin: auto;
+}
+
+.conteudo_usuario_info{
+  width: 1200px;
+  height: 50px;
   /*background-color: red;*/
+}
+
+.modo_user{
+  width: 50px;
+  height: 50px;
+  /*background-color: #000;*/
+  float: left;
+  margin-left: 7px;
 }

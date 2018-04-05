@@ -1,37 +1,182 @@
 
-<!-- Data ultima modificação: 04/04/2018
+<!-- Data ultima modificação: 05/04/2018
 Nome do desenvolvidor: Camila Cruz
 Tela: Controle de Usuario -->
 <div class="conteudo_padrao">
+  <!-- Segura o titulo da tela -->
   <div class="suporte_titulo">
+    <!-- titulo da tela "Usuario" -->
         <div class="titulo_usuario">
           <h1>Usuario</h1>
         </div>
+        <!-- Area que vai segurar todas as informações que serão apresentadas na tela -->
         <div id="conteudo_usuario">
-          <!-- <div id="filtro">
-            <input type= name="" value="">
-          </div> -->
-           <table border="1" width="900" height="30" >
-            <tr>
-              <td>Placa</td>
-              <td>Marca</td>
-              <td>Modelo</td>
-              <td>Ano</td>
-              <td>Cor</td>
-              <td>Nome Proprietário</td>
-              <td>Usuário Proprietário</td>
-            </tr>
-            <tr>
-              <td><input type="text" name="txtPlaca" value="" maxlength="10" size="10px"></td>
-              <td><input type="text" name="txtMarca" value="" maxlength="15" size="15px"></td>
-              <td><input type="text" name="txtModelo" value="" maxlength="15" size="15px"></td>
-              <td><input type="text" name="txtAno" value="" maxlength="15" size="15px"></td>
-              <td><input type="text" name="txtCor" value="" maxlength="10" size="10px"></td>
-              <td><input type="text" name="txtNomeProp" value="" maxlength="15" size="15px"></td>
-              <td><input type="text" name="txtUsuarioProp" value="" maxlength="15" size="15px"></td>
-            </tr>
-          </table>
+          <!-- titulos das informações que serão apresentadas-->
+              <div class="dados_user">Nome User</div>
+              <div class="dados_user">login</div>
+              <div class="dados_user">Cpf</div>
+              <div class="email">Email</div>
+              <div class="dados_user"></div>
+
         </div>
+<!-- Area que traz as informações do banco de dados -->
+        <div class="conteudo_usuario_info">
+
+          <div class="dados_user_view">Nome User</div>
+          <div class="dados_user_view">login</div>
+          <div class="dados_user_view">Cpf</div>
+          <div class="email_view">Email</div>
+          <div class="dados_user_modo">
+            <!-- Icones de visualizar, desativar e notifica -->
+              <div class="modo_user">
+                  <img src="imagens/off.png" alt="off" title="desativar user">
+              </div>
+
+              <div class="modo_user">
+                <img src="imagens/view.png" alt="off" title="Visualizar user">
+              </div>
+
+              <div class="modo_user">
+                <img src="imagens/notification.png" alt="off" title="Notificar user">
+              </div>
+
+
+          </div>
+
+        </div>
+
+        <div class="conteudo_usuario_info">
+
+          <div class="dados_user_view">Nome User</div>
+          <div class="dados_user_view">login</div>
+          <div class="dados_user_view">Cpf</div>
+          <div class="email_view">Email</div>
+          <div class="dados_user_modo">
+              <div class="modo_user">
+                  <img src="imagens/off.png" alt="off" title="desativar user">
+              </div>
+
+              <div class="modo_user">
+                <img src="imagens/view.png" alt="off" title="Visualizar user">
+              </div>
+
+              <div class="modo_user">
+                <img src="imagens/notification.png" alt="off" title="Visualizar user">
+              </div>
+          </div>
+
+        </div>
+
+        <div class="conteudo_usuario_info">
+
+          <div class="dados_user_view">Nome User</div>
+          <div class="dados_user_view">login</div>
+          <div class="dados_user_view">Cpf</div>
+          <div class="email_view">Email</div>
+          <div class="dados_user_modo">
+              <div class="modo_user">
+                  <img src="imagens/off.png" alt="off" title="desativar user">
+              </div>
+
+              <div class="modo_user">
+                <img src="imagens/view.png" alt="off" title="Visualizar user">
+              </div>
+
+              <div class="modo_user">
+                <img src="imagens/notification.png" alt="off" title="Visualizar user">
+              </div>
+          </div>
+
+        </div>
+
+        <div class="conteudo_usuario_info">
+
+          <div class="dados_user_view">Nome User</div>
+          <div class="dados_user_view">login</div>
+          <div class="dados_user_view">Cpf</div>
+          <div class="email_view">Email</div>
+          <div class="dados_user_modo">
+              <div class="modo_user">
+                  <img src="imagens/off.png" alt="off" title="desativar user">
+              </div>
+
+              <div class="modo_user">
+                <img src="imagens/view.png" alt="off" title="Visualizar user">
+              </div>
+
+              <div class="modo_user">
+                <img src="imagens/notification.png" alt="off" title="Visualizar user">
+              </div>
+          </div>
+
+        </div>
+
+        <div class="conteudo_usuario_info">
+
+          <div class="dados_user_view">Nome User</div>
+          <div class="dados_user_view">login</div>
+          <div class="dados_user_view">Cpf</div>
+          <div class="email_view">Email</div>
+          <div class="dados_user_modo">
+              <div class="modo_user">
+                  <img src="imagens/off.png" alt="off" title="desativar user">
+              </div>
+
+              <div class="modo_user">
+                <img src="imagens/view.png" alt="off" title="Visualizar user">
+              </div>
+
+              <div class="modo_user">
+                <img src="imagens/notification.png" alt="off" title="Visualizar user">
+              </div>
+          </div>
+
+        </div>
+
+        <div class="conteudo_usuario_info">
+
+          <div class="dados_user_view">Nome User</div>
+          <div class="dados_user_view">login</div>
+          <div class="dados_user_view">Cpf</div>
+          <div class="email_view">Email</div>
+          <div class="dados_user_modo">
+              <div class="modo_user">
+                  <img src="imagens/off.png" alt="off" title="desativar user">
+              </div>
+
+              <div class="modo_user">
+                <img src="imagens/view.png" alt="off" title="Visualizar user">
+              </div>
+
+              <div class="modo_user">
+                <img src="imagens/notification.png" alt="off" title="Visualizar user">
+              </div>
+          </div>
+
+        </div>
+
+        <div class="conteudo_usuario_info">
+
+          <div class="dados_user_view">Nome User</div>
+          <div class="dados_user_view">login</div>
+          <div class="dados_user_view">Cpf</div>
+          <div class="email_view">Email</div>
+          <div class="dados_user_modo">
+              <div class="modo_user">
+                  <img src="imagens/off.png" alt="off" title="desativar user">
+              </div>
+
+              <div class="modo_user">
+                <img src="imagens/view.png" alt="off" title="Visualizar user">
+              </div>
+
+              <div class="modo_user">
+                <img src="imagens/notification.png" alt="off" title="Visualizar user">
+              </div>
+          </div>
+
+        </div>
+
 
     </div>
 </div>

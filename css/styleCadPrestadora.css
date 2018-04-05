@@ -52,7 +52,8 @@ imagem e descricao em destaque*/
 }
 #titulo_tabela{
    
-    background-color: black;
+/*    background-color: black;*/
+    background-color: rgba(0,0,0,0.8);
     color: aliceblue;
     
     
@@ -77,8 +78,9 @@ imagem e descricao em destaque*/
 .btnprosseguir {
     
 /*    padding-left: 100px;*/
-    background-color: rgba(0,0,0,0.5);
-    height: 50px;
+    background-color: rgba(0,0,0,0.8);    
+/*    background-color: black;*/
+    height: 50px;    
     width: 100%;
     padding-left: 150px;
 }

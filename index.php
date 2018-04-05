@@ -218,53 +218,123 @@
 
                         <ul>
 
-													<!-- coluna do carrosel de prestadoras -->
-													<li>
-														<div class="flip">
-															<div class="foto_prestadora">
-																	<img src="imagens/manutencao.jpg" alt="mecanica">
+														<!-- coluna do carrosel de prestadoras -->
+														<li>
+															<div class="flip">
+																<div class="foto_prestadora">
+																		<img src="imagens/manutencao.jpg" alt="mecanica">
+																</div>
+
+																<div class="foto_prestadora_fundo">
+																		<img src="imagens/manutencao.jpg" alt="mecanica">
+																		<h2>Search the world's information, including webpages, images, videos and more. Google has many special features to help you find exactly what you're looking for.</h2>
+																</div>
 															</div>
 
-															<div class="foto_prestadora_fundo">
-																	<img src="imagens/manutencao.jpg" alt="mecanica">
-															</div>
-														</div>
+																<!-- <div class="descricao_prestadora">
+																		<p>Histórias são efetivamente um meio de comunicação da humanidade. Criamos filmes e desenvolvemos álbuns para guardar .</p>
+																</div>
+																<div class="ver_mais">
+																		<a href="#"> ver mais</a>
+																</div> -->
+														</li>
 
-															<!-- <div class="descricao_prestadora">
-																	<p>Histórias são efetivamente um meio de comunicação da humanidade. Criamos filmes e desenvolvemos álbuns para guardar .</p>
-															</div>
-															<div class="ver_mais">
-																	<a href="#"> ver mais</a>
-															</div> -->
-													</li>
+														<!-- coluna do carrosel de prestadoras -->
+														<li>
+															<div class="flip">
+																<div class="foto_prestadora">
+																		<img src="imagens/manutencao.jpg" alt="mecanica">
+																</div>
 
-													<!-- coluna do carrosel de prestadoras -->
-													<li>
-														<div class="flip">
-															<div class="foto_prestadora_fundo">
-																	<img src="imagens/manutencao.jpg" alt="mecanica">
-																			<h2>Histórias são efetivamente um meio de comunicação da humanidade. Criamos filmes e desenvolvemos álbuns para guardar .</h2>
-															</div>
-															<div class="foto_prestadora">
-																	<img src="imagens/manutencao.jpg" alt="mecanica">
+																<div class="foto_prestadora_fundo">
+																		<img src="imagens/manutencao.jpg" alt="mecanica">
+																		<h2>Search the world's information, including webpages, images, videos and more. Google has many special features to help you find exactly what you're looking for.</h2>
+																</div>
 															</div>
 
+																<!-- <div class="descricao_prestadora">
+																		<p>Histórias são efetivamente um meio de comunicação da humanidade. Criamos filmes e desenvolvemos álbuns para guardar .</p>
+																</div>
+																<div class="ver_mais">
+																		<a href="#"> ver mais</a>
+																</div> -->
+														</li>
 
-																	<!-- <div class="ver_mais">
-																			<a href="#"> ver mais</a>
-																	</div> -->
+														<!-- coluna do carrosel de prestadoras -->
+														<li>
+															<div class="flip">
+																<div class="foto_prestadora">
+																		<img src="imagens/manutencao.jpg" alt="mecanica">
+																</div>
+
+																<div class="foto_prestadora_fundo">
+																		<img src="imagens/manutencao.jpg" alt="mecanica">
+																		<h2>Search the world's information, including webpages, images, videos and more. Google has many special features to help you find exactly what you're looking for.</h2>
+																</div>
 															</div>
-														</div>
+
+																<!-- <div class="descricao_prestadora">
+																		<p>Histórias são efetivamente um meio de comunicação da humanidade. Criamos filmes e desenvolvemos álbuns para guardar .</p>
+																</div>
+																<div class="ver_mais">
+																		<a href="#"> ver mais</a>
+																</div> -->
+														</li>
 
 
-													</li>
+														<!-- coluna do carrosel de prestadoras -->
+														<li>
+															<div class="flip">
+																<div class="foto_prestadora">
+																		<img src="imagens/manutencao.jpg" alt="mecanica">
+																</div>
+
+																<div class="foto_prestadora_fundo">
+																		<img src="imagens/manutencao.jpg" alt="mecanica">
+																		<h2>Search the world's information, including webpages, images, videos and more. Google has many special features to help you find exactly what you're looking for.</h2>
+																</div>
+															</div>
+
+																<!-- <div class="descricao_prestadora">
+																		<p>Histórias são efetivamente um meio de comunicação da humanidade. Criamos filmes e desenvolvemos álbuns para guardar .</p>
+																</div>
+																<div class="ver_mais">
+																		<a href="#"> ver mais</a>
+																</div> -->
+														</li>
 
 
-												</ul>
+														<!-- coluna do carrosel de prestadoras -->
+														<li>
+															<div class="flip">
+																<div class="foto_prestadora">
+																		<img src="imagens/manutencao.jpg" alt="mecanica">
+																</div>
+
+																<div class="foto_prestadora_fundo">
+																		<img src="imagens/manutencao.jpg" alt="mecanica">
+																		<h2>Search the world's information, including webpages, images, videos and more. Google has many special features to help you find exactly what you're looking for.</h2>
+																</div>
+															</div>
+
+																<!-- <div class="descricao_prestadora">
+																		<p>Histórias são efetivamente um meio de comunicação da humanidade. Criamos filmes e desenvolvemos álbuns para guardar .</p>
+																</div>
+																<div class="ver_mais">
+																		<a href="#"> ver mais</a>
+																</div> -->
+														</li>
+
+													</ul>
+
+											</div>
+
+												<div class="passar_carrosel ">
+														<a href="#" class="next">> </a>
+												</div>
+
 										</div>
-										<div class="passar_carrosel ">
-												<a href="#" class="next">> </a>
-										</div>
+
 								</div>
 								<div class="ver_mais_coisas">
 									<a href="#">Ver mais</a>
@@ -272,8 +342,8 @@
 
 
 							</div>
-                        </div>
-					</div>
+  				</div>
+
 
 					<!-- Produtos -->
 					<div class="container_menu_Produtos">

@@ -7,7 +7,9 @@
     <link rel="stylesheet" href="css/style_prestadora.css">
     <link rel="stylesheet" href="css/styleUsuario.css">
     <!-- Import das bibliotecas JQuery -->
-
+    <script src="js/jquery7.min.js"></script>
+    <script  src="js/jcarousellite.js"></script>
+    <script  src="js/carrossel.js"></script>
 
 
   </head>
@@ -62,7 +64,7 @@
                   break;
 
                 case 'plano':
-                  require_once 'views/planos/planos_view.php';
+                  require_once 'views/planos_view.php';
                   break;
 
                 case 'prestadora':
@@ -77,8 +79,6 @@
           </div>
       </div>
 
-      <script src="js/jquery7.min.js"></script>
-      <script  src="js/jcarousellite.js"></script>
-      <script  src="js/carrossel.js"></script>
+
   </body>
 </html>

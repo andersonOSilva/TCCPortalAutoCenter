@@ -324,10 +324,10 @@ body{
 
 #carrossel_prestadora{
   width: 1100px;
-  height: 400px;
+  height: 500px;
    /*background-color: pink;*/
    margin: auto;
-  padding-top: 20px;
+  /*padding-top: 20px;*/
 }
 
 .passar_carrosel{
@@ -335,7 +335,7 @@ body{
   height: 235px;
    /*background-color: yellow; */
   float: left;
-
+  /*position: absolute;*/
   text-align: center;
   cursor: pointer;
   padding-top: 165px;
@@ -351,8 +351,8 @@ body{
 
 #carrossel_prestadora_principal{
   width: 900px;
-  height: 100%;
-  /* background-color: red; */
+  height: 400px;
+   /*background-color: red;*/
   float: left;
   overflow: hidden;
     margin-top: 40px;
@@ -367,10 +367,10 @@ body{
 
 #carrossel_prestadora_principal ul li {
 	width: 270px;
-	height: 300px;
+	height: 350px;
 	float: left;
-	margin: 0 25px;
-    /* background-color:#000; */
+	margin: 0 15px;
+     /*background-color:#000;*/
     transition: 1s;
     color: aliceblue;
     transition:1s;
@@ -385,11 +385,14 @@ body{
   float: left;
   perspective: 230px;
     border-radius: 100%;
+    margin: auto;
 }
 
 .flip img{
   width: 230px;
   height: 230px;
+  border-radius: 100%;
+
 }
 
 
@@ -429,9 +432,10 @@ body{
 
 .flip  h2{
   width: 100%;
-  bottom: 35px;
+  bottom: -35px;
   color: #fff;
-  font-size: 10px;
+  font-size: 15px;
+  text-align: center;
 }
 
 .mais:hover>.mais_menu{

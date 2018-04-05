@@ -15,11 +15,9 @@
       require_once('bd_class.php');
     }
 
-    public function Insert($dados_endereco_prestadora){
+    public function Insert($dados_prestadora){
       var_dump($dados_endereco_prestadora);
-        $etapa=0;
-     switch(etapa){
-         case 0:
+        
               $sqlPrestadora = "insert into tbl_Prestadora (razaoSocial,nomefantasia,fotoPrestadora,descricao,telefone,cnpj,idEnderecoPrestadora,login,senha)
               values('".$dados_prestadora->razaoSocial."',
                     '".$dados_prestadora->nomefantasia."',
@@ -32,7 +30,7 @@
                     '".$dados_prestadora->cnpj."')";
 //             SELECT * FROM tbl_prestadora where login= "teste" and senha=123;
                 
-             
+             //pega o id de registro para por no endereco
              $sqlPrestadoraSelect="Select * from tbl_prestadora where login='".$dados_prestadora->login."'and senha='".$dados_prestadora->$senha."';"
                  echo($sqlPrestadoraSelect);
 //             $conex = new Mysql_db();
@@ -54,8 +52,6 @@
       $conex->Desconectar();
              
             
-             break;
-         case 1:
              
               
               $sqlEndereco = "insert into tbl_endereco_prestadora (rua,numero,bairro,referencia,cep,idcidade)
@@ -65,8 +61,8 @@
                     '".$dados_prestadora->referencia."',
                     '".$dados_prestadora->cep."',
                     '".$dados_prestadora->cidade."')";
-             break;
-     }
+             
+     
        
         
 

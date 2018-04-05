@@ -20,18 +20,24 @@ $id="0";
     if ($modo == "buscarId") {
       $id=$_GET['id'];
 
-      echo $modo;
+      //echo $modo;
 
       require_once('../controllers/controller_planos.php');
       require_once('../models/plano_class.php');
 
-
-      $controller_plano = new controllerPlano();
-      $controller_plano :: Buscar();
       //instacia a controller
       //Passa o id para a controller
+      $controller_plano = new controllerPlano();
+      $retornoModel = $controller_plano :: Buscar();
+
+
+      $nome=$retornoModel->nome;
+      $preco=$retornoModel->preco;
+      $descricao=$retornoModel->descricao;
+      $foto=$retornoModel->imagem;
+
       //var_dump ($retornoModel);
-      echo "      ta na class ";
+      // echo "      ta na class ";
       // if (isset($retornoModel)) {
       //   echo "string";
       // }
@@ -78,18 +84,54 @@ $id="0";
         });
 
      });
+
+
+
+      $(document).ready(function() {
+
+        $(".fechar").click(function() {
+          //$(".modalContainer").fadeOut();
+      	$(".modalContainer").slideToggle(1000);
+        });
+      });
+
+
  </script>
 
 
 <div class="cadastro_plano">
 
     <form class="frmPlano" action="" method="post" id="form" data-id="<?php echo($id) ?>" enctype="multipart/form-data">
+
+        <div class="cabecalho_planos">
+          <div class="titulo_planos">
+            <h1>
+              <?php
+              if(isset($_GET['modo'])){
+
+                $modo=$_GET['modo'];
+
+                  echo "Editar Plano";
+                }else{
+                  echo "Novo Plano";
+                }
+               ?>
+              </h1>
+          </div>
+          <div class="sair">
+              <div class="fechar">
+                  <img src="imagens/fechar.png" alt="">
+              </div>
+          </div>
+
+        </div>
+
         <div class="entrada_dado">
           <input maxlength="40" placeholder="Nome do plano" required type="text" name="txtNome" value="<?php echo $nome?>">
         </div>
 
         <div class="entrada_dado">
-          <input maxlength="8" placeholder="Preco" required type="text" name="txtPreco" value="<?php echo $preco?>">
+          <input maxlength="4" placeholder="Preco" required type="text" name="txtPreco" value="<?php echo $preco?>">
         </div>
 
         <div class="entrada_dado1">

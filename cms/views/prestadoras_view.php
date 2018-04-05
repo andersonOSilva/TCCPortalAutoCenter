@@ -1,35 +1,33 @@
 <div class="conteudo_padrao">
   <div class="tbl_consulta_pretadora">
         <div class="titulo_prestadora">
-          <ul>
-            <li>Prestadora</li>
-            <li>Status</li>
-            <li>Plano</li>
-            <li>Opção</li>
-          </ul>
+
+            <div class="dados_prest">Prestadora</div>
+            <div class="dados_prest">Status</div>
+            <div class="dados_prest">Opção</div>
+
         </div>
 
         <div class="conteudo_prestadora">
-          <ul>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li>
-              <div class="segura_modo">
-                <div class="modo">
-                  <a href="#">
-                    <img src="imagens/delet.png" alt="delet">
-                  </a>
-                  <a href="#">
-                    <img src="imagens/edit.png" alt="edit">
-                  </a>
-                </div>
+          <div class="dados_prest_item">Prestadora</div>
+          <div class="dados_prest_item_modo">
+              <div class="status_prest">
+                  <img src="imagens/off.png" alt="off" title="desativar user">
               </div>
+          </div>
+          <div class="dados_prest_modo">
+            <div class="status_prest_modo">
+                <img src="imagens/view.png" alt="off" title="Visualizar user">
+            </div>
 
+            <div class="status_prest_modo">
+                <img src="imagens/notification.png" alt="off" title="Notificar user">
+            </div>
 
-            </li>
-          </ul>
+          </div>
         </div>
+
+
 
     </div>
 </div>

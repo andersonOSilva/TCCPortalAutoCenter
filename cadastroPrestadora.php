@@ -12,6 +12,69 @@
       <?php
           require_once 'menu.php';
        ?>
+<!--<script>
+     $("#form").submit(function(event){
+          //Recupera o id gravado no Form pelo atribute-id
+          var id = $(this).data("id");
+          var modo = "";
+          if(id == '0')
+              modo='novo';
+          else
+              modo='editar';
+
+        //anula a ação do submit tradicional "botao" ou F5
+         event.preventDefault();
+
+         $.ajax({
+            type: "POST",
+            url: "router.php?controller=planos&modo="+modo+"&id="+id,
+            //alert (url);
+            data: new FormData($("#form")[0]),
+            cache:false,
+            contentType:false,
+            processData:false,
+            async:true,
+            success: function(dados){
+                 $('.modal').html(dados);
+                 //alert(dados);
+
+            }
+        });
+
+     });
+ </script>-->
+   <script>
+     $("#form").submit(function(event){
+          //Recupera o id gravado no Form pelo atribute-id
+          var id = $(this).data("id");
+          var modo = "";
+          if(id == '0')
+              modo='novo';
+          else
+              modo='editar';
+
+        //anula a ação do submit tradicional "botao" ou F5
+         event.preventDefault();
+
+         $.ajax({
+            type: "POST",
+            url: "router.php?controller=prestadora&modo="+modo+"&id="+id,
+            //alert (url);
+            data: new FormData($("#form")[0]),
+            cache:false,
+            contentType:false,
+            processData:false,
+            async:true,
+            success: function(dados){
+                 $('formulario1').html(dados);
+                 //alert(dados);
+
+            }
+        });
+
+     });
+ </script>
+      <form action="" method="post" enctype="multipart/form-data" >
 
       <!-- div principal que vai sustentar  toda a area de imagem e descricao em destaque -->
       <div class="container_cad_prestadora">
@@ -27,32 +90,11 @@
                   <div class="img_servico">
                       <img src="imagens/mecanica.jpg" alt="servico" >
                 </div>
-                 
-                
-                  
-<!--
-                <div class="areaImagem_descricao">
-                    <input type="text" placeholder="loggin">
-
-                    <input type="text" placeholder="*****">
-
-                    <input type="text" placeholder="email@shazam.com">
-
-                    <input type="text" placeholder="cnpj">
-
-                    <input type="text" placeholder="razao social">
-
-                    <input type="text" placeholder="nome fantasia">
-
-                    <input type="submit" value="prosseguir">
-                    
-                </div>
--->
-
               </div>
-                 <div class="img_plus">
-                     
-                </div>
+                <div class="img_plus">
+                 <input  type="file" style="opacity:0;height:100%;width:100%" name="flefoto">
+                </div>     
+                
                 
               <!-- area de descricao em destaque  -->
             
@@ -63,133 +105,84 @@
         
       </div>
           <table class="formulario">
-                <tr>
+               <tr>
+                    <td colspan="2" id="titulo_tabela">Cadastro</td>
+                    
+              </tr>  
+              <tr>
                     <td class="coluna1">login</td>
-                    <td class="coluna2"><input type="text" placeholder="loggin"></td>
+                    <td class="coluna2" name="txtlogin"><input type="text" placeholder="loggin"></td>
                 </tr>
                 <tr>
                     <td class="coluna1">senha</td>
-                    <td class="coluna2"><input type="text" placeholder="****"></td>
+                    <td class="coluna2" name="txtsenha"><input type="text" placeholder="****"></td>
                 </tr>
                 <tr>
                     <td class="coluna1">email</td>
-                    <td class="coluna2"><input type="text" placeholder="email@shazam.com"></td>
+                    <td class="coluna2" name="txtemail"><input type="text" placeholder="email@shazam.com"></td>
                 </tr>
                 <tr>
                     <td class="coluna1">cnpj</td>
-                    <td class="coluna2"><input type="text" placeholder="cnpj"></td>
+                    <td class="coluna2" name="txtcnpj"><input type="text" placeholder="cnpj"></td>
                 </tr>
                 <tr>
                     <td class="coluna1">razao social</td>
-                    <td class="coluna2"><input type="text" placeholder="razao social"></td>
+                    <td class="coluna2" name="txtrazaosocial"><input type="text" placeholder="razao social"></td>
                 </tr>
                 <tr>
                     <td class="coluna1">nome fantasia</td>
-                    <td class="coluna2"><input type="text" placeholder="nome fantasia"></td>
+                    <td class="coluna2" name="txtnomefantasia"><input type="text" placeholder="nome fantasia"></td>
                 </tr>
+              <tr>
+                    <td class="coluna1">Telefone</td>
+                    <td class="coluna2" name="txttelefone"><input type="text" placeholder="(11)1234-5644"></td>
+              </tr>
+              <tr >
+                    
+                    <td colspan="2  " class="btnprosseguir" ><input type="submit" value="prosseguir"></td>
+              </tr> 
+              
+            </form>    
+                
+            </table>  
+<!--        
+
+    
+          <table class="formulario" >
+                <tr>
+                    <tr>
+                    <td colspan="2" class="titulo_tabela">Endereço</td>
+                    
+              </tr>
+              <tr>
+                    <td class="coluna1">cep</td>
+                    <td class="coluna2" name="txtcep"><input type="text" placeholder="quitanda do ze"></td>
+              </tr>
+              <tr>
+                    <td class="coluna1">Rua</td>
+                    <td class="coluna2" name="txtrua"><input type="text" placeholder="Rua"></td>
+              </tr>
+              <tr>
+                    <td class="coluna1">numero</td>
+                    <td class="coluna2" name="txtnumero"><input type="text" placeholder="nº"></td>
+              </tr>
+              <tr>
+                    <td class="coluna1">bairo</td>
+                    <td class="coluna2" name="txtbairro"><input type="text" placeholder="bairro" name="txt"></td>
+              </tr>
+              <tr>
+                    <td class="coluna1">Ponto de referencia</td>
+                    <td class="coluna2" name="txtpontodereferencia"><input type="text" placeholder="quitanda do ze"></td>
+              </tr>
+              <tr>
+                    <td class="coluna1">Cidade</td>
+                    <td class="coluna2" name="txtcidade"><input type="text" placeholder="cidade"></td>
+              </tr>
+              
               <tr >
                     
                     <td colspan="2  " class="btnprosseguir" ><input type="submit" value="prosseguir"></td>
               </tr>    
-                
-                
-            </table>  
-<!--
-          <table class="formulario" >
-                <tr>
-                    <td  colspan="2" id="titulo_tabela" align="center">
-                        Fale Conosco
-                    </td>
-                </tr>
-                <tr>
-                    
-                    <td class="coluna1">
-                       Nome:
-                    </td>
-                    <td class="coluna2">
-                        <input placeholder="Digite seu nome..." type="text" name="txtNome" value="" size="30px" required pattern="[a-z A-Z ã Ã õ Õ é É ê Ê ô Ô ç Ç]*" title="Permitido apenas Letras" onkeypress="return validar(event,'number')" >
-
-                    </td>
-                </tr>
-                <tr>
-                    <td class="coluna1">
-                        Telefone:
-                    </td>
-                    <td class="coluna2">
-                        <input placeholder=" DDD XXXX-XXXX" type="text" name="txtTelefone" value="" size="30px" pattern="[0-9]{3} [0-9]{4}-[0-9]{4}" title="Formato inválido!" onkeypress="return validar(event,'caracter')">
-                    </td>
-                </tr>
-                <tr>
-                    <td class="coluna1">
-                        Celular:
-                    </td>
-                    <td class="coluna2">
-                        <input placeholder=" DDD XXXXX-XXXX" type="text" name="txtCelular" value="" size="30px" pattern="[0-9]{3} [0-9]{5}-[0-9]{4}">
-                    </td>
-                </tr>
-                <tr >
-                    <td class="coluna1">
-                        Email:
-                    </td>
-                    <td class="coluna2">
-                        <input placeholder="cadrasto@contatos.com" type="email" name="txtEmail" value="" size="30px" required>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="coluna1">
-                        Home Page:
-                    </td>
-                    <td class="coluna2">
-                        <input type="date" name="txtDtNasc" value="" size="30px">
-                    </td>
-                </tr>
-                <tr>
-                    <td class="coluna1">
-                        Sexo:
-                    </td>
-                    <td class="coluna2">
-                        <input type="radio" name="rdoSexo" value="F"  checked>Feminino
-                        <input type="radio" name="rdoSexo" value="M" >Masculino
-                    </td>
-                </tr>
-                <tr>
-                    <td class="coluna1">
-                        Sugestões/Criticas:
-                    </td>
-                    <td class="coluna2">
-                        <textarea placeholder="Deixe aqui sua observação..." name="txtobs" cols="32" rows="5" ></textarea>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="coluna1">
-                        Informações de Produtos:
-                    </td>
-                    <td class="coluna2">
-                        <input placeholder="" type="text" name="txtProdutos" value="" size="30px" pattern="[0-9]{3} [0-9]{4}-[0-9]{4}" title="Formato inválido!" onkeypress="return validar(event,'caracter')">
-                    </td>
-                </tr>
-                <tr>
-                    <td class="coluna1">
-                        Profissão:
-                    </td>
-                    <td class="coluna2">
-                        <input placeholder="" type="text" name="txtProf" value="" size="30px" pattern="[0-9]{3} [0-9]{4}-[0-9]{4}" title="Formato inválido!" onkeypress="return validar(event,'caracter')">
-                    </td>
-                </tr>
-                <tr>
-                    <td class="coluna1">
-                        Link/Facebook:
-                    </td>
-                    <td class="coluna2">
-                        <input placeholder="" type="text" name="txtLink" value="" size="30px" pattern="[0-9]{3} [0-9]{4}-[0-9]{4}" title="Formato inválido!" onkeypress="return validar(event,'caracter')">
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="2" align="center" class="coluna1" id="btns">
-                        <input type="submit" name="btnSalvar" value="salvar">
-                        <input type="reset" name="btnLimpar" value="Limpar">
-                    </td>
-                </tr>
             </table>
 -->
       <?php   require_once 'rodape.php'; ?>
