@@ -54,11 +54,13 @@
         </div>
           <div id="todosServicos">
         <div class="container_imagemDescricao">
+
           <div id="suporte_imagemDescricao">
+            <div style="background-color:rgba(255,255,255,0.7);">
             <div class="area_imagem" >
               <img src="imagens/higienizacao.jpg" alt="gh" width="250px" height="200px" >
             </div>
-            <div class="area_descricao" >
+            <div class="area_descricao" style="color:black" >
                 Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.
                 Nunc viverra imperdiet enim. Fusce est. Vivamus a tellus.
                 Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin        pharetra nonummy pede. Mauris et orci.
@@ -66,8 +68,11 @@
                 Suspendisse dui purus, scelerisque at, vulputate vitae, pretium mattis, nunc. Mauris eget neque at sem venenatis eleifend. Ut nonummy.
 
             </div>
+
             <div class="botao">
               <a href="#"> Ver Mais</a>
+            </div>
+            </div
             </div>
               <div style="background-color:rgba(0,0,0,0.5)">
                   <div class="area_imagem" >
@@ -87,11 +92,13 @@
                   </div>
 
           </div>
-          <?php
-              require_once 'rodape.php';
-           ?>
+
          </div>
+
         </div>
       </div>
+      <?php
+          require_once 'rodape.php';
+       ?>
     </body>
   </html>

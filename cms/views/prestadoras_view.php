@@ -8,6 +8,10 @@
 
         </div>
 
+        <?php
+          
+        ?>
+
         <div class="conteudo_prestadora">
           <div class="dados_prest_item">Prestadora</div>
           <div class="dados_prest_item_modo">

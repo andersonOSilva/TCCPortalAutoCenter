@@ -65,11 +65,11 @@ body{
 .modal{
 	width:300px;
 	height:450px;
-	background-color:#fff;
+	background-color:#000;
 	/* margin:auto; */
   /* padding-top: 50%; */
-  margin-top: 60px;;
-  margin-left: 700px;
+  margin-top: 60px;
+  margin-left: 50%;
   margin-right: auto;
   margin-bottom: auto;
    /* margin-left: 300px; */
@@ -83,7 +83,7 @@ body{
 	height:600px;
 	background-color:#fff;
   margin-top: 60px;;
-  margin-left: 800px;
+  margin-left: 60%;
   margin-right: auto;
   margin-bottom: auto;
 
@@ -96,13 +96,14 @@ body{
 	width: 30px;
 	height: 30px;
 	position: absolute;
-	left: 880px;
+	left: 60%;
   top:50px;
   background-color: #fff;
   float: left;
   /* z-index: 999; */
 	-webkit-transform:rotate(45deg);
 }
+
 
 .fechar{
   width: 30px;
@@ -434,7 +435,7 @@ body{
 	width: 30px;
 	height: 30px;
 	position: absolute;
-	left: 940px;
+  left: 65%;
   top:50px;
   background-color: #fff;
   float: left;

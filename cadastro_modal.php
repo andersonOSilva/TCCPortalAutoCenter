@@ -91,7 +91,7 @@ $(document).ready(function() {
       </div>
 
       <div  id="login_cad_link">
-        <a href="#" onclick="novo();">Entrar com usuário cadastrado</a>
+        <a href="#" onclick="escolha();">Entrar com usuário cadastrado</a>
       </div>
   </div>
 
