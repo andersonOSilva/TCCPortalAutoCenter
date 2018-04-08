@@ -21,7 +21,7 @@
                       '".$plano_dados->descricao."',
                       '".$plano_dados->foto."')";
 
-                    //  echo $sql;
+                    //echo $sql;
 
 
                       $conex = new Mysql_db();

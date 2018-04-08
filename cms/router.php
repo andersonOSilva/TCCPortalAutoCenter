@@ -20,8 +20,10 @@
       switch ($_GET['modo']) {
         case 'novo':
             $controller_plano = new controllerPlano();
-            $controller_plano :: Novo();
+            $controller_plano::Novo();
           break;
+
+          
 
         // case 'buscarId':
         //     $controller_plano = new controllerPlano();

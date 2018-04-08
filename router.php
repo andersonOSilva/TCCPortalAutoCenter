@@ -12,11 +12,51 @@
           case 'novo':
               $controller_mensagen= new controllerMensagen();
               $controller_mensagen::Novo();
-              echo "string";
+              // echo "string";
             break;
 
 
         }
+
+        // cadastro User
+      case 'User':
+
+        require_once("cms/controllers/controller_cadUser.php");
+        require_once("cms/models/cadUser_class.php");
+
+        switch ($modo) {
+          case 'novo':
+              $controller_cadUser= new controllerCadUser();
+              $controller_cadUser::Novo();
+            break;
+
+
+
+
+        }
+
+        // login user
+
+        case 'loginUser':
+        require_once("cms/controllers/controller_cadUser.php");
+        require_once("cms/models/cadUser_class.php");
+
+        switch ($modo) {
+          case 'loginUser':
+            //Chama a controller para poder fazer o login
+            $controller_cadUser= new controllerCadUser();
+            $controller_cadUser::LoginUser();
+          break;
+
+          case 'buscarId':
+            $controller_cadUser= new controllerCadUser();
+            $controller_cadUser::Buscar();
+          break;
+
+        }
+
+
+
 
 
     }

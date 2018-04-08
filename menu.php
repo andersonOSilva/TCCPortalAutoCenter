@@ -20,9 +20,11 @@
               </ul>
             </div>
 
-              <div class="login">
-                  <p><a><span id="entre">Entre</span> <span id="cadastro">ou cadastre-se</span></a></p>
-              </div>
+            <!-- Login -->
+            <?php
+                require_once 'loginEcadastro.php';
+
+              ?>
               <!-- <div class="mais">
                   <img src="imagens/menuIcon.png" alt="menu mais">
               </div> -->
@@ -34,3 +36,9 @@
       </div>
     </nav>
 </div>
+
+<?php
+
+  require_once 'modais.php';
+
+ ?>

@@ -7,8 +7,9 @@
     <link rel="stylesheet" type="text/css" href="css/styleMenus.css">
     <link rel="stylesheet" type="text/css" href="css/styleHome.css">
     <link rel="stylesheet" type="text/css" href="css/styleForum.css">
+    <script src="js/jquery-3.3.1.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet">
   </head>
   <body>
       <div class="principal">

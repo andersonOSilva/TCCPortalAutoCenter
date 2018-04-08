@@ -8,7 +8,7 @@
 		<title>Home</title>
 		<link rel="stylesheet" type="text/css" href="css/styleHome.css">
 		<link rel="stylesheet" type="text/css" href="css/styleMenus.css">
-		<link href="css/jquery.FlowupLabels.css" rel='stylesheet' type='text/css'>
+		<!-- <link href="css/jquery.FlowupLabels.css" rel='stylesheet' type='text/css'> -->
 
 	   <!-- <script src="js/jquery-3.3.1.min.js"> </script>  -->
 		  <script src="js/jquery7.min.js"></script>
@@ -17,53 +17,7 @@
 			<script src="js/coin-slider.js"></script>
 	</head>
 	<body>
-		<script>
-				$(document).ready(function () {
 
-
-					//Efeito para abrir a div Container com timer de 2 segundos (Novo Registro)
-					$(".novo").click(function(){
-						 $(".modalContainer").slideToggle(2000);
-
-					});
-
-					//Efeito para abrir a div Container com timer de 2 segundos (Novo Registro)
-						$(".editar").click(function(){
-							 $(".modalContainer").fadeIn(2000);
-
-						});
-
-						$(".novo_cadastro").click(function(){
-							 $(".modalContainer_cadastro").slideToggle(2000);
-
-						});
-
-
-
-				});
-
-
-				function escolha(){
-	          $.ajax({
-	              type: "POST",
-	              url: "login_modal.php",
-	              success: function(dados){
-	                  $('.modal').html(dados);
-	              }
-	          });
-	      }
-
-				function cadastro(){
-	          $.ajax({
-	              type: "POST",
-	              url: "cadastro_modal.php",
-	              success: function(dados){
-	                  $('.modal_cadastro').html(dados);
-	              }
-	          });
-	      }
-
-		</script>
 			<div class="principal">
 					<!-- <div class="menu_info">
 						<nav id="itens_menu">
@@ -110,10 +64,11 @@
 												</ul>
 											</nav>
 
-												<div class="login">
-														<p><a href="#" class="novo" onclick="escolha();">Entre</a> <a href="#" class="novo_cadastro" onclick="cadastro();">ou cadastre-se</a>
-														</p>
-												</div>
+												<!-- Login -->
+												<?php
+														require_once 'loginEcadastro.php';
+
+												 	?>
 												<div class="mais">
 														<img src="imagens/menuIcon.png" alt="menu mais">
 														<div class="mais_menu">
@@ -157,20 +112,13 @@
 							</div>
 					</div>
 
-					<!-- Modal -->
+					<!-- modais -->
 
-					<div class="modalContainer">
-						<div class="modal">
+					<?php
 
-						</div>
-					</div>
+						require_once 'modais.php';
 
-					<div class="modalContainer_cadastro">
-						<div class="modal_cadastro">
-
-						</div>
-					</div>
-
+					 ?>
 
 					<!-- SLIDER -->
 					<div class="container_slider">

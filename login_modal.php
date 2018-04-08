@@ -13,6 +13,15 @@ $(document).ready(function() {
 
   });
 });
+
+
+$('input[name="FlgPontua"]').change(function () {
+    if ($('input[name="FlgPontua"]:checked').val() === "user") {
+        $('.tipo_user').show();
+    } else {
+        $('.tipo_prest').show();
+    }
+});
 </script>
 
 
@@ -20,21 +29,28 @@ $(document).ready(function() {
   <div class="fechar">
   </div>
 
+  <div class="tipo_login">
+
+    <input type="radio" name="FlgPontua" value="user" checked>
+    <input type="radio" name="FlgPontua" value="prest">
+  </div>
+
   <div class="titulo_login">
     <h1>Já tem Cadastro?</h1>
   </div>
-  <form id='formBody' class='FlowupLabels' method="post" action="" name="FrmLoginUser">
-
+  <form id='formBody' class='FlowupLabels' method="post" action="router.php?controller=loginUser&modo=loginUser" name="FrmLoginUser">
 
     <div class='fl_wrap'>
-      <label class='fl_label' for='rf_name'>Cpf</label>
-      <input class='fl_input' type='text'  />
+      <label class='fl_label' for='rf_name'>Usuario</label>
+      <input class='fl_input' type='text' value="" name="txtUser">
     </div>
 
     <div class='fl_wrap'>
       <label class='fl_label' for='rf_email'>Senha</label>
-      <input class='fl_input' type='email'/>
+      <input class='fl_input' type='password' value="" name="txtSenha">
     </div>
+
+
 
     <div class="manter_conectado">
       <!-- <INPUT TYPE="checkbox" NAME="OPCAO" VALUE="op1">
@@ -42,7 +58,7 @@ $(document).ready(function() {
       <a href="#">Esqueci minha senha</a>
     </div>
 
-    <div class="buttom_enviar">
+    <div class="buttom_enviar_login">
       <input id="btnLogar" type="submit" name="btnEnviar" value="Logar">
     </div>
 
