@@ -25,7 +25,7 @@
                                   '".$user_dados->cpf."',
                                   '".$user_dados->foto."')";
 
-                      echo $sql;
+                      //echo $sql;
 
       // conexao com o banco
       $conex = new Mysql_db();

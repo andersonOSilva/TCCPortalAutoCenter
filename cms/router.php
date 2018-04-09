@@ -23,7 +23,7 @@
             $controller_plano::Novo();
           break;
 
-          
+
 
         // case 'buscarId':
         //     $controller_plano = new controllerPlano();
@@ -86,6 +86,20 @@
           }
 
         break;
+
+        case 'prestadora':
+          require_once("controllers/prestadora_controller.php");
+          require_once("models/cadprestadora_class.php");
+
+          switch ($_GET['modo']) {
+            case 'listar':
+                $controller_Prestadora= new controllerPrestadora();
+                $controller_Prestadora::Listar();
+                // echo "string";
+              break;
+
+
+          }
 
     }
  ?>

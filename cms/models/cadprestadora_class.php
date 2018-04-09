@@ -9,81 +9,61 @@
     public $telefone;
     public $cnpj;
     public $idEnderecoPrestadora;
-      
+    public $login;
+    public $senha;
+    public $status;
+
 
     public  function __construct(){
       require_once('bd_class.php');
     }
 
-    public function Insert($dados_prestadora){
-      var_dump($dados_endereco_prestadora);
-        
-              $sqlPrestadora = "insert into tbl_Prestadora (razaoSocial,nomefantasia,fotoPrestadora,descricao,telefone,cnpj,idEnderecoPrestadora,login,senha)
-              values('".$dados_prestadora->razaoSocial."',
-                    '".$dados_prestadora->nomefantasia."',
-                    '".$dados_prestadora->fotoPrestadora."',
-                    '".$dados_prestadora->descricao."',
-                    '".$dados_prestadora->telefone."',
-                    '".$dados_prestadora->idEnderecoPrestadora."',
-                    '".$dados_prestadora->login."',
-                    '".$dados_prestadora->senha."',
-                    '".$dados_prestadora->cnpj."')";
-//             SELECT * FROM tbl_prestadora where login= "teste" and senha=123;
-                
-             //pega o id de registro para por no endereco
-             $sqlPrestadoraSelect="Select * from tbl_prestadora where login='".$dados_prestadora->login."'and senha='".$dados_prestadora->$senha."';"
-                 echo($sqlPrestadoraSelect);
-//             $conex = new Mysql_db();
-//
-//            $PDO_conex = $conex->Conectar();
-//
-//            $select = $PDO_conex->query($sqlPrestadoraSelect);
-//
-//            $cont=0;
-//
-//            while ($rs=$select->fetch(PDO::FETCH_ASSOC)) {
-//                $iddoregistro = new Prestadora();
-//
-//                $iddoregistro[$cont]->id = $rs['idPrestadora'];
-//                $cont+=1;
-//
-//      }
 
-      $conex->Desconectar();
-             
-            
-             
-              
-              $sqlEndereco = "insert into tbl_endereco_prestadora (rua,numero,bairro,referencia,cep,idcidade)
-              values('".$dados_prestadora->rua."',
-                    '".$dados_prestadora->numero."',
-                    '".$dados_prestadora->bairro."',
-                    '".$dados_prestadora->referencia."',
-                    '".$dados_prestadora->cep."',
-                    '".$dados_prestadora->cidade."')";
-             
-     
-       
-        
+
+
+
+    public function Select(){
+      $sql = "select * from tbl_prestadora order by idPrestadora desc";
+      // echo $sql;
 
       $conex = new Mysql_db();
 
       $PDO_conex = $conex->Conectar();
 
+      $select = $PDO_conex->query($sql);
+
+      $cont=0;
+
+      while($rs=$select->fetch(PDO::FETCH_ASSOC)){
+        $listPrestadora[] = new Prestadora();
+
+        $listPrestadora[$cont]->id=$rs['idPrestadora'];
+        $listPrestadora[$cont]->razaoSocial=$rs['razaoSocial'];
+        $listPrestadora[$cont]->nomefantasia=$rs['nomeFantasia'];
+        $listPrestadora[$cont]->fotoPrestadora=$rs['fotoPrestadora'];
+        $listPrestadora[$cont]->descricao=$rs['descricao'];
+        $listPrestadora[$cont]->telefone=$rs['telefone'];
+        $listPrestadora[$cont]->cnpj=$rs['cnpj'];
+        $listPrestadora[$cont]->idEnderecoPrestadora=$rs['idEnderecoPrestadora'];
+        $listPrestadora[$cont]->login=$rs['login'];
+        $listPrestadora[$cont]->senha=$rs['senha'];
+        $listPrestadora[$cont]->status=$rs['status'];
 
 
-      if ($PDO_conex->query($sql)) {
-        header('location:cadprestadora2.php');
-          $etapa=1;
-          
-      }else{
-        echo "erro";
+        $cont+=1;
       }
 
       $conex->Desconectar();
+
+      if (isset($listPrestadora)) {
+          return $listPrestadora;
+
+          //var_dump($listPrestadora) ;
+      }
+
     }
 
-    
+
 
   }
 
