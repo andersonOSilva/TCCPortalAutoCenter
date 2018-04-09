@@ -4,7 +4,6 @@
     public $nomeCompleto;
     public $email;
     public $cpf;
-    public $telefone;
     public $dtNasc;
     public $nomeUser;
     public $senha;
@@ -84,7 +83,7 @@
     public function selectById(){
       $sql='select * from tbl_usuario where idUsuario='.$_SESSION['idUsuario'];
 
-
+      //echo $sql;
 
       $conex = new Mysql_db();
       $PDO_conex = $conex->Conectar();
@@ -106,6 +105,9 @@
 
         //var_dump($usuarioAchado);
         //header("location:index.php");
+
+
+
 
       }else{
         echo "nada achado";

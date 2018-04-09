@@ -1,0 +1,118 @@
+body{
+  padding: 0px;
+  margin: 0px;
+/*
+    background-image: url(../imagens/10.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+*/
+}
+h1{
+  padding: 0px;
+  margin: 0px;
+}
+
+/*Conteudo serviços*/
+.container_conteudo{
+  width: 100%;
+  height: 200px;
+  min-height: 200px;
+  margin: auto;
+  padding-top: 100px;
+    
+}
+/*div que segura o titulo da tela*/
+#suporte_servico{
+  max-width: 1200px;
+  height: auto;
+  min-height:200px;
+  margin: auto;
+  background-color: #ccc;
+}
+/*titulo da tela*/
+#texto_servico{
+  width: 1200px;
+  height: 50px;
+
+}
+/*barra de pesquisa de serviços*/
+#barraPesquisa{
+  width: 800px;
+  height: 50px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  margin: auto;
+}
+#todosServicos{
+    background-color:rgba(255,255,255,0.3);
+    width:1200px;
+    height:auto;
+    margin-left:auto;
+    margin-right:auto;
+    
+}
+/*div que vai suporta todas as imagens e caixas de descrição*/
+.container_imagemDescricao{
+  width: 100%;
+  height: auto;
+  margin: auto;
+  min-height: 580px; 
+    
+    
+}
+#suporte_imagemDescricao{
+  max-width: 1200px;
+  height: auto;
+  min-height:580px;
+  margin: auto;
+/*  background-color: #808080;*/
+    
+
+}
+.area_imagem{
+  width: 250px;
+  height: 200px;
+    margin-left: 50px;
+    
+
+    
+  /*background-color: black;*/
+
+}
+.area_imagem img{
+  width: 200px;
+  height: 200px;
+    border-radius: 100%;
+    
+  /*background-color: black;*/
+
+}
+.area_descricao{
+  width: 800px;
+  min-height: 150px;
+/*  background-color: #ffffff;*/
+  float: left;
+    color: aliceblue;
+  margin-top: -175px;
+  margin-left: 270px;
+
+
+}
+.botao{
+  width: 110px;
+  height: 30px;
+  background-color: #f09900;
+  border-radius: 10px;
+  text-align: center;
+  margin-top: -15px;
+  margin-bottom: 5px;
+  font-weight: 600;
+  padding-top: 10px;
+  margin-left: 1000px;
+}
+.botao a{
+  text-decoration: none;
+  color: #fff;
+  font-size: 20px;
+
+}

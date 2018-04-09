@@ -8,10 +8,10 @@
 
 
     public function __construct(){
-      $this->server = "localhost";/*localhost*/
+      $this->server = "10.107.134.16";/*localhost*/
       $this->user = "root";
       $this->password = "bcd127";
-      $this->dataBaseName = "dbportal";
+      $this->dataBaseName = "db_portal";
 
     }
     public function Conectar(){
@@ -22,8 +22,8 @@
                             return $conexao;
       } catch (PDOException $Error) {
           echo "erro ao conectar-se no banco de dados. <br>
-                Linha do erro".$Erro->getLine()."<br>
-                mensagen do erro:".$Erro->getMessage();
+                Linha do erro".$Error->getLine()."<br>
+                mensagen do erro:".$Error->getMessage();
       }
 
 

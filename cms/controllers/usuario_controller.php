@@ -8,7 +8,8 @@ class controllerUsuario{
   }
 //Visualiza todos os dados do usuario
   public function Visualizar(){
-
+    $usuario = new Usuario();
+    return $usuario::Select();
   }
  // Manda uma notificação para o usuario
   public function Notificar(){

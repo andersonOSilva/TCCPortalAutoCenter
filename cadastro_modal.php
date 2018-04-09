@@ -47,6 +47,7 @@ $("#formBody").submit(function(event){
 
 
 <script src="js\formatarCalendario.js"></script>
+<script src="js\validacaoCpf.js"></script>
 
 
 <div class="cadastro">

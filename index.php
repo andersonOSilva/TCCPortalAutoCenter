@@ -69,40 +69,9 @@
 														require_once 'loginEcadastro.php';
 
 												 	?>
-												<div class="mais">
-														<img src="imagens/menuIcon.png" alt="menu mais">
-														<div class="mais_menu">
-<!--<div class="itens">shazam
-                                <div class="seguratudao">
-                                <a href="main.php?click=ctd&id_sub_categoria=<?php echo($rssub['id_sub_categoria']); ?>"><div class="sub">
-                                                    <?php
-                                                        $idsub=$rssub['id_sub_categoria'];
-
-                                                        echo($rssub['subcategoria']);  ?>
-                                                    </div></a>
-                                <div class="sub">
-
-                                </div><div class="sub">
-
-                                </div><div class="sub">
-
-                                </div>
-                            </div>
-                <a href="home.php?click=ctd&id_subcategoria=<?php echo($rsConsulta['id_subcategoria']); ?>">
-</a>                                                            -->
-															<div id="mantemomenuvisivel">
-                                                                <ul>
-																<li style=" border-radius: 10px 10px 0px 0px;"><a href="sobre.php">Sobre</a></li>
-																<li><a href="#">Prestadoras</a></li>
-																<li><a href="carBook.php">CarBook</a></li>
-																<li><a href="#">Produtos</a></li>
-																<li style=" border-radius: 0px 0px 10px 10px;"><a href="homeForum.php">Forum</a></li>
-															</ul>
-
-                                                            </div>
-														</div>
-
-												</div>
+												<div style="margin-left:800px;margin-top:10px;">
+								                                <?php require_once  'ver_mais.php';?>
+                                                </div>
 										</div>
 
 										<div class="bordao">
