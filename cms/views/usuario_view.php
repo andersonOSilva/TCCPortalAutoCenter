@@ -2,6 +2,30 @@
 <!-- Data ultima modificação: 05/04/2018
 Nome do desenvolvidor: Camila Cruz
 Tela: Controle de Usuario -->
+<script>
+$(document).ready(function () {
+  //Efeito para abrir a div Container com timer de 2 segundos (Novo Registro)
+  $(".visualizar").click(function(){
+     $(".modalContainerUsuario").slideToggle(2000);
+
+  });
+
+});
+// Função que irá abrir a modal para visualização dos dados
+// do usuario
+function Visualizar(idUsuario){
+  $.ajax({
+    type:"POST",
+    url:"views/usuario_modal_view.php",
+    success: function(dados){
+        $('.modalUsuario').html(dados);
+
+
+    }
+  });
+}
+</script>
+
 <div class="conteudo_padrao">
   <!-- Segura o titulo da tela -->
   <div class="suporte_titulo">
@@ -23,7 +47,7 @@ Tela: Controle de Usuario -->
 
         <?php
           require_once('controllers/usuario_controller.php');
-          require_once('models/usuario_class.php');
+          require_once('models/cadUser_class.php');
 
 
           $controller_usuario = new controllerUsuario();
@@ -54,7 +78,9 @@ Tela: Controle de Usuario -->
               </div>
 
               <div class="modo_user">
-                <img src="imagens/view.png" alt="off" title="Visualizar user">
+
+                <a href="#"><img src="imagens/view.png" alt="off" title="Visualizar user" class="visualizar" onclick="Visualizar(<?php   echo($list_usuario[$cont]->idUsuario);?>)" ></a>
+
               </div>
 
               <div class="modo_user">

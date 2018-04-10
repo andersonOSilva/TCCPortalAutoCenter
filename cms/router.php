@@ -53,10 +53,6 @@
             $controller_servico::Inserir();
           break;
 
-        case 'buscar':
-          $controller_servico = new controllerServico();
-          $controller_servico::Buscar();
-          break;
 
         case 'editar':
           $controller_servico = new controllerServico();

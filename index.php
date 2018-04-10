@@ -110,13 +110,25 @@
 								<div class="titulo_principal_servicos">
 									<h2><a href="servico.php">Serviços</a></h2>
 								</div>
+								<?php
+									//Inclui as classes
+									require_once 'cms/controllers/servico_controller.php';
+									require_once 'cms/models/servicos_class.php';
+
+									$controller_servico = new controllerServico;
+
+									$list=$controller_servico::Listar();
+									$cont = 0;
+									while ($cont<count($list)) {
+								 ?>
+
 									<div class="servicos_itens">
 											<div class="titulo_servico">
 													<div class="imagen_titulo_servico">
-															<img src="imagens/Car-2-icon.png" alt="car">
+															<img src="cms/<?php echo ($list[$cont]->imagem) ?>" alt="Servico">
 													</div>
 													<div class="descricao_titulo_servico">
-															<p><a href="servico01.php">HIGIENIZAÇÃO DO SISTEMA DE AR CONDICIONADO</a></p>
+															<p><a href="servico01.php"><?php echo $list[$cont]->nome; ?></a></p>
 													</div>
 											</div>
 											<!-- <div class="descricao_servico">
@@ -124,20 +136,10 @@
 											</div> -->
 									</div>
 
-									<div class="servicos_itens">
-											<div class="titulo_servico">
-													<div class="imagen_titulo_servico">
-															<img src="imagens/Car-2-icon.png" alt="car">
-													</div>
-													<div class="descricao_titulo_servico">
-															<p><a href="servico01.php">HIGIENIZAÇÃO DO SISTEMA DE AR CONDICIONADO</a></p>
-													</div>
-											</div>
-											<!-- <div class="descricao_servico">
-													<p>Nosso centro automotivo aplica produtos biodegradáveis, como a descarga de ozônio e solventes naturais.</p>
-											</div> -->
-									</div>
-
+									<?php
+											$cont+=1;
+										}
+									 	?>
 
 
 

@@ -35,6 +35,11 @@
             </div>
         </div>
     </header>
+    <div class="modalContainerUsuario">
+      <div class="modalUsuario" style="background-color:magenta;">
+
+      </div>
+    </div>
       <div class="principal">
           <div class="conteudo_principal">
             <nav>

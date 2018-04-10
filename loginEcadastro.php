@@ -60,9 +60,6 @@ if (isset($_GET['out'])) {
 ?>
 
 <div class="log">
-  <!-- <div class="nome_user">
-    <p>Antonio Willian</p>
-  </div> -->
 
   <div class="foto_user_login">
     <img src="<?php echo $return->foto ?>" alt="djfjff">
@@ -91,8 +88,12 @@ if (isset($_GET['out'])) {
           <a href="?out=1">Sair</a>
       </div>
     </div>
+
   </div>
 
+  <div class="caixa_de_ferramenta">
+    <img src="imagens/caixadeFerramentas.png" alt="caixa de ferramentas">
+  </div>
 
 
 </div>

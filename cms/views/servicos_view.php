@@ -1,19 +1,77 @@
-<?php
-  $idServico = null;
-  $nome = null;
-  $descricao = null;
-  $imagem = null;
 
-  $action='modo=novo';
 
-  if (isset($servico)){
-    $idServico=$servico->idServico;
-    $nome=$servico->nome;
-    $descricao=$servico->descricao;
-    $imagem=$servico->imagem;
-    $action = "modo=editar&id=$servico->idServico";
-  }
- ?>
+ <script>
+     $(document).ready(function () {
+
+
+       //Efeito para abrir a div Container com timer de 2 segundos (Novo Registro)
+       $(".abrir_modal").click(function(){
+          $(".modalContainer_servico").slideToggle(2000);
+
+       });
+
+       //Efeito para abrir a div Container com timer de 2 segundos (Novo Registro)
+       $(".editar_servico").click(function(){
+          $(".modalContainer_servico").slideToggle(2000);
+
+       });
+     });
+
+
+
+           //Função para Abrir a tela de cadastro na modal
+           function NovoServico(){
+               $.ajax({
+                   type: "POST",
+                   url: "views/servico_modal.php",
+                   success: function(dados){
+                       $('.modal_servico').html(dados);
+                   }
+               });
+           }
+
+           function Editar(idItem){
+
+             $.ajax({
+               type: "GET",
+               url: "views/servico_modal.php",
+               data: {modo:'buscar',id:idItem},
+               success: function(dados){
+                 $('.modal_servico').html(dados);
+               }
+
+             });
+           }
+
+           function Excluir(idIten){
+
+             var resposta;
+
+             resposta = confirm('Deseja excluir?');
+
+             if (resposta==true)
+             {
+             //alert(idIten);
+               $.ajax({
+                   type: "GET",
+                   url: "router.php?controller=servicos&modo=excluir&id="+idIten,
+                   // data: {modo:'excluir',id:idIten},
+                   success: function(dados){
+                       $('#conteudo_servico').html(dados);
+                       //alert ();
+                   }
+               });
+             }
+           }
+
+  </script>
+
+  <div class="modalContainer_servico">
+    <div class="modal_servico">
+
+    </div>
+  </div>
+
 <div class="conteudo_padrao">
     <div class="cabecalho_servicos">
       <h1>Serviços</h1>
@@ -24,79 +82,12 @@
           Adcionar
         </div>
       </div> -->
-      <div class="listaServicos">
-        <div class="titulo_tbl_servico">
-          <ul>
-            <li>Imagem</li>
-            <li>Servico</li>
-          </ul>
-        </div>
-        <?php
-          //Inclui as classes
-          require_once 'controllers/servico_controller.php';
-          require_once 'models/servicos_class.php';
-
-          $controller_servico = new controllerServico;
-
-          $list=$controller_servico::Listar();
-          $count = 0;
-          while ($count<count($list)) {
-         ?>
-
-         <div class="titulo_tbl_servico_conteudo">
-           <ul>
-             <li class="img_servico"><img src="<?php echo $list[$count]->imagem; ?>" alt="Servico"></li>
-             <li><?php echo $list[$count]->nome; ?></li>
-             <li>
-               <div class="segura_modo">
-                 <div class="modo">
-                     <a href="router.php?controller=servicos&modo=buscar&id=<?php echo $list[$count]->idServico ?>&pag=servicos">
-                      <img src="imagens/edit.png" alt="edit">
-                   </a>
-                 </div>
-
-                 <div class="modo">
-                   <a href="router.php?controller=servicos&modo=excluir&id=<?php echo $list[$count]->idServico ?>" onclick="return confirm('deseja realmente excluir');">
-                      <img src="imagens/delet.png" alt="edit">
-                   </a>
-                 </div>
-               </div>
-             </li>
-           </ul>
-         </div>
-
-        <?php
-          $count+=1;
-          }
-         ?>
-      </div>
+      <?php
+        require_once 'conteudo_servico.php';
+       ?>
     </div>
-    <img src="<?php echo $imagem ?>" alt="">
-    <form action="router.php?controller=servicos&<?php echo $action ?>" method="post" enctype="multipart/form-data">
-      <div class="entrada_dado">
-        <input type="text" name="txt_nome" value="<?php echo $nome; ?>" placeholder="Nome" maxlength="100">
-      </div>
 
-      <div class="entrada_dado1">
-        <textarea placeholder="Descricao do servico" name="txt_descricao" rows="8" cols="80"><?php echo $descricao; ?></textarea>
-      </div>
+    <div class="abrir_modal" onclick="NovoServico();">
 
-      <div class="filePost">
-        <input id="upload" type="file" name="fle_imagem" >
-      </div>
-
-      <div class="segura_preview">
-        <div class="preview_img">
-          <img id="img" src="<?php echo $imagem?>" alt="">
-        </div>
-      </div>
-
-
-      <div class="buttom_enviar">
-        <input id="btnEnviar" type="submit" name="btn_enviar" value="Enviar">
-      </div>
-
-
-    </form>
-    <script  src="../js/preview.js"></script>
+    </div>
 </div>

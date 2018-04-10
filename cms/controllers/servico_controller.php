@@ -45,9 +45,9 @@
       //Carrefa o id do registro na classe contatos
       $servico->idServico = $idServico;
 
-      $servico = $servico::SelectByID($servico);
+      return $servico = $servico::SelectByID($servico);
 
-      require_once('index.php');
+
     }
 
     public function Editar(){

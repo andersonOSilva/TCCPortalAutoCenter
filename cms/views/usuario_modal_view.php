@@ -1,11 +1,7 @@
-<div class="modalContainer">
-  <div class="modal">
 
-  </div>
-</div>
-<div class="conteudo_padrao">
-  <div class="visualizar">
-    <div class="titulo">
+<div class="conteudo_padrao" style="width:100%">
+  <div class="visualizar" style="width:100%">
+    <div class="titulo" style="width:100%">
       <h1>Visualizar Usuário</h1>
     </div>
     <div id="conteudo_usuario">
@@ -13,5 +9,5 @@
        ?>
     </div>
   </div>
-
+    <img src="imagens/Icon.jpg" alt="" class="visualizar">
 </div>

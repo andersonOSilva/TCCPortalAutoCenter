@@ -97,7 +97,7 @@
               $pdoCon = $con->Conectar();
 
               if ($pdoCon->query($sql)) {
-                header('location:index.php?pag=servicos');
+                  echo("<script>location.reload();</script>");
               }else{
                 echo "erro";
               }
@@ -120,7 +120,7 @@
       //Executa o script
       if($stmt->execute([$_servico->idServico])){
 
-        header('location:index.php?pag=servicos');
+      require_once 'conteudo_servico.php';
       }else{
         echo "Não foi possível excluir o registro do Banco de dados";
       }

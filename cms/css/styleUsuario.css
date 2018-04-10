@@ -103,3 +103,33 @@ h1{
   float: left;
   margin-left: 7px;
 }
+
+/*Area de modal*/
+.modalUsuario{
+	width:700px;
+	height:600px;
+	background-color:magenta;
+	 margin:auto;
+  display: none;
+  margin-top: 180px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-left: 300px;
+
+
+}
+
+.modalContainerUsuario{
+	width:100%;
+	height:100vh;
+	background: rgba(0, 0, 0, 0.7);
+	position:fixed;
+  margin: auto;
+	display:none;
+  z-index: 999;
+}
+
+#conteudo_usuario{
+  width: 100%;
+  height: auto;
+}

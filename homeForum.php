@@ -10,8 +10,50 @@
     <script src="js/jquery-3.3.1.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script>
+        $(document).ready(function () {
+
+
+          //Efeito para abrir a div Container com timer de 2 segundos (Novo Registro)
+          $(".novoForum").click(function(){
+             $(".modalContainer_forum").slideToggle(2000);
+
+          });
+
+          $(".alert").click(function(){
+             swal("OPSSS!", "Realize o login para participar do forum", "warning");
+
+          });
+
+
+        });
+
+        function pergunta(){
+            $.ajax({
+                type: "POST",
+                url: "perguntaForum.php",
+                success: function(dados){
+                    $('.modal_nova_pergunta').html(dados);
+                }
+            });
+        }
+
+
+    </script>
   </head>
   <body>
+
+
+
+    <div class="modalContainer_forum">
+      <!-- <div class="barra_que_segura">
+
+      </div> -->
+        <div class="modal_nova_pergunta">
+
+        </div>
+    </div>
       <div class="principal">
         <?php
             require_once 'menu.php';
@@ -21,7 +63,7 @@
          <header class="cabecalho_forum">
               <div class="descricao_cabecalho_forum">
                   <div class="titulo_forum">
-                    <h1><span style="color:#eca023;">WIKIA</span>utocenter</h1>
+                    <h1><span style="color:#eca023;">WIKI</span>Autocenter</h1>
                   </div>
 
                   <div class="regras_forum">
@@ -39,7 +81,17 @@
 
                 <div class="Butom_Fazer_Pergunta">
                   <div class="btnAbrirModal">
-                    <a href="#">Fazer Pergunta</a>
+                    <a href="#"
+                    <?php
+                    if (isset($_SESSION['idUsuario'])){
+                      echo "class='novoForum'";
+                      echo "onclick=pergunta()";
+                    }else{
+                      echo "class='alert'";
+                    }
+
+                     ?>
+                     >Fazer Pergunta</a>
                   </div>
 
                 </div>
