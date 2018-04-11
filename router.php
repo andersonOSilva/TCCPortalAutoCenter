@@ -55,7 +55,25 @@
 
         }
 
+        // forum
 
+        case 'forum':
+
+
+          require_once("cms/controllers/forum_controller.php");
+          require_once("cms/models/forum_class.php");
+
+          switch ($_GET['modo']) {
+            case 'novaPergunta':
+                $controller_Forum= new controllerForum();
+                $controller_Forum::novaPergunta();
+
+              break;
+
+
+
+
+          }
 
 
 

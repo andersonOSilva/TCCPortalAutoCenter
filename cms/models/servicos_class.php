@@ -20,7 +20,7 @@
       $pdoCon = $con->Conectar();
 
       if($pdoCon->query($sql)){
-        header("location:index.php?pag=servicos");
+        echo "<script>location.reload();</script>";
       }else{
         echo "<script>alert('Erro ao inserir serviço');</script>";
       }

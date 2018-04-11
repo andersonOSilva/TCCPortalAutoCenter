@@ -107,26 +107,42 @@
 
                   </div> -->
 
+                  <?php
+
+                  require_once("cms/controllers/forum_controller.php");
+                  require_once("cms/models/forum_class.php");
+                  $controller_forum= new controllerForum();
+                  $List_returnForum=$controller_forum::ListartUserPerg();
+
+                  $cont=0;
+                  while ($cont < count($List_returnForum)) {
+
+                  ?>
+
                   <!-- pergunta  -->
 
                   <div class="perguntas_forum">
                       <div class="pergunta_user_forum">
                           <div class="dados_user">
                             <div class="img_user">
-                              <img src="imagens/Gatinho.jpg" alt="djfjff">
+                              <img src="<?php echo ($List_returnForum[$cont]->fotoUser) ?>" alt="djfjff">
                             </div>
 
                             <div class="dados_user_tema">
-                                <p>Balanceamento errado</p>
+                                <p><?php echo ($List_returnForum[$cont]->descricao) ?></p>
                             </div>
 
 
                           </div>
 
                           <div class="dados_pergunta">
-                              <p>Os meios de comunicação da FuturAgora são disponibilizados para os membros partilharem ideias. O termo “Membro” é definido como: “uma pessoa que apoia um grupo social e compartilha de iniciativas e valores em comum”. Por favor, entenda que este não é um “fórum aberto”</p>
+                              <p><?php echo ($List_returnForum[$cont]->pergunta) ?></p>
                           </div>
-
+                          <div class="pergunta_user">
+                            <div class="nome_user_perguntas">
+                              <p>De:<?php echo ($List_returnForum[$cont]->nomeUser) ?></p>
+                            </div>
+                          </div>
                           <div class="segura_btnResponder">
                             <div class="btnResponder">
                               <a href="#">Responder</a>
@@ -138,161 +154,11 @@
 
                   </div>
 
+                  <?php
+                    $cont+=1;
+                  }
 
-                  <!-- pergunta  -->
-
-                  <div class="perguntas_forum">
-                      <div class="pergunta_user_forum">
-                          <div class="dados_user">
-                            <div class="img_user">
-                              <img src="imagens/blue.jpg" alt="djfjff">
-                            </div>
-
-                            <div class="dados_user_tema">
-                                <p>Balanceamento errado</p>
-                            </div>
-
-
-                          </div>
-
-                          <div class="dados_pergunta">
-                              <p>Os meios de comunicação da FuturAgora são disponibilizados para os membros partilharem ideias. O termo “Membro” é definido como: “uma pessoa que apoia um grupo social e compartilha de iniciativas e valores em comum”. Por favor, entenda que este não é um “fórum aberto”</p>
-                          </div>
-
-                          <div class="segura_btnResponder">
-                            <div class="btnResponder">
-                              <a href="#">Responder</a>
-                            </div>
-                          </div>
-
-                      </div>
-
-
-                  </div>
-
-                  <!-- pergunta  -->
-
-                  <div class="perguntas_forum">
-                      <div class="pergunta_user_forum">
-                          <div class="dados_user">
-                            <div class="img_user">
-                              <img src="imagens/blue.jpg" alt="djfjff">
-                            </div>
-
-                            <div class="dados_user_tema">
-                                <p>Balanceamento errado</p>
-                            </div>
-
-
-                          </div>
-
-                          <div class="dados_pergunta">
-                              <p>Os meios de comunicação da FuturAgora são disponibilizados para os membros partilharem ideias. O termo “Membro” é definido como: “uma pessoa que apoia um grupo social e compartilha de iniciativas e valores em comum”. Por favor, entenda que este não é um “fórum aberto”</p>
-                          </div>
-
-                          <div class="segura_btnResponder">
-                            <div class="btnResponder">
-                              <a href="#">Responder</a>
-                            </div>
-                          </div>
-
-                      </div>
-
-
-                  </div>
-
-                  <!-- pergunta  -->
-
-                  <div class="perguntas_forum">
-                      <div class="pergunta_user_forum">
-                          <div class="dados_user">
-                            <div class="img_user">
-                              <img src="imagens/blue.jpg" alt="djfjff">
-                            </div>
-
-                            <div class="dados_user_tema">
-                                <p>Balanceamento errado</p>
-                            </div>
-
-
-                          </div>
-
-                          <div class="dados_pergunta">
-                              <p>Os meios de comunicação da FuturAgora são disponibilizados para os membros partilharem ideias. O termo “Membro” é definido como: “uma pessoa que apoia um grupo social e compartilha de iniciativas e valores em comum”. Por favor, entenda que este não é um “fórum aberto”</p>
-                          </div>
-
-                          <div class="segura_btnResponder">
-                            <div class="btnResponder">
-                              <a href="#">Responder</a>
-                            </div>
-                          </div>
-
-                      </div>
-
-
-                  </div>
-
-                  <!-- pergunta  -->
-
-                  <div class="perguntas_forum">
-                      <div class="pergunta_user_forum">
-                          <div class="dados_user">
-                            <div class="img_user">
-                              <img src="imagens/blue.jpg" alt="djfjff">
-                            </div>
-
-                            <div class="dados_user_tema">
-                                <p>Balanceamento errado</p>
-                            </div>
-
-
-                          </div>
-
-                          <div class="dados_pergunta">
-                              <p>Os meios de comunicação da FuturAgora são disponibilizados para os membros partilharem ideias. O termo “Membro” é definido como: “uma pessoa que apoia um grupo social e compartilha de iniciativas e valores em comum”. Por favor, entenda que este não é um “fórum aberto”</p>
-                          </div>
-
-                          <div class="segura_btnResponder">
-                            <div class="btnResponder">
-                              <a href="#">Responder</a>
-                            </div>
-                          </div>
-
-                      </div>
-
-
-                  </div>
-
-                  <!-- pergunta  -->
-
-                  <div class="perguntas_forum">
-                      <div class="pergunta_user_forum">
-                          <div class="dados_user">
-                            <div class="img_user">
-                              <img src="imagens/genio.jpg" alt="djfjff">
-                            </div>
-
-                            <div class="dados_user_tema">
-                                <p>Balanceamento errado</p>
-                            </div>
-
-
-                          </div>
-
-                          <div class="dados_pergunta">
-                              <p>Os meios de comunicação da FuturAgora são disponibilizados para os membros partilharem ideias. O termo “Membro” é definido como: “uma pessoa que apoia um grupo social e compartilha de iniciativas e valores em comum”. Por favor, entenda que este não é um “fórum aberto”</p>
-                          </div>
-
-                          <div class="segura_btnResponder">
-                            <div class="btnResponder">
-                              <a href="#">Responder</a>
-                            </div>
-                          </div>
-
-                      </div>
-
-
-                  </div>
+                  ?>
 
 
 

@@ -69,9 +69,9 @@
 														require_once 'loginEcadastro.php';
 
 												 	?>
-												<div style="margin-left:800px;margin-top:10px;">
-								                                <?php require_once  'ver_mais.php';?>
-                                                </div>
+												<div class="ver_mais_div">
+                            <?php require_once  'ver_mais.php';?>
+                        </div>
 										</div>
 
 										<div class="bordao">

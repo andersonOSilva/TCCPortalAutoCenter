@@ -6,6 +6,7 @@ h1{
   padding: 0px;
   margin: 0px;
 }
+/*AREA usuario_view*/
 .suporte_titulo{
   width: 1000px;
   height: 800px;
@@ -15,7 +16,7 @@ h1{
   width:1000px;
   height: 50px;
   margin: auto;
-  /*background-color: pink;*/
+  background-color: pink;
 }
 .titulo_usuario h1{
   padding: 0px;
@@ -23,7 +24,7 @@ h1{
 }
 
 #conteudo_usuario{
-  width: 1200px;
+  width: 1000px;
   height: 50px;
   background-color: #636568;
 }
@@ -105,12 +106,11 @@ h1{
 }
 
 /*Area de modal*/
-.modalUsuario{
+.modalUsuario2{
 	width:700px;
 	height:600px;
 	background-color:magenta;
-	 margin:auto;
-  display: none;
+	 /*margin:auto;*/
   margin-top: 180px;
   margin-left: auto;
   margin-right: auto;
@@ -119,17 +119,31 @@ h1{
 
 }
 
-.modalContainerUsuario{
+.modalContainerUsuario2{
 	width:100%;
 	height:100vh;
-	background: rgba(0, 0, 0, 0.7);
+	background: red;
 	position:fixed;
   margin: auto;
 	display:none;
   z-index: 999;
 }
+#conteudo_informacoes{
+  width: 1000px;
+  height: 10px;
+  background-color: #636568;
+  text-align: center;
+  font-size: 20px;
+  top: -50px;
 
-#conteudo_usuario{
-  width: 100%;
-  height: auto;
 }
+/*#userName{
+  /*background-color: blue;
+  width: 1000px;
+  height: 50px;
+  text-align: center;
+}*/
+/*#userName p{
+  padding: 0px;
+  margin: 0px;
+}*/

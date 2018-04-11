@@ -1,8 +1,9 @@
 <?php
-  $idServico = null;
+  $idServico = "0";
   $nome = null;
   $descricao = null;
   $imagem = null;
+
 
 
   if(isset($_GET['modo'])){
@@ -65,7 +66,7 @@
 
 </script>
 
-<form action="" method="post" enctype="multipart/form-data" id="form" data-id="<?php echo($id) ?>">
+<form action="" method="post" enctype="multipart/form-data" id="form" data-id="<?php echo($idServico) ?>">
   <div class="entrada_dado">
     <input type="text" name="txt_nome" value="<?php echo $nome; ?>" placeholder="Nome" maxlength="100">
   </div>

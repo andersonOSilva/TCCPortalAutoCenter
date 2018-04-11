@@ -16,6 +16,11 @@
               <div class="logo">
                 <a class="scroll" href="#slide"><img src="imagens/logos/logo2.png" alt="teste de logo" id="imgLogo"></a>
               </div>
+
+              <?php
+                require_once 'file';
+
+               ?>
             <!---menu de ancora ira direcinar o usuario para aquele determinado assunto dentro da home -->
               <div class="menu_ancora">
                   <div class="menu_ancora_itens">

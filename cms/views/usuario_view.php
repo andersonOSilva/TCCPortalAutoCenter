@@ -1,12 +1,12 @@
 
-<!-- Data ultima modificação: 05/04/2018
+<!-- Data ultima modificação: 09/04/2018
 Nome do desenvolvidor: Camila Cruz
 Tela: Controle de Usuario -->
 <script>
 $(document).ready(function () {
   //Efeito para abrir a div Container com timer de 2 segundos (Novo Registro)
   $(".visualizar").click(function(){
-     $(".modalContainerUsuario").slideToggle(2000);
+     $(".modalContainerUsuario2").slideToggle(2000);
 
   });
 
@@ -18,14 +18,18 @@ function Visualizar(idUsuario){
     type:"POST",
     url:"views/usuario_modal_view.php",
     success: function(dados){
-        $('.modalUsuario').html(dados);
+        $('.modalUsuario2').html(dados);
 
 
     }
   });
 }
 </script>
+<div class="modalContainerUsuario2">
+  <div class="modalUsuario2">
 
+  </div>
+</div>
 <div class="conteudo_padrao">
   <!-- Segura o titulo da tela -->
   <div class="suporte_titulo">
@@ -40,11 +44,8 @@ function Visualizar(idUsuario){
               <div class="dados_user">Cpf</div>
               <div class="dados_user">Foto Usuario</div>
               <div class="email">Email</div>
-
-
         </div>
-
-
+        
         <?php
           require_once('controllers/usuario_controller.php');
           require_once('models/cadUser_class.php');
