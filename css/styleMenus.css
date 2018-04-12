@@ -1,10 +1,18 @@
 /* Menu principal home*/
 .colorRed{
+<<<<<<< HEAD
  background-color: rgba(229, 0, 0,0.5);
 }
 
 .colorGreen{
   background-color: rgba(0, 142, 16,0.5);
+=======
+  border-color: rgba(229, 0, 0,0.5);
+}
+
+.colorGreen{
+  border-color: rgba(0, 142, 16,0.5);
+>>>>>>> 938bc9066393704a1091a86deb0aeab227b78fec
 }
 
 .displayNone{

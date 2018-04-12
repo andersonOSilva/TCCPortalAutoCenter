@@ -14,6 +14,7 @@ function validar() {
 
 }
 
+<<<<<<< HEAD
 function AparecerBotao() {
 
   if (($('.colorRed').size() !=0 )) {
@@ -29,6 +30,8 @@ function AparecerBotao() {
 }
 
 
+=======
+>>>>>>> 938bc9066393704a1091a86deb0aeab227b78fec
 // validacao campo nome senha
 $("input[name='txtSenha']").on('blur', function(){
   var senha1 = FrmLoginUser.txtSenha.value;
@@ -44,8 +47,11 @@ $("input[name='txtSenha']").on('blur', function(){
 
   }
 
+<<<<<<< HEAD
   AparecerBotao();
 
+=======
+>>>>>>> 938bc9066393704a1091a86deb0aeab227b78fec
   });
 
   // validacao campo repetir senha
@@ -60,9 +66,16 @@ $("input[name='txtSenha']").on('blur', function(){
     }else {
         $('#senhaRep1').removeClass('colorRed');
         $('#senhaRep1').addClass('colorGreen');
+<<<<<<< HEAD
     }
 
     AparecerBotao();
+=======
+        $('#btnLogar').removeClass('displayNone');
+        $('#btnLogar').displayBlock('displayNone');
+
+    }
+>>>>>>> 938bc9066393704a1091a86deb0aeab227b78fec
 
     });
 
@@ -70,12 +83,18 @@ $("input[name='txtSenha']").on('blur', function(){
 $("input[name='txtNomeCompleto']").on('blur', function(){
   var nomeUserVal = FrmLoginUser.txtNomeCompleto.value;
   var total = nomeUserVal.length;
+<<<<<<< HEAD
   var resposta = "Nome Invalido";
+=======
+>>>>>>> 938bc9066393704a1091a86deb0aeab227b78fec
   //alert(total);
   if (nomeUserVal == "" || total < 10) {
       $('#nomeUserVal').removeClass('colorGreen');
       $('#nomeUserVal').addClass('colorRed');
+<<<<<<< HEAD
       $('#reposta p').html(resposta);
+=======
+>>>>>>> 938bc9066393704a1091a86deb0aeab227b78fec
 
   }else {
       $('#nomeUserVal').removeClass('colorRed');
@@ -83,10 +102,13 @@ $("input[name='txtNomeCompleto']").on('blur', function(){
 
   }
 
+<<<<<<< HEAD
   AparecerBotao();
 
 
 
+=======
+>>>>>>> 938bc9066393704a1091a86deb0aeab227b78fec
   });
 
 
@@ -112,8 +134,11 @@ $.get('router.php?controller=User&modo=validarCpf&CpfUser='+CpfUser,function(dat
 
     }
 
+<<<<<<< HEAD
     AparecerBotao();
 
+=======
+>>>>>>> 938bc9066393704a1091a86deb0aeab227b78fec
   });
   });
 
@@ -135,8 +160,11 @@ $("input[name='txtEmail']").on('blur', function(){
 
     }
 
+<<<<<<< HEAD
     AparecerBotao();
 
+=======
+>>>>>>> 938bc9066393704a1091a86deb0aeab227b78fec
   });
   });
 
@@ -159,7 +187,10 @@ $("input[name='txtEmail']").on('blur', function(){
 
       }
 
+<<<<<<< HEAD
       AparecerBotao();
 
+=======
+>>>>>>> 938bc9066393704a1091a86deb0aeab227b78fec
     });
     });

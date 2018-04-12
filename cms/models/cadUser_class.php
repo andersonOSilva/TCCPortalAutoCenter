@@ -13,6 +13,7 @@
     public $fotoUser;
     public $status;
 
+
     // construtor da class de conexao
     public  function __construct(){
       require_once('bd_class.php');
@@ -156,6 +157,82 @@
     if (isset ($list_usuario)) {
       return $list_usuario;
     }
+  }
+
+  public function validarUser($dadosUser){
+    $sql = "select count(*) as qtde from tbl_usuario where usuario='".$dadosUser->nomeUser."'";
+
+    //echo $sql;
+    $con=new Mysql_db();
+    //Faz a conexão com o banco
+    $pdoCon = $con->Conectar();
+
+    //Executa o select no DB e guarda o retorno na variável select
+     $select = $pdoCon->query($sql);
+
+     if($rs=$select->fetch(PDO::FETCH_ASSOC)){
+       $usuarioAchado = $rs['qtde'];
+     }
+
+     if( $usuarioAchado == '1' ) {//se retornar algum resultado
+         echo '1';
+       } else {
+         echo '0';
+       }
+
+     $con->Desconectar();
+  }
+
+  public function validarEmail($dadosUser){
+    $sql = "select count(*) as qtde from tbl_usuario where email='".$dadosUser->email."'";
+
+    //echo $sql;
+    $con=new Mysql_db();
+    //Faz a conexão com o banco
+    $pdoCon = $con->Conectar();
+
+    //Executa o select no DB e guarda o retorno na variável select
+     $select = $pdoCon->query($sql);
+
+     if($rs=$select->fetch(PDO::FETCH_ASSOC)){
+       $usuarioAchado = $rs['qtde'];
+     }
+
+     if( $usuarioAchado == '1' ) {//se retornar algum resultado
+         echo '1';
+       } else {
+         echo '0';
+       }
+
+     $con->Desconectar();
+
+
+  }
+
+  public function validarCpf($dadosUser){
+    $sql = "select count(*) as qtde from tbl_usuario where cpf='".$dadosUser->cpf."'";
+
+    //echo $sql;
+    $con=new Mysql_db();
+    //Faz a conexão com o banco
+    $pdoCon = $con->Conectar();
+
+    //Executa o select no DB e guarda o retorno na variável select
+     $select = $pdoCon->query($sql);
+
+     if($rs=$select->fetch(PDO::FETCH_ASSOC)){
+       $usuarioAchado = $rs['qtde'];
+     }
+
+     if( $usuarioAchado == '1' ) {//se retornar algum resultado
+         echo '1';
+       } else {
+         echo '0';
+       }
+
+     $con->Desconectar();
+
+
   }
 
   }

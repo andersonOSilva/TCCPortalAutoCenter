@@ -68,6 +68,29 @@
       return $user::selectById($user);
     }
 
+    // validacao de usuário
+
+    public function validarUser(){
+      $nomeUser = $_GET['nomeUser'];
+      $user = new cadUser();
+      $user->nomeUser=$nomeUser;
+      return $user::validarUser($user);
+    }
+
+    public function validarEmail(){
+      $emailUser = $_GET['emailUser'];
+      $user = new cadUser();
+      $user->email=$emailUser;
+      return $user::validarEmail($user);
+    }
+
+    public function validarCpf(){
+      $cpfUser = $_GET['CpfUser'];
+      $user = new cadUser();
+      $user->cpf=$cpfUser;
+      return $user::validarCpf($user);
+    }
+
   }
 
 
