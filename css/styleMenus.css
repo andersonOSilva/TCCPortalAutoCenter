@@ -1,5 +1,21 @@
 /* Menu principal home*/
+.colorRed{
+  border-color: rgba(229, 0, 0,0.5);
+}
 
+.colorGreen{
+  border-color: rgba(0, 142, 16,0.5);
+}
+
+.displayNone{
+  display: none;
+  transition: 2s;
+}
+
+.displayBlock{
+  display: block;
+  transition: 2s;
+}
 .menu{
   width: 100%;
   margin: auto;

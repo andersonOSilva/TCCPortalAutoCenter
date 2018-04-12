@@ -30,6 +30,21 @@
               $controller_cadUser::Novo();
             break;
 
+          case 'validarUser':
+              $controller_cadUser= new controllerCadUser();
+              return $controller_cadUser::validarUser();
+            break;
+
+        case 'validarEmail':
+            $controller_cadUser= new controllerCadUser();
+            return $controller_cadUser::validarEmail();
+          break;
+
+      case 'validarCpf':
+          $controller_cadUser= new controllerCadUser();
+          return $controller_cadUser::validarCpf();
+        break;
+
 
 
 

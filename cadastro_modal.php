@@ -45,7 +45,6 @@ $("#formBody").submit(function(event){
 </script>
   <!-- <script src="js/jquery-3.3.1.min.js"></script> -->
 
-
 <script src="js\formatarCalendario.js"></script>
 <script src="js\validacaoCpf.js"></script>
 
@@ -74,12 +73,12 @@ $("#formBody").submit(function(event){
 
       <div class='fl_wrap'>
         <label class='fl_label' for='rf_name'>Nome Completo</label>
-        <input maxlength="14" required class='fl_input' type='text' name="txtNomeCompleto" value="" >
+        <input id="nomeUserVal" maxlength="100" required class='fl_input' type='text' name="txtNomeCompleto" value="" >
       </div>
 
       <div class='fl_wrap'>
         <label class='fl_label' for='rf_email'>email</label>
-        <input required class='fl_input' type='text' name="txtEmail" value="">
+        <input id="txtEmail" required class='fl_input' type='email' name="txtEmail" value="">
       </div>
 
       <div class='fl_wrap'>
@@ -95,21 +94,32 @@ $("#formBody").submit(function(event){
         	<!-- <input required value="" type="text" size="10" maxlength="10" onKeyDown="return(FormataData(this,event));" onBlur="javascript:if(!validaCampoData(this)){alert('Data inválida')};" name="txtDtNasc"/> -->
       </div>
 
-      <div class='fl_wrap'>
+      <div >
         <label class='fl_label' for='rf_email'>nome usuario</label>
-        <input required class='fl_input' type='text' name="txtNomeUser" value="">
+        <input required id="nomeUserTXT" type='text' name="txtNomeUser" value="">
       </div>
 
       <div class='fl_wrap'>
         <label class='fl_label' for='rf_email'>senha</label>
-        <input required class='fl_input' type='password' name="txtSenha" value="">
+        <input maxlength="8" id="senha1" required class='fl_input' type='password' name="txtSenha" value="">
+      </div>
+
+      <div class='fl_wrap'>
+        <label class='fl_label' for='rf_email'>Repetir senha</label>
+        <input id="senhaRep1" maxlength="8" required class='fl_input' type='password' name="txtSenhaRep" value="">
       </div>
     </div>
 
 
     <div class="buttom_enviar_login">
-      <input id="btnLogar" type="submit" name="btnEnviar" value="Enviar">
+      <input id="btnLogar" class="displayNone" type="submit" name="btnEnviar" value="Enviar" onclick="return validar()">
     </div>
+
+    <div id="resultado">
+
+    </div>
+
+  <script src="js\validarUsuario.js"></script>
 
 
   </form>
