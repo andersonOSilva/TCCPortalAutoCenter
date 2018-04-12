@@ -45,7 +45,6 @@ $("#formBody").submit(function(event){
 </script>
   <!-- <script src="js/jquery-3.3.1.min.js"></script> -->
 
-
 <script src="js\formatarCalendario.js"></script>
 <script src="js\validacaoCpf.js"></script>
 
@@ -58,9 +57,9 @@ $("#formBody").submit(function(event){
     <h1>Cadastre-se </h1>
   </div>
 
-  <form id='formBody'  method="post" action="" name="FrmLoginUser" enctype="multipart/form-data">
+  <form id='formBody'  method="post" action="" name="FrmLoginUser" enctype="multipart/form-data"  >
 
-    <div class="formModal">
+
       <div class="foto_user_cad">
           <img id="img" src="" alt="">
       </div>
@@ -71,45 +70,51 @@ $("#formBody").submit(function(event){
         </div>
       </div>
 
+<div class="formModal">
 
-      <div class='fl_wrap'>
-        <label class='fl_label' for='rf_name'>Nome Completo</label>
-        <input maxlength="14" required class='fl_input' type='text' name="txtNomeCompleto" value="" >
+      <div class="control medium" >
+        <input  placeholder="Nome Completo" id="nomeUserVal" maxlength="100" required  name="txtNomeCompleto" value="" >
+        <label for="title " >Nome Completo</label>
       </div>
 
-      <div class='fl_wrap'>
-        <label class='fl_label' for='rf_email'>email</label>
-        <input required class='fl_input' type='text' name="txtEmail" value="">
+    <div class='control medium'>
+        <input placeholder="E-mail" id="txtEmail" required type='email' maxlength="150" name="txtEmail" value="">
+        <label for="title">E-mail</label>
       </div>
 
-      <div class='fl_wrap'>
-        <label class='fl_label' for='rf_email'>cpf</label>
-        <input id="cpf" required class='fl_input' type='text' name="txtCpf" value="" onkeypress="this.value = FormataCpf(event)" onpaste="return false;" maxlength="14">
+      <div class='control medium'>
+        <input placeholder="Cpf" id="cpf" required  type='text' name="txtCpf" value="" onkeypress="this.value = FormataCpf(event)" onpaste="return false;" maxlength="14">
+        <label for="title">Cpf</label>
       </div>
 
-      <div class='fl_wrap'>
-        <label class='fl_label' for='rf_email'>Data de Nascimento</label>
-        <input id="data" required class='fl_input' type='text' name="txtDtNasc" value="" onkeypress="this.value = FormataData(event)" onpaste="return false;" maxlength="10">
-
-
-        	<!-- <input required value="" type="text" size="10" maxlength="10" onKeyDown="return(FormataData(this,event));" onBlur="javascript:if(!validaCampoData(this)){alert('Data inválida')};" name="txtDtNasc"/> -->
+      <div class='control medium'>
+        <input placeholder="Data de Nascimento" id="data" required  type='text' name="txtDtNasc" value="" onkeypress="this.value = FormataData(event)" onpaste="return false;" maxlength="10">
+        <label for="title" >Data de Nascimento</label>
       </div>
 
-      <div class='fl_wrap'>
-        <label class='fl_label' for='rf_email'>nome usuario</label>
-        <input required class='fl_input' type='text' name="txtNomeUser" value="">
+      <div class='control medium'>
+        <input placeholder="Nome de usuario" required id="nomeUserTXT" type='text' name="txtNomeUser" value="">
+        <label for="title" >Nome de usuario <p id="">nome de usuario em uso</p></label>
       </div>
 
-      <div class='fl_wrap'>
-        <label class='fl_label' for='rf_email'>senha</label>
-        <input required class='fl_input' type='password' name="txtSenha" value="">
+      <div class='control medium'>
+        <input placeholder="Senha" maxlength="8" id="senha1" required type='password' name="txtSenha" value="">
+        <label for="title">Senha</label>
       </div>
+
+      <div class='control medium'>
+        <input placeholder="Repetir senha" id="senhaRep1" maxlength="8" required  type='password' name="txtSenhaRep" value="">
+        <label for="title">Repetir senha  </label>
+      </div>
+
+</div>
+
+    <div class="buttom_enviar_login " >
+      <input id="btnLogar" type="submit" name="btnEnviar" value="Enviar" onclick="return validar()">
     </div>
 
 
-    <div class="buttom_enviar_login">
-      <input id="btnLogar" type="submit" name="btnEnviar" value="Enviar">
-    </div>
+  <script src="js\validarUsuario.js"></script>
 
 
   </form>

@@ -28,22 +28,22 @@ if(isset($_GET['pag'])){
             
         
         ?>
-        <div style="margin-top:0px;">
+        <div  class="formconteudo">
             <?php
             switch($pag){
                     
                     case 'etapa1':
-                        require_once 'cadPrestadoraEtapa1.php';
+                        require_once 'cadastroPrestadoraEtapa1.php';
                         break;
                     case 'endereco':
-                        require_once 'cadEndereco.php';
+                        require_once 'cadastroEndereco.php';
                         break;
                     
             }
             
             ?>
             
-        </div>
+          </div>
 
       <!-- div principal que vai sustentar  toda a area de imagem e descricao em destaque -->
       
@@ -51,6 +51,6 @@ if(isset($_GET['pag'])){
           
       </div>
           <?php   require_once 'rodape.php'; ?>
-      </div>
+      
     </body>
 </html>

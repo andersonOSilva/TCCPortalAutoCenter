@@ -30,6 +30,21 @@
               $controller_cadUser::Novo();
             break;
 
+          case 'validarUser':
+              $controller_cadUser= new controllerCadUser();
+              return $controller_cadUser::validarUser();
+            break;
+
+        case 'validarEmail':
+            $controller_cadUser= new controllerCadUser();
+            return $controller_cadUser::validarEmail();
+          break;
+
+      case 'validarCpf':
+          $controller_cadUser= new controllerCadUser();
+          return $controller_cadUser::validarCpf();
+        break;
+
 
 
 
@@ -74,6 +89,40 @@
 
 
           }
+         case 'Prestadoras':
+         require_once('cms/controllers/prestadora_controller.php');
+         require_once('cms/models/cadprestadora_class.php');
+
+
+          switch ($modo) {
+            case 'novo':
+                //echo('dfgdfgdf');
+                //header('location:../carbook.php');
+
+                $controller_prestadora = new controllerPrestadora();
+                $controller_prestadora::Inserir();
+
+                break;
+            /*
+
+            case 'buscar':
+              $controller_prestadora = new controllerprestadora();
+              $controller_prestadora::Buscar();
+              break;
+
+            case 'editar':
+              $controller_prestadora = new controllerprestadora();
+              $controller_prestadora::Editar();
+              break;
+
+            case 'excluir':
+              $controller_prestadora = new controllerprestadora();
+              $controller_prestadora::Excluir();
+              break;
+              */
+          }
+
+        break;
 
 
 

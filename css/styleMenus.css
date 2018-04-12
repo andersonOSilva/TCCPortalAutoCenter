@@ -1,5 +1,21 @@
 /* Menu principal home*/
+.colorRed{
+ background-color: rgba(229, 0, 0,0.5);
+}
 
+.colorGreen{
+  background-color: rgba(0, 142, 16,0.5);
+}
+
+.displayNone{
+  display: none;
+  transition: 2s;
+}
+
+.displayBlock{
+  display: block;
+  transition: 2s;
+}
 .menu{
   width: 100%;
   margin: auto;
@@ -254,72 +270,57 @@ color: #fff;
   text-align: center;
 }
 
-/* TETETETE */
+/* Float label */
 
-.FlowupLabels .fl_wrap {
-  /* Can change */
-  width: 280px;
-  height: 46px;
-  margin: 12px auto; /* change 0 to auto for center alignment */
-
-  /* Don't change */
-  display: block;
+#formBody .control {
+  float: left;
   position: relative;
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-/* initial label state */
-.FlowupLabels .fl_label {
-
-  top: 15px;
-  left: 5px;
-
-
-  position: absolute;
-  z-index: 3; /* Isso pode ser removido, mas os rótulos devem ser colocados após as entradas no HTML */
-  -webkit-transition: all .05s linear;
-     -moz-transition: all .05s linear;
-         -transition: all .05s linear;
-}
-
-.FlowupLabels .fl_input {
-
-  background: none;
-  border: none;
-  border-bottom: 2px solid #555;
-  border-radius: 0;
-  font-size: 16px;
-  line-height: 22px;
-  padding: 20px 0 0 5px;
-
-  position: absolute;
-  top:0;left:0;right:0;bottom:0;
   width: 100%;
-  z-index: 2;
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
+  border-bottom: 1px solid #ddd;
+  padding-top: 23px;
+  padding-bottom: 10px;
+}
+#formBody .control.small {
+  width: 30%;
+  border-right: 1px solid #ddd;
+}
+#formBody .control.medium {
+  width: 260px;
+  margin-left: 20px;
 }
 
-
-
-.FlowupLabels .fl_wrap.focused .fl_label,
-.FlowupLabels .fl_wrap.populated .fl_label,
-
-.no-js .FlowupLabels .fl_label {
-
-  top: 0;
-  font-size: 12px;
-  color: #555;
+#formBody .control:last-child {
+  border: 0;
 }
-.FlowupLabels .fl_wrap.focused .fl_label {
+#formBody input,
+#formBody textarea {
+  display: block;
+  width: 100%;
+  border: 0;
   outline: 0;
-  color: #00A34D;
+  resize: none;
+}
+#formBody input + label,
+#formBody textarea + label {
+  position: absolute;
+  top: 10px;
+  transition: top 0.7s ease, opacity 0.7s ease;
+  opacity: 0;
+  font-size: 13px;
+  font-weight: 600;
+  color: #ccc;
+}
+#formBody input:valid + label,
+#formBody textarea:valid + label {
+  opacity: 1;
+  top: 3px;
+}
+#formBody input:focus + label,
+#formBody textarea:focus + label {
+  color: #2c8efe;
 }
 
-/* TETETETETET */
+
 
 .buttom_enviar_login{
   width: 280px;
@@ -509,36 +510,37 @@ color: #fff;
 }
 
 .foto_user_cad{
-  width: 200px;
-  height: 200px;
+  width: 100px;
+  height: 100px;
   border-radius: 100%;
   margin: auto;
   background-image: url(../imagens/imageUser.png);
+  background-size: 100px;
 }
 
 #img{
-  width: 200px;
-  height: 200px;
+  width: 100px;
+  height: 100px;
   border-radius: 100%;
   float: left;
 }
 .segura_file_prest{
-  width: 70px;
-  height: 70px;
+  width: 50px;
+  height: 50px;
   border-radius: 100%;
   background-color: #fff;
   float: left;
   margin-left: 170px;
-  margin-top: -65px;
+  margin-top: -50px;
   z-index: 999;
   /* position: absolute; */
 }
 .filePrest{
-  width: 70px;
-  height: 70px;
+  width: 50px;
+  height: 50px;
   overflow: hidden;
   background-image: url(../imagens/câmera.png);
-  background-size: 70px;
+  background-size: 50px;
   background-repeat: no-repeat;
   float: left;
 
@@ -552,9 +554,9 @@ color: #fff;
 
 .formModal{
   overflow-y: auto;
-  /* background-color: red; */
+   /*background-color: red;*/
   width: 300px;
-  height: 350px;
+  height: 200px;
 }
 
 .formModal::-webkit-scrollbar {

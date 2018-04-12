@@ -1,7 +1,10 @@
 <?php
 
-class controllerPrestadora{
+class controllerPrestadoraEndereco{
     public function Inserir(){
+
+
+
 
       require_once('cms/modulo.php');
      $Prestadora = new Prestadora();
@@ -41,21 +44,22 @@ class controllerPrestadora{
 
        $Prestadora->fotoPrestadora = $diretorio_completo;
        $Prestadora::Insert($Prestadora);
-
+        
           if ($Prestadora->$IDdaPrestadora != Null){
             echo("controller diz - amigo estou aqui");
-
-
+       
+       
         }else{
           echo("controller diz -voce falhou miseravelmente");
-
+       
         }
     }
 
 
 
 
-    //Luana instanciou a class
+  
+
     public function Listar(){
       $Prestadora = new Prestadora;
       return $Prestadora::Select();
@@ -67,7 +71,7 @@ class controllerPrestadora{
       $Prestadora = new Prestadora();
       //Carrefa o id do registro na classe contatos
       $Prestadora->idPrestadora = $idPrestadora;
-
+ 
       $Prestadora = $Prestadora::SelectByID($Prestadora);
 
       require_once('index.php');
@@ -121,6 +125,6 @@ class controllerPrestadora{
       //Chama o metodo de excluir na model
       $Prestadora::Delete($Prestadora);
     }
-
+    
 }
  ?>

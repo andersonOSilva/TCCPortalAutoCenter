@@ -23,6 +23,12 @@ function Visualizar(idUsuario){
 
     }
   });
+//   $(document).ready(function() {
+//   $(".fechar").click(function() {
+//     //$(".modalContainer").fadeOut();
+//   $(".modalContainerUsuario2").slideToggle(1000);
+//   });
+// });
 }
 </script>
 <div class="modalContainerUsuario2">
@@ -45,7 +51,7 @@ function Visualizar(idUsuario){
               <div class="dados_user">Foto Usuario</div>
               <div class="email">Email</div>
         </div>
-        
+
         <?php
           require_once('controllers/usuario_controller.php');
           require_once('models/cadUser_class.php');
