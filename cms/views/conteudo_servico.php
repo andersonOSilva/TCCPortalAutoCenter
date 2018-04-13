@@ -1,10 +1,17 @@
 <div class="listaServicos">
   <div class="titulo_tbl_servico">
-    <ul>
-      <li>Imagem</li>
-      <li>Servico</li>
-    </ul>
+    <div class="conteudo_tbl_servico">
+      <p>Imagem</p>
+    </div>
+    <div class="conteudo_tbl_servico">
+      <p>Serviço</p>
+    </div>
+
+    <div class="conteudo_tbl_servico">
+      <p>Modo</p>
+    </div>
   </div>
+
   <?php
     //Inclui as classes
     require_once 'controllers/servico_controller.php';
@@ -17,35 +24,48 @@
 
     while ($cont <count($list)) {
 
+      if ($cont%2==0) {
+         $cor='cor1';
+       }else {
+         $cor='cor2';
+       }
+
    ?>
 
-   <div class="titulo_tbl_servico_conteudo">
-     <ul>
-       <li class="img_servico"><img src="<?php echo $list[$cont]->imagem; ?>" alt="Servico"></li>
-       <li><?php echo $list[$cont]->nome; ?></li>
-       <li>
-         <div class="segura_modo">
-           <div class="modo">
-               <!-- <a href="router.php?controller=servicos&modo=buscar&id=<?php echo $list[$cont]->idServico ?>&pag=servicos"> -->
-            <a href="#" class="editar_servico" onclick="Editar(<?php echo $list[$cont]->idServico?>)" >
+  <div class="conteudo_tblServico <?php echo $cor ?>">
+      <div class="item_tblServico">
+        <div class="imgServico">
+          <img src="<?php echo $list[$cont]->imagem; ?>" alt="">
+        </div>
+      </div>
 
-                <img src="imagens/edit.png" alt="edit">
-             </a>
-           </div>
+      <div class="item_tblServico">
+        <p><?php echo $list[$cont]->nome; ?></p>
+      </div>
 
-           <div class="modo">
-             <!-- <a href="router.php?controller=servicos&modo=excluir&id=<?php echo $list[$cont]->idServico ?>" onclick="return confirm('deseja realmente excluir');"> -->
-             <a href="#" class="excluir_servico" onclick="Excluir(<?php echo $list[$cont]->idServico?>)">
-                <img src="imagens/delet.png" alt="edit">
-             </a>
-           </div>
-         </div>
-       </li>
-     </ul>
-   </div>
+      <div class="item_tblServico">
+        <div class="segura_modo">
+          <div class="modo">
+              <!-- <a href="router.php?controller=servicos&modo=buscar&id=<?php echo $list[$cont]->idServico ?>&pag=servicos"> -->
+           <a href="#" class="editar_servico" onclick="Editar(<?php echo $list[$cont]->idServico?>)" >
+
+               <img src="imagens/edit.png" alt="edit">
+            </a>
+          </div>
+
+          <div class="modo">
+            <!-- <a href="router.php?controller=servicos&modo=excluir&id=<?php echo $list[$cont]->idServico ?>" onclick="return confirm('deseja realmente excluir');"> -->
+            <a href="#" class="excluir_servico" onclick="Excluir(<?php echo $list[$cont]->idServico?>)">
+               <img src="imagens/delet.png" alt="edit">
+            </a>
+          </div>
+        </div>
+      </div>
+  </div>
 
   <?php
     $cont+=1;
     }
    ?>
+
 </div>

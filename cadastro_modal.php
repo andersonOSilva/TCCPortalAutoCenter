@@ -72,30 +72,19 @@ $("#formBody").submit(function(event){
 
 <div class="formModal">
 
-<<<<<<< HEAD
       <div class="control medium" >
         <input  placeholder="Nome Completo" id="nomeUserVal" maxlength="100" required  name="txtNomeCompleto" value="" >
-        <label for="title " >Nome Completo</label>
+        <label for="title " >Nome Completo <span id="respostaNomecompleto"></span> </label>
       </div>
 
     <div class='control medium'>
-        <input placeholder="E-mail" id="txtEmail" required type='email' maxlength="150" name="txtEmail" value="">
-        <label for="title">E-mail</label>
-=======
-      <div class='fl_wrap'>
-        <label class='fl_label' for='rf_name'>Nome Completo</label>
-        <input id="nomeUserVal" maxlength="100" required class='fl_input' type='text' name="txtNomeCompleto" value="" >
-      </div>
-
-      <div class='fl_wrap'>
-        <label class='fl_label' for='rf_email'>email</label>
-        <input id="txtEmail" required class='fl_input' type='email' name="txtEmail" value="">
->>>>>>> 938bc9066393704a1091a86deb0aeab227b78fec
+        <input autocomplete='email' placeholder="E-mail" id="txtEmail" required type='email' maxlength="150" name="txtEmail" value="">
+        <label for="title">E-mail <span id="respostaEmail"></span></label>
       </div>
 
       <div class='control medium'>
         <input placeholder="Cpf" id="cpf" required  type='text' name="txtCpf" value="" onkeypress="this.value = FormataCpf(event)" onpaste="return false;" maxlength="14">
-        <label for="title">Cpf</label>
+        <label for="title">Cpf <span id="respostaCpf"></span></label>
       </div>
 
       <div class='control medium'>
@@ -105,51 +94,24 @@ $("#formBody").submit(function(event){
 
       <div class='control medium'>
         <input placeholder="Nome de usuario" required id="nomeUserTXT" type='text' name="txtNomeUser" value="">
-        <label for="title" >Nome de usuario <p id="">nome de usuario em uso</p></label>
+        <label for="title" >Nome de usuario <span id="respostaNomeUser"></span></label>
       </div>
 
-<<<<<<< HEAD
       <div class='control medium'>
-        <input placeholder="Senha" maxlength="8" id="senha1" required type='password' name="txtSenha" value="">
+        <input suggested: "current-password" placeholder="Senha" maxlength="8" id="senha1" required type='password' name="txtSenha" value="">
         <label for="title">Senha</label>
       </div>
 
       <div class='control medium'>
         <input placeholder="Repetir senha" id="senhaRep1" maxlength="8" required  type='password' name="txtSenhaRep" value="">
-        <label for="title">Repetir senha  </label>
-=======
-      <div >
-        <label class='fl_label' for='rf_email'>nome usuario</label>
-        <input required id="nomeUserTXT" type='text' name="txtNomeUser" value="">
-      </div>
-
-      <div class='fl_wrap'>
-        <label class='fl_label' for='rf_email'>senha</label>
-        <input maxlength="8" id="senha1" required class='fl_input' type='password' name="txtSenha" value="">
-      </div>
-
-      <div class='fl_wrap'>
-        <label class='fl_label' for='rf_email'>Repetir senha</label>
-        <input id="senhaRep1" maxlength="8" required class='fl_input' type='password' name="txtSenhaRep" value="">
->>>>>>> 938bc9066393704a1091a86deb0aeab227b78fec
+        <label for="title">Repetir senha</label>
       </div>
 
 </div>
 
-<<<<<<< HEAD
     <div class="buttom_enviar_login " >
       <input id="btnLogar" type="submit" name="btnEnviar" value="Enviar" onclick="return validar()">
-=======
-    <div class="buttom_enviar_login">
-      <input id="btnLogar" class="displayNone" type="submit" name="btnEnviar" value="Enviar" onclick="return validar()">
->>>>>>> 938bc9066393704a1091a86deb0aeab227b78fec
     </div>
-
-    <div id="resultado">
-
-    </div>
-
-  <script src="js\validarUsuario.js"></script>
 
 
   <script src="js\validarUsuario.js"></script>

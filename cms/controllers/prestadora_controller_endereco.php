@@ -3,56 +3,47 @@
 class controllerPrestadoraEndereco{
     public function Inserir(){
 
-
+        echo('controller prestadora endereco diz - amigo estou aqui');
 
 
       require_once('cms/modulo.php');
-     $Prestadora = new Prestadora();
-     $Prestadora->login=$_POST['txtlogin'];
-     $Prestadora->senha=$_POST['txtsenha'];
-     $Prestadora->email=$_POST['txtemail'];
-     $Prestadora->cnpj=$_POST['txtcnpj'];
-     $Prestadora->razaoSocial=$_POST['txtrazaosocial'];
-     $Prestadora->nomefantasia=$_POST['txtnomefantasia'];
-     $Prestadora->telefone=$_POST['txttelefone'];
-     $Prestadora->descricao=$_POST['txtdescricao'];
+     $Prestadora = new PrestadoraEndereco();
+//        txtcep
+//txtrua
+//txtnumero
+//txtcomplemento
+//txtbairro
+//txtpontodereferencia
+//txtcidade
+     $Prestadora->cep=$_POST['txtcep'];
+     $Prestadora->logradouro=$_POST['txtrua'];
+     $Prestadora->numero=$_POST['txtnumero'];
+     $Prestadora->complementol=$_POST['txtcomplemento'];
+     $Prestadora->bairro=$_POST['txtbairro'];
+     $Prestadora->referencia=$_POST['txtpontodereferencia'];
+     $Prestadora->idcidade=$_POST['txtcidade'];
+     $IDdaPrestadra=$_POST['1'];
+   
 
     // var_dump($Prestadora);
       // $Prestadora->imagem;
       // iniciado variaveis
-      $diretorio_completo=Null;
-      $MovUpload=false;
-      $imagem_file=Null;
-
+     
       // Pegando a Foto
 
-      if (!empty($_FILES['fle_imagem']['name'])) {
-         $imagem_file = true;
-         $diretorio_completo=salvarFoto($_FILES['fle_imagem'],'cms/imagenPlano');
-         if ($diretorio_completo == "Erro") {
-             echo "<script>
-                 alert('arquivo nao movido');
-                 window.history.go(-1);
-                 </script>";
-               $MovUpload=false;
-         }else {
-           $MovUpload=true;
-         }
-       }else {
-         $imagem_file = false;
-       }
+     
 
-       $Prestadora->fotoPrestadora = $diretorio_completo;
+       
        $Prestadora::Insert($Prestadora);
         
-          if ($Prestadora->$IDdaPrestadora != Null){
-            echo("controller diz - amigo estou aqui");
-       
-       
-        }else{
-          echo("controller diz -voce falhou miseravelmente");
-       
-        }
+//          if ($Prestadora->$IDdaPrestadora != Null){
+//            echo("controller diz - amigo estou aqui");
+//       
+//       
+//        }else{
+//          echo("controller diz -voce falhou miseravelmente");
+//       
+//        }
     }
 
 

@@ -5,6 +5,7 @@ if (isset($_GET['out'])) {
   header('location:index.php');
 } else if (isset($_SESSION['idFuncionario'])){
     require_once("views/home.php");
+    // header("location:home.php?pag=home");
   }else {
     require_once("views/autentica_view.php");
   }

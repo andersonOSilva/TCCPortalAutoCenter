@@ -64,16 +64,54 @@
 
      });
 
+     $(document).ready(function() {
+
+       $(".fechar_modal").click(function() {
+         //$(".modalContainer").fadeOut();
+      $(".modalContainer_servico").slideToggle(1000);
+       });
+     });
+
 </script>
 
-<form action="" method="post" enctype="multipart/form-data" id="form" data-id="<?php echo($idServico) ?>">
-  <div class="entrada_dado">
-    <input type="text" name="txt_nome" value="<?php echo $nome; ?>" placeholder="Nome" maxlength="100">
+<form id="formBody" action="" method="post" enctype="multipart/form-data" id="form" data-id="<?php echo($idServico) ?>">
+  <div class="titulo_Servico_modal">
+    <div class="tituo_sevico_modal_item">
+      <h1>
+        <?php
+        if(isset($_GET['modo'])){
+
+          $modo=$_GET['modo'];
+
+            echo "Editar Servico";
+          }else{
+            echo "Novo Servico";
+          }
+         ?>
+        </h1>
+    </div>
+
+
+      <div class="sair_modal">
+          <div class="fechar_modal">
+              <img src="imagens/fechar.png" alt="">
+          </div>
+      </div>
   </div>
 
-  <div class="entrada_dado1">
-    <textarea placeholder="Descricao do servico" name="txt_descricao" rows="8" cols="80"><?php echo $descricao; ?></textarea>
-  </div>
+
+    <div class="segura_form">
+      <div class="control small" >
+        <input  placeholder="Nome do Serviço" id="nomeservico" maxlength="100" required  name="txt_nome" value="<?php echo $nome; ?>" >
+        <label for="title " >Nome do Serviço</label>
+      </div>
+
+      <div class="control small">
+        <textarea name="txt_descricao" placeholder="Descricao do servico" required><?php echo $descricao; ?></textarea>
+        <label for="description">Descricao do servico</label>
+      </div>
+    </div>
+
 
   <div class="filePost">
     <input id="upload" type="file" name="fle_imagem" >

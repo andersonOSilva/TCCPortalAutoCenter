@@ -14,7 +14,6 @@ function validar() {
 
 }
 
-<<<<<<< HEAD
 function AparecerBotao() {
 
   if (($('.colorRed').size() !=0 )) {
@@ -30,12 +29,11 @@ function AparecerBotao() {
 }
 
 
-=======
->>>>>>> 938bc9066393704a1091a86deb0aeab227b78fec
 // validacao campo nome senha
 $("input[name='txtSenha']").on('blur', function(){
   var senha1 = FrmLoginUser.txtSenha.value;
   var senha2 = nomeUserVal.length;
+
 
   if (senha1 == "" || senha2 < 8) {
       $('#senha1').removeClass('colorGreen');
@@ -47,11 +45,8 @@ $("input[name='txtSenha']").on('blur', function(){
 
   }
 
-<<<<<<< HEAD
   AparecerBotao();
 
-=======
->>>>>>> 938bc9066393704a1091a86deb0aeab227b78fec
   });
 
   // validacao campo repetir senha
@@ -66,16 +61,9 @@ $("input[name='txtSenha']").on('blur', function(){
     }else {
         $('#senhaRep1').removeClass('colorRed');
         $('#senhaRep1').addClass('colorGreen');
-<<<<<<< HEAD
     }
 
     AparecerBotao();
-=======
-        $('#btnLogar').removeClass('displayNone');
-        $('#btnLogar').displayBlock('displayNone');
-
-    }
->>>>>>> 938bc9066393704a1091a86deb0aeab227b78fec
 
     });
 
@@ -83,32 +71,25 @@ $("input[name='txtSenha']").on('blur', function(){
 $("input[name='txtNomeCompleto']").on('blur', function(){
   var nomeUserVal = FrmLoginUser.txtNomeCompleto.value;
   var total = nomeUserVal.length;
-<<<<<<< HEAD
   var resposta = "Nome Invalido";
-=======
->>>>>>> 938bc9066393704a1091a86deb0aeab227b78fec
+  var resposta2 =""
   //alert(total);
   if (nomeUserVal == "" || total < 10) {
       $('#nomeUserVal').removeClass('colorGreen');
       $('#nomeUserVal').addClass('colorRed');
-<<<<<<< HEAD
-      $('#reposta p').html(resposta);
-=======
->>>>>>> 938bc9066393704a1091a86deb0aeab227b78fec
+      $('#respostaNomecompleto').html(resposta);
 
   }else {
       $('#nomeUserVal').removeClass('colorRed');
       $('#nomeUserVal').addClass('colorGreen');
+      $('#respostaNomecompleto').html(resposta2);
 
   }
 
-<<<<<<< HEAD
   AparecerBotao();
 
 
 
-=======
->>>>>>> 938bc9066393704a1091a86deb0aeab227b78fec
   });
 
 
@@ -118,6 +99,8 @@ $("input[name='txtNomeCompleto']").on('blur', function(){
 $("input[name='txtCpf']").on('blur', function(){
   var CpfUser = $(this).val();
   var cpf = FrmLoginUser.txtCpf.value;
+  var resposta= "Cpf invalido";
+  var resposta1="";
 $.get('router.php?controller=User&modo=validarCpf&CpfUser='+CpfUser,function(data){
     //$('#resultado').html(data);
     //alert(data);
@@ -126,19 +109,18 @@ $.get('router.php?controller=User&modo=validarCpf&CpfUser='+CpfUser,function(dat
     if (data == 1||cpf=="" ) {
       $('#cpf').removeClass('colorGreen');
       $('#cpf').addClass('colorRed');
+      $('#respostaCpf').html(resposta);
 
     }else {
       $('#cpf').removeClass('colorRed');
       $('#cpf').addClass('colorGreen');
+      $('#respostaCpf').html(resposta1);
 
 
     }
 
-<<<<<<< HEAD
     AparecerBotao();
 
-=======
->>>>>>> 938bc9066393704a1091a86deb0aeab227b78fec
   });
   });
 
@@ -146,25 +128,26 @@ $.get('router.php?controller=User&modo=validarCpf&CpfUser='+CpfUser,function(dat
 $("input[name='txtEmail']").on('blur', function(){
   var emailUser = $(this).val();
   var email = FrmLoginUser.txtEmail.value;
+  var resposta="Email Invalido";
+  var resposta1="";
   $.get('router.php?controller=User&modo=validarEmail&emailUser='+emailUser,function(data){
     //$('#resultado').html(data);
     //alert(data);
     if (data == 1 || email=="") {
       $('#txtEmail').removeClass('colorGreen');
       $('#txtEmail').addClass('colorRed');
+      $('#respostaEmail').html(resposta);
 
     }else {
       $('#txtEmail').removeClass('colorRed');
       $('#txtEmail').addClass('colorGreen');
+      $('#respostaEmail').html(resposta1);
 
 
     }
 
-<<<<<<< HEAD
     AparecerBotao();
 
-=======
->>>>>>> 938bc9066393704a1091a86deb0aeab227b78fec
   });
   });
 
@@ -173,24 +156,26 @@ $("input[name='txtEmail']").on('blur', function(){
   $("input[name='txtNomeUser']").on('blur', function(){
     var nomeUser = $(this).val();
     var user = FrmLoginUser.txtNomeUser.value;
+    var resposta="usuario Invalido";
+    var resposta1="";
     $.get('router.php?controller=User&modo=validarUser&nomeUser='+nomeUser,function(data){
       //$('#resultado').html(data);
       //alert(data);
       if (data == 1 || user=="") {
         $('#nomeUserTXT').removeClass('colorGreen');
         $('#nomeUserTXT').addClass('colorRed');
+        $('#respostaNomeUser').html(resposta);
+
 
       }else {
         $('#nomeUserTXT').removeClass('colorRed');
         $('#nomeUserTXT').addClass('colorGreen');
+        $('#respostaNomeUser').html(resposta1);
 
 
       }
 
-<<<<<<< HEAD
       AparecerBotao();
 
-=======
->>>>>>> 938bc9066393704a1091a86deb0aeab227b78fec
     });
     });

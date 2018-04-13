@@ -14,6 +14,14 @@
 
 }
 
+.cadastro_carbook{
+  width: 750px;
+  height: 650px;
+  float: left;
+  margin-left: 10px;
+  background-color: green;
+}
+
 /* #btn_editar{
 width: 63px;
 height: 63px;

@@ -2,7 +2,7 @@
 
 class controllerPrestadora{
     public function Inserir(){
-
+      
       require_once('cms/modulo.php');
      $Prestadora = new Prestadora();
      $Prestadora->login=$_POST['txtlogin'];
@@ -41,15 +41,18 @@ class controllerPrestadora{
 
        $Prestadora->fotoPrestadora = $diretorio_completo;
        $Prestadora::Insert($Prestadora);
+        
+        
 
-          if ($Prestadora->$IDdaPrestadora != Null){
-            echo("controller diz - amigo estou aqui");
-
-
-        }else{
-          echo("controller diz -voce falhou miseravelmente");
-
-        }
+//          if ($Prestadora->$IDdaPrestadora != Null){
+//            echo("controller diz - amigo estou aqui");
+//              header('../../cadPrestadora/cadastroPrestadora.php?pag=Endereco');
+//
+//
+//        }else{
+//          echo("controller diz -voce falhou miseravelmente");
+//
+//        }
     }
 
 

@@ -48,7 +48,7 @@
 
                     '".$dados_prestadora->login."',
                     '".$dados_prestadora->senha."')";
-                    echo($sqlPrestadora);
+//                    echo($sqlPrestadora);
 
                     $PDO_conex->query($sqlPrestadora);
 
@@ -63,14 +63,30 @@
                        login ='".$dados_prestadora->login."'
                       And  senha=".$dados_prestadora->senha.";";
 
-                      echo($sqlselectPrestadora);
+//                      echo($sqlselectPrestadora);
 
-                      $PDO_conex->query($sqlselectPrestadora);
+                      $select=$PDO_conex->query($sqlselectPrestadora);
 
-                      if($rs=$sqlselectPrestadora->fetch(PDO::FETCH_ASSOC)){
-                        $PrestadoraID->$idPrestadora = $rs['idPrestadora'];
+                      if($rs=$select->fetch(PDO::FETCH_ASSOC)){
+//                          echo('amigo estou aqui');
+                            $PrestadoraID = new Prestadora();
+                          $PrestadoraID->idPrestadora = $rs['idPrestadora'];
+                          
                       }
+//                        $cont=0
+//                        while($rs=$sqlselectPrestadora->fetch(PDO::FETCH_ASSOC)){
+//                            $PrestadoraID->$idPrestadora = $rs['idPrestadora'];
+//                            $cont+=1;
+//                        }
+                        
                        $IDdaPrestadora=$PrestadoraID->idPrestadora = $rs['idPrestadora'];
+                        
+                        
+//                                                  echo('amigo estou aqui');
+//                        header('location:cadPrestadora/cadastroPrestadora.php?pag=Endereco');
+                        require_once 'cadPrestadora/cadastroEndereco.php';
+//                        echo($IDdaPrestadora);
+
 
                     }
 
@@ -85,11 +101,6 @@
 
                   }
            
-
-
-
-
-
 
 // _______________________________________________________________________________________________________________________________________________
                // SELECT * FROM db_portal.tbl_prestadora where login = "teste" and senha="123";
@@ -134,23 +145,8 @@
 //                      echo($e);
 
                   }
-      
-
-                
-      
-        
-    
                         
       }
-      
-      
-      
-      
-      
-      
-      
-      
-
 
       public function Select(){
           

@@ -123,8 +123,53 @@
           }
 
         break;
+        
+        case 'Endereco':
+         require_once('cms/controllers/prestadora_controller_endereco.php');
+         require_once('cms/models/cadprestadoraEndereco_class.php');
+           
+
+          switch ($modo) {
+            case 'novo':
+                   echo('aeeeeeew powha');
+                //echo('dfgdfgdf');
+                //header('location:../carbook.php');
+
+                $controller_prestadora_endereco = new controllerPrestadoraEndereco();
+                $controller_prestadora_endereco::Inserir();
+
+                break;
+            
+          }
+            break;
+
+                  
+                  /*
+
+            case 'buscar':
+              $controller_prestadora = new controllerprestadora();
+              $controller_prestadora::Buscar();
+              break;
+
+            case 'editar':
+              $controller_prestadora = new controllerprestadora();
+              $controller_prestadora::Editar();
+              break;
+
+            case 'excluir':
+              $controller_prestadora = new controllerprestadora();
+              $controller_prestadora::Excluir();
+              break;
+              */
+          }
+
+      
 
 
 
-    }
+ 
+
+
+
+    
  ?>

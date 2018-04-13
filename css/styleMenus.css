@@ -1,18 +1,17 @@
 /* Menu principal home*/
 .colorRed{
-<<<<<<< HEAD
+
  background-color: rgba(229, 0, 0,0.5);
 }
 
 .colorGreen{
   background-color: rgba(0, 142, 16,0.5);
-=======
+
   border-color: rgba(229, 0, 0,0.5);
 }
 
 .colorGreen{
   border-color: rgba(0, 142, 16,0.5);
->>>>>>> 938bc9066393704a1091a86deb0aeab227b78fec
 }
 
 .displayNone{
@@ -36,12 +35,26 @@
   float: left;
 }
 
+.menu_home{
+  width: 100%;
+  margin: auto;
+  height: auto;
+  min-height: 100px;
+  /* background-color: #13436b; */
+  /* background-color: #000; */
+    background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  z-index: 100;
+  float: left;
+}
+
 #menu_navegacao{
   max-width: 1200px;
   min-height: auto;
   height: 100px;
   /* background-color: pink; */
   margin: auto;
+
 }
 
 .logo{
@@ -76,6 +89,14 @@
   height: 100%;
   /* background-color:yellow; */
   float: left;
+
+}
+
+.menu_ancora_home{
+  width: 800px;
+  height: 100%;
+  margin: auto;
+
 }
 
 .menu_ancora_itens{
@@ -280,6 +301,21 @@ color: #fff;
 
 /* Float label */
 
+#respostauser{
+  margin: 0px;
+  padding: 0px;
+  float: left;
+  color:rgba(229, 0, 0,0.5);
+}
+
+.displayNoneUser{
+  display: none;
+}
+
+.displayBlockUser{
+  display: block;
+}
+
 #formBody .control {
   float: left;
   position: relative;
@@ -328,6 +364,17 @@ color: #fff;
   color: #2c8efe;
 }
 
+#formBody label span{
+  color: red;
+}
+
+#respostaNomecompleto span{
+  margin: 0px;
+  padding: 0px;
+  float: left;
+  color: red;
+}
+
 
 
 .buttom_enviar_login{
@@ -357,9 +404,25 @@ color: #fff;
     font-weight: 400;
 }
 
+#btnLogarUser{
+    width: 100%;
+    position: relative;
+    min-height: 44px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    border-width: 1px;
+    border-style: solid;
+    background-color: rgb(33, 150, 243);
+    border-color: rgb(33, 150, 243);
+    border-image: initial;
+    border-radius: 40px;
+    padding: 10px 0px;
+    color: #fff;
+    font-weight: 400;
+}
+
 .manter_conectado{
   width: 280px;
-  height: 40px;
   margin: auto;
   /* background-color: red; */
   font-size: 13px;
@@ -398,6 +461,12 @@ color: #fff;
     text-transform: none;
 
 }
+
+#btnLogarUser select {
+    text-transform: none;
+
+}
+
 
 .termos_de_uso{
   width: 280px;

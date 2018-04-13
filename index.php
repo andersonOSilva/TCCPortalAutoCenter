@@ -29,33 +29,19 @@
 
 					</div> -->
 
-					<div class="menu">
+					<div class="menu_home">
 							<div id="menu_navegacao">
-								<div class="logo">
+								<!-- <div class="logo">
 									<div class="enfeite">
 											<img src="imagens/logos/" alt="">
 									</div>
 									<a href="#slide"><img src="imagens/logos/possivellogo2.png" alt="teste de logo" id="imgLogo"></a>
-								</div>
+								</div> -->
 
-								<div class="menu_ancora">
+								<div class="menu_ancora_home">
 										<div class="menu_ancora_itens">
 											<nav class="menu_ancora_itens_principal">
-<!--												<div id="new_Player">
-
-				<div  id="social">
-
-					<a href="https://forums.warframe.com/topic/795965-octavia%E2%80%99s-anthem-hotfix-2046/" style="text-decoration:none"><div id="pc">Pc</div></a>
-					<a href="https://forums.warframe.com/topic/797230-ps4-octavias-anthem-2045-hotfixes/" style="text-decoration:none"><div id="ps4">Ps4</div></a>
-					<a href="https://forums.warframe.com/topic/797229-xb1-octavias-anthem-2045-hotfixes/" style="text-decoration:none"><div id="xbox">Xbox</div></a>
-
-				</div>
-
-				<div id="texto"><br><br><br><br><br><br><div id="texto_nome">Lotus</div> Voce nao está sozinho tenno</div>
-
-
-			</div>-->
-                                                <ul>
+                      	<ul>
 													<li><a class="scroll" href="#Servicos">Serviços</a></li>
 													<li><a class="scroll" href="#Prestadoras">Prestadoras</a></li>
 													<li><a class="scroll" href="#Produtos">Produtos</a></li>
@@ -69,9 +55,7 @@
 														require_once 'loginEcadastro.php';
 
 												 	?>
-												<div class="ver_mais_div">
-                            <?php require_once  'ver_mais.php';?>
-                        </div>
+
 										</div>
 
 										<div class="bordao">
@@ -93,14 +77,21 @@
 					<div class="container_slider">
 							<div id="slider">
 					   				<div class="barra_buscar_dados">
-                        <form class="FrmBuscarDados" action="index.html" method="post" style="margin-top:200px;" >
-                            <input class="BarraTXTdados" placeholder="O que esta Procurando" type="text" name="txtBuscar" value="" style="margin-top:10px;" >
+                        <form class="FrmBuscarDados teste" action="index.html" method="post" >
+													<center>
+														<input class="BarraTXTdados" placeholder="O que esta Procurando" type="text" name="txtBuscar" value="" style="margin-top:10px;" >
+														<div class="segura_botao" dsdzcd >
+															<input  class="btnBuscarddos" type="submit" name="btnBuscar" value=""  >
+														</div>
+													</center>
 
                         </form>
-                        <div class="segura_botao" dsdzcd >
-                          <input  class="btnBuscarddos" type="submit" name="btnBuscar" value=""  >
-                        </div>
+
                     </div>
+							</div>
+
+							<div class="slider_menu">
+								
 							</div>
 					</div>
 

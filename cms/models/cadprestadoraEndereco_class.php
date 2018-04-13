@@ -1,6 +1,7 @@
 <?php
 class PrestadoraEndereco{
 
+
     public $logradouro;
     public $numero;
     public $referencia;
@@ -10,14 +11,18 @@ class PrestadoraEndereco{
     public $IDdaPrestadora;
     public $idCidade;
     public $bairro;
-    public $status;
-
+    
+       
 
 
     public  function __construct(){
       require_once('bd_class.php');
     }
     public function Insert($dados_prestadora){
+        
+        try{
+             $conex = new Mysql_db();
+                $PDO_conex = $conex->Conectar();
         $sqlPrestadoraEndereco="insert into tbl_endereco_prestadora (logradouro,numero,bairro,referencia,cep)
                 values('".$dados_prestadora->logradouro."',
                       '".$dados_prestadora->numero."',
@@ -26,17 +31,22 @@ class PrestadoraEndereco{
                       '".$dados_prestadora->referencia."',
                       '".$dados_prestadora->cep."',
                       '".$dados_prestadora->idcidade."');";
+            echo($sqlPrestadoraEndereco);
 
-                      $PDO_conex->query($sqlPrestadoraEndereco);
-        
+              $PDO_conex->query($sqlPrestadoraEndereco);
+        }catch (Exception $e) {
+                     // echo($e);
+
+                  }
+        $conex->Desconectar();
         
     }
     
 }
-  public function Update($dados_prestadora){
+   function Update($dados_prestadora){
       
       
-      
+      try{
       $sqlPrestadoraDelete="UPDATE `db_portal`.`tbl_prestadora` SET
                 `razaoSocial`='".$PrestadoraEnderecoID->idPrestadoraEndereco.
                 "' WHERE `idPrestadora`='".$PrestadoraID->idPrestadora."';";
@@ -44,21 +54,32 @@ class PrestadoraEndereco{
       
       
       $PDO_conex->query($sqlPrestadoraUpdate);
-                
+                }catch (Exception $e) {
+//                      echo($e);
+
+                  }
       
       
       
                 
       }
-   public function Delete($dados_prestadora){
+
+
+    function Delete($dados_prestadora){
        
 //       DELETE FROM `db_portal`.`tbl_prestadora` WHERE `idPrestadora`='53';
-
+       try{
       $sqlPrestadoraDelete="DELETE FROM `db_portal`.`tbl_endereco_prestadora` WHERE `idEnderecoPrestadora`='".$PrestadoraID->idPrestadora."';";
-                
+               
+        $PDO_conex->query($sqlPrestadoraDelete);
+       
+       }catch (Exception $e) {
+//                      echo($e);
+
+                  }
       
       
-      $PDO_conex->query($sqlPrestadoraDelete);
+     
       
       
       
@@ -66,8 +87,9 @@ class PrestadoraEndereco{
       
                 
       }
- public function Select(){
-      $sql = "select * from tbl_endereco_prestadora order by idEnderecoPrestadora desc";
+  function Select(){
+     try{ 
+     $sql = "select * from tbl_endereco_prestadora order by idEnderecoPrestadora desc";
       // echo $sql;
 
       $conex = new Mysql_db();
@@ -103,6 +125,10 @@ class PrestadoraEndereco{
 
           //var_dump($listPrestadora) ;
       }
+     }catch (Exception $e) {
+//                      echo($e);
+
+                  }
 
     }
 ?>

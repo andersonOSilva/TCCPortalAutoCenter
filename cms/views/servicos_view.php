@@ -77,11 +77,7 @@
       <h1>Serviços</h1>
     </div>
     <div class="conteudos_servico">
-      <!-- <div class="container_opc">
-        <div>
-          Adcionar
-        </div>
-      </div> -->
+
       <?php
         require_once 'conteudo_servico.php';
        ?>

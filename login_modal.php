@@ -15,13 +15,7 @@ $(document).ready(function() {
 });
 
 
-$('input[name="FlgPontua"]').change(function () {
-    if ($('input[name="FlgPontua"]:checked').val() === "user") {
-        $('.tipo_user').show();
-    } else {
-        $('.tipo_prest').show();
-    }
-});
+
 </script>
 
 
@@ -38,16 +32,18 @@ $('input[name="FlgPontua"]').change(function () {
   <div class="titulo_login">
     <h1>Já tem Cadastro?</h1>
   </div>
-  <form id='formBody' class='FlowupLabels' method="post" action="router.php?controller=loginUser&modo=loginUser" name="FrmLoginUser">
+  <form id='formBody'  method="post" action="router.php?controller=loginUser&modo=loginUser" name="FrmLoginUser">
 
-    <div class='fl_wrap'>
-      <label class='fl_label' for='rf_name'>Usuario</label>
-      <input class='fl_input' type='text' value="" name="txtUser">
+    <div class="control medium" >
+
+      <input placeholder="Usuario" id="user" type='text' value="" name="txtUser" required>
+        <label for="title" >Usuario</label>
     </div>
 
-    <div class='fl_wrap'>
-      <label class='fl_label' for='rf_email'>Senha</label>
-      <input class='fl_input' type='password' value="" name="txtSenha">
+    <div class="control medium" >
+
+      <input placeholder="Senha" id="senha" required type='password' value="" name="txtSenha">
+        <label for="title">Senha</label>
     </div>
 
 
@@ -59,7 +55,7 @@ $('input[name="FlgPontua"]').change(function () {
     </div>
 
     <div class="buttom_enviar_login">
-      <input id="btnLogar" type="submit" name="btnEnviar" value="Logar">
+      <input id="btnLogarUser" type="submit" name="btnEnviar" value="Logar">
     </div>
 
 
