@@ -30,14 +30,14 @@
                                   '".$user_dados->cpf."',
                                   '".$user_dados->foto."')";
 
-                      //echo $sql;
+                      echo $sql;
 
       // conexao com o banco
       $conex = new Mysql_db();
       $PDO_conex = $conex->Conectar();
 
       if ($PDO_conex->query($sql)) {
-         echo "<script>location.reload();</script>";
+         //echo "<script>location.reload();</script>";
       }else{
         echo "erro ao conectar";
       }

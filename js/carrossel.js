@@ -13,3 +13,11 @@ $(function() {
         visible: 3
     });
 });
+
+$(function() {
+    $(".container_carrosel_menu").jCarouselLite({
+        btnPrev: '.prev3',
+        btnNext: '.next3',
+        visible: 6
+    });
+});

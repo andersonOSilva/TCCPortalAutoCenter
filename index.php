@@ -76,7 +76,7 @@
 					<!-- SLIDER -->
 					<div class="container_slider">
 							<div id="slider">
-					   				<div class="barra_buscar_dados">
+					   				<!-- <div class="barra_buscar_dados">
                         <form class="FrmBuscarDados teste" action="index.html" method="post" >
 													<center>
 														<input class="BarraTXTdados" placeholder="O que esta Procurando" type="text" name="txtBuscar" value="" style="margin-top:10px;" >
@@ -87,12 +87,114 @@
 
                         </form>
 
-                    </div>
+                    </div> -->
+
+										<div class="slider_menu">
+
+										</div>
+
+										<div class="conteudo_slider_menu">
+											<div class="espaco_menu1">
+
+											</div>
+											<div class="espaco_menu2">
+
+												<div class="passar_carrosel_menu dominuir ">
+												<a href="#" class="prev3"> <img src="imagens/voltar.png" alt=""> </a>
+												</div>
+
+												<div class="container_carrosel_menu">
+														<ul>
+															<!-- Item menu carrosel -->
+															<li>
+																	<a href="sobre.php">
+																		<div class="titulo_menu_carrossel">
+																			<p>Sobre</p>
+																		</div>
+
+																		<div class="descricao_menu_carrosel">
+																				<p>Conheça mais sobre a portal Auto center.</p>
+																		</div>
+																	</a>
+															</li>
+
+															<!-- Item menu carrosel -->
+															<li>
+																	<a href="carBook.php">
+																		<div class="titulo_menu_carrossel">
+																			<p>CarBook</p>
+																		</div>
+
+																		<div class="descricao_menu_carrosel">
+																				<p>Ja pensou em ter um lugar para compartilhar coisas de su carro?? Confira</p>
+																		</div>
+																	</a>
+															</li>
+
+															<!-- Item menu carrosel -->
+															<li>
+																	<a href="homeForum.php">
+																		<div class="titulo_menu_carrossel">
+																			<p>Forum</p>
+																		</div>
+
+																		<div class="descricao_menu_carrosel">
+																				<p>Troca de ideia e algo saudavel entao as compartilhe aqui.</p>
+																		</div>
+																	</a>
+															</li>
+
+															<!-- Item menu carrosel -->
+															<li>
+																	<a href="#">
+																		<div class="titulo_menu_carrossel">
+																			<p>prestadoras</p>
+																		</div>
+
+																		<div class="descricao_menu_carrosel">
+																				<p>confira as nossas peincipais parceiras</p>
+																		</div>
+																	</a>
+															</li>
+
+															<!-- Item menu carrosel -->
+															<li>
+																	<a href="#">
+																		<div class="titulo_menu_carrossel">
+																			<p>Produtos</p>
+																		</div>
+
+																		<div class="descricao_menu_carrosel">
+																				<p>Confira os principais produtos do portal</p>
+																		</div>
+																	</a>
+															</li>
+															<!-- Item menu carrosel -->
+															<li>
+																	<a href="#">
+																		<div class="titulo_menu_carrossel">
+																			<p>Carros</p>
+																		</div>
+
+																		<div class="descricao_menu_carrosel">
+																				<p>Troque agora se carro!! Confira as ofertas</p>
+																		</div>
+																	</a>
+															</li>
+														</ul>
+												</div>
+
+												<div class="passar_carrosel_menu  ">
+													<a href="#" class="next3"><img src="imagens/next.png" alt=""></a>
+												</div>
+
+
+
+											</div>
+										</div>
 							</div>
 
-							<div class="slider_menu">
-								
-							</div>
+
 					</div>
 
 					<!-- Menu de Serviços -->

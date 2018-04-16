@@ -50,6 +50,8 @@
 
         }
 
+        break;
+
         // login user
 
         case 'loginUser':
@@ -69,6 +71,7 @@
           break;
 
         }
+        break;
 
         // forum
 
@@ -84,11 +87,35 @@
                 $controller_Forum::novaPergunta();
 
               break;
+            case 'novaResposta':
+                $controller_Forum= new controllerForum();
+                $controller_Forum::novaResposta();
+
+              break;
 
 
 
 
           }
+
+          case 'Respostaforum':
+
+
+            require_once("cms/controllers/RespostaForum_controller.php");
+            require_once("cms/models/RespostaForum_class.php");
+
+            switch ($_GET['modo']) {
+
+              case 'novaResposta':
+                  $controller_Forum= new RespostaForum();
+                  $controller_Forum::novaResposta();
+
+                break;
+
+
+
+
+            }
          case 'Prestadoras':
          require_once('cms/controllers/prestadora_controller.php');
          require_once('cms/models/cadprestadora_class.php');
@@ -123,11 +150,11 @@
           }
 
         break;
-        
+
         case 'Endereco':
          require_once('cms/controllers/prestadora_controller_endereco.php');
          require_once('cms/models/cadprestadoraEndereco_class.php');
-           
+
 
           switch ($modo) {
             case 'novo':
@@ -139,11 +166,11 @@
                 $controller_prestadora_endereco::Inserir();
 
                 break;
-            
+
           }
             break;
 
-                  
+
                   /*
 
             case 'buscar':
@@ -163,13 +190,13 @@
               */
           }
 
-      
 
 
 
- 
 
 
 
-    
+
+
+
  ?>

@@ -20,8 +20,22 @@
 
 
     public function ListartUserPerg(){
-    $perguntaForum = new Forum();
+      $perguntaForum = new Forum();
       return $perguntaForum::selectUserPerg();
+    }
+
+    public function ListartUserPergPorId($idPergunta){
+      $idTopicoForum = $idPergunta;
+      $perguntaForum= new Forum();
+      $perguntaForum->idTopicoForum=$idTopicoForum;
+      return $perguntaForum::selectUserPergPorId($perguntaForum);
+    }
+
+    public function ListarTodasRepostas($idPergunta){
+      $idTopicoForum = $idPergunta;
+      $perguntaForum= new Forum();
+      $perguntaForum->idTopicoForum=$idTopicoForum;
+      return $perguntaForum::selectRespostas($perguntaForum);
     }
 
   }
