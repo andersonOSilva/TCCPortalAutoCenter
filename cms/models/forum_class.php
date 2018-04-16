@@ -27,7 +27,7 @@
       public function selectCat(){
         addslashes($sql="select * from tbl_categoria_forum");
 
-        echo $sql;
+        ///echo $sql;
         $conex = new Mysql_db();
         $PDO_conex = $conex->Conectar();
         $select = $PDO_conex->query($sql);
@@ -92,9 +92,9 @@
       // select resposta por id de pergunta
 
       public function selectRespostas($dadosForum){
-        $sql="select * from respostaPerguntaForum_view where idTopicoForum=".$dadosForum->idTopicoForum." group by idTopicoForum";
+        $sql="select * from respostaPerguntaForum_view where idTopicoForum=".$dadosForum->idTopicoForum;
 
-      //  echo $sql;
+       //echo $sql;
 
         $conex = new Mysql_db();
         $PDO_conex = $conex->Conectar();
@@ -149,7 +149,7 @@
       public function selectUserPergPorId($dadosForum){
         $sql="select * from view_UsuarioForum Where idTopicoForum=".$dadosForum->idTopicoForum;
 
-
+        //echo $sql;
         $conex = new Mysql_db();
         $PDO_conex = $conex->Conectar();
         $select = $PDO_conex->query($sql);

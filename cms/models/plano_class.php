@@ -158,7 +158,7 @@
 
     if ($PDO_conex->query($sql)) {
 
-        require('views/conteudo_planos.php');
+        require_once('views/conteudo_planos.php');
 
         // echo "
         // <script src='js/jquery7.min.js'></script>

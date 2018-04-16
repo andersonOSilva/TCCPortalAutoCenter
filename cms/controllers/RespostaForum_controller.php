@@ -5,7 +5,7 @@
         $idUser=$_GET['idUser'];
         $idPergunta=$_GET['idPergunta'];
 
-        echo $idUser;
+        //echo $idUser;
         $resposta = new RespForum;
         $resposta ->comentario=$_POST['txtResposta'];
         $resposta ->idUsuario=$idUser;

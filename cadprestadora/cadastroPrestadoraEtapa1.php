@@ -85,31 +85,31 @@ $(document).ready(function() {
               </tr>
               <tr>
                     <td class="coluna1">login</td>
-                    <td class="coluna2" ><input name="txtlogin" type="text" placeholder="loggin"></td>
+                    <td class="coluna2" ><input name="txtlogin" type="text" placeholder="loggin" required></td>
                 </tr>
                 <tr>
                     <td class="coluna1">senha</td>
-                    <td class="coluna2" ><input name="txtsenha" type="password" placeholder="****"></td>
+                    <td class="coluna2" ><input name="txtsenha" type="password" placeholder="****" required></td>
                 </tr>
                 <tr>
                     <td class="coluna1">email</td>
-                    <td class="coluna2" ><input name="txtemail" type="text" placeholder="email@shazam.com"></td>
+                    <td class="coluna2" ><input name="txtemail" type="email" placeholder="email@shazam.com" required></td>
                 </tr>
                 <tr>
                     <td class="coluna1">cnpj</td>
-                    <td class="coluna2" ><input name="txtcnpj" type="text" placeholder="cnpj"></td>
+                    <td class="coluna2" ><input name="txtcnpj" type="text" placeholder="cnpj" required></td>
                 </tr>
                 <tr>
                     <td class="coluna1">razao social</td>
-                    <td class="coluna2" ><input name="txtrazaosocial" type="text" placeholder="razao social"></td>
+                    <td class="coluna2" ><input name="txtrazaosocial" type="text" placeholder="razao social" required></td>
                 </tr>
                 <tr>
                     <td class="coluna1">nome fantasia</td>
-                    <td class="coluna2" ><input name="txtnomefantasia" type="text" placeholder="nome fantasia"></td>
+                    <td class="coluna2" ><input name="txtnomefantasia" type="text" placeholder="nome fantasia" required></td>
                 </tr>
               <tr>
                     <td class="coluna1">Telefone</td>
-                    <td class="coluna2" ><input name="txttelefone" type="text" placeholder="(11)1234-5644"></td>
+                    <td class="coluna2" ><input name="txttelefone" required type="text" placeholder="(11)1234-5644" pattern="[0-9]{3} [0-9]{4}-[0-9]{4}" title="Formato inválido!" onkeypress="return validar(event,'caracter')"></td>
               </tr>
               <tr>
                     <td class="coluna1">Desricao</td>

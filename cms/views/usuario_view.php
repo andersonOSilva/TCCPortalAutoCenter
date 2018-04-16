@@ -31,12 +31,13 @@ function Visualizar(idUsuario){
 // });
 }
 </script>
-<div class="modalContainerUsuario2">
-  <div class="modalUsuario2">
+  <div class="modalContainerUsuario2">
+    <div class="modalUsuario2">
 
+    </div>
   </div>
-</div>
 <div class="conteudo_padrao">
+  <div class="suporte">
   <!-- Segura o titulo da tela -->
   <div class="suporte_titulo">
     <!-- titulo da tela "Usuario" -->
@@ -105,4 +106,5 @@ function Visualizar(idUsuario){
          ?>
 
     </div>
+  </div>
 </div>

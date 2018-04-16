@@ -43,6 +43,7 @@
 
       }
       break;
+
     case 'servicos':
       require_once('controllers/servico_controller.php');
       require_once('models/servicos_class.php');
@@ -66,6 +67,24 @@
       }
 
       break;
+
+      //Carbook
+      case 'carbook':
+        require_once('controllers/carbook_controller.php');
+        require_once('models/carbook_class.php');
+
+        switch ($_GET['modo']) {
+          case 'novo':
+            $controller_carbook = new controllerCarbook();
+            $controller_carbook::Novo();
+            break;
+
+          default:
+            # code...
+            break;
+        }
+
+        break;
 
         //Fale Conosco
       case 'faleconosco':

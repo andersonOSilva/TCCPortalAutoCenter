@@ -73,3 +73,9 @@
 
 
 </div>
+
+
+<!-- Import das bibliotecas JQuery -->
+
+<script  src="js/jcarousellite.js"></script>
+<script  src="js/carrossel.js"></script>

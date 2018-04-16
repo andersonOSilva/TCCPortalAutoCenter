@@ -23,7 +23,7 @@ class PrestadoraEndereco{
         try{
              $conex = new Mysql_db();
                 $PDO_conex = $conex->Conectar();
-        $sqlPrestadoraEndereco="insert into tbl_endereco_prestadora (logradouro,numero,bairro,referencia,cep)
+        $sqlPrestadoraEndereco="insert into tbl_endereco_prestadora (logradouro,numero,bairro,referencia,cep,idcidade)
                 values('".$dados_prestadora->logradouro."',
                       '".$dados_prestadora->numero."',
                       '".$dados_prestadora->bairro."',
@@ -31,7 +31,7 @@ class PrestadoraEndereco{
                       '".$dados_prestadora->referencia."',
                       '".$dados_prestadora->cep."',
                       '".$dados_prestadora->idcidade."');";
-            echo($sqlPrestadoraEndereco);
+//            echo($sqlPrestadoraEndereco);
 
               $PDO_conex->query($sqlPrestadoraEndereco);
         }catch (Exception $e) {
@@ -39,10 +39,10 @@ class PrestadoraEndereco{
 
                   }
         $conex->Desconectar();
-        
+        require_once 'cadprestadora/cadastroPrestadoraEtapa1.php';   
     }
     
-}
+
    function Update($dados_prestadora){
       
       
@@ -131,4 +131,5 @@ class PrestadoraEndereco{
                   }
 
     }
+}
 ?>

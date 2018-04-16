@@ -1,45 +1,54 @@
 
-    <div class="modalContainer_servico">
+    <!-- <div class="modalContainer_servico">
       <div class="modal_servico">
 
       </div>
-    </div>
+    </div> -->
 
     <div class="conteudo_padrao">
       <div class="cabecalho_carbook">
         <h1>Carbook</h1>
       </div>
 
-      <div class="conteudo_carbook">
-        <div class="cadastro_carbook">
+        <!--listas de ativos -->
+        <!-- <div class="cadastro_carbook">
+          <?php
 
-        </div>
+          // require_once('conteudo_servico.php');
+
+           ?>
+        </div> -->
         <div class="cadastro_carbook">
 
 
             <!-- <div id="btn_editar">
               <img src="Imagens/pencil.png" alt="editar">
             </div> -->
-            <form class="" action="index.html" method="post" id="formBody">
-              <div class="suporte_video">
-                <h2>Area de Video</h2>
-              </div>
-              <div class="area_texto">
-                <h2>Area de Descrição</h2>
+            <form action="router.php?controller=carbook&modo=novo" method="post" id="formBody">
+              <!-- <div class="suporte_video"> -->
+                  <div class="filePost">
+                    <input  id="upload" type="file" name="fle_imagemCarbook" >
+                  </div>
 
-                <div class="control small">
+                  <div class="segura_preview">
+                    <div class="preview_img">
+                      <img id="img" src="<?php echo $imagem?>" alt="">
+                    </div>
+                  </div>
+
+              <!-- </div> -->
+
+            <div class="control_small">
                   <textarea name="txtdescricao" id="DescricaoCarbook" placeholder="Descricao do Carbook" required></textarea>
                   <label for="description">Descricao do Carbook </label>
-                </div>
+            </div>
 
+            <div class="buttom_enviar">
+              <input id="btnEnviar" type="submit" name="btnEnvia0" value="Salvar">
+            </div>
 
-              </div>
-            </form>
-
-            <!-- <div id="btn_salvar">
-                <!-- <img src="Imagens/save_48.png" alt="salvar">
-            </div> -->
+          </form>
         </div>
-      </div>
+
 
     </div>

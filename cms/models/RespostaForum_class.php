@@ -17,14 +17,16 @@
       $sql="insert into tbl_comentario_topico(comentario,idUsuario,idTopico)
               VALUES ('".$dadosResposta->comentario."', '".$dadosResposta->idUsuario."', '".$dadosResposta->idTopico."');";
 
-              echo $sql;
+              //echo $sql;
 
               $conex = new Mysql_db();
               $PDO_conex = $conex->Conectar();
 
               if ($PDO_conex->query($sql)) {
 
-              echo "<script>location.href='location:responderPergunta.php?idPergunta=.$dadosResposta->idTopico.';</script>";  
+                header("location:responderPergunta.php?idPergunta=".$dadosResposta->idTopico);
+
+
               }else{
                 echo "erro ao conectar";
               }

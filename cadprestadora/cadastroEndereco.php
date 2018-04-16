@@ -37,6 +37,35 @@ $(document).ready(function() {
     
     
 </script>
+<!--<?php 
+require_once('cms/models/bd_class.php');
+$cont= null;
+//                            SELECT * FROM db_portal.tbl_cidade;
+                          
+                          $conex = new Mysql_db();
+                           $PDO_conex = $conex->Conectar();
+                          
+                           $sql = "SELECT * FROM db_portal.tbl_cidade;";
+                          
+                          $conex = new Mysql_db();
+
+      $PDO_conex = $conex->Conectar();
+
+      $select = $PDO_conex->query($sql);
+                        
+    while($rs=$select->fetch(PDO::FETCH_ASSOC)){
+         $listPrestadoraEndereco[] = new Prestadora();
+        
+        $listPrestadora[$cont]->id=$rs['idCidade'];
+        $listPrestadora[$cont]->razaoSocial=$rs['nome'];
+        $cont+=1;
+      }
+
+      // echo ($sql);
+      $conex->Desconectar();
+
+                          
+                          ?>-->
 <!-- div principal que vai sustentar  toda a area de imagem e descricao em destaque -->
       <form action="" method="POST" enctype="multipart/form-data" id="form"  >
           <div class="container_cad_prestadora">
@@ -115,7 +144,7 @@ $(document).ready(function() {
                   </tr>
                   <tr>
                         <td class="coluna1">cep</td>
-                        <td class="coluna2" ><input name="txtcep" type="text" placeholder="quitanda do ze"></td>
+                        <td class="coluna2" ><input name="txtcep" type="text" placeholder="quitanda do ze" pattern="[0-8]{5}-[0-8]{3}"></td>
                   </tr>
                   <tr>
                         <td class="coluna1">Rua</td>
@@ -139,9 +168,16 @@ $(document).ready(function() {
                   </tr>
                   <tr>
                         <td class="coluna1">Cidade</td>
-                      <td class="coluna2" > <select name="txtcidade"> <option>
-                          <?php   ?>
-                          </option></select></td>
+                      <td class="coluna2" > 
+                          <select name="txtcidade"> 
+<!--
+                              <option value="<?php $listPrestadora[$cont]->id=$rs['idcidade']; ?>">
+                               <?php $listPrestadora[$cont]->razaoSocial=$rs['nome'];?>
+                            </option>
+-->
+                              <option value="0" >selcione uma opção de cidade</option>
+                          </select>
+                      </td>
                   </tr>
 <!--
                   <tr>

@@ -18,7 +18,7 @@
               </div>
 
               <?php
-                require_once 'file';
+//                require_once 'file';
 
                ?>
             <!---menu de ancora ira direcinar o usuario para aquele determinado assunto dentro da home -->

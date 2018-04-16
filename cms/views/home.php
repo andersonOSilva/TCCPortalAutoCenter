@@ -7,11 +7,7 @@
     <link rel="stylesheet" href="css/style_prestadora.css">
     <link rel="stylesheet" href="css/styleUsuario.css">
     <link rel="stylesheet" href="css/style_carbook.css">
-    <!-- Import das bibliotecas JQuery -->
     <script src="js/jquery7.min.js"></script>
-    <script  src="js/jcarousellite.js"></script>
-    <script  src="js/carrossel.js"></script>
-
 
   </head>
   <body>

@@ -134,10 +134,16 @@
           
            $conex = new Mysql_db();
             $PDO_conex = $conex->Conectar();
-          
+//          (razaoSocial,nomefantasia,fotoPrestadora,telefone,descricao,cnpj,login,senha)
           $sqlPrestadoraUpdate="UPDATE `db_portal`.`tbl_prestadora` SET
-                `razaoSocial`='".$PrestadoraEnderecoID->idPrestadoraEndereco.
-                "' WHERE `idPrestadora`='".$PrestadoraID->idPrestadora."';";
+                `razaoSocial`='".$PrestadoraEnderecoID->idPrestadoraEndereco."',
+                `nomefantasia`='".$PrestadoraEnderecoID->idPrestadoraEndereco."',
+                `fotoPrestadora`='".$PrestadoraEnderecoID->idPrestadoraEndereco."',
+                `telefone`='".$PrestadoraEnderecoID->idPrestadoraEndereco."',
+                `cnpj`='".$PrestadoraEnderecoID->idPrestadoraEndereco."',
+                `login`='".$PrestadoraEnderecoID->idPrestadoraEndereco."',
+                `senha`='".$PrestadoraEnderecoID->idPrestadoraEndereco."',
+                WHERE `idPrestadora`='".$PrestadoraID->idPrestadora."';";
                 $PDO_conex->query($sqlPrestadoraUpdate);
                 
           $conex->Desconectar();
