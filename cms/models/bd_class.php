@@ -8,10 +8,10 @@
 
 
     public function __construct(){
-      $this->server = "10.107.134.16";/*localhost*/
+      $this->server = "localhost";/*localhost*/
       $this->user = "root";
       $this->password = "bcd127";
-      $this->dataBaseName = "db_portal";
+      $this->dataBaseName = "dbportal";
 
     }
     public function Conectar(){

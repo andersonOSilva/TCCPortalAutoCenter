@@ -35,6 +35,12 @@
               return $controller_cadUser::validarUser();
             break;
 
+
+        case 'LoginUserAposCadastro':
+            $controller_cadUser= new controllerCadUser();
+             $controller_cadUser::LoginUserAposCadastro();
+          break;
+
         case 'validarEmail':
             $controller_cadUser= new controllerCadUser();
             return $controller_cadUser::validarEmail();
@@ -63,6 +69,7 @@
             //Chama a controller para poder fazer o login
             $controller_cadUser= new controllerCadUser();
             $controller_cadUser::LoginUser();
+            //echo('teste no router');
           break;
 
           case 'buscarId':

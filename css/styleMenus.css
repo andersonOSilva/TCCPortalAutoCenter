@@ -316,6 +316,14 @@ color: #fff;
   display: block;
 }
 
+
+
+.tipo{
+  float: left;
+  width: 50%;
+  height: 100%;
+}
+
 #formBody .control {
   float: left;
   position: relative;
@@ -564,7 +572,7 @@ color: #fff;
 .tipo_login{
   width: 280px;
   height: 50px;
-  background-color: red;
+  /*background-color: red;*/
   margin: auto;
 
 }

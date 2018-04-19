@@ -14,13 +14,16 @@
     public $status;
 
 
+
+
+
     // construtor da class de conexao
     public  function __construct(){
       require_once('bd_class.php');
     }
 
     // function de Inserir novo usuario
-    public function Insert($user_dados){
+    public function Insert($user_dados,$url){
       $sql = "insert into tbl_usuario (nome,usuario,senha,email,dtNasc,cpf,fotoUser)
                           values ('".$user_dados->nomeCompleto."',
                                   '".$user_dados->nomeUser."',
@@ -30,16 +33,31 @@
                                   '".$user_dados->cpf."',
                                   '".$user_dados->foto."')";
 
-                      echo $sql;
+
+
+                    //  echo $sql;
 
       // conexao com o banco
       $conex = new Mysql_db();
       $PDO_conex = $conex->Conectar();
 
       if ($PDO_conex->query($sql)) {
-         //echo "<script>location.reload();</script>";
+
+
+
+
+
+    //echo " <script>parent.window.document.location.href = 'router.php?controller=User&modo=LoginUserAposCadastro&url=$user_dados->url&nomeUser=$user_dados->nomeUser&senha=$user_dados->senha;'<script>" ;
+
+        //
+
+        echo "<script>location.href='router.php?controller=User&modo=LoginUserAposCadastro&url=$url&nomeUser=$user_dados->nomeUser&senha=$user_dados->senha';</script>";
+        //header("location:router.php?controller=User&modo=LoginUserAposCadastro&url=$user_dados->url&nomeUser=$user_dados->nomeUser&senha=$user_dados->senha");
+
       }else{
-        echo "erro ao conectar";
+        //header("location:router.php?controller=User&modo=LoginUserAposCadastro&url=$user_dados->url&nomeUser=$user_dados->nomeUser&senha=$user_dados->senha");
+        echo "<script>location.href='router.php?controller=User&modo=LoginUserAposCadastro&url=$url&nomeUser=$user_dados->nomeUser&senha=$user_dados->senha';</script>";
+
       }
 
       $conex->Desconectar();
@@ -66,22 +84,95 @@
       if($rs=$select->fetch(PDO::FETCH_ASSOC)){
 
         $idUsuario = $rs['idUsuario'];
-        echo $idUsuario;
+        //echo $idUsuario;
 
       }
+
+
+
+
+
+      if ($idUsuario > 0) {
+        echo '1';
+
+        $_SESSION['idUsuario'] = $idUsuario;
+
+      }else {
+
+        echo '0';
+
+        //header('location:router.php?controller=loginUser&modo=buscarId&idUsuario='.$_SESSION['idUsuario']);
+
+
+
+      //  header("location:".$url);
+
+        //echo $url;
+      }
+
+      $conex->Desconectar();
+
+      // if($idUsuario < 0) {
+      //   echo $idUsuario;
+      //   echo '0';
+      // }
+
+    }
+
+
+    public function LoginUserAposCadastro($login_user,$url){
+      session_start();
+
+      // chamando a procedure
+      addslashes($sql="CALL loginUser('$login_user->nomeUser','$login_user->senha',@_idUsuario);");
+
+      // conexao com o banco e execuçao
+      $conex = new Mysql_db();
+      $PDO_conex = $conex->Conectar();
+      $PDO_conex->query($sql);
+
+      // retorno
+      addslashes($sql="select @_idUsuario as idUsuario;");
+      $select = $PDO_conex->query($sql);
+      $idUsuario = 0;
+
+      // pegando id do retorno
+      if($rs=$select->fetch(PDO::FETCH_ASSOC)){
+
+        $idUsuario = $rs['idUsuario'];
+        //echo $idUsuario;
+
+      }
+
 
 
       $conex->Desconectar();
 
-
       if ($idUsuario > 0) {
+      //  echo '1';
+
         $_SESSION['idUsuario'] = $idUsuario;
-        //header('location:router.php?controller=loginUser&modo=buscarId&idUsuario='.$_SESSION['idUsuario']);
-        header("location:index.php");
+        header("location:".$url);
+
       }else {
-        echo('<script> alert("Usuario ou senha invalidos");
-        window.location.href = "index.php"</script>');
+
+      //  echo '0';
+
+        //header('location:router.php?controller=loginUser&modo=buscarId&idUsuario='.$_SESSION['idUsuario']);
+
+
+
+       header("location:".$url);
+
+        //echo $url;
       }
+
+
+
+      // if($idUsuario < 0) {
+      //   echo $idUsuario;
+      //   echo '0';
+      // }
 
     }
 
@@ -149,7 +240,7 @@
         $list_usuario[$cont]->email = $rs['email'];
         $list_usuario[$cont]->dtNasc = $rs['dtNasc'];
         $list_usuario[$cont]->fotoUser = $rs['fotoUser'];
-        $list_usuario[$cont]->status = $rs['status'];
+        $list_usuario[$cont]->status = $rs['statusUser'];
 
         $cont+=1;
     }
@@ -231,6 +322,46 @@
        }
 
      $con->Desconectar();
+
+
+  }
+
+  public function Ativacao($dadosUser){
+    $sql="update tbl_usuario set statusUser = '1' where idUsuario=".$dadosUser->idUsuario;
+
+    echo $sql;
+    $conex = new Mysql_db();
+
+    $PDO_conex = $conex->Conectar();
+    if ($PDO_conex->query($sql)) {
+
+      //require_once 'views/usuario_view.php';
+      echo "<script>location.href='index.php?pag=usuario';</script>";
+
+    }else{
+      echo "erro ao ativar";
+    }
+    $conex->Desconectar();
+
+
+  }
+
+  public function Desativar($dadosUser){
+    $sql="update tbl_usuario set statusUser = '0' where idUsuario=".$dadosUser->idUsuario;
+
+    echo $sql;
+    $conex = new Mysql_db();
+
+    $PDO_conex = $conex->Conectar();
+    if ($PDO_conex->query($sql)) {
+
+      //require_once 'views/usuario_view.php';
+      echo "<script>location.href='index.php?pag=usuario';</script>";
+
+    }else{
+      echo "erro ao ativar";
+    }
+    $conex->Desconectar();
 
 
   }

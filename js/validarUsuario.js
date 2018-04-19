@@ -14,6 +14,8 @@ function validar() {
 
 }
 
+
+
 function AparecerBotao() {
 
   if (($('.colorRed').size() !=0 )) {

@@ -1,3 +1,11 @@
+<?php
+  $url = $_SERVER['HTTP_REFERER'];
+
+ echo $url;
+ ?>
+
+
+
 <script>
 $(document).ready(function() {
 
@@ -15,7 +23,6 @@ $(document).ready(function() {
 
 
 // cadastro assicrono
-
 $("#formBody").submit(function(event){
 
 
@@ -24,7 +31,7 @@ $("#formBody").submit(function(event){
 
     $.ajax({
        type: "POST",
-       url: "router.php?controller=User&modo=novo",
+       url: "router.php?controller=User&modo=novo&url=<?php echo $url ?>",
        //alert (url);
        data: new FormData($("#formBody")[0]),
        cache:false,
@@ -45,6 +52,7 @@ $("#formBody").submit(function(event){
 </script>
   <!-- <script src="js/jquery-3.3.1.min.js"></script> -->
 
+
 <script src="js\formatarCalendario.js"></script>
 <script src="js\validacaoCpf.js"></script>
 
@@ -56,6 +64,8 @@ $("#formBody").submit(function(event){
   <div class="titulo_login">
     <h1>Cadastre-se </h1>
   </div>
+
+
 
   <form id='formBody'  method="post" action="" name="FrmLoginUser" enctype="multipart/form-data"  >
 

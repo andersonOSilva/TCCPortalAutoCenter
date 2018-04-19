@@ -6,48 +6,56 @@ class controllerCarbook
       require_once 'modulo.php';
 
       $carbook = new Carbook();
-      $carbook->descricao = $_POST['txtdescricao'];
+      $carbook->descricao=$_POST['txtdescricao'];
 
+      // iniciado variaveis
       $diretorio_completo=Null;
       $MovUpload=false;
       $imagem_file=Null;
 
+      // Pegando a Foto
 
-    if (!empty($_FILES['flImagenCarbook']['name'])) {
-       $imagem_file = true;
-       $diretorio_completo=salvarFoto($_FILES['flImagenCarbook'],'imagenCarbook');
-       if ($diretorio_completo == "Erro") {
-           echo "<script>
-               alert('arquivo nao movido');
-               window.history.go(-1);
-               </script>";
-             $MovUpload=false;
+      if (!empty($_FILES['flImagenCarbook']['name'])) {
+
+         $imagem_file = true;
+         $diretorio_completo=salvarFoto($_FILES['flImagenCarbook'],'imagenCarbook');
+
+         if ($diretorio_completo == "Erro") {
+             echo "<script>
+                 alert('arquivo nao movido');
+                 window.history.go(-1);
+                 </script>";
+               $MovUpload=false;
+         }else {
+           $MovUpload=true;
+         }
        }else {
-         $MovUpload=true;
+         $imagem_file = false;
        }
-     }else {
-       $imagem_file = false;
-     }
 
-     $carbook->imagem =$diretorio_completo;
-     $carbook::Insert($carbook);
-
+       $carbook ->video =$diretorio_completo;
+       //var_dump($diretorio_completo) ;
+      // var_dump($carbook);
+       $carbook::Insert($carbook);
   }
 
 
-  public function Update(){
+  public function Editar(){
 
   }
 
-  public function Select(){
+  public function Listar(){
+      $carbook = new Carbook();
+    return  $carbook::Select();
 
   }
 
-  public function SelectByID(){
-
+  public function BuscarApenasum(){
+    $carbook = new Carbook();
+  return  $carbook::SelectApenasum();
   }
 
-  public function Delete(){
+  public function Excluir(){
 
   }
 

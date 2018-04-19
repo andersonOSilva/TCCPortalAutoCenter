@@ -71,6 +71,35 @@
                   <p>Não Fique Com Duvida, faça a sua pergunta</p>
                 </div>
 
+
+                <?php
+                // $dominio= $_SERVER['HTTP_HOST'];
+                 //$url = $_SERVER['REQUEST_URI'];
+
+
+
+                //$domain =substr_count('/TCCPortalAutoCenter/',1);
+
+                //echo $domain;
+
+                // $haystack = $url;
+                // $needle   = '/';
+                //
+                // $pos      = strripos($haystack, $needle);
+                //
+                // echo substr($url,$pos)
+
+                // echo $pos;
+                //
+                // if ($pos === false) {
+                //     echo "Sinto muito, nós não encontramos ($needle) em ($haystack)";
+                // } else {
+                //     echo "Parabéns!\n";
+                //     echo "Nós encontramos a última ($needle) em ($haystack) na posição ($pos)";
+                // }
+                  ?>
+
+
                 <div class="Butom_Fazer_Pergunta">
                   <div class="btnAbrirModal">
                     <a href="#"

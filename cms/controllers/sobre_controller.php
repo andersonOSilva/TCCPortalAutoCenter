@@ -1,10 +1,11 @@
 <?php
 
 class controller_sobre{
+//    echo('controller sobre diz - amigo estou aqui');
     
-    public function inserir{
+    public function inserir(){
         
-        $sobre = new Sobre();
+        $sobre = new sobre();
         
         $sobre->historia=$_POST['historia'];
         $sobre->missao=$_POST['missao'];
@@ -16,7 +17,13 @@ class controller_sobre{
         
     }
     public function Listar(){
-        $Sobre = new Sobre();
+        $Sobre = new sobre();
+        $Sobre::Select($Sobre);
+        
+        
+    }
+    public function Buscar(){
+        $Sobre = new sobre();
         
         $Sobre->idSobre=$idsobre;
         
@@ -25,9 +32,23 @@ class controller_sobre{
         
         
     }
+    
+    
+    public function BuscarAtivo(){
+//        echo('buscarAtivo diz - amigo estou aqui');        
+        $Sobre = new sobre();
+
+        return  $Sobre::SelectAtivo();
+        
+        
+        
+        
+        
+        
+    }
   public function Editar(){ 
       
-      $sobre = new Sobre();
+      $sobre = new sobre();
         
         $sobre->historia=$_POST['historia'];
         $sobre->missao=$_POST['missao'];

@@ -99,7 +99,7 @@ h1{
   min-height:70px;
   height: auto;
   overflow: hidden;
-  background-color: red;
+  background-color: gainsboro;
   margin-top: 50px;
 }
 
@@ -115,12 +115,13 @@ h1{
 .suporte{
   width: 100%;
   height: auto;
+  position: fixed;
   /*background-color: blue;*/
 }
 .modalUsuario2{
 	width:700px;
 	height:600px;
-	/*background-color:magenta;
+	background-color:magenta;
 	 /*margin:auto;*/
   margin-top: 180px;
   margin-left: auto;
@@ -133,7 +134,7 @@ h1{
 .modalContainerUsuario2{
 	width:100%;
 	height:100vh;
-	background: red;
+	background: #fff;
 	position:fixed;
   margin: auto;
 	display:none;
@@ -160,13 +161,13 @@ h1{
    height: auto;
    background-color: yellow;
    margin-left: 50px;
-   margin-top: 15px;
+   margin-top: 18px;
    float: left;
 
 }
-/*.exibir{
+.exibir{
   min-height: 30px;
    height: auto;
    width: 300px;
    background-color: gainsboro;
-}*/
+}

@@ -15,6 +15,14 @@ class controllerUsuario{
   public function Notificar(){
 
   }
+  public function Selecionarporid(){
+    $idUsuario = $_GET['id'];
+    // echo $idUsuario;
+    $usuario = new carroeUsuario();
+
+    $usuario->idUsuario = $idUsuario;
+  return $usuario::Selecionarporid($usuario);
+  }
 }
 
  ?>
