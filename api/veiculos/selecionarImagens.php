@@ -15,8 +15,15 @@ if (isset($_GET['idVeiculo'])) {
   $lstImagens = array();
 
   while ($imagem = $resultado->fetch(PDO::FETCH_ASSOC)) {
+<<<<<<< HEAD
     $lstImagens[] = $imagem;
   }
 
   echo json_encode($lstImagens);
+=======
+    $lstimagens[] = $imagem;
+  }
+
+  echo json_encode($lstimagens);
+>>>>>>> a85b0cc4aa154f3435ef58716e9573ce324c66d6
 ?>

@@ -86,13 +86,21 @@ $(document).ready(function() {
 
     <div class="tipo">
       <input type="radio" name="FlgPontua" id="tipoUser"  >
+<<<<<<< HEAD
       <label for="r1" class="radio"><span></span>Usuario</label>
+=======
+      <label for="r1"><span></span>Usuario</label>
+>>>>>>> a85b0cc4aa154f3435ef58716e9573ce324c66d6
       <div class="check"></div>
     </div>
 
     <div class="tipo">
       <input type="radio" name="FlgPontua" id="tipoPrest">
+<<<<<<< HEAD
       <label for="r1" class="radio"><span></span>Prestadora</label>
+=======
+      <label for="r1"><span></span>Prestadora</label>
+>>>>>>> a85b0cc4aa154f3435ef58716e9573ce324c66d6
 
       <div class="check"></div>
     </div>
@@ -140,7 +148,11 @@ $(document).ready(function() {
       </div>
 
       <div  id="novo_cadastro_link">
+<<<<<<< HEAD
         <a href="#" onclick="cadastro();" ><div>Cadastre-se agora</div></a>
+=======
+        <a href="#" onclick="cadastro();" >Cadastre-se agora</a>
+>>>>>>> a85b0cc4aa154f3435ef58716e9573ce324c66d6
       </div>
   </div>
 <!-- Load the JS -->

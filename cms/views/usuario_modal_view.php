@@ -3,6 +3,7 @@ $nome_pessoa= null;
 $cpf= null;
 $imagem = null;
 $email = null;
+<<<<<<< HEAD
 $usuario = null;
 $dtNasc = null;
 // $fotoUser;
@@ -18,12 +19,18 @@ $idVeiculo = null;
 
   //  echo $sql;
 
+=======
+>>>>>>> a85b0cc4aa154f3435ef58716e9573ce324c66d6
 $id=$_GET['id'];
 
 
 
 
+<<<<<<< HEAD
     // echo $id;
+=======
+    echo $id;
+>>>>>>> a85b0cc4aa154f3435ef58716e9573ce324c66d6
 
  ?>
 <!-- Modal  -->
@@ -57,7 +64,11 @@ $id=$_GET['id'];
           </div>
 
           <?php
+<<<<<<< HEAD
 
+=======
+      
+>>>>>>> a85b0cc4aa154f3435ef58716e9573ce324c66d6
 }
 
            ?>
@@ -74,19 +85,28 @@ $id=$_GET['id'];
           <div class="conteudo_informacoes">
             <p>Email</p>
             <div class="exibir">
+<<<<<<< HEAD
               <?php echo ($retornaModel->email) ?>
+=======
+>>>>>>> a85b0cc4aa154f3435ef58716e9573ce324c66d6
             </div>
           </div>
           <div class="conteudo_informacoes">
             <p>CPF</p>
             <div class="exibir">
+<<<<<<< HEAD
               <?php echo ($retornaModel->cpf) ?>
+=======
+>>>>>>> a85b0cc4aa154f3435ef58716e9573ce324c66d6
             </div>
           </div>
           <div class="conteudo_informacoes">
             <p>Modelo</p>
             <div class="exibir">
+<<<<<<< HEAD
               <?php echo ($retornaModel->modelo) ?>
+=======
+>>>>>>> a85b0cc4aa154f3435ef58716e9573ce324c66d6
             </div>
           </div>
           <div class="conteudo_informacoes">
@@ -107,7 +127,10 @@ $id=$_GET['id'];
           <div class="conteudo_informacoes">
             <p>Cor</p>
             <div class="exibir">
+<<<<<<< HEAD
 
+=======
+>>>>>>> a85b0cc4aa154f3435ef58716e9573ce324c66d6
             </div>
           </div>
         </div>

@@ -108,8 +108,13 @@ if (isset($_GET['out'])) {
   ?>
 
 <div class="login">
+<<<<<<< HEAD
     <a href="#" class="novo" onclick="escolha();"><p id="entre">Entre</p></a> <a href="#" class="novo_cadastro" onclick="cadastro();"><p>ou cadastre-se</p></a>
     
+=======
+    <p><a href="#" class="novo" onclick="escolha();"><p>Entre</p></a> <a href="#" class="novo_cadastro" onclick="cadastro();"><p>ou cadastre-se</p></a>
+    </p>
+>>>>>>> a85b0cc4aa154f3435ef58716e9573ce324c66d6
 </div>
 
 <?php
