@@ -50,6 +50,12 @@
           <!-- div que vai segurar tudo que tiver na página  -->
           <div id="container_conteudo">
             <div id="suporte_primaria">
+              <div id="area_imagem">
+                <div id="img_perfil">
+                  <img src="imagens/mecanica.jpg" alt="perfil">
+                </div>
+              </div>
+              
             </div>
             <div id="suporte_secundaria">
             </div>
@@ -67,17 +73,24 @@
                   <div class="two_imagens">
                   </div>
                 </div>
-                <div >
-              </div id="divisao_imagens2">
-              </div>
-              <!-- area das duas imagens menores -->
-              <div id="imagensMenores">
-                    <!-- area que vai segurar as imagens  -->
+              <div id="divisao_imagens2">
+                <div class="imagens_menores">
 
+                </div>
+                <div class="imagens_menores">
+
+                </div>
+                <div class="imagens_menores">
+
+                </div>
+              </div>
               </div>
             </div>
           </div>
         </div>
+        <?php
+            require_once 'rodape.php';
+         ?>
       </div>
     </body>
   </html>

@@ -13,23 +13,63 @@ $(document).ready(function () {
 });
 // Função que irá abrir a modal para visualização dos dados
 // do usuario
-function Visualizar(idUsuario){
+
+function Visualizar(idItem){
+
   $.ajax({
-    type:"POST",
-    url:"views/usuario_modal_view.php",
+    type: "GET",
+    url: "views/usuario_modal_view.php",
+    data: {modo:'buscarId',id:idItem},
     success: function(dados){
-        $('.modalUsuario2').html(dados);
-
-
+      $('.modalUsuario2').html(dados);
+      alert(dados);
     }
-  });
-//   $(document).ready(function() {
-//   $(".fechar").click(function() {
-//     //$(".modalContainer").fadeOut();
-//   $(".modalContainerUsuario2").slideToggle(1000);
-//   });
-// });
+});
 }
+
+function Ativar(idIten){
+
+    var resposta;
+
+    resposta = confirm('Deseja Ativar esse usuario?');
+
+    if (resposta==true)
+    {
+    //alert(idIten);
+      $.ajax({
+          type: "GET",
+          url: "router.php?controller=user&modo=ativar&id="+idIten,
+          // data: {modo:'excluir',id:idIten},
+          success: function(dados){
+              $('.conteudo_prestadora').html(dados);
+            //  alert (dados);
+          }
+      });
+    }
+  }
+
+
+  function Desativar(idIten){
+
+    var resposta;
+
+    resposta = confirm('Deseja Desativar esse usuario?');
+
+    if (resposta==true)
+    {
+    //alert(idIten);
+      $.ajax({
+          type: "GET",
+          url: "router.php?controller=user&modo=Desativar&id="+idIten,
+          // data: {modo:'excluir',id:idIten},
+          success: function(dados){
+              $('.conteudo_prestadora').html(dados);
+              //alert ();
+          }
+      });
+    }
+  }
+
 </script>
   <div class="modalContainerUsuario2">
     <div class="modalUsuario2">
@@ -81,9 +121,35 @@ function Visualizar(idUsuario){
           <div class="email_view"><?php echo ($list_usuario[$cont]->email) ?></div>
           <div class="dados_user_modo">
             <!-- Icones de visualizar, desativar e notifica -->
-              <div class="modo_user">
-                  <img src="imagens/off.png" alt="off" title="desativar user">
-              </div>
+            <div class="dados_prest_item_modo">
+
+          <?php
+              $status= $list_usuario[$cont]->status;
+
+              echo $status;
+
+
+// quando o status for 1 ele desativa
+              if ($status == 0) {
+
+           ?>
+            <div class="status_prest">
+                <img src="imagens/off.png" alt="off" title="Ativar user" onclick="Ativar(<?php echo ($list_usuario[$cont]->idUsuario) ?>);">
+            </div>
+
+            <?php
+            // quando o status for o ele atina
+          }else {
+             ?>
+
+             <div class="status_prest">
+                 <img src="imagens/on.png" alt="on" title="desativar user" onclick="Desativar(<?php echo ($list_usuario[$cont]->idUsuario) ?>);">
+             </div>
+
+             <?php
+           }
+              ?>
+        </div>
 
               <div class="modo_user">
 

@@ -1,3 +1,11 @@
+<?php
+  $url = $_SERVER['HTTP_REFERER'];
+
+ echo $url;
+ ?>
+
+
+
 <script>
 $(document).ready(function() {
 
@@ -15,7 +23,6 @@ $(document).ready(function() {
 
 
 // cadastro assicrono
-
 $("#formBody").submit(function(event){
 
 
@@ -24,7 +31,7 @@ $("#formBody").submit(function(event){
 
     $.ajax({
        type: "POST",
-       url: "router.php?controller=User&modo=novo",
+       url: "router.php?controller=User&modo=novo&url=<?php echo $url ?>",
        //alert (url);
        data: new FormData($("#formBody")[0]),
        cache:false,
@@ -45,10 +52,11 @@ $("#formBody").submit(function(event){
 </script>
   <!-- <script src="js/jquery-3.3.1.min.js"></script> -->
 
+
 <script src="js\formatarCalendario.js"></script>
 <script src="js\validacaoCpf.js"></script>
 
-
+<div style="background:linear-gradient(orange,white,white,white,white,white);height:auto;width:300px;margin-left:450px;">
 <div class="cadastro">
   <div class="fechar_cadastro">
   </div>
@@ -56,6 +64,8 @@ $("#formBody").submit(function(event){
   <div class="titulo_login">
     <h1>Cadastre-se </h1>
   </div>
+
+
 
   <form id='formBody'  method="post" action="" name="FrmLoginUser" enctype="multipart/form-data"  >
 
@@ -71,7 +81,9 @@ $("#formBody").submit(function(event){
       </div>
 
 <div class="formModal">
-
+        
+    
+    
       <div class="control medium" >
         <input  placeholder="Nome Completo" id="nomeUserVal" maxlength="100" required  name="txtNomeCompleto" value="" >
         <label for="title " >Nome Completo <span id="respostaNomecompleto"></span> </label>
@@ -106,6 +118,7 @@ $("#formBody").submit(function(event){
         <input placeholder="Repetir senha" id="senhaRep1" maxlength="8" required  type='password' name="txtSenhaRep" value="">
         <label for="title">Repetir senha</label>
       </div>
+     
 
 </div>
 
@@ -118,6 +131,7 @@ $("#formBody").submit(function(event){
 
 
   </form>
+    
 
   <div class="termos_de_uso">
     <p>Ao entrar, você concorda com nossos <a href="#">termos de uso</a>, condições, <a href="#">política de privacidade</a> e que tem pelo menos 18 anos de idade</p>
@@ -141,4 +155,5 @@ $("#formBody").submit(function(event){
   <script src='js/main.js'></script> -->
 
 
+</div>
 </div>

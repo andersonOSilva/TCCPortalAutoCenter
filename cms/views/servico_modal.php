@@ -16,6 +16,7 @@
 
       require_once('../controllers/servico_controller.php');
       require_once('../models/servicos_class.php');
+
         //Instancia da classe buscar
         $controller_servico = new controllerServico();
         $servico=$controller_servico::Buscar();
@@ -34,7 +35,7 @@
 
  <script>
 
-     $("#form").submit(function(event){
+     $("#formBody").submit(function(event){
           //Recupera o id gravado no Form pelo atribute-id
           var id = $(this).data("id");
           var modo = "";
@@ -50,14 +51,14 @@
             type: "POST",
             url: "router.php?controller=servicos&modo="+modo+"&id="+id,
             //alert (url);
-            data: new FormData($("#form")[0]),
+            data: new FormData($("#formBody")[0]),
             cache:false,
             contentType:false,
             processData:false,
             async:true,
             success: function(dados){
                  $('.modal_servico').html(dados);
-                 //alert(dados);
+                // alert(dados);
 
             }
         });
@@ -102,7 +103,7 @@
 
     <div class="segura_form">
       <div class="control small" >
-        <input  placeholder="Nome do Serviço" id="nomeservico" maxlength="100" required  name="txt_nome" value="<?php echo $nome; ?>" >
+        <input  name="txt_nome" placeholder="Nome do Serviço" id="nomeservico" maxlength="100" required  value="<?php echo $nome; ?>" >
         <label for="title " >Nome do Serviço</label>
       </div>
 

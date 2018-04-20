@@ -11,36 +11,33 @@
       </div>
 
         <!--listas de ativos -->
-        <!-- <div class="cadastro_carbook">
+        <div class="cadastro_carbook">
           <?php
 
-          // require_once('conteudo_servico.php');
+            require_once 'conteudo_carbook.php';
 
            ?>
-        </div> -->
+        </div>
         <div class="cadastro_carbook">
 
+            <form action="router.php?controller=carbook&modo=novo" method="post" enctype="multipart/form-data" id="formBody" >
+              <div class="suporte_video">
+               <div class="filePost">
+                <input  id="upload" type="file" name="flImagenCarbook" >
 
-            <!-- <div id="btn_editar">
-              <img src="Imagens/pencil.png" alt="editar">
-            </div> -->
-            <form action="router.php?controller=carbook&modo=novo" method="post" id="formBody">
-              <!-- <div class="suporte_video"> -->
-                  <div class="filePost">
-                    <input  id="upload" type="file" name="fle_imagemCarbook" >
-                  </div>
+              </div>
 
                   <div class="segura_preview">
                     <div class="preview_img">
-                      <img id="img" src="<?php echo $imagem?>" alt="">
+                      <img id="img" src="<?php echo $video?>" alt="">
                     </div>
                   </div>
 
-              <!-- </div> -->
+              </div>
 
             <div class="control_small">
-                  <textarea name="txtdescricao" id="DescricaoCarbook" placeholder="Descricao do Carbook" required></textarea>
-                  <label for="description">Descricao do Carbook </label>
+                  <textarea name="txtdescricao" id="DescricaoCarbook" maxlength="50" rows="8" cols="70" placeholder="Descricao do Carbook" required></textarea>
+
             </div>
 
             <div class="buttom_enviar">
@@ -52,3 +49,5 @@
 
 
     </div>
+
+    <script  src="../js/preview.js"></script>

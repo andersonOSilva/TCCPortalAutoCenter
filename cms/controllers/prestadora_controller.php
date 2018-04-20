@@ -77,6 +77,7 @@ class controllerPrestadora{
     }
 
     public function Editar(){
+      
       require_once('modulo.php');
       $Prestadora = new Prestadora;
       $Prestadora->nome = $_POST['txt_nome'];

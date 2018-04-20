@@ -9,6 +9,33 @@
         $controller_funcionario::Login();
         break;
 
+        // USER
+
+      case 'user':
+
+      require_once("controllers/controller_cadUser.php");
+      require_once("models/cadUser_class.php");
+
+
+      switch ($_GET['modo']) {
+
+        case 'ativar':
+              $controller_cadUser= new controllerCadUser();
+              $controller_cadUser::Ativar();
+              // echo "string";
+            break;
+
+            case 'Desativar':
+                $controller_cadUser= new controllerCadUser();
+                $controller_cadUser::Desativar();
+                // echo "string";
+              break;
+
+      }
+
+
+      break;
+
         // PLANOS
 
     case 'planos':
@@ -22,7 +49,6 @@
             $controller_plano = new controllerPlano();
             $controller_plano::Novo();
           break;
-
 
 
         // case 'buscarId':
@@ -44,6 +70,7 @@
       }
       break;
 
+      /*Serviços*/
     case 'servicos':
       require_once('controllers/servico_controller.php');
       require_once('models/servicos_class.php');
@@ -51,7 +78,7 @@
       switch ($_GET['modo']) {
         case 'novo':
             $controller_servico = new controllerServico();
-            $controller_servico::Inserir();
+            $controller_servico::Novo();
           break;
 
 
@@ -79,9 +106,7 @@
             $controller_carbook::Novo();
             break;
 
-          default:
-            # code...
-            break;
+
         }
 
         break;
@@ -118,6 +143,12 @@
 
             break;
 
-
+      // case 'usuario':
+      //         $test=$_GET['id'];
+      //         echo $test;
+      //         require_once('viewModel/view_carroeUsuario.php');
+      //         $carro = new carroeUsuario();
+      //         $carro :: Selecionarporid();
+      //         break;
     }
  ?>

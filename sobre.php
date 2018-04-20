@@ -2,11 +2,22 @@
 <!-- nome do autor:Camils Cruz
 		ultima data de edicao:20/03/2018 -->
 <?php
-$pag='historia';
-if(isset($_GET['pag']))
-{
-$pag=$_GET['pag'];
-}
+$pag="historia";
+
+if(isset($_GET['pag'])){
+    $pag=$_GET['pag'];
+    
+}    
+              require_once('cms/controllers/sobre_controller.php');
+              require_once('cms/models/sobre_class.php');
+
+              $sobre_controller = new controller_sobre();
+
+              $retornoModel = controller_sobre::BuscarAtivo();
+              $historia=$retornoModel->historia;
+              $missao=$retornoModel->missao;
+              $visao=$retornoModel->visao;
+              $valores=$retornoModel->valores;
 
 ?>
 <html lang="pt">
@@ -51,6 +62,7 @@ $pag=$_GET['pag'];
             <?php
                 switch($pag){
                         case'historia':
+                            echo($retornoModel->historia);
                             require_once'sobre/historia.php'; 
                         break;
                         case'missao':

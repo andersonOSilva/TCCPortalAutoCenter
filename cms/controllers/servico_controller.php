@@ -1,8 +1,8 @@
 <?php
   class controllerServico{
-    public function Inserir(){
+    public function Novo(){
       require_once('modulo.php');
-      $servico = new Servico;
+      $servico = new Servico();
       $servico->nome = $_POST['txt_nome'];
       $servico->descricao = $_POST['txt_descricao'];
       // $servico->imagem;
@@ -15,7 +15,7 @@
 
       if (!empty($_FILES['fle_imagem']['name'])) {
          $imagem_file = true;
-         $diretorio_completo=salvarFoto($_FILES['fle_imagem'],'imagenPlano');
+         $diretorio_completo=salvarFoto($_FILES['fle_imagem'],'imagenServico');
          if ($diretorio_completo == "Erro") {
              echo "<script>
                  alert('arquivo nao movido');
@@ -31,6 +31,8 @@
 
        $servico->imagem = $diretorio_completo;
        $servico::Insert($servico);
+
+       //var_dump($servico);
     }
 
     public function Listar(){

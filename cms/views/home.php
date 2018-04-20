@@ -122,6 +122,9 @@
                   case 'usuario':
                     require_once 'views/usuario_view.php';
                     break;
+                  case 'sobre':
+                    require_once 'views/sobre_view.php';
+                    break;
               }
 
 

@@ -47,7 +47,7 @@ body{
 .container_slider{
   width: 100%;
   height: 100%;
-  background-color: red;
+  /*background-color: red;*/
 
 
 }
@@ -861,7 +861,8 @@ margin-left: 1000px;
   padding-top: 20px;
   font-size: 20px;
   text-align: left;
-    background-color: rgba(255,255,255,0.7);
+/*    background-color: rgba(255,255,255,0.7);*/
+    background-color:  rgba(236, 160, 35,0.5);
   color: black;
     border-radius: 50px 10px 50px 50px;
 
@@ -890,7 +891,11 @@ margin-left: 1000px;
   width: 100%;
   height: auto;
   min-height: 580px;
-  background-color:#000;
+/*  background-color:#000;    */
+    background-image: url(../imagens/17.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     border-top: 5px solid #eca023;
 }
 
@@ -899,6 +904,7 @@ margin-left: 1000px;
   height: auto;
   min-height: 580px;
   margin: auto;
+/*    background-color: aqua;*/
   /* background-image: url("../imagens/Fale-conosco_alterado.jpg")no-repeat; */
 }
 
@@ -931,12 +937,15 @@ margin-left: 1000px;
 }
 
 .entrada_dados{
-  width: 400px;
-  height: 50px;
-  font-size: 30px;
+  width: 300px;
+  height: 30px;
+  font-size: 20px;
   /* text-transform: uppercase; */
   border: 2px solid #000;
+    margin-top: 5px;
     border-radius: 10px;
+    outline-color: #eca023
+    
 }
 
 .dados2{
@@ -947,12 +956,14 @@ margin-left: 1000px;
 }
 
 .entrada_dados2{
-  width: 810px;
+  width: 560px;
   height: 100px;
   font-size: 30px;
   /* text-transform: uppercase; */
   border: 2px solid #000;
     border-radius: 10px;
+    outline-color: #eca023;
+/*    background-color: #eca023*/
 }
 
 textarea{

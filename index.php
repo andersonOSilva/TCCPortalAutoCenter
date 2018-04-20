@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <!-- nome:Antonio willian
 		ultima data de edicao:22/03/2018-->
 
@@ -161,11 +161,11 @@
 															<li>
 																	<a href="#">
 																		<div class="titulo_menu_carrossel">
-																			<p>Produtos</p>
+																			<a href="produtos.php"><p>Produtos</p></a>
 																		</div>
 
 																		<div class="descricao_menu_carrosel">
-																				<p>Confira os principais produtos do portal</p>
+                                                                            <a href="produto.php"><p>Confira os principais produtos do portal</p></a>
 																		</div>
 																	</a>
 															</li>
@@ -572,20 +572,32 @@
 									<h1><a href="#">CarBook</a></h1>
 								</div>
 
+								<?php
+									require_once 'cms/controllers/carbook_controller.php';
+									require_once 'cms/models/carbook_class.php';
+
+									$controller_carbook = new controllerCarbook();
+
+									$listCarbook=$controller_carbook::BuscarApenasum();
+									$cont = 0;
+
+									while ($cont < count($listCarbook)) {
+
+								 ?>
+
 								<div class="descricao_car_book" >
 <!--                                    style="background-color:rgba(255,255,255,0.5);color:black;border-radius:20px;"-->
-										<p >Quando se deseja garantir uma formatação homogênea e uniforme em todas as páginas de um site as folhas de estilo em cascata (Cascading Style Sheets) facilitam muito o trabalho de criação.
-
-Folha de estilo em cascata é um mecanismo simples para adicionar estilos (exemplos: fontes, cores, espaçamentos) em documentos Web.
-
-Ou seja, CSS é um padrão de formatação (Web Standards) para páginas que permite ir além das limitações impostas pelo HTML.
-
-Web Standards é um conjunto de normas, diretrizes, recomendações, notas, artigos, tutoriais e afins de caráter técnico, e destinados a orientar fabricantes, desenvolvedores e projetistas para o uso de práticas que possibilitem a criação de uma Web acessível a todos, independentemente dos dispositivos usados ou de suas necessidades especiais.</p>
+										<p><?php echo $listCarbook[$cont]->descricao; ?></p>
 								</div>
 
 								<div class="video_carbook">
-										<img src="imagens/video.png" alt="">
+									<img src="cms/<?php echo $listCarbook[$cont]->video; ?>" alt="">
 								</div>
+
+								<?php
+								$cont+=1;
+							}
+								 ?>
 
 							</nav>
                         </div>
@@ -593,7 +605,8 @@ Web Standards é um conjunto de normas, diretrizes, recomendações, notas, arti
 
 					<!-- Fale conosco -->
 					<div class="container_menu_FaleConosco">
-							<nav id="FaleConosco">
+						<div style="background-color:rgba(0,0,0,0.7);">
+                        <nav id="FaleConosco">
 									<form class="frmFaleconosco" action="router.php?controller=FaleConosco&modo=novo" method="post">
 										<div class="titulo_principal_servicos">
 											<h2>Fale Conosco</h2>
@@ -614,6 +627,7 @@ Web Standards é um conjunto de normas, diretrizes, recomendações, notas, arti
 										</div>
 									</form>
 							</nav>
+                            </div>	
 					</div>
 
 					<span id="back-to-top">

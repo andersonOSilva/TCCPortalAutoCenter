@@ -5,8 +5,10 @@
     public function Novo(){
 
       require_once 'cms/modulo.php';
-
+  $url = $_GET['url'];
       $user = new cadUser();
+
+      //$user ->url = $url;
       $user ->nomeCompleto = $_POST['txtNomeCompleto'];
       $user ->email = $_POST['txtEmail'];
       $user ->cpf = $_POST['txtCpf'];
@@ -43,25 +45,45 @@
       $user ->foto =$diretorio_completo;
 
 
-      $user::Insert($user);
+
+
+      $user::Insert($user,$url);
 
 
     }
 
     // Login de usuario do site
     public function LoginUser(){
-
+      //$url = $_GET['url'];
       $user = new cadUser();
-      $user ->nomeUser = $_POST['txtUser'];
-      $user ->senha = $_POST['txtSenha'];
+      $nomeUser = $_GET['user'];
+      $senha = $_GET['senha'];
+
+      $user ->nomeUser =$nomeUser;
+      $user ->senha =   $senha;
+
 
       $user::LoginUser($user);
+    }
+
+    // login apos o cadstro de usuario
+    public function LoginUserAposCadastro(){
+      $url = $_GET['url'];
+      $nomeUser = $_GET['nomeUser'];
+      $senha = $_GET['senha'];
+      $user = new cadUser();
+
+      $user ->nomeUser = $nomeUser;
+      $user ->senha = $senha;
+
+      $user::LoginUserAposCadastro($user,$url);
     }
 
 
     // buscar usuario por id especifico
     public function Buscar(){
       $idUsuario=$_SESSION['idUsuario'];
+      // echo('controller cad user diz - amigo estou aqui');
 
       $user = new cadUser();
       $user->idUsuario=$idUsuario;
@@ -90,6 +112,31 @@
       $user->cpf=$cpfUser;
       return $user::validarCpf($user);
     }
+
+
+    public function Selecionarporid(){
+      $idUsuario=$id;
+       echo $idUsuario;
+
+      $user = new carroeUsuario();
+      $user->idUsuario=$idUsuario;
+      return $user::Selecionarporid($user);
+    }
+
+
+    // function ativar user
+  public function Ativar(){
+    $ativacao = new cadUser();
+    $ativacao->idUsuario=$_GET['id'];
+    $ativacao::Ativacao($ativacao);
+  }
+
+  // function de desativar user
+  public function Desativar(){
+    $Desativar = new cadUser();
+    $Desativar->idUsuario=$_GET['id'];
+    $Desativar::Desativar($Desativar);
+  }
 
   }
 

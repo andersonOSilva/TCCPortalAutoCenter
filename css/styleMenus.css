@@ -170,13 +170,21 @@ color: #fff;
 
 .login{
   width: 150px;
-
+  
   text-align: center;
-  /* background-color: green; */
+/*   background-color: green; */
   float: left;
-  color: #fff;
+  
   margin-top: 10px;
 }
+.login p{
+  float: left;
+  margin-top: 15px;
+  margin-left: 2px;
+  color: #fff;
+  text-decoration: none;  
+}
+
 
 #entre{
   color:#ecb158;
@@ -212,7 +220,7 @@ color: #fff;
 .modalContainer{
 	width:100%;
 	height:100%;
-	background: rgba(0, 0, 0, 0.7);
+/*	background: rgba(0, 0, 0, 0.7);*/
 	position:fixed;
   /* margin-left: 600px; */
   /* margin: auto; */
@@ -231,11 +239,11 @@ color: #fff;
   /* background: rgba(0, 0, 0, 0.7); */
 
 }
-
+/*espaço onde se encontra a modal*/
 .modal{
 	max-width:1200px;
 	height:450px;
-	/* background-color:red; */
+/*	 background-color:red; */
   margin: auto;
 	/* margin:auto; */
   padding-top:60px;
@@ -252,12 +260,14 @@ color: #fff;
 .modal_cadastro{
 	max-width:1200px;
 	height:600px;
-	/* background-color:red; */
+/*	 background-color:red; */
   padding-top: 60px;
+/*  padding: center;*/
   margin: auto;
+    padding-left: 650px;
 
 }
-
+/*________________________________*/
 
 .escolha::before{
 
@@ -293,7 +303,7 @@ color: #fff;
 .titulo_login{
   width: 280px;
   height: 50px;
-  /* background-color: blue; */
+/*   background-color: #fff; */
   margin: auto;
   font-weight: 400;
   text-align: center;
@@ -316,11 +326,19 @@ color: #fff;
   display: block;
 }
 
+
+
+.tipo{
+  float: left;
+  width: 50%;
+  height: 100%;
+}
+
 #formBody .control {
   float: left;
   position: relative;
   width: 100%;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #000;
   padding-top: 23px;
   padding-bottom: 10px;
 }
@@ -343,6 +361,7 @@ color: #fff;
   border: 0;
   outline: 0;
   resize: none;
+  background-color: rgba(0,0,0,0);    
 }
 #formBody input + label,
 #formBody textarea + label {
@@ -378,17 +397,17 @@ color: #fff;
 
 
 .buttom_enviar_login{
-  width: 280px;
-  height: 50px;
-  /* background-color: blue; */
+  width: 90px;
+  height: 30px;
+   background-color: black; 
   border-radius: 40px;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 10px;
+/*  padding-top: 10px;*/
 }
 
 #btnLogar{
-    width: 100%;
+    width: 50%;
     position: relative;
     min-height: 44px;
     margin-bottom: 10px;
@@ -412,7 +431,8 @@ color: #fff;
     font-size: 16px;
     border-width: 1px;
     border-style: solid;
-    background-color: rgb(33, 150, 243);
+/*    background-color: rgb(33, 150, 243);*/
+    background-color: #eca023;
     border-color: rgb(33, 150, 243);
     border-image: initial;
     border-radius: 40px;
@@ -471,8 +491,11 @@ color: #fff;
 .termos_de_uso{
   width: 280px;
   height: 60px;
-  background-color: pink;
-  margin: auto;
+/*  background-color: pink;*/
+  margin-left: auto;
+  margin-right: auto;
+    margin-top: 2   px;
+    
   padding-top: 10px;
 }
 
@@ -517,6 +540,21 @@ color: #fff;
   color: #666;
   height: 20px;
   padding: 5px 0;
+  
+    
+  /* background-color: #f7f7f7; */
+}
+a{
+    text-decoration: none;
+    color: #666;
+}
+
+#novo_cadastro_link div{
+  margin-top: 1px;
+  color: #666;
+ 
+
+/*  text-underline-position: none;*/
   /* background-color: #f7f7f7; */
 }
 
@@ -545,7 +583,7 @@ color: #fff;
   border-top: 1px solid #eca020;
   border-right: 1px solid #eca020;
   float: left;
-  margin-left:285px;
+  margin-left:290px;
   margin-top: -15px;
   border-radius: 100%;
 
@@ -555,16 +593,18 @@ color: #fff;
 
 .escolha{
   width: 300px;
-  height: 500px;
+  min-height: 300px;
   background-color: #fff;
-  box-shadow: 5px 10px 8px #eca020;
+/*  background: linear-gradient(#eca023, black,black); */
+    border: solid 1px black;
+/*  box-shadow: 5px 10px 8px #eca020;*/
   margin-left: 590px;
 }
 
 .tipo_login{
   width: 280px;
   height: 50px;
-  background-color: red;
+  /*background-color: red;*/
   margin: auto;
 
 }
@@ -574,6 +614,27 @@ color: #fff;
   height: 50px;
   float: left;
   /* background-color: blue; */
+}
+/*
+.tipo input[type='radio']{
+    display: none;
+    
+}
+.tipo input[type='radio']+label:before {
+    background-color: #eca023;
+    height: 100px;
+    width: 100px;
+    
+}
+.tipo input[type='radio']+label:checked {
+    background-color: #000;
+    height: 100px;
+    width: 100px;
+    
+*/
+
+
+
 }
 
 
@@ -607,8 +668,8 @@ color: #fff;
   border-radius: 100%;
   background-color: #fff;
   float: left;
-  margin-left: 170px;
-  margin-top: -50px;
+  margin-left: 175px;
+  margin-top: -40px;
   z-index: 999;
   /* position: absolute; */
 }
@@ -631,7 +692,10 @@ color: #fff;
 
 .formModal{
   overflow-y: auto;
-   /*background-color: red;*/
+/*   background-color: #fff;*/
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
   width: 300px;
   height: 200px;
 }
@@ -657,8 +721,8 @@ color: #fff;
 	width: 30px;
 	height: 30px;
 	position: absolute;
-  margin-left: 160px;
-  top:50px;
+  margin-left: 140px;
+  top:63px;
   background-color: #fff;
   float: left;
   /* z-index: 999; */
@@ -707,8 +771,9 @@ color: #fff;
   margin-left: 10px;
   margin-top: 5px;
   float: left;
+    background-color: #fff;
   border: 3px solid #fff;
-    border-radius: 100%;
+/*    border-radius: 100%;*/
 }
 
 .foto_user_login img{

@@ -10,16 +10,17 @@
     }
 
     //Função de inserir
-    public function Insert($_servico){
-      $sql="INSERT INTO tbl_servico SET nome='$_servico->nome', descricao='$_servico->descricao',
-      imagem='$_servico->imagem'";
+    public function Insert($servico){
+      $sql="insert into tbl_servico (nome,descricao,imagem)
+      values('".$servico->nome."', '".$servico->descricao."', '".$servico->imagem."')";
 
-      echo $sql;
+        echo $sql;
 
       $con=new Mysql_db();
       $pdoCon = $con->Conectar();
 
       if($pdoCon->query($sql)){
+
         echo "<script>location.reload();</script>";
       }else{
         echo "<script>alert('Erro ao inserir serviço');</script>";
@@ -27,7 +28,7 @@
     }
 
     public function Select(){
-      $sql="SELECT * FROM tbl_servico ORDER BY idServico DESC";
+      $sql="select * from tbl_servico order by idServico desc";
 
       $con=new Mysql_db();
       //Faz a conexão com o banco
@@ -120,7 +121,9 @@
       //Executa o script
       if($stmt->execute([$_servico->idServico])){
 
-      require_once 'conteudo_servico.php';
+        echo "<script>location.href='index.php?pag=servicos';</script>";
+
+    //  require_once 'conteudo_servico.php';
       }else{
         echo "Não foi possível excluir o registro do Banco de dados";
       }

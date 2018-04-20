@@ -50,7 +50,9 @@
 session_start();
 if (isset($_GET['out'])) {
   session_destroy();
-  header('location:index.php');
+  $url = $_SERVER['HTTP_REFERER'];
+
+  header('location:'.$url);
 } else if (isset($_SESSION['idUsuario'])){
 
   require_once("cms/controllers/controller_cadUser.php");
@@ -106,8 +108,8 @@ if (isset($_GET['out'])) {
   ?>
 
 <div class="login">
-    <p><a href="#" class="novo" onclick="escolha();">Entre</a> <a href="#" class="novo_cadastro" onclick="cadastro();">ou cadastre-se</a>
-    </p>
+    <a href="#" class="novo" onclick="escolha();"><p id="entre">Entre</p></a> <a href="#" class="novo_cadastro" onclick="cadastro();"><p>ou cadastre-se</p></a>
+    
 </div>
 
 <?php
