@@ -25,7 +25,7 @@
 
 
       public function selectCat(){
-        addslashes($sql="select * from tbl_categoria_forum");
+        addslashes($sql="select * from tbl_categoria_forum where statusCat=1");
 
         ///echo $sql;
         $conex = new Mysql_db();

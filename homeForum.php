@@ -120,13 +120,42 @@
               </div>
          </div>
 
+
          <!-- FEED de perguntas -->
 
          <div class="container_conteudo_Forum">
+
+           <!-- Barra de pesquisa -->
+
+           <div class="barra_pesquisa">
+              <form class="" action="router.php?controller=Pesquisaforum&modo=pesquisa" method="post">
+                <input type="text" name="txtPesquisaForum" value="" required>
+                <input type="submit" name="" value="Pesquisar">
+
+
+              </form>
+           </div>
+
+
+
               <div class="conteudo_Forum">
                   <!-- <div class="filtros_forum">
 
                   </div> -->
+
+                  <?php
+                  require_once("cms/controllers/forum_controller.php");
+                  require_once("cms/viewModel/view_forum.php");
+                  $controller_forumPesquisa= new controllerForum();
+                  $List_returnForumoesquisa=$controller_forumPesquisa::pesquisa();
+
+                //  var_dump($List_returnForumoesquisa);
+
+                if (isset($List_returnForumoesquisa)) {
+                  echo "lista";
+                }
+
+                   ?>
 
                   <?php
 

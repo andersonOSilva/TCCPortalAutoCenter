@@ -104,84 +104,39 @@
 												</div>
 
 												<div class="container_carrosel_menu">
+
 														<ul>
+                              <?php
+                                  require_once 'cms/controllers/menus_controller.php';
+                                  require_once 'cms/models/menus_class.php';
+
+                                  $controller_menu = new controllerMenus();
+
+                                  $listMenus=$controller_menu::Listar();
+                                  $cont = 0;
+
+                                  while ($cont < count($listMenus)) {
+
+                               ?>
 															<!-- Item menu carrosel -->
 															<li>
-																	<a href="sobre.php">
+																	<a href="<?php echo $listMenus[$cont]->link; ?>">
 																		<div class="titulo_menu_carrossel">
-																			<p>Sobre</p>
+																		<p><?php echo $listMenus[$cont]->titulo; ?></p>
 																		</div>
 
 																		<div class="descricao_menu_carrosel">
-																				<p>Conheça mais sobre a portal Auto center.</p>
+																			<p><?php echo $listMenus[$cont]->descricao; ?></p>
 																		</div>
 																	</a>
 															</li>
-
-															<!-- Item menu carrosel -->
-															<li>
-																	<a href="carBook.php">
-																		<div class="titulo_menu_carrossel">
-																			<p>CarBook</p>
-																		</div>
-
-																		<div class="descricao_menu_carrosel">
-																				<p>Ja pensou em ter um lugar para compartilhar coisas de su carro?? Confira</p>
-																		</div>
-																	</a>
-															</li>
-
-															<!-- Item menu carrosel -->
-															<li>
-																	<a href="homeForum.php">
-																		<div class="titulo_menu_carrossel">
-																			<p>Forum</p>
-																		</div>
-
-																		<div class="descricao_menu_carrosel">
-																				<p>Troca de ideia e algo saudavel entao as compartilhe aqui.</p>
-																		</div>
-																	</a>
-															</li>
-
-															<!-- Item menu carrosel -->
-															<li>
-																	<a href="#">
-																		<div class="titulo_menu_carrossel">
-																			<p>prestadoras</p>
-																		</div>
-
-																		<div class="descricao_menu_carrosel">
-																				<p>confira as nossas peincipais parceiras</p>
-																		</div>
-																	</a>
-															</li>
-
-															<!-- Item menu carrosel -->
-															<li>
-																	<a href="#">
-																		<div class="titulo_menu_carrossel">
-																			<a href="produtos.php"><p>Produtos</p></a>
-																		</div>
-
-																		<div class="descricao_menu_carrosel">
-                                                                            <a href="produto.php"><p>Confira os principais produtos do portal</p></a>
-																		</div>
-																	</a>
-															</li>
-															<!-- Item menu carrosel -->
-															<li>
-																	<a href="#">
-																		<div class="titulo_menu_carrossel">
-																			<p>Carros</p>
-																		</div>
-
-																		<div class="descricao_menu_carrosel">
-																				<p>Troque agora se carro!! Confira as ofertas</p>
-																		</div>
-																	</a>
-															</li>
+                              <?php
+                                 $cont+=1;
+                               }
+                              ?>
 														</ul>
+
+
 												</div>
 
 												<div class="passar_carrosel_menu  ">
@@ -627,7 +582,7 @@
 										</div>
 									</form>
 							</nav>
-                            </div>	
+                            </div>
 					</div>
 
 					<span id="back-to-top">

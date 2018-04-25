@@ -111,6 +111,38 @@
 
         break;
 
+        //Menus
+       case 'menus':
+         require_once('models/menus_class.php');
+         require_once('controllers/menus_controller.php');
+
+         switch ($_GET['modo']) {
+           case 'novo':
+             $controller_menu = new controllerMenus();
+             $controller_menu::Novo();
+             break;
+
+         }
+
+         break;
+
+         //Forum
+        case 'forum':
+          require_once("controllers/forum_controller.php");
+          require_once('models/cabecalhoForum_class.php');
+
+          switch ($_GET['modo']) {
+            case 'novo':
+              $controller_forum = new controllerForum();
+              $controller_forum::NovoCabecalho();
+              break;
+
+          }
+
+          break;
+
+
+
         //Fale Conosco
       case 'faleconosco':
 

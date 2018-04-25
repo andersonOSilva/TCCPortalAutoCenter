@@ -3,7 +3,7 @@ $nome_pessoa= null;
 $cpf= null;
 $imagem = null;
 $email = null;
-<<<<<<< HEAD
+
 $usuario = null;
 $dtNasc = null;
 // $fotoUser;
@@ -19,18 +19,17 @@ $idVeiculo = null;
 
   //  echo $sql;
 
-=======
->>>>>>> a85b0cc4aa154f3435ef58716e9573ce324c66d6
+
 $id=$_GET['id'];
 
 
 
 
-<<<<<<< HEAD
+
     // echo $id;
-=======
+
     echo $id;
->>>>>>> a85b0cc4aa154f3435ef58716e9573ce324c66d6
+
 
  ?>
 <!-- Modal  -->
@@ -67,7 +66,7 @@ $id=$_GET['id'];
 <<<<<<< HEAD
 
 =======
-      
+
 >>>>>>> a85b0cc4aa154f3435ef58716e9573ce324c66d6
 }
 

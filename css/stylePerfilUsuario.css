@@ -6,18 +6,18 @@ body{
 .container_principal{
   width: 100%;
   height: auto;
-  background-color: red;
+  /*background-color: red;*/
 }
 #container_conteudo{
   width: 1200px;
-  height: 1000px;
+  /*height: 1000px;*/
   margin: auto;
-  background-color: yellow;
+  background-color: 	#DCDCDC;
 }
 #suporte_primaria{
   width: 100%;
   height: 200px;
-  background-color: blue;
+  background-color: #C0C0C0;
   margin: auto;
 }
 /*area imagem perfil*/
@@ -32,7 +32,7 @@ body{
   width: 150px;
   height: 150px;
   border-radius: 100%;
-  background-color: red;
+  /*background-color: red;*/
   float: left;
 }
 #img_perfil img{
@@ -42,17 +42,10 @@ body{
   box-shadow: 2px 3px 3px black;
 }
 
-
-/*#imagem{
-  width: 80px;
-  height: 50px;
-  background-color: #fff;
-  padding-top: 20px;
-}*/
 #suporte_secundaria{
   width: 100%;
   height: 150px;
-  background-color: green;
+  background-color:#D3D3D3 ;
   margin: auto;
 }
 #suporte_terciario{
@@ -69,11 +62,13 @@ body{
   /*background-color: magenta;*/
 }
 #imagensMaiores{
+  margin-top: 10px;
   width: 850px;
   height: auto;
-  min-height: 580px;
-  background-color: magenta;
+  min-height: 450px;
+  /*background-color: magenta;*/
   float: left;
+  border: solid 1px #000;
 }
 /*Area de vistas Recentes caixa do lado direito da tela*/
 /*#imagensMenores{
@@ -89,7 +84,7 @@ body{
   width: 850px;
   height: 200px;
   float: left;
-  background-color: #ffffff;
+  /*background-color: #ffffff;*/
 }
 
 
@@ -97,20 +92,96 @@ body{
   width: 250px;
   height: 200px;
   float: left;
-  background-color: #163458;
+  /*background-color: #163458;*/
   margin-left: 120px;
 }
 
 #divisao_imagens2{
-  background-color: green;
+  background-color: #fff;
   width: 850px;
-  height: 400px;
+  height: 450px;
 }
 
 .imagens_menores{
   width: 200px;
-  height: 100px;
-  background-color: red;
-  margin-left: 120px;
+  height: 200px;
+  /*background-color: red;*/
+  margin-left: 50px;
   float: left;
+}
+
+#informacaoUser{
+  width: 300px;
+  height: 20px;
+  background-color: black;
+}
+#areaInformacao{
+  width:500px;
+  height: 50px;
+  /*background-color: #f34adc;*/
+  float: left;
+  font-size: 20px;
+  font-family: 'Noto Serif', serif;
+  margin-top: -30px;
+  margin-left: 20px;
+  color:#fff;
+}
+#areaProprietario{
+  width: 100%;
+  height: 100px;
+  margin: auto;
+  /*background-color: magenta;*/
+  color: #fff;
+}
+.nome{
+  width: 300px;
+  height: 30px;
+  margin: auto;
+  /*background-color: magenta;*/
+}
+#unica{
+  width: 150px;
+  height: 150px;
+  background-color:blue;
+  margin-left: 900px;
+  margin-top: -410px;
+  color: #fff;
+}
+#suporteVisualizar{
+  width: 150px;
+  height: 20px;
+  background-color: red;
+  color: #fff;
+
+}
+#menus{
+  width: 200px;
+  height: 200px;
+  background-color:blue;
+  margin-top: 100px;
+  margin-left: 25px;
+}
+.menus_lateral{
+  width: 200px;
+  height: 10px;
+  background-color: #fff;
+  margin: auto;
+}
+#suporteImg{
+  width: 500px;
+  height: 500px;
+  /*background-color: green;*/
+  margin-left: 500px;
+  margin-top: -150px;
+  border: solid 1px #000;
+}
+#imagem{
+  width: 500px;
+  height: 300px;
+  /*background-color: #fff;*/
+}
+#descricaoImg{
+  width: 500px;
+  height: 200px;
+  /*background-color: black;*/
 }

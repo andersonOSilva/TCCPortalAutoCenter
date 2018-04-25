@@ -14,7 +14,7 @@ class Carbook
     $sql="insert into tbl_home (videoCarbook,textoCarbook)
     values('".$carbook->video."', '".$carbook->descricao."')";
 
-  echo $sql;
+  //echo $sql;
 
 
     $conex = new Mysql_db();

@@ -100,10 +100,25 @@
 
               break;
 
-
-
-
           }
+
+
+          // forum pesquisa
+
+          case 'Pesquisaforum':
+
+
+            require_once("cms/controllers/forum_controller.php");
+            require_once("cms/viewModel/view_forum.php");
+
+            switch ($_GET['modo']) {
+              case 'pesquisa':
+                  $controller_Forum= new controllerForum();
+                  $controller_Forum::pesquisa();
+
+                break;
+
+            }
 
           case 'Respostaforum':
 

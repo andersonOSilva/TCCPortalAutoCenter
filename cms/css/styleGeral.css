@@ -1174,3 +1174,382 @@ nav ul li a{
   height: 50px;
   margin: auto;
 }
+
+/*Carbook*/
+
+.cabecalho_carbook{
+  width: 100%;
+  height: 70px;
+  background-color: red;
+}
+
+.cadastro_carbook{
+  width: 50%;
+  height: 550px;
+  float: left;
+  margin-left: 30px;
+  margin: 0px;
+  padding: 0px;
+  background-color: blue;
+}
+
+.control_small{
+  width:600px;
+  height: 70px;
+  margin: auto;
+  margin-top: 10px;
+}
+
+.buttom_enviar{
+  width: 100px;
+  height: 50px;
+  margin-top: 70px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#btnEnviar{
+  width: 80px;
+  height: 30px;
+  background:green;
+  color:#fff;
+  box-shadow:0 5px 0 #00d103;
+  border:none;
+  cursor: pointer;
+  display:inline-block;
+  text-decoration: none;
+  border-radius: 10px;
+
+
+}
+
+
+.filePost{
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+  /* background-image: url(../../imagens/cam.png); */
+  background-size: 50px;
+  margin-left: auto;
+  margin-right:auto;
+}
+
+.filePost input[type=file]{
+  width: 50px;
+  height: 50px;
+  opacity: 0;
+}
+
+.segura_preview{
+  width: 600px;
+  height: 200px;
+  margin: auto;
+   /*background-color: red; */
+}
+
+.preview_img{
+  width: 300px;
+  height: 200px;;
+  margin-left: 10%;
+
+   /*background-color: green; */
+}
+
+.preview_img img{
+  width: 100%;
+  height: 200px;
+}
+
+/*lista de cadastros*/
+.listarCadastros{
+  width:85%;
+  height: 400px;
+  background-color: yellow;
+  margin: auto;
+  overflow-y: scroll;
+}
+
+.titulo_carbook{
+  max-width: 100%;
+  height: 10%;
+  /* border: 1px solid #000; */
+  /* background-color: #fff; */
+  margin: auto;
+
+}
+
+.conteudo_tbl_carbook{
+  width:30%;
+  height: 40px;
+  background-color: white;
+  float: left;
+  margin: auto;
+  margin-left: 15px;
+}
+
+.conteudo_tbl_carbook p{
+  text-align: center;
+  margin: 0px;
+  padding: 0px;
+  font-size: 200%;
+}
+
+.conteudoCarbook{
+  width: 100%;
+  height: 90px;
+  background-color: green;
+  padding: 0px;
+  margin: 0px;
+}
+
+.item_carbook{
+  width: 30%;
+  height: 75%;
+  float: left;
+  /*background-color: orange;*/
+  margin-left: 15px;
+}
+
+.item_carbook p{
+  margin: 0px;
+  padding-top: 10%;
+  padding-left: 10%;
+  text-align: left;
+  font-size: 150%;
+}
+
+.imgCarbook{
+  width: 65%;
+  height: 85%;
+  margin-top: 2%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: red;
+}
+
+.imgCarbook img{
+  width: 100%;
+  height: 100%;
+
+}
+
+.descCarbook{
+  width: 65%;
+  height: 85%;
+  margin-top: 2%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: red;
+  text-align: center;
+  font-style: bold;
+  font-size: 20px;
+}
+
+.segura_modo{
+  width:80px;
+  height: 30px;
+  margin: auto;
+  padding-top: 10%;
+}
+
+.modo{
+  width: 30px;
+  height: 30px;
+  float: left;
+  margin-left: 10px;
+  text-align: center;
+}
+
+.modo img {
+  width: 30px;
+  height: 30px;
+
+}
+
+
+/* Forum */
+
+/* formatacao de radio */
+.hidden {
+  display: none;
+}
+
+.button-wrap {
+  position: relative;
+  text-align: center;
+  top: 50%;
+  margin-top: -2.5em;
+}
+@media (max-width: 40em) {
+  .button-wrap {
+    margin-top: -1.5em;
+  }
+}
+
+.button-label {
+  display: inline-block;
+  padding: 1em 2em;
+  margin: 0.5em;
+  cursor: pointer;
+  color: #292929;
+  border-radius: 0.25em;
+  background: #efefef;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2), inset 0 -3px 0 rgba(0, 0, 0, 0.22);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.button-label h1 {
+  font-size: 1em;
+  font-family: "Lato", sans-serif;
+}
+.button-label:hover {
+  background: #d6d6d6;
+  color: #101010;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2), inset 0 -3px 0 rgba(0, 0, 0, 0.32);
+}
+.button-label:active {
+  -webkit-transform: translateY(2px);
+          transform: translateY(2px);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2), inset 0px -1px 0 rgba(0, 0, 0, 0.22);
+}
+@media (max-width: 40em) {
+  .button-label {
+    padding: 0em 1em 3px;
+    margin: 0.25em;
+  }
+}
+
+#yes-button1:checked + .button-label {
+  background: #2ECC71;
+  color: #efefef;
+}
+#yes-button1:checked + .button-label:hover {
+  background: #29b765;
+  color: #e2e2e2;
+}
+
+#yes-button2:checked + .button-label {
+  background: #2ECC71;
+  color: #efefef;
+}
+#yes-button2:checked + .button-label:hover {
+  background: #29b765;
+  color: #e2e2e2;
+}
+
+#yes-button3:checked + .button-label {
+  background: #2ECC71;
+  color: #efefef;
+}
+#yes-button3:checked + .button-label:hover {
+  background: #29b765;
+  color: #e2e2e2;
+}
+
+
+#yes-button4:checked + .button-label {
+  background: #2ECC71;
+  color: #efefef;
+}
+#yes-button4:checked + .button-label:hover {
+  background: #29b765;
+  color: #e2e2e2;
+}
+
+.tbl_temas{
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  min-height: 100vw;
+  background-color: blue;
+
+}
+
+.temas_cadastrados{
+  width: 500px;
+  height: auto;
+  min-height: 700px;
+  margin: auto;
+  background-color: #fff;
+}
+
+.titulo_temas_principal{
+  width: 100%;
+  height: 50px;
+  background-color: pink;
+}
+
+.titulo_temas_principal h1{
+  margin:0px;
+  padding: 0px;
+  font-size: 50px;
+  text-align: center;
+}
+
+.categoria_cadastrada{
+  width: 100%;
+  height: auto;
+  min-height: 50px;
+  overflow: hidden;
+  background-color: red;
+  margin-top: 10px;
+}
+
+.nome_cat{
+  width: 90%;
+  height: 100%;
+  float: left;
+  background-color: green;
+  padding-top: 10px;
+}
+
+.nome_cat p{
+  margin: 0px;
+  padding: 0px;
+  font-size: 25px;
+}
+
+.status_cat{
+  width: 10%;
+  height: 100%;
+  float: left;
+  background-color: brown;
+}
+
+.conteudo_cabecalho{
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  min-height: 100vw;
+  background-color: green;
+
+}
+
+.mostrar_dados{
+  background-color: #fff;
+  margin: auto;
+  width: 500px;
+  height: auto;
+  min-height: 500px;
+  overflow: hidden;
+}
+
+.dados_cabecalho{
+    width: 100%;
+    height: auto;
+    min-height: 50px;
+    overflow: hidden;
+    background-color: blue;
+    margin-top: 10px;
+}
+
+.titulo_cabecalho_forum{
+  width: 100%;
+  height: auto;
+  min-height: 50px;
+  overflow: hidden;
+}

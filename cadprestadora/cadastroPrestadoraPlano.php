@@ -1,12 +1,4 @@
-<html lang="pt">
-  <head>
-    <meta charset="utf-8">
-    <title>Serviços</title>
-      <link rel="stylesheet" type="text/css" href="css/styleHome.css">
-      <link rel="stylesheet" type="text/css" href="css/styleCadPrestadora.css">
-      <link rel="stylesheet" type="text/css" href="css/styleMenus.css">
-  </head>
-  <body>
+
     <div class="principal">
 
       <?php
@@ -16,52 +8,39 @@
       <!-- div principal que vai sustentar  toda a area de imagem e descricao em destaque -->
       <div class="container_cad_prestadora">
         <!-- div que suporta imagem e descricao em destaque-->
-        <div id="suporte">
-            <!-- area da imagem em destaque  -->
-
-            <div class="suporte_conteudo_prestadora">
-              <div id="areaImagem">
-
-
+          
+        <div id="planos" >
+<!--            <div style="background-color:darkred;height:25%;"></div>-->
+            <div class="seguraPlanos" >
+                 <div class="plano" style="background-image: url(../imagens/6.jpg);" >
+                     <div class="descPlano">
+                     hrhrhh
+                     </div>
                 
-                  <div class="img_servico">
-                      <img src="imagens/mecanica.jpg" alt="servico" >
-                </div>
-                 
-                
-                  
-<!--
-                <div class="areaImagem_descricao">
-                    <input type="text" placeholder="loggin">
-
-                    <input type="text" placeholder="*****">
-
-                    <input type="text" placeholder="email@shazam.com">
-
-                    <input type="text" placeholder="cnpj">
-
-                    <input type="text" placeholder="razao social">
-
-                    <input type="text" placeholder="nome fantasia">
-
-                    <input type="submit" value="prosseguir">
-                    
-                </div>
--->
-
-              </div>
-                 <div class="img_plus">
-                     
-                </div>
-                
-              <!-- area de descricao em destaque  -->
             
-            
-
+                 </div>
+                <div class="plano" >
+                
+            rthrth
+                 </div>
+                <div class="plano" >
+                
+            hrthtrh
+                 </div>
+                <div class="plano" >
+                
+            hrhrhh
+                 </div>
+                <div class="plano" >
+                
+            rthrth
+                 </div>
+                <div class="plano" >
+                
+            hrthtrh
+                 </div>
+            </div>
         </div>
-        <!--suporta imagens e descricoes segundarias/ avaliacao e botao -->
-        
-      </div>
           
 <!--
           <table class="formulario" >

@@ -1,0 +1,86 @@
+/*Menus*/
+
+.cabecalho_menus{
+  width: 100%;
+  height: 70px;
+  background-color: red;
+}
+
+.cadastros_menus{
+  width: 50%;
+  height: 500px;
+  float: left;
+  margin-left: 30px;
+  margin: 0px;
+  padding: 0px;
+  background-color: blue;
+}
+
+.cad_titulo{
+  width: 50%;
+  height: 90px;
+  margin: auto;
+  font-style: bold;
+  font-size: 20px;
+  /* background-color: #0fc; */
+  /* padding-bottom: 10px; */
+}
+
+
+.cad_descricao{
+  width:30%;
+  height: 70px;
+  background-color: yellow;
+  margin: auto;
+  margin-top: 10px;
+}
+
+.cad_link{
+  width: 30%;
+  height: 70%;
+  margin-left: 250px;
+  margin-top: 80px;
+  background-color: pink;
+}
+
+.buttom_enviar{
+  width: 100px;
+  height: 50px;
+  margin-top: 70px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#btnEnviar{
+  width: 80px;
+  height: 30px;
+  background:green;
+  color:#fff;
+  box-shadow:0 5px 0 #00d103;
+  border:none;
+  cursor: pointer;
+  display:inline-block;
+  text-decoration: none;
+  border-radius: 10px;
+}
+
+
+.listar_cadastros{
+  width:50%;
+  height: 400px;
+  background-color: yellow;
+  margin: auto;
+  overflow-y: scroll;
+}
+
+.item_menus{
+  width: 45%;
+  height: 20%;
+  float: left;
+  background-color: orange;
+  margin-left: 15px;
+  margin-top: 10px;
+  font-size: 20px;
+  font-style: bold;
+  text-align: center;
+}

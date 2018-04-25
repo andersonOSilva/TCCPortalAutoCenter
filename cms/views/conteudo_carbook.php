@@ -1,3 +1,9 @@
+<!--
+Autor:Luana Fernandes
+Descrição:CRUD do carbook,anuncio que aparece na home
+Data:18/04/2018
+-->
+
 <div class="listarCadastros">
   <div class="titulo_carbook">
     <div class="conteudo_tbl_carbook">
@@ -37,6 +43,8 @@
       </div>
 
       <div class="item_carbook">
+
+        
           <div class="segura_modo">
             <div class="modo">
               <a href="#">

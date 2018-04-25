@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="css/styleGeral.css">
     <link rel="stylesheet" href="css/style_prestadora.css">
     <link rel="stylesheet" href="css/styleUsuario.css">
-    <link rel="stylesheet" href="css/style_carbook.css">
+    <link rel="stylesheet" href="css/style_menus.css">
     <script src="js/jquery7.min.js"></script>
 
   </head>
@@ -37,7 +37,9 @@
           <p>Marketing</p>
       </div>
 
-
+      <div class="item_menu">
+        <p> <a href="?pag=menus">Menus</a></p>
+      </div>
 
       <div class="item_menu">
         <p> <a href="?pag=fale">Fale conosco</a></p>
@@ -65,6 +67,10 @@
 
       <div class="item_menu">
         <p><a href="?pag=usuario">Usuário</a></p>
+      </div>
+
+      <div class="item_menu">
+        <p><a href="?pag=forum">Forum</a></p>
       </div>
 
 
@@ -99,6 +105,10 @@
                   require_once 'views/conteudoHome.php';
                   break;
 
+                case 'menus':
+                  require_once 'views/menus_view.php';
+                  break;
+
                 case 'fale':
                   require_once 'views/faleconosco_view.php';
                   break;
@@ -122,6 +132,12 @@
                   case 'usuario':
                     require_once 'views/usuario_view.php';
                     break;
+
+
+                  case 'forum':
+                    require_once 'views/forum_view.php';
+                    break;
+
                   case 'sobre':
                     require_once 'views/sobre_view.php';
                     break;

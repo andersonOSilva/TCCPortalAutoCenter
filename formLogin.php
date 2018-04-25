@@ -60,10 +60,7 @@
     </div>
 
     <div  id="novo_cadastro_link">
-<<<<<<< HEAD
       <a href="#" onclick="cadastro();"><p >Cadastre-se agora</p></a>
-=======
       <a href="#" onclick="cadastro();">Cadastre-se agora</a>
->>>>>>> a85b0cc4aa154f3435ef58716e9573ce324c66d6
     </div>
 </div>
