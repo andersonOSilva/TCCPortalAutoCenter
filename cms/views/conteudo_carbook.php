@@ -43,8 +43,6 @@ Data:18/04/2018
       </div>
 
       <div class="item_carbook">
-
-        
           <div class="segura_modo">
             <div class="modo">
               <a href="#">

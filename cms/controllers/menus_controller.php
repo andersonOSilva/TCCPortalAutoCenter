@@ -12,6 +12,7 @@ class controllerMenus
 
       $menus->titulo=$_POST['txt_titulo'];
       $menus->descricao=$_POST['txt_descricao'];
+      $menus->link=$_POST['txt_link'];
 
       $menus::Insert($menus);
 
@@ -24,6 +25,14 @@ class controllerMenus
     }
 
     public function Editar(){
+      $menus = new Menus();
+
+      $menus->idMenu = $_GET['id'];
+      $menus->titulo=$_POST['txt_titulo'];
+      $menus->descricao=$_POST['txt_descricao'];
+      $menus->link=$_POST['txt_link'];
+
+      $menus::Update($menus);
 
     }
 

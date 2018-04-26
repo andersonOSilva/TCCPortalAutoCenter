@@ -112,8 +112,7 @@ if (isset($_GET['out'])) {
     <a href="#" class="novo" onclick="escolha();"><p id="entre">Entre</p></a> <a href="#" class="novo_cadastro" onclick="cadastro();"><p>ou cadastre-se</p></a>
 
 
-    <p><a href="#" class="novo" onclick="escolha();"><p>Entre</p></a> <a href="#" class="novo_cadastro" onclick="cadastro();"><p>ou cadastre-se</p></a>
-    </p>
+   
 
 </div>
 

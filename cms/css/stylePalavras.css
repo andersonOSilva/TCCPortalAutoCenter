@@ -1,0 +1,46 @@
+/*Palavras Proibidas*/
+.conteudo_palavras{
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  min-height: 100vw;
+  background-color: green;
+}
+#segura{
+  width: 800px;
+  height: 800px;
+  background-color: magenta;
+}
+#titulo_palavra_proibida{
+  width: 100%;
+  height: 30px;
+  background-color: yellow;
+}
+#palavraCadastrada{
+  width: 800px;
+  height: auto;
+  min-height: 800px;
+  background-color: #fff;
+  margin: auto;
+  overflow-y: scroll;
+}
+.cadastradas{
+  width: 100%;
+  height: auto;
+  min-height: 50px;
+  overflow: hidden;
+  background-color: red;
+  margin-top: 10px;
+}
+.nome_palavra{
+  width: 90%;
+  height: 100%;
+  float: left;
+  background-color: green;
+  padding-top: 10px;
+}
+.nome_palavra p{
+margin: 0px;
+padding: 0px;
+font-size: 25px;
+}

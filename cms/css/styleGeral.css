@@ -1339,6 +1339,7 @@ nav ul li a{
   margin-top: 2%;
   margin-left: auto;
   margin-right: auto;
+  overflow: hidden;
   background-color: red;
   text-align: center;
   font-style: bold;
@@ -1469,13 +1470,6 @@ nav ul li a{
 
 }
 
-.temas_cadastrados{
-  width: 500px;
-  height: auto;
-  min-height: 700px;
-  margin: auto;
-  background-color: #fff;
-}
 
 .titulo_temas_principal{
   width: 100%;
@@ -1552,4 +1546,87 @@ nav ul li a{
   height: auto;
   min-height: 50px;
   overflow: hidden;
+}
+
+.temas_cadastrados{
+
+  width: 500px;
+  height: auto;
+  min-height: 700px;
+  background-color: #fff;
+  margin: auto;
+  overflow-y: scroll;
+}
+
+
+.temas_cadastrados::-webkit-scrollbar {
+  width:10px;
+  background:#e3e0d6;
+
+  } /* configurando scroll */
+.temas_cadastrados::-webkit-scrollbar-track {
+  background: rgba(0,0,0,0.1);
+}
+
+.temas_cadastrados::-webkit-scrollbar-thumb {
+   border-radius:10px;
+    background:#8b8778;
+   }
+
+.principal_perguntasRespostas{
+  width: 100%;
+  height: 100vh;
+  background-color: green;
+}
+
+.tbl_mostrar_perguntas{
+  width: 1000px;
+  height: auto;
+  min-height: 500px;
+  overflow-y: scroll;
+  background-color: #fff;
+  margin: auto;
+}
+
+.tbl_mostrar_perguntas::-webkit-scrollbar {
+  width:10px;
+  background:#e3e0d6;
+
+  } /* configurando scroll */
+.tbl_mostrar_perguntas::-webkit-scrollbar-track {
+  background: rgba(0,0,0,0.1);
+}
+
+.tbl_mostrar_perguntas::-webkit-scrollbar-thumb {
+   border-radius:10px;
+    background:#8b8778;
+   }
+
+.item_perguntas{
+  width: 100%;
+  height: auto;
+  min-height: 50px;
+  background-color: pink;
+}
+
+/* .item_perguntas:hover>.div_perguntas{
+  display: block;
+  margin-top: 50px;
+} */
+
+.div_perguntas{
+  width: 100%;
+  height: auto;
+  min-height: 200px;
+  overflow: hidden;
+  display: none;
+  background-color: red;
+}
+
+.displayBlockPer{
+  display: block;
+}
+
+.displaynonePer{
+  display: none;
 }

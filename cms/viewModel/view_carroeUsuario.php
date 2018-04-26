@@ -51,11 +51,9 @@ class carroeUsuario{
   // Função de Visualizar
   public function Selecionarporid($id){
     $sql = "select * from tbl_usuario where idUsuario=".$id;
-<<<<<<< HEAD
     //  echo $sql;
-=======
+
     echo $sql;
->>>>>>> a85b0cc4aa154f3435ef58716e9573ce324c66d6
     $con=new Mysql_db();
     //Faz a conexão com o banco
     $pdoCon = $con->Conectar();
@@ -75,11 +73,8 @@ class carroeUsuario{
       $list_usuario->email = $rs['email'];
       $list_usuario->dtNasc = $rs['dtNasc'];
       $list_usuario->fotoUser = $rs['fotoUser'];
-<<<<<<< HEAD
       $list_usuario->status = $rs['statusUser'];
-=======
       $list_usuario->status = $rs['status'];
->>>>>>> a85b0cc4aa154f3435ef58716e9573ce324c66d6
   }
   $con->Desconectar();
   if (isset ($list_usuario)) {

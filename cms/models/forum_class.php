@@ -125,6 +125,42 @@
 
       }
 
+      // select resposta por id de pergunta
+
+      public function selectRespostasForum($dadosForum){
+        $sql="SELECT * FROM tbl_comentario_topico where idTopico=".$dadosForum->idTopicoForum;
+
+       //echo $sql;
+
+        $conex = new Mysql_db();
+        $PDO_conex = $conex->Conectar();
+        $select = $PDO_conex->query($sql);
+        $cont = 0;
+
+        while ($rs=$select->fetch(PDO::FETCH_ASSOC)) {
+          $list_resposta[] = new Forum;
+
+          $list_resposta[$cont]->idUsuario=$rs['idUsuario'];
+          $list_resposta[$cont]->nomeUser=$rs['usuario'];
+          $list_resposta[$cont]->fotoUser=$rs['fotoUser'];
+          $list_resposta[$cont]->comentario=$rs['comentario'];
+          $list_resposta[$cont]->idComentarioTopico=$rs['idComentarioTopico'];
+
+
+          $cont+=1;
+
+        }
+
+        $conex->Desconectar();
+        if (isset ($list_resposta)) {
+          return $list_resposta;
+
+        }
+
+
+
+      }
+
       // Insert
       public function Insert($dados_forum){
           $sql="insert into tbl_topico_forum (pergunta, idCategoriaForum, idUsuario)

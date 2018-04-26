@@ -1,0 +1,8 @@
+/*Palavras Proibidas*/
+.conteudo_palavras{
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  min-height: 100vw;
+  background-color: green;
+}

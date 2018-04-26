@@ -5,10 +5,12 @@
         <input type="submit" name="btnEnviar" value="cadastrar">
       </form>
 
+      <div class="titulo_temas_principal">
+          <h1>Categorias</h1>
+      </div>
+
       <div class="temas_cadastrados">
-        <div class="titulo_temas_principal">
-            <h1>Categorias</h1>
-        </div>
+
 
         <?php
 
@@ -40,7 +42,7 @@
 
              ?>
               <div class="status_prest">
-                  <img src="imagens/off.png" alt="off" title="Ativar user" onclick="Ativar(<?php echo ($list_usuario[$cont]->idUsuario) ?>);">
+                  <img src="imagens/off.png" alt="off" title="Ativar user" onclick="Ativar(<?php echo ($List_returnForum[$cont]->idCategoriaForum) ?>);">
               </div>
 
               <?php
@@ -49,7 +51,7 @@
                ?>
 
                <div class="status_prest">
-                   <img src="imagens/on.png" alt="on" title="desativar user" onclick="Desativar(<?php echo ($list_usuario[$cont]->idUsuario) ?>);">
+                   <img src="imagens/on.png" alt="on" title="desativar user" onclick="Desativar(<?php echo ($List_returnForum[$cont]->idCategoriaForum) ?>);">
                </div>
 
                <?php

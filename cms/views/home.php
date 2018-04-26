@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/style_prestadora.css">
     <link rel="stylesheet" href="css/styleUsuario.css">
     <link rel="stylesheet" href="css/style_menus.css">
+    <link rel="stylesheet" href="css/stylePalavras.css">
     <script src="js/jquery7.min.js"></script>
 
   </head>

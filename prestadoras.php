@@ -64,7 +64,7 @@
                    </div>
            </div>
         <!--suporta imagens e descricoes segundarias/ avaliacao e botao -->
-        <div class="container_servico_suporte">
+        <div class="container_servico_suporte" style="max-width:1400px;margin-botoom:10px;">
           <!-- segura as imagens e area de descricao  PRESTADORA-->
           
         <div class="suporteSecundaria">

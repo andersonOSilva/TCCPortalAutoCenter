@@ -11,7 +11,10 @@
             <!-- texto historia da empresa -->
           <div id="texto_historia" style="background-color:bisque;color:black;width:700px;padding-right:25px;margin-bottom:30px;border-radius:0px 0px 50px 50px;">
             <p > 
-                <?php echo($historia)?>
+                <?php echo($historia);
+    //                        echo($valores);
+                
+                ?>
                  
             </p>
         </div>

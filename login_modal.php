@@ -87,14 +87,14 @@ $(document).ready(function() {
     <div class="tipo">
       <input type="radio" name="FlgPontua" id="tipoUser"  >
       <label for="r1" class="radio"><span></span>Usuario</label>
-      <label for="r1"><span></span>Usuario</label>
+      
       <div class="check"></div>
     </div>
 
     <div class="tipo">
       <input type="radio" name="FlgPontua" id="tipoPrest">
       <label for="r1" class="radio"><span></span>Prestadora</label>
-      <label for="r1"><span></span>Prestadora</label>
+      
 
       <div class="check"></div>
     </div>
@@ -145,7 +145,7 @@ $(document).ready(function() {
 
         <a href="#" onclick="cadastro();" ><div>Cadastre-se agora</div></a>
 
-        <a href="#" onclick="cadastro();" >Cadastre-se agora</a>
+        
 
       </div>
   </div>

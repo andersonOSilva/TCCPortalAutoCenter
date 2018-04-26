@@ -38,7 +38,7 @@
 .cad_link{
   width: 30%;
   height: 70%;
-  margin-left: 250px;
+  margin: auto;
   margin-top: 80px;
   background-color: pink;
 }
@@ -73,9 +73,42 @@
   overflow-y: scroll;
 }
 
+.tito_menu{
+  max-width: 100%;
+  height: 10%;
+  /* border: 1px solid #000; */
+  background-color: #fff;
+  margin: auto;
+
+}
+
+.conteudo_tbl_menu{
+  width:22%;
+  height: 55%;
+  background-color: white;
+  float: left;
+  margin: auto;
+  margin-left: 15px;
+}
+
+.conteudo_tbl_menu p{
+  text-align: center;
+  margin: 0px;
+  padding: 0px;
+  font-size: 20px;
+}
+
+.conteudoMenu{
+  width: 100%;
+  height: 90px;
+  background-color: green;
+  padding: 0px;
+  margin: 0px;
+}
+
 .item_menus{
-  width: 45%;
-  height: 20%;
+  width: 20%;
+  height: 85%;
   float: left;
   background-color: orange;
   margin-left: 15px;
@@ -83,4 +116,38 @@
   font-size: 20px;
   font-style: bold;
   text-align: center;
+}
+
+.descMenu{
+  width: 75%;
+  height: 85%;
+  margin-top: 2%;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+  background-color: red;
+  text-align: center;
+  font-style: bold;
+  font-size: 20px;
+}
+
+.segura_modo{
+  width: 50%;
+  height: 30px;
+  margin: auto;
+  padding-top: 10%;
+}
+
+.modo{
+  width: 30px;
+  height: 30px;
+  float: left;
+  margin-left: 10px;
+  text-align: center;
+}
+
+.modo img {
+  width: 30px;
+  height: 30px;
+
 }

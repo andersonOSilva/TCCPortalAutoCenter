@@ -67,6 +67,27 @@ class Menus
 
   }
 
+  public function Update($menus){
+      $sql="update tbl_menus set titulo='".$menus->titulo."', descricao='".$menus->descricao."',
+       link='".$menu->link."' where idMenu=$menu->idMenu ";
+
+       // echo $sql;
+
+       $conex = new Mysql_db();
+
+       $PDO_conex = $conex->Conectar();
+
+
+
+       if ($PDO_conex->query($sql)) {
+         echo("<script>location.reload();</script>");
+       }else{
+         echo "erro";
+       }
+
+       $conex->Desconectar();
+  }
+
   public function SelectById(){
 
   }

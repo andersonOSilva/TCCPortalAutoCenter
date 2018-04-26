@@ -122,6 +122,11 @@
              $controller_menu::Novo();
              break;
 
+             case 'editar':
+             $controller_menu = new controllerMenus();
+             $controller_menu::Editar();
+            break;
+
          }
 
          break;
@@ -136,6 +141,27 @@
               $controller_forum = new controllerForum();
               $controller_forum::NovoCabecalho();
               break;
+
+            case 'excluir':
+              $controller_forum = new controllerForum();
+              $controller_forum::Excluir();
+              break;
+
+            case 'editar':
+              $controller_forum = new controllerForum();
+              $controller_forum::EditarCabecalho();
+              break;
+
+          case 'ativar':
+            $controller_forum = new controllerForum();
+            $controller_forum::ativarCabecalho();
+            break;
+
+          
+          case 'desativar':
+            $controller_forum = new controllerForum();
+            $controller_forum::DesativarCabecalho();
+            break;
 
           }
 
