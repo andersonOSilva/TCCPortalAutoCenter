@@ -87,14 +87,14 @@ $(document).ready(function() {
     <div class="tipo">
       <input type="radio" name="FlgPontua" id="tipoUser"  >
       <label for="r1" class="radio"><span></span>Usuario</label>
-      
+
       <div class="check"></div>
     </div>
 
     <div class="tipo">
       <input type="radio" name="FlgPontua" id="tipoPrest">
       <label for="r1" class="radio"><span></span>Prestadora</label>
-      
+
 
       <div class="check"></div>
     </div>
@@ -119,15 +119,6 @@ $(document).ready(function() {
 
 
 
-    <div class="manter_conectado">
-      <!-- <INPUT TYPE="checkbox" NAME="OPCAO" VALUE="op1">
-      <label for="stay-connected" class="">Continuar conectado</label> -->
-      <a href="#">Esqueci minha senha</a>
-    </div>
-
-    <div class="buttom_enviar_login">
-      <input id="btnLogarUser" type="button" name="btnEnviar" value="Logar" onclick="teste();">
-    </div>
 
 
   </form>
@@ -145,7 +136,7 @@ $(document).ready(function() {
 
         <a href="#" onclick="cadastro();" ><div>Cadastre-se agora</div></a>
 
-        
+
 
       </div>
   </div>
@@ -170,6 +161,35 @@ $(document).ready(function() {
 
       alert("ta aqui");
       $.get('router.php?controller=loginUser&modo=loginUser&user='+usuario+'&senha='+senha,function(data){
+          // //$('#resultado').html(data);
+          // alert(data);
+          //
+          if (data == 0) {
+              $('#respostaDeuser').html(resposta);
+            }
+          else {
+            location.href='index.php' ;
+          }
+
+        //  alert(data);
+
+        });
+
+
+    }
+
+
+    function testePrestadora() {
+      var cnpj = document.getElementById('idtxtCnpj').value; //   txtUser.value;
+      var senha = document.getElementById('idtxtSenhaPrestadora').value; //   txtUser.value;
+
+      // alert(cnpj);
+      // console.log(cnpj);
+
+      var resposta = "cnpj ou senha invalidos";
+
+      alert("ta aqui");
+      $.get('router.php?controller=LoginPrestadora&modo=LoginPrestadora&cnpj='+cnpj+'&senha='+senha,function(data){
           // //$('#resultado').html(data);
           // alert(data);
           //

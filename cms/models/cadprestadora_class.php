@@ -30,13 +30,13 @@
     public function Insert($dados_prestadora){
       //var_dump($dados_prestadora);
 
-                
+
 
                 try {
       // insere no banco de dados a prestadora
                 $conex = new Mysql_db();
-                $PDO_conex = $conex->Conectar();    
-                    
+                $PDO_conex = $conex->Conectar();
+
               $sqlPrestadora = "insert into tbl_prestadora (razaoSocial,nomefantasia,fotoPrestadora,telefone,descricao,cnpj,login,senha)
               values('".$dados_prestadora->razaoSocial."',
                     '".$dados_prestadora->nomefantasia."',
@@ -71,17 +71,17 @@
 //                          echo('amigo estou aqui');
                             $PrestadoraID = new Prestadora();
                           $PrestadoraID->idPrestadora = $rs['idPrestadora'];
-                          
+
                       }
 //                        $cont=0
 //                        while($rs=$sqlselectPrestadora->fetch(PDO::FETCH_ASSOC)){
 //                            $PrestadoraID->$idPrestadora = $rs['idPrestadora'];
 //                            $cont+=1;
 //                        }
-                        
+
                        $IDdaPrestadora=$PrestadoraID->idPrestadora = $rs['idPrestadora'];
-                        
-                        
+
+
 //                                                  echo('amigo estou aqui');
 //                        header('location:cadPrestadora/cadastroPrestadora.php?pag=Endereco');
                         require_once 'cadPrestadora/cadastroEndereco.php';
@@ -100,17 +100,17 @@
 //                      echo($e);
 
                   }
-           
+
 
 // _______________________________________________________________________________________________________________________________________________
                // SELECT * FROM db_portal.tbl_prestadora where login = "teste" and senha="123";
 
 
 // seleciona o endereco pra que seja possivel associar o endereco a prestadora
-            
 
 
-// 
+
+//
 /*
       if ($PDO_conex->query($sqlPrestadora)) {
 
@@ -127,11 +127,11 @@
 
   }
   public function Update($dados_prestadora){
-      
-               
-      
+
+
+
       try{
-          
+
            $conex = new Mysql_db();
             $PDO_conex = $conex->Conectar();
 //          (razaoSocial,nomefantasia,fotoPrestadora,telefone,descricao,cnpj,login,senha)
@@ -145,22 +145,22 @@
                 `senha`='".$PrestadoraEnderecoID->idPrestadoraEndereco."',
                 WHERE `idPrestadora`='".$PrestadoraID->idPrestadora."';";
                 $PDO_conex->query($sqlPrestadoraUpdate);
-                
+
           $conex->Desconectar();
       }catch (Exception $e) {
 //                      echo($e);
 
                   }
-                        
+
       }
 
       public function Select(){
-          
+
         try{
-          
+
         $conex = new Mysql_db();
         $PDO_conex = $conex->Conectar();
-          
+
       $sql = "select * from tbl_prestadora order by idPrestadora desc";
       // echo $sql;
 
@@ -206,9 +206,101 @@
 //                      echo($e);
 
                   }
-      }  
-      
-      
+      }
+
+
+        // LOGIN PRESTADORA
+
+        public function LoginPrestadora($login_Prestadora){
+          session_start();
+
+          // chamando a procedure
+          addslashes($sql="CALL loginPrestadora('$login_Prestadora->cnpj','$login_Prestadora->senha',@_idPrestadora);");
+
+            //echo $sql;
+
+          // conexao com o banco e execuçao
+          $conex = new Mysql_db();
+          $PDO_conex = $conex->Conectar();
+          $PDO_conex->query($sql);
+
+          // retorno
+          addslashes($sql="select @_idPrestadora as idPrestadora;");
+          $select = $PDO_conex->query($sql);
+          $idPrestadora = 0;
+
+          // pegando id do retorno
+          if($rs=$select->fetch(PDO::FETCH_ASSOC)){
+
+            $idPrestadora = $rs['idPrestadora'];
+            echo $idPrestadora;
+
+            //echo "string";
+
+          }
+
+
+
+
+
+          if ($idPrestadora > 0) {
+
+            echo '1';
+
+
+            $_SESSION['idPrestadora'] = $idPrestadora;
+
+          }else {
+
+            echo '0';
+          }
+
+          $conex->Desconectar();
+
+
+        }
+
+        public function selectById(){
+          $sql='select * from tbl_prestadora where idPrestadora='.$_SESSION['idPrestadora'];
+
+          //echo $sql;
+
+          $conex = new Mysql_db();
+          $PDO_conex = $conex->Conectar();
+          $select = $PDO_conex->query($sql);
+
+
+          if($rs=$select->fetch(PDO::FETCH_ASSOC)){
+            $listPrestadora = new Prestadora();
+
+            $listPrestadora->idPrestadora=$rs['idPrestadora'];
+            $listPrestadora->razaoSocial=$rs['razaoSocial'];
+            $listPrestadora->nomeFantasia=$rs['nomeFantasia'];
+            $listPrestadora->fotoPrestadora=$rs['fotoPrestadora'];
+            $listPrestadora->descricao=$rs['descricao'];
+            $listPrestadora->telefone=$rs['telefone'];
+            $listPrestadora->cnpj=$rs['cnpj'];
+            $listPrestadora->idEnderecoPrestadora=$rs['idEndereco'];
+            $listPrestadora->login=$rs['login'];
+            $listPrestadora->senha=$rs['senha'];
+            $listPrestadora->status=$rs['status'];
+
+
+
+
+          }else{
+            echo "nada achado";
+          }
+
+          $conex->Desconectar();
+
+          if (isset($listPrestadora)) {
+              return $listPrestadora;
+          }
+
+        }
+
+
 
 
 

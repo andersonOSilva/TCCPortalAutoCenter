@@ -59,47 +59,20 @@ if (isset($_GET['out'])) {
   require_once("cms/models/cadUser_class.php");
   $controller_cadUser= new controllerCadUser();
   $return=$controller_cadUser::Buscar($_SESSION['idUsuario']);
+
+  require_once 'userMenu.php';
+
+}elseif (isset($_SESSION['idPrestadora'])) {
+  require_once('cms/controllers/prestadora_controller.php');
+  require_once('cms/models/cadprestadora_class.php');
+  $controller_Prestadora= new controllerPrestadora();
+  $return=$controller_Prestadora::BuscarPrestadoraPorID($_SESSION['idPrestadora']);
+
+  require_once 'menuPrestadora.php';
+
 ?>
 
-<div class="log">
 
-  <div class="foto_user_login">
-    <img src="<?php echo $return->foto ?>" alt="djfjff">
-  </div>
-
-
-  <div class="segura_menu_info">
-    <div class="menu_user">
-      <div class="info_nome_user">
-        <h2><?php echo $return->nomeUser?></h2>
-      </div>
-
-      <div class="item_info">
-          <a href="#">Minha conta</a>
-      </div>
-
-      <div class="item_info">
-          <a href="#">Meus Pedidos</a>
-      </div>
-
-      <div class="item_info">
-          <a href="#">Agenda</a>
-      </div>
-
-      <div class="item_info">
-          <a href="?out=1">Sair</a>
-      </div>
-    </div>
-
-  </div>
-
-
-
-</div>
-
-<div class="caixa_de_ferramenta">
-  <img src="imagens/caixadeFerramentas.png" alt="caixa de ferramentas">
-</div>
 
 
 <?php
@@ -112,7 +85,7 @@ if (isset($_GET['out'])) {
     <a href="#" class="novo" onclick="escolha();"><p id="entre">Entre</p></a> <a href="#" class="novo_cadastro" onclick="cadastro();"><p>ou cadastre-se</p></a>
 
 
-   
+
 
 </div>
 

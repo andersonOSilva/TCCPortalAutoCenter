@@ -84,7 +84,9 @@
       if($rs=$select->fetch(PDO::FETCH_ASSOC)){
 
         $idUsuario = $rs['idUsuario'];
-        //echo $idUsuario;
+        echo $idUsuario;
+
+        echo "string";
 
       }
 
@@ -93,13 +95,17 @@
 
 
       if ($idUsuario > 0) {
+      //echo $idUsuario;
         echo '1';
+
 
         $_SESSION['idUsuario'] = $idUsuario;
 
       }else {
 
         echo '0';
+
+        echo "tatatatat";
 
         //header('location:router.php?controller=loginUser&modo=buscarId&idUsuario='.$_SESSION['idUsuario']);
 

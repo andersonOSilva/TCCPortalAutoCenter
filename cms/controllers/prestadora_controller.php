@@ -2,7 +2,7 @@
 
 class controllerPrestadora{
     public function Inserir(){
-      
+
       require_once('cms/modulo.php');
      $Prestadora = new Prestadora();
      $Prestadora->login=$_POST['txtlogin'];
@@ -41,8 +41,8 @@ class controllerPrestadora{
 
        $Prestadora->fotoPrestadora = $diretorio_completo;
        $Prestadora::Insert($Prestadora);
-        
-        
+
+
 
 //          if ($Prestadora->$IDdaPrestadora != Null){
 //            echo("controller diz - amigo estou aqui");
@@ -77,7 +77,7 @@ class controllerPrestadora{
     }
 
     public function Editar(){
-      
+
       require_once('modulo.php');
       $Prestadora = new Prestadora;
       $Prestadora->nome = $_POST['txt_nome'];
@@ -94,7 +94,7 @@ class controllerPrestadora{
 
       if (!empty($_FILES['fle_imagem']['name'])) {
          $imagem_file = true;
-         $diretorio_completo=salvarFoto($_FILES['fle_imagem'],'imagenPlano');
+         $diretorio_completo=salvarFoto($_FILES['fle_imagem'],'imagenPrestadora');
          if ($diretorio_completo == "Erro") {
              echo "<script>
                  alert('arquivo nao movido');
@@ -124,6 +124,28 @@ class controllerPrestadora{
       $Prestadora->idPrestadora=$_GET['id'];
       //Chama o metodo de excluir na model
       $Prestadora::Delete($Prestadora);
+    }
+
+    // Login de prestadora do site
+    public function LoginPrestadora(){
+      //$url = $_GET['url'];
+      $Prestadora = new Prestadora();
+      $cnpj = $_GET['cnpj'];
+      $senha = $_GET['senha'];
+
+      $Prestadora ->cnpj =$cnpj;
+      $Prestadora ->senha = $senha;
+
+
+      $Prestadora::LoginPrestadora($Prestadora);
+    }
+
+    // buscar prestadora por id especifico
+    public function BuscarPrestadoraPorID(){
+      $idPrestadora=$_SESSION['idPrestadora'];
+      $Prestadora = new Prestadora();
+      $Prestadora->IDdaPrestadora=$idPrestadora;
+      return $Prestadora::selectById($Prestadora);
     }
 
 }

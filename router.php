@@ -192,6 +192,28 @@
           }
             break;
 
+            // login user
+
+            case 'LoginPrestadora':
+            require_once('cms/controllers/prestadora_controller.php');
+            require_once('cms/models/cadprestadora_class.php');
+
+            switch ($modo) {
+              case 'LoginPrestadora':
+                //Chama a controller para poder fazer o login
+                $controller_Prestadora= new controllerPrestadora();
+                $controller_Prestadora::LoginPrestadora();
+                //echo('teste no router');
+              break;
+
+              case 'buscarId':
+                $controller_Prestadora= new controllerPrestadora();
+                $controller_Prestadora::Buscar();
+              break;
+
+            }
+            break;
+
 
                   /*
 
