@@ -3,7 +3,9 @@
 .cabecalho_menus{
   width: 100%;
   height: 70px;
-  background-color: red;
+  background-color: black;
+  color: aliceblue;
+  border-top:solid 2px #eca023; 
 }
 
 .cadastros_menus{
@@ -13,13 +15,23 @@
   margin-left: 30px;
   margin: 0px;
   padding: 0px;
-  background-color: blue;
+    
+/*  background-color: blue;*/
 }
-
+.input textarea{
+    box-shadow: 2px 2px 2px 2px #ccc;
+}
+.input{
+    margin-top: 3px;
+    box-shadow: 2px 2px 2px 2px #ccc;
+    content: none;
+    
+    
+}
 .cad_titulo{
-  width: 50%;
+  width: 100%;
   height: 90px;
-  margin: auto;
+  
   font-style: bold;
   font-size: 20px;
   /* background-color: #0fc; */
@@ -28,27 +40,83 @@
 
 
 .cad_descricao{
-  width:30%;
-  height: 70px;
+  width:100%;
+  height: 70%;
   background-color: yellow;
   margin: auto;
-  margin-top: 10px;
+ 
 }
 
 .cad_link{
-  width: 30%;
+  width: 100%;
   height: 70%;
-  margin: auto;
-  margin-top: 80px;
-  background-color: pink;
+    font-size: 20px;
+  
+/*  margin-top: 80px;*/
+/*  background-color: pink;*/
+}
+.principal{
+/*    background-color: aqua;*/
+    height: 300px;
+    width: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+    
+}
+.pricipalfilha{
+     height: 32%;
+    width: 32%;
+/*    background-color: aliceblue;*/
+    margin-left: 10px;
+    margin-top: 10px;
+    
+    
+}
+.principal .pricipalfilha:nth-child(1) input{
+width: 100%;
+}
+.principal .pricipalfilha:nth-child(1){
+    width: 150px;
+    
+    
+}
+.principal .pricipalfilha:nth-child(3) textarea{
+    height: 100%;
+    width: 100%;
+    
+    
+}
+.principal .pricipalfilha:nth-child(3){
+/*    margin-left: 80px;*/
+/*    background-color: antiquewhite;*/
+    width: 300px;
+    
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+.principal .pricipalfilha:nth-child(2) input{
+    width: 100%;
+}
+.principal .pricipalfilha:nth-child(2){
+/*    height: 100px;*/
+    width: 100px;
+
+    
+}
+.principal .pricipalfilha:nth-child(4){
+    margin-left: 100px;
+    height: 100px;
+    
 }
 
 .buttom_enviar{
   width: 100px;
   height: 50px;
-  margin-top: 70px;
-  margin-left: auto;
-  margin-right: auto;
+/*  margin-top: 70px;*/
+
 }
 
 #btnEnviar{
@@ -125,7 +193,7 @@
   margin-left: auto;
   margin-right: auto;
   overflow: hidden;
-  background-color: red;
+/*  background-color: red;*/
   text-align: center;
   font-style: bold;
   font-size: 20px;

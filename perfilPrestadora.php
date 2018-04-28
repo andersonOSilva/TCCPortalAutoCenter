@@ -1,4 +1,24 @@
-<html>
+<?php
+ require_once 'cms/viewModel/view_prestadoraPerfil.php';
+                
+            
+                  $retornoModel = perfilPrestadora::select();
+                  $nomefantasia=$retornoModel->nomefantasia;
+                    $fotoprestadora=$retornoModel->fotoPrestadora;
+                    $descricao=$retornoModel->descricao;
+                    $telefone=$retornoModel->telefone;
+                    $logradouro=$retornoModel->logradouro;
+                    $numero=$retornoModel->numero;
+                    $referencia=$retornoModel->referencia;
+                    $cep=$retornoModel->cep;
+                    $cidade=$retornoModel->cidade;
+                    $estado=$retornoModel->estado;
+                    $bairro=$retornoModel->bairro;
+            
+            echo($nomefantasia);
+
+
+?><html>
     <head>
        <link type="text/css" href="css/stylePerfilPrestadora.css" rel="stylesheet">
        <link type="text/css" href="css/styleMenus.css" rel="stylesheet">
@@ -265,10 +285,12 @@
     
         
     </style>
+    
     <body>
         <div id="calco">
             <?php
                 require_once 'menu.php';
+             
              ?>
             </div>
         <div style="heigth:auto;max-width:1200px;margin:auto;">

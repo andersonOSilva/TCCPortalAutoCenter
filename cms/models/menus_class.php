@@ -25,8 +25,8 @@ class Menus
 
     if ($PDO_conex->query($sql)) {
       //echo $sql;
-      header("location:index.php?pag=menus");
-    }else{
+      echo "sucesso";
+      }else{
       echo "erro";
     }
 
@@ -80,7 +80,7 @@ class Menus
 
 
        if ($PDO_conex->query($sql)) {
-         echo("<script>location.reload();</script>");
+         echo "sucesso";
        }else{
          echo "erro";
        }

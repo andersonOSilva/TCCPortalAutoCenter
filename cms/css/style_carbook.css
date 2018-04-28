@@ -2,7 +2,9 @@
 .cabecalho_carbook{
   width: 100%;
   height: 70px;
-  background-color: red;
+  background-color: black;
+  color: aliceblue;
+  border-top:solid 2px #eca023; 
 }
 
 .cadastro_carbook{

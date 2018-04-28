@@ -12,10 +12,12 @@ class perfilPrestadora{
     public $cidade;
     public $estado;
     public $bairro;
-    public  function __construct(){
-      require_once('bd_class.php');
-    }
-    public function select{
+    
+  public function __construct(){
+    require_once('../models/bd_class.php');
+  }
+    
+    public function select(){
         try{ 
      $sql = "SELECT * FROM db_portal.viewperfilprestadora order by idPrestadora desc;";
       // echo $sql;
@@ -31,16 +33,33 @@ class perfilPrestadora{
       while($rs=$select->fetch(PDO::FETCH_ASSOC)){
         $listPrestadoraEndereco = new Prestadora();
           
+//         nomefantasia
+//        fotoPrestadora
+//        descricao
+//        telefone
+//        logradouro
+//        numero
+//        referencia
+//        cepcep
+//        cidade
+//        estado
+//        bairro
+
+
           
 
 
-        $listPrestadoraEndereco->idEnderecoPrestadora=$rs['idEnderecoPrestadora'];
-        $listPrestadoraEndereco->logradouro=$rs['logradouro'];
-        $listPrestadoraEndereco->numero=$rs['numero'];
-        $listPrestadoraEndereco->bairro=$rs['bairro'];
-        $listPrestadoraEndereco->referencia=$rs['referencia'];
-        $listPrestadoraEndereco->cep=$rs['cep'];
-        $listPrestadoraEndereco->idCidade=$rs['idCidade'];
+        $listPrestadora->nomefantasia=$rs['nomefantasia'];
+        $listPrestadora->fotoPrestadora=$rs['fotoPrestadora'];
+        $listPrestadora->descricao=$rs['descricao'];
+        $listPrestadora->telefone=$rs['telefone'];
+        $listPrestadora->logradouro=$rs['logradouro'];
+        $listPrestadora->numero=$rs['numero'];
+        $listPrestadora->referencia=$rs['referencia'];
+        $listPrestadora->cep=$rs['cep'];
+        $listPrestadora->cidade=$rs['cidade'];
+        $listPrestadora->estado=$rs['estado'];
+        $listPrestadora->bairro=$rs['bairro'];
 
         $cont+=1;
       }

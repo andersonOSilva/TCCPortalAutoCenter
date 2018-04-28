@@ -156,17 +156,64 @@ public function DesativarCabecalho(){
 
 
     // palavra proibida
-    public function ListarPalavra(){
-      require_once("../models/palavraForum_class.php");
-      $select_palavraForum = new palavraForum();
-      return $select_palavraForum::InsertPalavra();
+    public function NovoPalavrao(){
+      // require_once("../models/palavraForum_class.php");
+      $palavrao = new palavraForum();
+      $palavrao->palavrao=$_POST['txt_palavrao'];
+      $palavrao::InsertPalavra($palavrao);
+
+      //var_dump($palavrao);
 
     }
+    // Listar palavras proibidas
+    public function ListarPalavrao(){
+      $select_palavrao = new palavraForum();
+      return $select_palavrao::selectPalavra();
+    }
 
+    // excluir palavras proibidas
+    public function ExcluirPalavra(){
+      require_once("models/palavraForum_class.php");
 
+      $idPalavra=$_GET['id'];
+      $palavra= new palavraForum();
+      $palavra->idPalavra = $idPalavra;
+      $palavra::Delete($palavra);
+    }
 
+    // // ativar e desativar palavras proibidas
+    // public function DesativarP(){
+    //   require_once("models/palavraForum_class.php");
+    //   $desativar = new palavraForum();
+    //   $desativar->idPalavra=$_GET['id'];
+    //   $desativar::DesativarPalavra($desativar);
+    // }
+    //
+    // public function AtivarP(){
+    //   require_once("models/palavraForum_class.php");
+    //   $ativar = new palavraForum();
+    //   $ativar->idPalavra=$_GET['id'];
+    //   $ativar::AtivarPalavra($ativar);
+    // }
 
+    public function EditarPalavra(){
+      require_once("models/palavraForum_class.php");
+      $idcabecalho=$_GET['id'];
 
+      $palavra = new palavraForum();
+      $palavra ->idPalavra=$idPalavra;
+      $palavra->palavra=$_POST['palavra'];
+      $palavra::EditarP($palavra);
+    }
+
+    public function BuscarPalavraId($idPalavra){
+      require_once("../models/palavraForum_class.php");
+
+      $idPalavra = $idPalavra;
+      $palavra= new palavraForum();
+      $palavra->idPalavra=$idPalavra;
+      return $palavra::selectPalavraPorId($palavra);
+    }
 
   }
 

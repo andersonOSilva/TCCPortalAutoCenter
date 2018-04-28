@@ -18,7 +18,7 @@
       $sql="insert into tbl_cabecalho_forum (titulo1,titulo2,descricao)
             values ('".$dados->titulo1."','".$dados->titulo2."','".$dados->descricao."')";
 
-            echo $sql;
+            //echo $sql;
 
             $conex = new Mysql_db();
 
@@ -73,7 +73,7 @@
 
           $select="select * from tbl_cabecalho_forum where idcabecalho=".$dados_controller->idcabecalho;
 
-          echo $select;
+          //echo $select;
 
           $conex = new Mysql_db();
           $PDO_conex = $conex->Conectar();

@@ -157,7 +157,7 @@
             $controller_forum::ativarCabecalho();
             break;
 
-          
+
           case 'desativar':
             $controller_forum = new controllerForum();
             $controller_forum::DesativarCabecalho();
@@ -185,6 +185,7 @@
 
         break;
 
+        //Prestadora
         case 'prestadora':
           require_once("controllers/prestadora_controller.php");
           require_once("models/cadprestadora_class.php");
@@ -195,11 +196,83 @@
                 $controller_Prestadora::Listar();
                 // echo "string";
               break;
-
-
           }
-
             break;
+
+
+            //Palavra Proibida
+            case 'palavrao':
+              require_once('controllers/forum_controller.php');
+              require_once('models/palavraForum_class.php');
+
+              switch ($_GET['modo']){
+                case 'novo':
+                  $controller_palavrao= new controllerForum();
+                  $controller_palavrao::NovoPalavrao();
+                  break;
+
+              }
+              break;
+
+              // excluir palavra proibida
+              case 'excluir':
+              require_once('controllers/forum_controller.php');
+              require_once('models/palavraForum_class.php');
+              switch ($_GET['modo']) {
+                case 'delete':
+                $controller_palavrao= new controllerForum();
+                $controller_palavrao::ExcluirPalavra();
+                  break;
+              }
+                break;
+
+                case 'editar':
+                require_once('controllers/forum_controller.php');
+                require_once('models/palavraForum_class.php');
+                switch ($_GET['modo']) {
+                  case 'edita':
+                  $controller_palavrao= new controllerForum();
+                  $controller_palavrao::EditarPalavra();
+                    break;
+                }
+                  break;
+
+              // // ativar palavra proibida
+              // case 'desativar':
+              // require_once('controllers/forum_controller.php');
+              // require_once('models/palavraForum_class.php');
+              // switch ($_GET['modo']) {
+              //   case 'desativa':
+              //   $controller_palavrao= new controllerForum();
+              //   $controller_palavrao::DesativarP();
+              //     break;
+              // }
+              //   break;
+              //
+              // case 'ativar':
+              // require_once('controllers/forum_controller.php');
+              // require_once('models/palavraForum_class.php');
+              // switch ($_GET['modo']) {
+              //   case 'ativa':
+              //   $controller_palavrao= new controllerForum();
+              //   $controller_palavrao::AtivarP();
+              //     break;
+              // }
+              //   break;
+
+//            case 'sobre':
+//                require_once ('controllers/sobre_controller.php');
+//                require_once ('models/sobre_class.php');
+//
+//              switch ($_GET['modo']){
+//                case 'novo':
+//                $controller_sobre= new sobre_controller();
+//                $controller_sobre::inserir();
+//                break;
+//                }
+//
+//
+//            break;
 
       // case 'usuario':
       //         $test=$_GET['id'];

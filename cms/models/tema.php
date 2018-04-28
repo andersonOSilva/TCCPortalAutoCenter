@@ -61,28 +61,7 @@
 
       if ($PDO_conex->query($sql)) {
 
-          $select="select * from tbl_categoria_forum where descricao='$dados->descricao'";
-
-          echo $select;
-
-          $conex = new Mysql_db();
-          $PDO_conex = $conex->Conectar();
-          $result = $PDO_conex->query($select);
-
-
-          if ($rs=$result->fetch(PDO::FETCH_ASSOC)) {
-            $list_tema = new Forum;
-            $list_tema->idCategoriaForum=$rs['idCategoriaForum'];
-            $list_tema->descricao=$rs['descricao'];
-
-
-          }
-
-          if (isset ($list_tema)) {
-            //var_dump()
-            return $list_tema;
-          }
-
+        echo "secesso";
       }
 
       $conex->Desconectar();

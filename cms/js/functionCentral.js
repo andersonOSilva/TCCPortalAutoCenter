@@ -31,18 +31,24 @@ function CadastroeEdicao(idform,controller,modo,divDados,divForm,linkDados,linkF
 
 // function excluir
 
-function Excluir(idIten,controller,modalDados,link){
+function Excluir(idIten,controller,modo,modalDados,link){
   var resposta;
   resposta = confirm('Deseja excluir?');
+  // alert(idIten);
+  // alert(controller);
+  // alert(modo);
+  //   alert(modalDados);
+  //   alert(link);
   if (resposta==true){
   //alert(idIten);
     $.ajax({
         type: "GET",
-        url: "router.php?controller="+controller+"&modo=excluir&id="+idIten,
+        url: "router.php?controller="+controller+"&modo="+modo+"&id="+idIten,
         // data: {modo:'excluir',id:idIten},
         success: function(dados){
           // aqui ele recarrega a div com o arquivo
           $( modalDados ).load(link);
+          //alert(dados);
         }
     });
   }
