@@ -148,5 +148,118 @@ class controllerPrestadora{
       return $Prestadora::selectById($Prestadora);
     }
 
-}
+    //  buscar por id CMS
+    public function Selecionarporid($id){
+      $idPrestadora=$id;
+       echo $idPrestadora;
+
+      $Prestadora = new Prestadora();
+      $Prestadora->IDdaPrestadora=$idPrestadora;
+      return $Prestadora::Selecionarporid($Prestadora);
+    }
+
+    public function SelecionarFilialPrest($id){
+      $idPrestadora=$id;
+       echo $idPrestadora;
+       require_once('../viewModel/view_Prestadora_Filial.php');
+      $Prestadora = new Prestadora_Filial();
+      $Prestadora->idPrestadora=$idPrestadora;
+      return $Prestadora::selecionarTudo($Prestadora);
+    }
+
+    // function desativar os servicos
+      public function desativarBeneficilServico(){
+        require_once("models/filial_class.php");
+        $ativacao = new filial();
+
+        $ativacao->idFilial=$_GET['id'];
+        $ativacao::desativarBeneficilServico($ativacao);
+      }
+
+      // function desativar beneficio de produtos
+        public function desativarBeneficilProduto(){
+          require_once("models/filial_class.php");
+          $ativacao = new filial();
+
+          $ativacao->idFilial=$_GET['id'];
+          $ativacao::desativarBeneficilProduto($ativacao);
+        }
+
+        // function desativar beneficio da home
+          public function desativarBeneficilHome(){
+            require_once("models/filial_class.php");
+            $ativacao = new filial();
+
+            $ativacao->idFilial=$_GET['id'];
+            $ativacao::desativarBeneficilHome($ativacao);
+          }
+
+          // function desativar beneficio de aparecer na pagina de Servicos
+            public function desativarBeneficilPagServico(){
+              require_once("models/filial_class.php");
+              $ativacao = new filial();
+
+              $ativacao->idFilial=$_GET['id'];
+              $ativacao::desativarBeneficilPagServico($ativacao);
+            }
+
+            // function desativar beneficio de aparecer na pagina de produtos
+              public function desativarBeneficilPagProdutos(){
+                require_once("models/filial_class.php");
+                $ativacao = new filial();
+
+                $ativacao->idFilial=$_GET['id'];
+                $ativacao::desativarBeneficilPagProdutos($ativacao);
+              }
+
+              // ATIVAÇÂO
+
+              // function ativar os servicos
+                public function ativarBeneficilServico(){
+                  require_once("models/filial_class.php");
+                  $ativacao = new filial();
+
+                  $ativacao->idFilial=$_GET['id'];
+                  $ativacao::ativarBeneficilServico($ativacao);
+                }
+
+                // function ativar beneficio de produtos
+                public function ativarBeneficilProduto(){
+                    require_once("models/filial_class.php");
+                    $ativacao = new filial();
+
+                    $ativacao->idFilial=$_GET['id'];
+                    $ativacao::ativarBeneficilProduto($ativacao);
+                }
+
+                // function ativar beneficio da home
+                public function ativarBeneficilHome(){
+                require_once("models/filial_class.php");
+                $ativacao = new filial();
+
+                $ativacao->idFilial=$_GET['id'];
+                $ativacao::ativarBeneficilHome($ativacao);
+                }
+
+                // function ativar beneficio de aparecer na pagina de Servicos
+                public function ativarBeneficilPagServico(){
+                require_once("models/filial_class.php");
+                $ativacao = new filial();
+
+                $ativacao->idFilial=$_GET['id'];
+                $ativacao::ativarBeneficilPagServico($ativacao);
+                }
+
+                // function ativar beneficio de aparecer na pagina de produtos
+                public function ativarBeneficilPagProdutos(){
+                  require_once("models/filial_class.php");
+                  $ativacao = new filial();
+
+                  $ativacao->idFilial=$_GET['id'];
+                  $ativacao::ativarBeneficilPagProdutos($ativacao);
+                }
+
+
+    }
+
  ?>

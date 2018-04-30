@@ -196,6 +196,64 @@
                 $controller_Prestadora::Listar();
                 // echo "string";
               break;
+
+            // DESATIVAR
+
+        // desativar os servicos
+        case 'desativarBeneficilServico':
+          $controller_Prestadora = new controllerPrestadora();
+          $controller_Prestadora::desativarBeneficilServico();
+          break;
+
+        case 'desativarBeneficilProduto':
+          $controller_Prestadora = new controllerPrestadora();
+          $controller_Prestadora::desativarBeneficilProduto();
+          break;
+
+        case 'desativarBeneficilHome':
+          $controller_Prestadora = new controllerPrestadora();
+          $controller_Prestadora::desativarBeneficilHome();
+          break;
+
+        case 'desativarBeneficilPagServico':
+          $controller_Prestadora = new controllerPrestadora();
+          $controller_Prestadora::desativarBeneficilPagServico();
+          break;
+
+        case 'desativarBeneficilPagProdutos':
+          $controller_Prestadora = new controllerPrestadora();
+          $controller_Prestadora::desativarBeneficilPagProdutos();
+          break;
+
+
+          //ATIVAÇÂO
+
+      // desativar os servicos
+      case 'ativarBeneficilServico':
+        $controller_Prestadora = new controllerPrestadora();
+        $controller_Prestadora::ativarBeneficilServico();
+        break;
+
+      case 'ativarBeneficilProduto':
+        $controller_Prestadora = new controllerPrestadora();
+        $controller_Prestadora::ativarBeneficilProduto();
+        break;
+
+      case 'ativarBeneficilHome':
+        $controller_Prestadora = new controllerPrestadora();
+        $controller_Prestadora::ativarBeneficilHome();
+        break;
+
+      case 'ativarBeneficilPagServico':
+        $controller_Prestadora = new controllerPrestadora();
+        $controller_Prestadora::ativarBeneficilPagServico();
+        break;
+
+      case 'ativarBeneficilPagProdutos':
+        $controller_Prestadora = new controllerPrestadora();
+        $controller_Prestadora::ativarBeneficilPagProdutos();
+        break;
+
           }
             break;
 

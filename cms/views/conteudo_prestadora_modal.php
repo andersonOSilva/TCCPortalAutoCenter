@@ -1,18 +1,3 @@
-<?php
-
-  $id=$_GET['id'];
-
-  //echo $id;
-  require_once('../controllers/prestadora_controller.php');
-  require_once('../models/cadprestadora_class.php');
-
-  $controller_Prestadora = new controllerPrestadora();
-  $listPrestadora = $controller_Prestadora ::Selecionarporid($id);
-
-
-  if(isset($listPrestadora)){
-
-?>
 
 <div class="titulo_prestadora_modal">
   <h1>Dados da prestadora</h1>
@@ -56,7 +41,7 @@
    <div class="Conteudos_filiais_completo">
      <div class="nome_Filial">
        <div class="filial_p">
-         <p><?php echo($listPrestadora[$cont]->NomePrestadora)  ?></p>
+         <p><?php echo($listPrestadora[$cont]->nomeFilial)  ?></p>
        </div>
 
        <div class="status_filial">
@@ -108,17 +93,15 @@
 
        <div class="dados_de_status">
 
+         <fieldset class="fieldset-borderMAior">
+           <legend class="legend-border">Status da Filial</legend>
+           <div class="receber_dados">
+             <?php require_once 'statusFilial.php'; ?>
+           </div>
 
-           <fieldset class="fieldset-borderMAior">
-             <legend class="legend-border">Localizacao</legend>
 
-              <div class="receber_dados">
-                <?php require_once 'statusFilial.php'; ?>
 
-              </div>
-
-          </fieldset>
-
+         </fieldset>
        </div>
 
      </div>
@@ -129,13 +112,3 @@
   }
    ?>
 </div>
-
-
-
-<?php
-
-
-
-}
-
-  ?>

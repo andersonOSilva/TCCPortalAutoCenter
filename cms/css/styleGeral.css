@@ -448,19 +448,19 @@ width: 98%;
 
 
 .titulo_tbl_servico{
- width: 828px;     
+ width: 828px;
   height: 50px;
   background-color: #bd5a20a6;
   color: aliceblue;
-  
+
     margin-top: 10px;
     margin-left: 30px;
-  
+
   /*margin-top: -175px;*/
     /*
   max-width: 1200px;
   height: 10%;
-   border: 1px solid #000; 
+   border: 1px solid #000;
   background-color: #fff;
   margin: auto;
 */
@@ -1165,10 +1165,10 @@ nav ul li a{
 	height:600px;
 	background-color:white;
 	/* margin:auto; */
-  margin-top: 180px;
+  /* margin-top: 180px; */
   /*margin-left: auto;
   margin-right: auto;*/
-  margin-left: 300px;
+  /* margin-left: 300px; */
 }
 
 .modalContainer_pretadora{
@@ -1196,7 +1196,7 @@ nav ul li a{
   height: 70px;
   background-color: black;
   color: aliceblue;
-  border-top:solid 2px #eca023; 
+  border-top:solid 2px #eca023;
 }
 
 .cadastro_carbook{

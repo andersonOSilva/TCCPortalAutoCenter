@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="css/style_menus.css">
     <link rel="stylesheet" href="css/stylePalavras.css">
     <script src="js/jquery7.min.js"></script>
-    <script src="js\functionCentral.js"></script>
 
   </head>
   <body>
@@ -198,6 +197,7 @@
           </div>
       </div> -->
 
+      <script src="js/functionCentral.js"></script>
 
   </body>
 </html>

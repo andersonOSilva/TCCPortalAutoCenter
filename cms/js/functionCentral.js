@@ -75,21 +75,46 @@ function Editar(idItem,link,div){
 
 // ativar coisas
 
-function AtivarEdesativar(idIten,controller,modo,divdados,link,respostaPesonalizada){
+function AtivarEdesativar(idIten,controller,modo,respostaPesonalizada){
     var resposta;
     resposta = confirm(respostaPesonalizada);
-    if (resposta==true)
-    {
+    // alert(idIten);
+    // alert(controller);
+    // alert(modo);
+     // alert(divdados);
+     // alert(link);
+    if (resposta==true){
     //alert(idIten);
       $.ajax({
           type: "GET",
           url: "router.php?controller="+controller+"&modo="+modo+"&id="+idIten,
           success: function(dados){
-              //$('.conteudo_prestadora').html(dados);
-            // alert (dados);
+             $('.receber_dados').html(dados);
+            //alert (dados);
 
-            $( divdados ).load(link);
+          // $( '.dados_conteudo_modal' ).load('views/conteudo_prestadora_modal.php');
           }
       });
     }
   }
+
+  // visualizar
+
+  function Visualizar(idItem,link,div){
+
+    $.ajax({
+      type: "GET",
+      url:link,
+      data: {id:idItem},
+      success: function(dados){
+        $(div).html(dados);
+      //  alert(dados);
+      }
+  });
+  }
+
+  //Efeito para abrir a div Container com timer de 2 segundos (Novo Registro)
+  $(".novo").click(function(){
+     $(".modalContainer_pretadora").slideToggle(2000);
+
+  });

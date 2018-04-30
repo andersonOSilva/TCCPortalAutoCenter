@@ -171,7 +171,6 @@
       $select = $PDO_conex->query($sql);
 
       $cont=0;
-
       while($rs=$select->fetch(PDO::FETCH_ASSOC)){
         $listPrestadora[] = new Prestadora();
 
@@ -300,7 +299,45 @@
 
         }
 
+        public function Selecionarporid($dados){
+          $sql='select * from tbl_prestadora where idPrestadora='.$dados->IDdaPrestadora;
 
+          //echo $sql;
+
+          $conex = new Mysql_db();
+          $PDO_conex = $conex->Conectar();
+          $select = $PDO_conex->query($sql);
+
+
+          if($rs=$select->fetch(PDO::FETCH_ASSOC)){
+            $listPrestadora = new Prestadora();
+
+            $listPrestadora->idPrestadora=$rs['idPrestadora'];
+            $listPrestadora->razaoSocial=$rs['razaoSocial'];
+            $listPrestadora->nomeFantasia=$rs['nomeFantasia'];
+            $listPrestadora->fotoPrestadora=$rs['fotoPrestadora'];
+            $listPrestadora->descricao=$rs['descricao'];
+            $listPrestadora->telefone=$rs['telefone'];
+            $listPrestadora->cnpj=$rs['cnpj'];
+            $listPrestadora->idEnderecoPrestadora=$rs['idEndereco'];
+            $listPrestadora->login=$rs['login'];
+            $listPrestadora->senha=$rs['senha'];
+            $listPrestadora->status=$rs['status'];
+
+
+
+
+          }else{
+            echo "nada achado";
+          }
+
+          $conex->Desconectar();
+
+          if (isset($listPrestadora)) {
+              return $listPrestadora;
+          }
+
+        }
 
 
 

@@ -5,11 +5,11 @@
       $(document).ready(function () {
 
 
-        //Efeito para abrir a div Container com timer de 2 segundos (Novo Registro)
-        $(".novo").click(function(){
-           $(".modalContainer_pretadora").slideToggle(2000);
-
-        });
+        // //Efeito para abrir a div Container com timer de 2 segundos (Novo Registro)
+        // $(".novo").click(function(){
+        //    $(".modalContainer_pretadora").slideToggle(2000);
+        //
+        // });
 
         //Efeito para abrir a div Container com timer de 2 segundos (Novo Registro)
           $(".listar").click(function(){
@@ -112,11 +112,11 @@
           </div>
           <div class="dados_prest_modo">
             <div class="status_prest_modo">
-                <img src="imagens/view.png"  alt="off" title="Visualizar user" class="novo" onclick="Novo();">
+                <img src="imagens/view.png"  alt="off" title="Visualizar prestadora" class="novo" onclick="Visualizar(<?php echo ($listPrestadora[$cont]->id)?>,'views/prestadora_modal.php','.modal_prestadora');">
             </div>
 
             <div class="status_prest_modo">
-                <img src="imagens/notification.png" alt="off" title="Notificar user">
+                <img src="imagens/notification.png" alt="off" title="Notificar Prestadora">
             </div>
 
           </div>
