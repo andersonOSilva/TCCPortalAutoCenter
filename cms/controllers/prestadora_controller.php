@@ -259,6 +259,17 @@ class controllerPrestadora{
                   $ativacao::ativarBeneficilPagProdutos($ativacao);
                 }
 
+                // selecionar Filiais
+
+                public function SelecionarFilialPorID(){
+                  $idPrestadora=$_SESSION['idPrestadora'];
+                  require_once("models/filial_class.php");
+
+                  $Prestadora = new filial();
+                  $Prestadora->idPrestadora=$idPrestadora;
+                  return $Prestadora::SelecionarFilialPorID($Prestadora);
+                }
+
 
     }
 

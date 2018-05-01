@@ -23,55 +23,74 @@
 
       <!-- Menu -->
 
-      <div class="titulo_menu">
-          <p>Cms</p>
-      </div>
-      <div class="item_menu">
-        <p><a href="?pag=home">Home</a></p>
-      </div>
+
 
       <div class="titulo_menu">
-          <p>Marketing</p>
+          <p>Perfil</p>
       </div>
-
       <div class="item_menu">
-        <p> <a href="?pag=menus">Menus</a></p>
-      </div>
-
-      <div class="item_menu">
-        <p> <a href="?pag=fale">Fale conosco</a></p>
-      </div>
-
-      <div class="item_menu">
-        <p> <a href="?pag=servicos">Servicos</a></p>
-      </div>
-
-      <div class="item_menu">
-        <p> <a href="?pag=carbook">CarBook</a></p>
+        <p><a href="?pag=home">editar Perfil</a></p>
       </div>
 
       <div class="titulo_menu">
-          <p>Administrativo</p>
+          <p>Filiais</p>
       </div>
 
-      <div class="item_menu">
-        <p> <a href="?pag=plano">Plano</a></p>
-      </div>
+      <?php
+
+      if (isset($_SESSION['idPrestadora'])){
+
+        require_once("../cms/controllers/prestadora_controller.php");
+        require_once("models/filial_class.php");
+        $controller_cadUser= new controllerPrestadora();
+        $return=$controller_cadUser::SelecionarFilialPorID($_SESSION['idPrestadora']);
+
+        $cont=0;
+        //var_dump ($return);
+
+        while ($cont <count($return)) {
+
+        ?>
 
       <div class="item_menu">
-        <p><a href="?pag=prestadora">Prestadora</a></p>
+        <p> <a href="#"><?php echo ($return[$cont]->nomeFilial); ?></a></p>
+
+        <?php
+
+        $statusServico = $return[$cont]->statusServico;
+        $statusProduto = $return[$cont]->statusProduto;
+
+            if ($statusServico = '1') {
+
+         ?>
+         <div class="item_menu_filial">
+           <p> <a href="?pag=servico&idFilial=<?php echo ($return[$cont]->idFilial); ?>">Controle de Servicos</a></p>
+        </div>
+         <?php
+       }else if($statusProduto = '1'){
+
+
+          ?>
+          <div class="item_menu_filial">
+            <p> <a href="?pag=menus">Controle de Produtos</a></p>
+         </div>
+
+          <?php
+        }
+           ?>
       </div>
 
-      <div class="item_menu">
-        <p><a href="?pag=usuario">Usuário</a></p>
+      <?php
+        $cont+=1;
+      }
+    }
+       ?>
+
+      <div class="titulo_menu">
+          <p>Layout</p>
       </div>
 
-      <div class="item_menu">
-        <p><a href="?pag=forum">Forum</a></p>
-      </div>
-      <div class="item_menu">
-        <p><a href="?pag=sobre">Sobre</a></p>
-      </div>
+
 
 
     </div>
@@ -105,42 +124,11 @@
                   require_once 'views/conteudoHome.php';
                   break;
 
-                case 'menus':
-                  require_once 'views/menus_view.php';
-                  break;
-
-                case 'fale':
-                  require_once 'views/faleconosco_view.php';
-                  break;
-
-                case 'servicos':
-                  require_once 'views/servicos_view.php';
-                  break;
-
-                case 'carbook':
-                  require_once 'views/carbook_view.php';
-                  break;
-
-                case 'plano':
-                  require_once 'views/planos_view.php';
-                  break;
-
-                case 'prestadora':
-                  require_once 'views/prestadoras_view.php';
-                  break;
-
-                  case 'usuario':
-                    require_once 'views/usuario_view.php';
-                    break;
+              case 'servico':
+                require_once 'views/cadServico.php';
+                break;
 
 
-                  case 'forum':
-                    require_once 'views/forum_view.php';
-                    break;
-
-                  case 'sobre':
-                    require_once 'views/sobre_view.php';
-                    break;
               }
 
 
