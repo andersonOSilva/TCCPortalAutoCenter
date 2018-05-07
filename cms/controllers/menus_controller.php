@@ -24,13 +24,23 @@ class controllerMenus
 
     }
 
+    public function Buscar(){
+      $idMenu = $_GET['idMenu'];
+
+      $menus= new Menus();
+      $menus->idMenu = $idMenu;
+      return $menus = $menus::SelectById($menus);
+
+    }
+
     public function Editar(){
+
       $menus = new Menus();
 
-      $menus->idMenu = $_GET['id'];
       $menus->titulo=$_POST['txt_titulo'];
       $menus->descricao=$_POST['txt_descricao'];
       $menus->link=$_POST['txt_link'];
+      $menus->idMenu=$_GET['idMenu'];
 
       $menus::Update($menus);
 

@@ -56,8 +56,19 @@ body{
 
 .item_menu{
   width: 100%;
-  height: 6%;
+  height: auto;
+  min-height: 6%;
+  overflow: hidden;
   border-bottom: 2px solid #2E353F;
+}
+
+.item_menu_filiais{
+  width: 100%;
+  height: auto;
+  min-height: 0%;
+  overflow: hidden;
+  /* background-color: blue; */
+
 }
 
 .item_menu:hover{
@@ -77,17 +88,36 @@ width: 98%;
   text-decoration: none;
   color: #fff;
 }
-.item_menu:hover>.item_menu_filial{
+
+/* .item_menu:hover>.item_menu_filial{
   display:block;
-  margin-bottom: 100px;
+
+} */
+
+
+
+
+.menu_de_filiais{
+  width: 100%;
+  height: auto;
+  min-height: 0px;
+  /* background-color: red; */
+  overflow: hidden;
+  display: none;
+
+}
+
+.item_menu_filiais:hover>.menu_de_filiais{
+  display:block;
+transition: 2s;
 }
 
 .item_menu_filial{
   width: 100%;
   height: 50px;
   /* border-bottom: 2px solid #2E353F; */
-  display: none;
-  background-color: #000;
+  /* display: none; */
+  /* background-color: red; */
 }
 
 

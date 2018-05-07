@@ -1,6 +1,7 @@
 <?php
 class perfilPrestadora{
     
+    
     public $nomefantasia;
     public $fotoPrestadora;
     public $descricao;
@@ -13,42 +14,28 @@ class perfilPrestadora{
     public $estado;
     public $bairro;
     
-  public function __construct(){
+   public function __construct(){
     require_once('../models/bd_class.php');
+       echo "seytyrty";
   }
     
     public function select(){
+        
         try{ 
-     $sql = "SELECT * FROM db_portal.viewperfilprestadora order by idPrestadora desc;";
-      // echo $sql;
+     $sql = "SELECT * FROM viewperfilprestadora order by idPrestadora desc;";
+       echo $sql;
+    
+     
 
       $conex = new Mysql_db();
-
       $PDO_conex = $conex->Conectar();
-
       $select = $PDO_conex->query($sql);
 
       
       $cont=0;
       while($rs=$select->fetch(PDO::FETCH_ASSOC)){
         $listPrestadoraEndereco = new Prestadora();
-          
-//         nomefantasia
-//        fotoPrestadora
-//        descricao
-//        telefone
-//        logradouro
-//        numero
-//        referencia
-//        cepcep
-//        cidade
-//        estado
-//        bairro
-
-
-          
-
-
+        
         $listPrestadora->nomefantasia=$rs['nomefantasia'];
         $listPrestadora->fotoPrestadora=$rs['fotoPrestadora'];
         $listPrestadora->descricao=$rs['descricao'];

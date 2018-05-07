@@ -1,3 +1,4 @@
+
 <?php
 
   $id=$_GET['id'];
@@ -113,7 +114,7 @@
              <legend class="legend-border">Localizacao</legend>
 
               <div class="receber_dados">
-                <?php require_once 'statusFilial.php'; ?>
+                <?php require 'statusFilial.php'; ?>
 
               </div>
 

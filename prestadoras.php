@@ -49,7 +49,8 @@
 </div>
 
       <!-- div principal que vai sustentar  toda a area de imagem e descricao em destaque -->
-      <div class="container_servico">
+     
+        <div class="container_servico" style="margin-bottom:50px;">
         <!-- div que suporta imagem e descricao em destaque-->
         <div id="texto_servico">
               <h1>Prestadoras</h1>
@@ -67,19 +68,29 @@
         <div class="container_servico_suporte" style="max-width:1400px;margin-botoom:10px;">
           <!-- segura as imagens e area de descricao  PRESTADORA-->
           
-        <div class="suporteSecundaria">
+
+     <?php 
+           require_once('cms/controllers/prestadora_controller.php');
+           require_once('cms/models/cadprestadora_class.php');
+
+          $controller_Prestadora = new controllerPrestadora();
+          $listPrestadora = $controller_Prestadora ::Listar();
+          $cont=0;
+
+          while($cont < count($listPrestadora)){?>
+
+            <div class="suporteSecundaria">
 <!--            <div style="background-color:rgba(0,0,0,0.1)">-->
             <div class="areaImagemSecundaria">
                 <img src="imagens/pres.jpg" alt="servico" >
             </div>
             <div class="areaDescricaoSecundaria">
                 <div class="titulo_Prestadora_servico">
-                    <h2>Nome da prestadora</h2>
+                    <h2><?php echo ($listPrestadora[$cont]->nomeFantasia); ?></h2>
                 </div>
 
                 <div class="descricao_prestadora">
-                    <p>  Um Mecânico de Automóveis utiliza ferramentas e instrumentos apropriados, para recondicionar
-                       o veículo e assegurar seu funcionamento regular.
+                    <p> <?php echo ($listPrestadora[$cont]->descricao);?>
                      </p>
                 </div>
                 <div class="classificacao">
@@ -99,142 +110,9 @@
             </div>
             
           </div>
+            <?php $cont+=1;}?>
 
-          <!-- segura as imagens e area de descricao  PRESTADORA-->
-          <div class="suporteSecundaria">
-            <div class="areaImagemSecundaria">
-                <img src="imagens/pres1.jpg" alt="servico" >
-            </div>
-            <div class="areaDescricaoSecundaria">
-                <div class="titulo_Prestadora_servico">
-                    <h2>Nome da prestadora</h2>
-                </div>
-
-                <div class="descricao_prestadora">
-                    <p>  Um Mecânico de Automóveis utiliza ferramentas e instrumentos apropriados, para recondicionar
-                       o veículo e assegurar seu funcionamento regular.
-                     </p>
-                </div>
-
-            </div>
-              <div class="classificacao">
-                <ul>
-                  <li class="color"></li>
-                  <li class="color"></li>
-                  <li class="color"></li>
-                  <li class="colornot"></li>
-                  <li class="colornot"></li>
-                </ul>
-            </div>
-            
-            <div class="botao">
-              <a href="#">Ver mais</a>
-            </div>
-
-          </div>
-
-
-          <!-- segura as imagens e area de descricao  PRESTADORA-->
-          <div class="suporteSecundaria">
-            <div class="areaImagemSecundaria">
-                <img src="imagens/pres2.jpg" alt="servico" >
-            </div>
-            <div class="areaDescricaoSecundaria">
-                <div class="titulo_Prestadora_servico">
-                    <h2>Nome da prestadora</h2>
-                </div>
-
-                <div class="descricao_prestadora">
-                    <p>  Um Mecânico de Automóveis utiliza ferramentas e instrumentos apropriados, para recondicionar
-                       o veículo e assegurar seu funcionamento regular.
-                     </p>
-                </div>
-
-            </div>
-              <div class="classificacao">
-                <ul>
-                  <li class="color"></li>
-                  <li class="color"></li>
-                  <li class="color"></li>
-                  <li class="colornot"></li>
-                  <li class="colornot"></li>
-                </ul>
-            </div>
-            
-            <div class="botao">
-              <a href="#">Ver mais</a>
-            </div>
-
-          </div>
-
-
-          <!-- segura as imagens e area de descricao  PRESTADORA-->
-          <div class="suporteSecundaria">
-            <div class="areaImagemSecundaria">
-                <img src="imagens/pres3.jpg" alt="servico" >
-            </div>
-            <div class="areaDescricaoSecundaria">
-                <div class="titulo_Prestadora_servico">
-                    <h2>Nome da prestadora</h2>
-                </div>
-
-                <div class="descricao_prestadora">
-                    <p>  Um Mecânico de Automóveis utiliza ferramentas e instrumentos apropriados, para recondicionar
-                       o veículo e assegurar seu funcionamento regular.
-                     </p>
-                </div>
-
-            </div>
-              <div class="classificacao">
-                <ul>
-                  <li class="color"></li>
-                  <li class="color"></li>
-                  <li class="color"></li>
-                  <li class="colornot"></li>
-                  <li class="colornot"></li>
-                </ul>
-            </div>
-            
-            <div class="botao">
-              <a href="#">Ver mais</a>
-            </div>
-
-          </div>
-
-
-          <!-- segura as imagens e area de descricao  PRESTADORA-->
-          <div class="suporteSecundaria">
-            <div class="areaImagemSecundaria">
-                <img src="imagens/pres4.jpg" alt="servico" >
-            </div>
-            <div class="areaDescricaoSecundaria">
-                <div class="titulo_Prestadora_servico">
-                    <h2>Nome da prestadora</h2>
-                </div>
-
-                <div class="descricao_prestadora">
-                    <p>  Um Mecânico de Automóveis utiliza ferramentas e instrumentos apropriados, para recondicionar
-                       o veículo e assegurar seu funcionamento regular.
-                     </p>
-                </div>
-                
-
-            </div>
-              <div class="classificacao">
-                <ul>
-                  <li class="color"></li>
-                  <li class="color"></li>
-                  <li class="color"></li>
-                  <li class="colornot"></li>
-                  <li class="colornot"></li>
-                </ul>
-            </div>
-            
-            <div class="botao">
-              <a href="#">Ver mais</a>
-            </div>
-
-          </div>
+         
 
         </div>
       </div>

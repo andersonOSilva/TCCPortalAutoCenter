@@ -269,31 +269,25 @@
                   $controller_palavrao::NovoPalavrao();
                   break;
 
+                  case 'delete':
+                  $controller_palavrao= new controllerForum();
+                  $controller_palavrao::ExcluirPalavra();
+                    break;
+
+                    case 'edita':
+                    $controller_palavrao= new controllerForum();
+                    $controller_palavrao::EditarPalavra();
+                      break;
+
+                    case 'buscarId':
+                    $controller_palavrao= new controllerForum();
+                    $controller_palavrao::buscarPalavraPorId();
+                      break;
+
               }
               break;
 
-              // excluir palavra proibida
-              case 'excluir':
-              require_once('controllers/forum_controller.php');
-              require_once('models/palavraForum_class.php');
-              switch ($_GET['modo']) {
-                case 'delete':
-                $controller_palavrao= new controllerForum();
-                $controller_palavrao::ExcluirPalavra();
-                  break;
-              }
-                break;
 
-                case 'editar':
-                require_once('controllers/forum_controller.php');
-                require_once('models/palavraForum_class.php');
-                switch ($_GET['modo']) {
-                  case 'edita':
-                  $controller_palavrao= new controllerForum();
-                  $controller_palavrao::EditarPalavra();
-                    break;
-                }
-                  break;
 
               // // ativar palavra proibida
               // case 'desativar':

@@ -57,6 +57,36 @@
       }
     }
 
+    public function SelectServicoFilial(){
+      $sql="select * from tbl_servico where idServico not in (select sf.idServico from tbl_filial as f inner join tbl_filial_servico as s on f.idFilial=s.idFilial  inner join tbl_servico as sf on s.idServico=sf.idServico);";
+
+      $con=new Mysql_db();
+      //Faz a conexão com o banco
+      $pdoCon = $con->Conectar();
+
+      //Executa o select no DB e guarda o retorno na variável select
+      $select = $pdoCon->query($sql);
+
+      $indice = 0;
+
+      while($rs=$select->fetch(PDO::FETCH_ASSOC)){
+        $list_servico[] = new Servico;
+
+        $list_servico[$indice]->idServico = $rs['idServico'];
+        $list_servico[$indice]->nome = $rs['nome'];
+        $list_servico[$indice]->descricao = $rs['descricao'];
+        $list_servico[$indice]->imagem = $rs['imagem'];
+
+        $indice+=1;
+      }
+
+      $con->Desconectar();
+
+      if (isset($list_servico)){
+        return $list_servico;
+      }
+    }
+
     //Seleciona um registro por ID
     public function SelectByID($_servico){
       $sql="SELECT * FROM tbl_servico WHERE idServico=$_servico->idServico";

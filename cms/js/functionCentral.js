@@ -89,10 +89,10 @@ function AtivarEdesativar(idIten,controller,modo,respostaPesonalizada){
           type: "GET",
           url: "router.php?controller="+controller+"&modo="+modo+"&id="+idIten,
           success: function(dados){
-             $('.receber_dados').html(dados);
+             //$('.receber_dados').html(dados);
             //alert (dados);
 
-          // $( '.dados_conteudo_modal' ).load('views/conteudo_prestadora_modal.php');
+           $( '.receber_dados' ).load(dados);
           }
       });
     }

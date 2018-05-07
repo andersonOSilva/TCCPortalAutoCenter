@@ -171,6 +171,16 @@ public function DesativarCabecalho(){
       return $select_palavrao::selectPalavra();
     }
 
+    public function BuscarPalavraId($idPalavra){
+      require_once("../models/palavraForum_class.php");
+      $palavrao=null;
+      $idPalavra = $idPalavra;
+      $palavra= new palavraForum();
+      $palavra->idPalavra=$idPalavra;
+      return $palavra::selectPalavraPorId($palavra);
+    }
+
+
     // excluir palavras proibidas
     public function ExcluirPalavra(){
       require_once("models/palavraForum_class.php");
@@ -181,39 +191,38 @@ public function DesativarCabecalho(){
       $palavra::Delete($palavra);
     }
 
+    public function EditarPalavra(){
+      require_once("../models/palavraForum_class.php");
+      $idPalavra=$_GET['id'];
+
+      $palavra= new palavraForum();
+      $palavra ->idPalavra=$idPalavra;
+      $palavra::EditarP($palavra);
+    }
+
+    // public function BuscarPalavraId(){
+    //   require_once("models/palavraForum_class.php");
+    //
+    //   $idPalavra = $idPalavra;
+    //   $palavra= new palavraForum();
+    //   $palavra->idPalavra=$idPalavra;
+    //   return $palavra::selectCabecalhoPorId($palavra);
+    // }
+
     // // ativar e desativar palavras proibidas
     // public function DesativarP(){
     //   require_once("models/palavraForum_class.php");
-    //   $desativar = new palavraForum();
+    //   $desativar = new cabecalhoForum();
     //   $desativar->idPalavra=$_GET['id'];
     //   $desativar::DesativarPalavra($desativar);
     // }
     //
     // public function AtivarP(){
     //   require_once("models/palavraForum_class.php");
-    //   $ativar = new palavraForum();
+    //   $ativar = new cabecalhoForum();
     //   $ativar->idPalavra=$_GET['id'];
     //   $ativar::AtivarPalavra($ativar);
     // }
-
-    public function EditarPalavra(){
-      require_once("models/palavraForum_class.php");
-      $idcabecalho=$_GET['id'];
-
-      $palavra = new palavraForum();
-      $palavra ->idPalavra=$idPalavra;
-      $palavra->palavra=$_POST['palavra'];
-      $palavra::EditarP($palavra);
-    }
-
-    public function BuscarPalavraId($idPalavra){
-      require_once("../models/palavraForum_class.php");
-
-      $idPalavra = $idPalavra;
-      $palavra= new palavraForum();
-      $palavra->idPalavra=$idPalavra;
-      return $palavra::selectPalavraPorId($palavra);
-    }
 
   }
 

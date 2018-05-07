@@ -1,7 +1,7 @@
 <?php
 class palavraForum{
   public $idPalavra;
-  public $palavrao;
+  public $palavra;
 
   function __construct(){
   require_once('bd_class.php');
@@ -61,9 +61,9 @@ public function Delete($dados_controller){
 
 }
 
-public function EditarP(){
+public function EditarP($dados){
   $sql="update tbl_palavra_proibida_forum set
-        palavra='".$dados->palavrao."',
+        palavra='".$dados->palavra."',
         where idPalavra=".$dados->idPalavra;
         echo $sql;
         $conex = new Mysql_db();
@@ -77,6 +77,7 @@ public function EditarP(){
         $conex->Desconectar();
 }
 
+// selecionar(do metodo buscar da forum_controller)
 public function selectPalavraPorId($dados_controller){
 
   $select="select * from tbl_palavra_proibida where idPalavra=".$dados_controller->idPalavra;
@@ -106,6 +107,33 @@ public function selectPalavraPorId($dados_controller){
 $conex->Desconectar();
 
 }
+
+// public function BuscarPalavraId(){
+//   $sql= "tbl_palavra_proibida where idPalavra=".$dados_controller->idPalavra;
+//
+//   //echo $sql;
+//
+//   $conex = new Mysql_db();
+//   $PDO_conex = $conex->Conectar();
+//   $select = $PDO_conex->query($sql);
+//
+//
+//   if($rs=$select->fetch(PDO::FETCH_ASSOC)){
+//     $listBus = new Prestadora();
+//
+//     $listPrestadora->idPrestadora=$rs['idPrestadora'];
+//     $listPrestadora->razaoSocial=$rs['razaoSocial'];
+//     $listPrestadora->nomeFantasia=$rs['nomeFantasia'];
+//     $listPrestadora->fotoPrestadora=$rs['fotoPrestadora'];
+//     $listPrestadora->descricao=$rs['descricao'];
+//     $listPrestadora->telefone=$rs['telefone'];
+//     $listPrestadora->cnpj=$rs['cnpj'];
+//     $listPrestadora->idEnderecoPrestadora=$rs['idEndereco'];
+//     $listPrestadora->login=$rs['login'];
+//     $listPrestadora->senha=$rs['senha'];
+//     $listPrestadora->status=$rs['status'];
+//
+// }
 
 // public function DesativarPalavra($dadosPalavra){
 //   $sql="update  tbl_palavra_proibida SET status='0' where idPalavra=".$dadosPalavra->idPalavra;

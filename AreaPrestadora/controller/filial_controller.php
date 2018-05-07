@@ -14,5 +14,19 @@
         //  var_dump($filial);
         }
     }
+
+    public function SelecionarFilialPorID($idFilial){
+      $filial= new filial();
+      $filial->idFilial=$idFilial;
+      return $filial::selecionarFilialPorIdTBL($filial);
+    }
+
+    public function SelecionarServicosPorFilial($idFilial){
+      $filial= new servico_filial();
+      $filial->idFilial=$idFilial;
+      return $filial::SelecionarServicosPorFilial($filial);
+    }
+
+
   }
  ?>

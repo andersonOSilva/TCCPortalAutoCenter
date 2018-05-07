@@ -67,16 +67,41 @@ class Menus
 
   }
 
+  public function SelectById($menus){
+    $sql="select * from tbl_menus where idMenu= $menus->idMenu";
+
+    //Instancia a classe do banco de dados
+    $conex = new Mysql_db ();
+
+    //Chama o metodo de conexão, e guarda o retorno na variável
+    $PDOconex = $conex->Conectar();
+
+    $select = $PDOconex->query($sql);
+
+    $menus = new Menus();
+
+    if($rs=$select->fetch(PDO::FETCH_ASSOC)){
+      $menus->idMenu = $rs['idMenu'];
+      $menus->titulo = $rs['titulo'];
+      $menus->link = $rs['link'];
+      $menus->descricao = $rs['descricao'];
+    }
+
+    $con->Desconectar();
+
+    return $menus;
+  }
+
   public function Update($menus){
-      $sql="update tbl_menus set titulo='".$menus->titulo."', descricao='".$menus->descricao."',
+      $sql="update tbl_menus set titulo='".$menus->titulo."',
+      descricao='".$menus->descricao."',
        link='".$menu->link."' where idMenu=$menu->idMenu ";
 
-       // echo $sql;
+       //echo $sql;
 
        $conex = new Mysql_db();
 
        $PDO_conex = $conex->Conectar();
-
 
 
        if ($PDO_conex->query($sql)) {
@@ -88,9 +113,7 @@ class Menus
        $conex->Desconectar();
   }
 
-  public function SelectById(){
 
-  }
 
   public function Delete(){
 

@@ -46,28 +46,45 @@
               </div>
             </nav>
         </div>
+        <?php
+        require_once("cms/controllers/controller_perfilUsuario.php");
+        require_once("cms/models/perfilUser_class.php");
+        $controller_perfil= new controllerPerfilUser();
+        $List_returnPerfil=$controller_perfil::ListarperfilUsuario($idUsuario);
+        $cont = 0;
+        $nome=$List_returnPerfil->nome;
+        $usuario=  $List_returnPerfil->usuario;
+        $fotoUser =   $List_returnPerfil->fotoUser;
+        $fotoCar1 =$List_returnPerfil->fotoCar1;
+        $fotoCar2 =$List_returnPerfil->fotoCar2;
+        $fotoCar3 =$List_returnPerfil->fotoCar3;
+        $fotoCar4 =$List_returnPerfil->fotoCar4;
+        $fotoCar5 =$List_returnPerfil->fotoCar5;
+        $fotoCar6 =$List_returnPerfil->fotoCar6;
+        $descricao =$List_returnPerfil->descricao;
+
+        while ($cont < count($List_returnPerfil)) {
+         ?>
+
+
         <div class="container_principal">
           <!-- div que vai segurar tudo que tiver na página  -->
           <div id="container_conteudo">
             <div id="suporte_primaria">
               <div id="area_imagem">
-                <div id="img_perfil">
-                  <img src="imagens/mecanica.jpg" alt="perfil">
+                <div id="img_perfil"><?php echo ($List_returnPerfil[$cont]->fotoUser)?>
                 </div>
               </div>
             </div>
             <div id="areaInformacao">
-              <p>Camila</p>
             </div>
             <div id="suporte_secundaria">
             </div>
             <div id="suporte_terciario">
               <div id="areaProprietario">
-                <div class="nome">
-                  Camila Cruz
+                <div class="nome"><?php echo ($List_returnPerfil[$cont]->nome)?>
                 </div>
-                <div class="nome">
-                  Milla
+                <div class="nome"><?php echo ($List_returnPerfil[$cont]->usuario)?>
                 </div>
               </div>
             </div>
@@ -77,23 +94,32 @@
               <div id="imagensMaiores">
                 <!-- divisão entre as imagens -->
                 <div id="divisao_imagens">
+                   <!-- <?php
+                  if ($foto == 0){
+                    "Não possui imagens"
+                  }else {
+                    $foto == 1;
+                  }
+
+                    ?> -->
+
                   <!-- area que vai segurar as imagens  -->
-                  <div class="two_imagens">
-                    <img src="imagens/logo.png" alt="carro" width="250px;" height="200px;">
+                  <div class="two_imagens"><?php echo ($List_returnPerfil[$cont]->fotoCar1)?>
+
                   </div>
-                  <div class="two_imagens">
-                    <img src="imagens/logo.png" alt="carro" width="250px;" height="200px;">
+                  <div class="two_imagens"><?php echo ($List_returnPerfil[$cont]->fotoCar2)?>
+
                   </div>
                 </div>
               <div id="divisao_imagens2">
-                <div class="imagens_menores">
-                  <img src="imagens/logo.png" alt="carro" width="200px;" height="200px;">
+                <div class="imagens_menores"><?php echo ($List_returnPerfil[$cont]->fotoCar3)?>
+
                 </div>
-                <div class="imagens_menores">
-                  <img src="imagens/logo.png" alt="carro" width="200px;" height="200px;">
+                <div class="imagens_menores"><?php echo ($List_returnPerfil[$cont]->fotoCar4)?>
+
                 </div>
-                <div class="imagens_menores">
-                  <img src="imagens/logo.png" alt="carro" width="200px;" height="200px;">
+                <div class="imagens_menores"><?php echo ($List_returnPerfil[$cont]->fotoCar5)?>
+
                 </div>
               </div>
               <div id="unica">
@@ -119,20 +145,18 @@
                 </div>
               </div>
               <div id="suporteImg">
-                <div id="imagem">
-                  <img src="imagens/Celta-02-Portas.jpg" alt="celta" width="500px;" height="300px;">
+                <div id="imagem"><?php echo ($List_returnPerfil[$cont]->fotoCar6)?>
+
                 </div>
-                <div id="descricaoImg">
-                  Tudo sobre a CBO 519935 Lavador de veículos de acordo com a
-                   tabela da Classificação Brasileira de Ocupações. ...
-                    Descrição Sumária. Prestam serviços diversos a
-                    empresas e pessoas. instalam painéis e cartazes,
-                    limpam eguardam veículos;
-                  lavam vidros e outros utensílios; combatem pragas.
-                  fazem a leiturae ...
+                <div id="descricaoImg"><?php echo ($List_returnPerfil[$cont]->descricao)?>
+
                 </div>
               </div>
             </div>
+            <?php
+              $cont +=1;
+              }
+             ?>
           </div>
         </div>
         <?php

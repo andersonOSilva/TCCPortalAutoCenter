@@ -52,32 +52,40 @@
 
         ?>
 
-      <div class="item_menu">
-        <p> <a href="#"><?php echo ($return[$cont]->nomeFilial); ?></a></p>
 
-        <?php
 
-        $statusServico = $return[$cont]->statusServico;
-        $statusProduto = $return[$cont]->statusProduto;
-
-            if ($statusServico = '1') {
-
-         ?>
-         <div class="item_menu_filial">
-           <p> <a href="?pag=servico&idFilial=<?php echo ($return[$cont]->idFilial); ?>">Controle de Servicos</a></p>
+      <div class="item_menu_filiais">
+        <div class="item_menu">
+          <p> <a href="#"><?php echo ($return[$cont]->nomeFilial); ?></a></p>
         </div>
-         <?php
-       }else if($statusProduto = '1'){
 
 
-          ?>
-          <div class="item_menu_filial">
-            <p> <a href="?pag=menus">Controle de Produtos</a></p>
-         </div>
+          <div class="menu_de_filiais ">
+            <?php
 
-          <?php
-        }
-           ?>
+            $statusServico = $return[$cont]->statusServico;
+            $statusProduto = $return[$cont]->statusProduto;
+
+                if ($statusServico == '1') {
+
+             ?>
+            <div class="item_menu_filial">
+               <p> <a href="?pag=servico&idFilial=<?php echo ($return[$cont]->idFilial); ?>">Controle de Servicos</a></p>
+            </div>
+             <?php
+            }else if($statusProduto == '1'){
+
+
+              ?>
+              <div class="item_menu_filial">
+                <p> <a href="?pag=menus">Controle de Produtos</a></p>
+             </div>
+
+              <?php
+            }
+               ?>
+          </div>
+
       </div>
 
       <?php
@@ -89,6 +97,8 @@
       <div class="titulo_menu">
           <p>Layout</p>
       </div>
+
+
 
 
 

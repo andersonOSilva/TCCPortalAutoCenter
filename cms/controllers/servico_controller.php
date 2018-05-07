@@ -40,6 +40,11 @@
       return $servico::Select();
     }
 
+    public function ListarServicoFilial(){
+      $servico = new Servico;
+      return $servico::SelectServicoFilial();
+    }
+
     public function Buscar(){
       $idServico = $_GET["id"];
 

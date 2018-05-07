@@ -9,7 +9,7 @@
 
     if($modo == "buscarid"){
 
-      $idcabecalho=$_GET['id'];
+      $idPalavra=$_GET['id'];
 
 
       require_once("../controllers/forum_controller.php");
@@ -17,11 +17,12 @@
 
 
         //Instancia da classe buscar
-        $controller_palavra= new palavraForum();
+        $controller_palavra= new controllerForum();
         $returnPalavra=$controller_palavra::BuscarPalavraId($idPalavra);
 
         $idPalavra=$returnPalavra->idPalavra;
-        $palavrao=$returnPalavra->palavrao;
+          $palavrao=$returnPalavra->palavrao;
+
 
     }
 
@@ -44,7 +45,7 @@
    <?php
    }else{
     ?>
-    value="Cadastrar"    onclick="CadastroeEdicao('#frmcadastroPalavra','palavrao','novo','#segura','.cadastar_nova_palavra','views/view_palavras.php','views/formPalavra.php','0');"
+    value="Cadastrar" onclick="CadastroeEdicao('#frmcadastroPalavra','palavrao','novo','#segura','.cadastar_nova_palavra','views/view_palavras.php','views/formPalavra.php','0');"
 
     <?php
    }
