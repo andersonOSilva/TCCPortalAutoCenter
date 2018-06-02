@@ -19,31 +19,9 @@
         <a href="#slide"><img src="imagens/logos/possivellogo2.png" alt="teste de logo" id="imgLogo"></a>
       </div>
 
-      <div class="menu_ancora">
-          <div class="menu_ancora_itens">
-            <div class="menu_ancora_itens_principal">
-              <ul>
-                <li><a href="index.php">Home</a></li>
-                <li><a  href="sobre.php">Sobre</a></li>
-                <li><a  href="#">Prestadoras</a></li>
-                <li><a  href="carBook.php">CarBook</a></li>
-                <li><a  href="#">Produtos</a></li>
-                <li><a  href="homeForum.php">Forum</a></li>
-              </ul>
-            </div>
-
-              <div class="login">
-                  <p><a><span id="entre">Entre</span> <span id="cadastro">ou cadastre-se</span></a></p>
-              </div>
-              <!-- <div class="mais">
-                  <img src="imagens/menuIcon.png" alt="menu mais">
-              </div> -->
-          </div>
-
-          <div class="bordao">
-              <p>"Se você adora o seu carro, deixe que nós cuidamos de tudo para você"</p>
-          </div>
-      </div>
+      <?php
+          require_once 'menu.php';
+       ?>
     </nav>
 </div>
 
@@ -65,7 +43,7 @@
         <!--suporta imagens e descricoes segundarias/ avaliacao e botao -->
         <div class="container_servico_suporte">
           <!-- segura as imagens e area de descricao  PRESTADORA-->
-          
+
         <div class="suporteSecundaria">
 <!--            <div style="background-color:rgba(0,0,0,0.1)">-->
             <div class="areaImagemSecundaria">
@@ -83,11 +61,11 @@
                 </div>
 
             </div>
-            
+
             <div class="botao">
               <a href="produto.php">Ver mais</a>
             </div>
-            
+
           </div>
 
           <!-- segura as imagens e area de descricao  PRESTADORA-->
@@ -107,7 +85,7 @@
                 </div>
 
             </div>
-            
+
             <div class="botao">
               <a href="#">Ver mais</a>
             </div>
@@ -132,7 +110,7 @@
                 </div>
 
             </div>
-            
+
             <div class="botao">
               <a href="#">Ver mais</a>
             </div>
@@ -157,7 +135,7 @@
                 </div>
 
             </div>
-            
+
             <div class="botao">
               <a href="#">Ver mais</a>
             </div>
@@ -182,7 +160,7 @@
                 </div>
 
             </div>
-            
+
             <div class="botao">
               <a href="#">Ver mais</a>
             </div>

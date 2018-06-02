@@ -16,12 +16,14 @@
        <p><?php echo ($List_returnForum[$cont]->palavrao) ?></p>
       </div>
    </div>
-   <a href="#" onclick="Excluir( <?php echo $List_returnForum[$cont]->idPalavra ?>,'excluir','delete','#segura','views/view_palavras.php',)">
-       <img src="imagens/delet.png" alt="deletar">
-   </a>
-   <a href="#" onclick="Editar( <?php echo $List_returnForum[$cont]->idPalavra ?>,'views/formPalavra.php','.cadastar_nova_palavra',)">
-         <img src="imagens/edit.png" alt="edit">
-   </a>
+  <div class="botao">
+    <a href="#" onclick="Excluir( <?php echo $List_returnForum[$cont]->idPalavra ?>,'palavrao','delete','#segura','views/view_palavras.php',)">
+        <img src="imagens/delet.png" alt="deletar">
+    </a>
+    <a href="#" onclick="Editar( <?php echo $List_returnForum[$cont]->idPalavra ?>,'views/formPalavra.php','.cadastar_nova_palavra',)">
+          <img src="imagens/edit.png" alt="edit">
+    </a>
+  </div>
    <!-- <div class="status_palavra">
      <a href="#" onclick="DesativarAtivarP">
        <img src="imagens/off.png" alt="off"  title="desativar palavra">

@@ -64,19 +64,20 @@
 
     }
 
-    public function LoginUser($login_user){
+    public function LoginUser($login_user,$url){
       session_start();
 
       // chamando a procedure
-      addslashes($sql="CALL loginUser('$login_user->nomeUser','$login_user->senha',@_idUsuario);");
+      addslashes($sql="select * from tbl_usuario where usuario='$login_user->nomeUser' and senha='$login_user->senha'");
 
+      echo $sql;
       // conexao com o banco e execuçao
       $conex = new Mysql_db();
       $PDO_conex = $conex->Conectar();
       $PDO_conex->query($sql);
 
       // retorno
-      addslashes($sql="select @_idUsuario as idUsuario;");
+    //  addslashes($sql="select @_idUsuario as idUsuario;");
       $select = $PDO_conex->query($sql);
       $idUsuario = 0;
 
@@ -86,7 +87,7 @@
         $idUsuario = $rs['idUsuario'];
         echo $idUsuario;
 
-        echo "string";
+        //echo "string";
 
       }
 
@@ -96,24 +97,24 @@
 
       if ($idUsuario > 0) {
       //echo $idUsuario;
-        echo '1';
+        //echo '1';
 
 
         $_SESSION['idUsuario'] = $idUsuario;
+        header("location:".$url);
+
+        //$sql='select * from tbl_usuario where idUsuario='.$_SESSION['idUsuario'];
+
+        //echo $sql;
+
+
 
       }else {
 
-        echo '0';
-
-        echo "tatatatat";
-
-        //header('location:router.php?controller=loginUser&modo=buscarId&idUsuario='.$_SESSION['idUsuario']);
-
-
-
-      //  header("location:".$url);
-
-        //echo $url;
+        echo "<script>
+              alert('usuario ou senha invalidos');
+              window.history.go(-1);
+              </script>";
       }
 
       $conex->Desconectar();
@@ -154,6 +155,7 @@
 
       $conex->Desconectar();
 
+
       if ($idUsuario > 0) {
       //  echo '1';
 
@@ -170,9 +172,13 @@
 
        header("location:".$url);
 
+       // echo "<script>
+       //        alert('Usuario ou senha invalidos');
+       //
+       //        </script>;";
+
         //echo $url;
       }
-
 
 
       // if($idUsuario < 0) {
@@ -182,8 +188,8 @@
 
     }
 
-    public function selectById(){
-      $sql='select * from tbl_usuario where idUsuario='.$_SESSION['idUsuario'];
+    public function selectById($dados){
+      $sql='select * from tbl_usuario where idUsuario='.$dados->idUsuario;
 
       //echo $sql;
 
@@ -206,7 +212,7 @@
         $usuarioAchado->foto = $rs['fotoUser'];
 
         //var_dump($usuarioAchado);
-        //header("location:index.php");
+      //  header("location:index.php");
 
 
 
@@ -218,7 +224,10 @@
       $conex->Desconectar();
 
       if (isset($usuarioAchado)) {
+        //header("location:index.php");
           return $usuarioAchado;
+        //  header("location:index.php");
+
       }
 
     }

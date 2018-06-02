@@ -6,8 +6,9 @@
     <link rel="stylesheet" href="css/styleGeral.css">
     <link rel="stylesheet" href="css/style_prestadora.css">
     <link rel="stylesheet" href="css/styleUsuario.css">
-    <link rel="stylesheet" href="css/style_menus.css">
+    <!-- <link rel="stylesheet" href="css/style_menus.css"> -->
     <link rel="stylesheet" href="css/stylePalavras.css">
+    <link rel="stylesheet" href="css/style_forumHome.css">
     <script src="js/jquery7.min.js"></script>
 
   </head>
@@ -54,6 +55,10 @@
         <p> <a href="?pag=carbook">CarBook</a></p>
       </div>
 
+      <div class="item_menu">
+        <p> <a href="?pag=forumHome">Fórum Home</a></p>
+      </div>
+
       <div class="titulo_menu">
           <p>Administrativo</p>
       </div>
@@ -76,6 +81,7 @@
       <div class="item_menu">
         <p><a href="?pag=sobre">Sobre</a></p>
       </div>
+
 
 
     </div>
@@ -124,6 +130,10 @@
                 case 'carbook':
                   require_once 'views/carbook_view.php';
                   break;
+
+                case 'forumHome':
+                   require_once 'views/forumHome_view.php';
+                   break;
 
                 case 'plano':
                   require_once 'views/planos_view.php';

@@ -4,8 +4,10 @@
 
 
 
+
   if(isset($_GET['modo'])){
     $modo = $_GET['modo'];
+    //echo $modo;
 
     if($modo == "buscarid"){
 
@@ -21,7 +23,7 @@
         $returnPalavra=$controller_palavra::BuscarPalavraId($idPalavra);
 
         $idPalavra=$returnPalavra->idPalavra;
-          $palavrao=$returnPalavra->palavrao;
+        $palavrao=$returnPalavra->palavra;
 
 
     }
@@ -34,14 +36,14 @@
 
 
 <form id="frmcadastroPalavra" class="frmcadastroPalavra" method="POST" action="" data-id="<?php echo($idPalavra) ?>">
-  <input placeholder="Proibir Palavra" type="text" name="txt_palavrao" value="<?php echo $palavrao ?>">
-  <input type="submit" name="btnEnviar" value="Cadastrar"
+  <input class="proibir" placeholder="Proibir Palavra" type="text" name="txt_palavrao" value="<?php echo $palavrao ?>">
+  <input type="submit" name="btnEnviar"
 
 
   <?php
    if(isset($_GET['modo'])){
    ?>
-   value="Salvar edicao" onclick="CadastroeEdicao('#frmcadastroPalavra','editar','edita','#segura','.cadastar_nova_palavra','views/view_palavras.php','views/formPalavra.php','<?php echo($idPalavra) ?>');"
+   value="Salvar Edição" onclick="CadastroeEdicao('#frmcadastroPalavra','palavrao','edita','#segura','.cadastar_nova_palavra','views/view_palavras.php','views/formPalavra.php','<?php echo($idPalavra) ?>');"
    <?php
    }else{
     ?>

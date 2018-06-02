@@ -10,20 +10,20 @@ class filial_servico{
 
  public function servicoFilial($dados){
 
-   echo "ta na class";
+   //echo "ta na class";
 
    foreach($dados->idServico as $servico){
     $sql = "insert into tbl_filial_servico (idFilial,idServico)
           VALUES ('".$dados->idFilial."','".$servico."')";
-    echo $sql."<br />";
+  //  echo $sql."<br />";
 
     $conex = new Mysql_db();
     $PDO_conex = $conex->Conectar();
 
     if ($PDO_conex->query($sql)) {
-       //header("location:homeForum.php");
+       header("location:index.php?pag=servico&idFilial=".$dados->idFilial."");
 
-       echo "suceeso";
+       //echo "suceeso";
     }else{
       echo "erro ao conectar";
     }

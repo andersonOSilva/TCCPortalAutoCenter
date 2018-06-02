@@ -1,7 +1,5 @@
 <?php
 
-
-
 $nome=Null;
 $preco=Null;
 $descricao=Null;
@@ -44,13 +42,7 @@ $id="0";
 
     }
 
-
-
   }
-
-
-
-
 
  ?>
 

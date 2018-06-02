@@ -99,10 +99,14 @@ $(document).ready(function() {
       <div class="check"></div>
     </div>
   </div>
+  <?php
+    $url = $_SERVER['HTTP_REFERER'];
+
+   //echo $url;
+   ?>
 
 
-
-  <form id='formBody'  method="post" action="" name="FrmLoginUser2">
+  <form id='formBody'  method="post" action="router.php?controller=loginUser&modo=loginUser&url=<?php echo $url ?>" name="FrmLoginUser2">
 
 
     <div id="respostaDeuser">
@@ -162,13 +166,14 @@ $(document).ready(function() {
       alert("ta aqui");
       $.get('router.php?controller=loginUser&modo=loginUser&user='+usuario+'&senha='+senha,function(data){
           // //$('#resultado').html(data);
-          // alert(data);
+           alert(data);
           //
           if (data == 0) {
               $('#respostaDeuser').html(resposta);
             }
           else {
             location.href='index.php' ;
+            //location.href='index.php' ;
           }
 
         //  alert(data);

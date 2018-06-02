@@ -241,3 +241,33 @@ imagem e descricao em destaque*/
   font-size: 15px;
   color: #13436b;
 }
+
+.abrirModalServico p{
+  cursor: pointer;
+  padding: 0px;
+  margin: 0px;
+}
+
+.vermais_servicos{
+  width: 100%;
+  height: auto;
+  min-height: 300px;
+  /* background-color: red; */
+  overflow: hidden;
+  display: none;
+}
+
+.dadosDamodalServico{
+  width: 100%;
+  height: auto;
+  min-height: 300px;
+  /* background-color: blue; */
+  overflow: hidden;
+}
+
+.spmPagina{
+  width: 100%;
+  height: auto;
+  min-height: 100px;
+  /* background-color: green; */
+}

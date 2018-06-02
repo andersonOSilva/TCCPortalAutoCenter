@@ -111,6 +111,30 @@
 
         break;
 
+        //Forum Home
+         case 'forumHome':
+           require_once('controllers/forumHome_controller.php');
+           require_once('models/forumHome_class.php');
+
+           switch ($_GET['modo']) {
+             case 'novo':
+               $controller_forumHome = new controllerForumHome();
+               $controller_forumHome::Novo();
+               break;
+
+             case 'ativo':
+               $controller_forumHome = new controllerForumHome();
+               $controller_forumHome::Ativar();
+               break;
+
+             case 'desativo':
+               $controller_forumHome = new controllerForumHome();
+               $controller_forumHome::Desativar();
+               break;
+           }
+
+           break;
+
         //Menus
        case 'menus':
          require_once('models/menus_class.php');
@@ -122,9 +146,14 @@
              $controller_menu::Novo();
              break;
 
-             case 'editar':
+          case 'editar':
              $controller_menu = new controllerMenus();
              $controller_menu::Editar();
+            break;
+
+          case 'excluir':
+            $controller_menu = new controllerMenus();
+            $controller_menu::Excluir();
             break;
 
          }
@@ -135,6 +164,7 @@
         case 'forum':
           require_once("controllers/forum_controller.php");
           require_once('models/cabecalhoForum_class.php');
+          require_once('models/forum_class.php');
 
           switch ($_GET['modo']) {
             case 'novo':
@@ -161,6 +191,11 @@
           case 'desativar':
             $controller_forum = new controllerForum();
             $controller_forum::DesativarCabecalho();
+            break;
+
+          case 'novaCategoria':
+            $controller_forum = new controllerForum();
+            $controller_forum::NovaCategoria();
             break;
 
           }
@@ -287,51 +322,21 @@
               }
               break;
 
+              //Perfil usuario
+              case 'perfilUser':
+                require_once('controllers/controller_perfilUsuario.php');
+                require_once('models/perfilUser.php');
+
+                switch ($_GET['modo']) {
+                  case 'buscarId':
+                    $controller_perfil = new controllerPerfilUser();
+                    $controller_perfil::buscarPerfilPorId();
+                    break;
+                }
+                break;
 
 
-              // // ativar palavra proibida
-              // case 'desativar':
-              // require_once('controllers/forum_controller.php');
-              // require_once('models/palavraForum_class.php');
-              // switch ($_GET['modo']) {
-              //   case 'desativa':
-              //   $controller_palavrao= new controllerForum();
-              //   $controller_palavrao::DesativarP();
-              //     break;
-              // }
-              //   break;
-              //
-              // case 'ativar':
-              // require_once('controllers/forum_controller.php');
-              // require_once('models/palavraForum_class.php');
-              // switch ($_GET['modo']) {
-              //   case 'ativa':
-              //   $controller_palavrao= new controllerForum();
-              //   $controller_palavrao::AtivarP();
-              //     break;
-              // }
-              //   break;
 
-//            case 'sobre':
-//                require_once ('controllers/sobre_controller.php');
-//                require_once ('models/sobre_class.php');
-//
-//              switch ($_GET['modo']){
-//                case 'novo':
-//                $controller_sobre= new sobre_controller();
-//                $controller_sobre::inserir();
-//                break;
-//                }
-//
-//
-//            break;
 
-      // case 'usuario':
-      //         $test=$_GET['id'];
-      //         echo $test;
-      //         require_once('viewModel/view_carroeUsuario.php');
-      //         $carro = new carroeUsuario();
-      //         $carro :: Selecionarporid();
-      //         break;
     }
  ?>

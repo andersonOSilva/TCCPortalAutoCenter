@@ -35,10 +35,11 @@
  ?>
 
  <form id="frmcadastroCabecalho" class="frmcadastroCabecalho" action="" method="post" data-id="<?php echo($idcabecalho) ?>">
-   <input placeholder="Primeira parte do titulo" type="txt" name="txtTitulo1" value="<?php echo $titulo1  ?>">
-   <input placeholder="Segunda parte do titulo" type="txt" name="txtTitulo2" value="<?php echo $titulo2  ?>">
-   <textarea placeholder="Descricao do forum" name="txtCabecalho" rows="8" cols="80"><?php echo $descricao  ?></textarea>
-   <input type="submit" name="btnEnviar"
+   <div class="segura">
+   <input class="palavra" placeholder="Primeira parte do titulo" type="txt" name="txtTitulo1" value="<?php echo $titulo1  ?>">
+   <input class="palavra" placeholder="Segunda parte do titulo" type="txt" name="txtTitulo2" value="<?php echo $titulo2  ?>">
+   <textarea id="desc" placeholder="Descricao do forum" name="txtCabecalho" rows="8" cols="80"><?php echo $descricao  ?></textarea>
+   <input id="botao" type="submit" name="btnEnviar"
 
    <?php
     if(isset($_GET['modo'])){
@@ -53,5 +54,5 @@
       ?>
     >
 
-    
+     </div>
 </form>

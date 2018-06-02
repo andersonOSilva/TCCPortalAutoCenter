@@ -1,0 +1,206 @@
+/* css */
+/*Style_forum*/
+.cabecalho_forumHome{
+  width: 100%;
+  height: 70px;
+  background-color: black;
+  color: aliceblue;
+  border-top:solid 2px #eca023;
+}
+
+.cadastro_forumHome{
+  width: 50%;
+  height: 550px;
+  float: left;
+  margin-left: 30px;
+  margin: 0px;
+  padding: 0px;
+/*  background-color: blue;*/
+}
+
+.control_small{
+  width:600px;
+  height: 70px;
+  background-color: yellow;
+  margin: auto;
+  margin-top: 10px;
+}
+
+.buttom_enviar{
+  width: 100px;
+  height: 50px;
+  margin-top: 70px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#btnEnviar{
+  width: 80px;
+  height: 30px;
+  background:green;
+  color:#fff;
+  box-shadow:0 5px 0 #00d103;
+  border:none;
+  cursor: pointer;
+  display:inline-block;
+  text-decoration: none;
+  border-radius: 10px;
+
+
+}
+
+
+.filePost{
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+/*   background-image: url(../../imagens/cam.png); */
+  background-size: 50px;
+  margin-left: auto;
+  margin-right:auto;
+}
+
+.filePost input[type=file]{
+  width: 50px;
+  height: 50px;
+  opacity: 0;
+}
+
+.segura_preview{
+  width: 400px;
+  height: 200px;
+  margin: auto;
+  /* background-color: red; */
+}
+
+.preview_img{
+  width: 300px;
+  height: 200px;;
+  margin-left: 10%;
+
+  /* background-color: green; */
+}
+
+.preview_img img{
+  width: 100%;
+  height: 200px;
+}
+
+/*lista de cadastros*/
+.listarCadastrosForum{
+     width: 90%;
+    max-height: 400px;
+    /* background-color: yellow; */
+    /*background-color: rgba(0,0,0,0.5);*/
+    margin: auto;
+    margin-top: 100px;
+/*    border: solid 1px black;*/
+    overflow-y: scroll;
+    overflow-x: hidden;
+    border-bottom: solid 1px #000;
+
+}
+
+
+.titulo_forumHome{
+  max-width: 100%;
+  height: 50px;
+  /* border: 1px solid #000; */
+  background-color: #000;
+  color: #fff;
+  margin: auto;
+}
+
+.conteudo_tbl_forumHome{
+  width:30%;
+  height: 40px;
+/*  background-color: white;*/
+  float: left;
+  margin: auto;
+  margin-left: 15px;
+}
+
+.conteudo_tbl_forumHome p{
+  text-align: center;
+  margin: 0px;
+  padding: 0px;
+  font-size: 200%;
+}
+
+.conteudoForumHome{
+  width: 100%;
+  height: 90px;
+/*  background-color: green;*/
+  padding: 0px;
+  margin: 0px;
+  border-bottom: solid 1px #000;
+
+}
+
+.item_forumHome{
+  width: 30%;
+  height: 100%;
+  float: left;
+  background-color: orange;
+  margin-left: 5px;
+    margin-top: 2px;
+}
+
+.item_forumHome p{
+  margin: 0px;
+  padding-top: 10%;
+  padding-left: 10%;
+  text-align: left;
+  font-size: 150%;
+}
+
+.imgForumHome{
+  width: 65%;
+  height: 85%;
+  margin-top: 2%;
+  margin-left: auto;
+  margin-right: auto;
+/*  background-color: red;*/
+}
+
+.imgForumHome img{
+  width: 100%;
+  height: 100%;
+
+}
+
+.descForumHome{
+  width: 65%;
+  height: 85%;
+  margin-top: 2%;
+  margin-left: auto;
+  margin-right: auto;
+/*  background-color: red;*/
+  text-align: center;
+  font-style: bold;
+  font-size: 20px;
+}
+
+.segura_modo{
+  width:80px;
+  height: 30px;
+/*  margin: auto;*/
+  padding-top: 5%;
+    padding-bottom: 5%;
+    margin-left: 70%;
+
+}
+
+.modo{
+  width: 30px;
+  height: 30px;
+  float: left;
+  margin-left: 10px;
+  text-align: center;
+}
+
+.modo img {
+  width: 30px;
+  height: 30px;
+
+}

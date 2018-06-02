@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <title>Portal Auto Center - CMS</title>
     <link rel="stylesheet" href="css/stylegeralPrestadora.css">
+    <link rel="stylesheet" href="css/styleFilial.css">
+    <link rel="stylesheet" href="css/style_produto.css">
 
 
   </head>
@@ -35,6 +37,15 @@
       <div class="titulo_menu">
           <p>Filiais</p>
       </div>
+
+      <div class="titulo_menu">
+          <p>Produtos</p>
+      </div>
+      <!-- <div class="item_menu">
+        <p><a href="?pag=produto">Cadastro Produtos</a></p>
+      </div> -->
+
+
 
       <?php
 
@@ -73,12 +84,13 @@
                <p> <a href="?pag=servico&idFilial=<?php echo ($return[$cont]->idFilial); ?>">Controle de Servicos</a></p>
             </div>
              <?php
-            }else if($statusProduto == '1'){
+            }
+             if($statusProduto == '1'){
 
 
               ?>
               <div class="item_menu_filial">
-                <p> <a href="?pag=menus">Controle de Produtos</a></p>
+                <p> <a href="?pag=produto&idFilial=<?php echo ($return[$cont]->idFilial); ?>">Controle de Produtos</a></p>
              </div>
 
               <?php
@@ -94,8 +106,15 @@
     }
        ?>
 
-      <div class="titulo_menu">
+      <!-- <div class="titulo_menu">
           <p>Layout</p>
+      </div> -->
+      <div class="titulo_menu">
+          <p>Cadastro</p>
+          <!-- <p><a href="?pag=home"> Cadastro Filial</a></p> -->
+          <div class="item_menu_filial">
+            <p> <a href="?pag=cadFilial">Cadastro</a></p>
+         </div>
       </div>
 
 
@@ -131,13 +150,20 @@
 
               switch ($pag) {
                 case 'home':
-                  require_once 'views/conteudoHome.php';
+                  require_once 'views/cadServico.php';
                   break;
+
+              case 'produto':
+                require_once 'views/cadProduto_view.php';
+                break;
 
               case 'servico':
                 require_once 'views/cadServico.php';
                 break;
 
+              case 'cadFilial':
+                require_once 'views/cadFilial.php';
+                break;
 
               }
 

@@ -2,6 +2,14 @@
 
   class controllerForum{
 
+    //cad Categoria
+    public function NovaCategoria(){
+       $categoria = new Forum();
+       $categoria->descricao=$_POST['txt_descricao'];
+       $categoria::InsertCategoria($categoria);
+
+    }
+
     // trazer dados de categorias
     public function Categorias(){
       $categoria = new Forum();
@@ -70,11 +78,11 @@
       return $perguntaForum::selectRespostas($perguntaForum);
     }
 
-    public function pesquisa(){
-      $pesquisaForum = new pequisaForum();
-      $pesquisaForum->pesquisa=$_POST['txtPesquisaForum'];
-      return $pesquisaForum::pesquisaForum($pesquisaForum);
-    }
+    // public function pesquisa(){
+    //   $pesquisaForum = new pequisaForum();
+    //   $pesquisaForum->pesquisa=$_POST['txtPesquisaForum'];
+    //   return $pesquisaForum::pesquisaForum($pesquisaForum);
+    // }
 
     public function selectRespostasForum($idPergunta){
       $idTopicoForum = $idPergunta;
@@ -192,23 +200,14 @@ public function DesativarCabecalho(){
     }
 
     public function EditarPalavra(){
-      require_once("../models/palavraForum_class.php");
+      require_once("models/palavraForum_class.php");
       $idPalavra=$_GET['id'];
 
       $palavra= new palavraForum();
+      $palavra->palavra=$_POST['txt_palavrao'];
       $palavra ->idPalavra=$idPalavra;
       $palavra::EditarP($palavra);
     }
-
-    // public function BuscarPalavraId(){
-    //   require_once("models/palavraForum_class.php");
-    //
-    //   $idPalavra = $idPalavra;
-    //   $palavra= new palavraForum();
-    //   $palavra->idPalavra=$idPalavra;
-    //   return $palavra::selectCabecalhoPorId($palavra);
-    // }
-
     // // ativar e desativar palavras proibidas
     // public function DesativarP(){
     //   require_once("models/palavraForum_class.php");
@@ -223,6 +222,8 @@ public function DesativarCabecalho(){
     //   $ativar->idPalavra=$_GET['id'];
     //   $ativar::AtivarPalavra($ativar);
     // }
+
+
 
   }
 

@@ -60,21 +60,26 @@ class controllerPrestadora{
 
     //Luana instanciou a class
     public function Listar(){
+
       $Prestadora = new Prestadora;
       return $Prestadora::Select();
+
     }
 
     public function Buscar(){
       $idPrestadora = $_GET["id"];
 
+
       $Prestadora = new Prestadora();
       //Carrefa o id do registro na classe contatos
       $Prestadora->idPrestadora = $idPrestadora;
 
-      $Prestadora = $Prestadora::SelectByID($Prestadora);
+      $Prestadora = $Prestadora::SelectByID($idPrestadora);
 
       require_once('index.php');
     }
+
+
 
     public function Editar(){
 
@@ -160,9 +165,18 @@ class controllerPrestadora{
 
     public function SelecionarFilialPrest($id){
       $idPrestadora=$id;
-       echo $idPrestadora;
+       //echo $idPrestadora;
        require_once('../viewModel/view_Prestadora_Filial.php');
       $Prestadora = new Prestadora_Filial();
+      $Prestadora->idPrestadora=$idPrestadora;
+      return $Prestadora::selecionarTudo($Prestadora);
+    }
+
+    public function SelecionarFilialPrestPefil($id){
+      $idPrestadora=$id;
+       //echo $idPrestadora;
+       require_once('cms/viewModel/view_prestadoraPerfil.php');
+      $Prestadora = new perfilPrestadora();
       $Prestadora->idPrestadora=$idPrestadora;
       return $Prestadora::selecionarTudo($Prestadora);
     }
@@ -269,6 +283,59 @@ class controllerPrestadora{
                   $Prestadora->idPrestadora=$idPrestadora;
                   return $Prestadora::SelecionarFilialPorID($Prestadora);
                 }
+
+    // selecionar servico por prestadora
+
+    public function ListarTodosServicos($dados){
+      require_once('cms/viewModel/view_Prestadora_Filial_Servico.php');
+      $Prestadora = new Sevico_Filial();
+      $idServico = $dados;
+      $Prestadora->idServico=$idServico;
+      return $Prestadora::selecionarTudoDeServico($Prestadora);
+    }
+
+    // selecionar servico por prestadora com servico
+
+    public function salvarServicoVisita(){
+      require_once('cms/viewModel/view_Prestadora_Filial_Servico.php');
+      $Prestadora = new Sevico_Filial();
+      //$idServico = $dados;
+      $txtfiliais = $_POST['rdofiliais'];
+      //echo $txtfiliais."</br>";
+      //$txtfiliais = $_POST['rdofiliais'];
+      $txtdata = $_POST['txtData'];
+    //  echo $txtdata."</br>";
+      $idUser=$_GET['idUser'];
+    //  echo $idUser."</br>";
+      //$idServico=$_GET['idServico'];
+
+      //$Prestadora->idServico=$idServico;
+
+      $Prestadora->idFilialServico=$txtfiliais;
+      $Prestadora->idUsuario=$idUser;
+      $Prestadora->dtVisita=$txtdata;
+
+      //var_dump($Prestadora);
+      // $Prestadora->idServico=$idServico;
+       $Prestadora::inserirVisita($Prestadora);
+    }
+
+    // selecionar servico por prestadora com servico
+
+    public function selecionarTudoDeServicoComEndereco($dados){
+      require_once('cms/viewModel/view_Prestadora_Filial_Servico.php');
+      $Prestadora = new Sevico_Filial();
+      $idServico = $dados;
+      //$txtControle = $_POST['txtControle'];
+      //$idUser=$_GET['idUser'];
+      //$Prestadora->idFilial=$txtControle;
+      //$Prestadora->idUser=$idUser;
+
+      //var_dump($Prestadora);
+       $Prestadora->idServico=$idServico;
+      return $Prestadora::selecionarTudoDeServicoComEndereco($Prestadora);
+    }
+
 
 
     }

@@ -6,8 +6,8 @@ $pag="historia";
 
 if(isset($_GET['pag'])){
     $pag=$_GET['pag'];
-    
-}    
+
+}
               require_once('cms/controllers/sobre_controller.php');
               require_once('cms/models/sobre_class.php');
 
@@ -23,34 +23,34 @@ if(isset($_GET['pag'])){
 <html lang="pt">
   <head>
     <meta charset="utf-8">
-    <title>Sobre Nózes</title>
+    <title>Sobre Nós</title>
     <link rel="stylesheet" type="text/css" href="css/styleHome.css">
     <link rel="stylesheet" type="text/css" href="css/styleSobre.css">
     <link rel="stylesheet" type="text/css" href="css/styleMenus.css">
-      
-      
+
+
       <script src="js/jquery7.min.js"></script>
 
   </head>
   <body>
     <!---A div Principal vai suporta todas as informações que tiver na página -->
-    
+
     <div class="principal">
       <?php
           require_once 'menu.php';
        ?>
-        
+
       <!-- Conteudo historia da empresa -->
       <div class="container_conteudo_hitoria">
-        
-          
+
+
             <!-- titulo historia da empresa s-->
           <?php
           require_once 'hexagonos/hexagonosobre.php';
-          
+
           ?>
-        
-          
+
+
         <section id="conteudo">
 <!--
             <a href="#texto_historia" class="scroll">
@@ -63,7 +63,7 @@ if(isset($_GET['pag'])){
                 switch($pag){
                         case'historia':
                             echo($retornoModel->historia);
-                            require_once'sobre/historia.php'; 
+                            require_once'sobre/historia.php';
                         break;
                         case'missao':
                             require_once'sobre/missao.php';
@@ -76,19 +76,19 @@ if(isset($_GET['pag'])){
                         break;
                 }
             ?>
-         
-        
+
+
         </section>
-            
-              
-          
-                
+
+
+
+
         </div>
           <?php
               require_once 'rodape.php';
            ?>
     </div>
-      
+
       <script src="js/scrollSobre.js" ></script>
   </body>
 </html>

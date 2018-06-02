@@ -152,14 +152,53 @@
                 $controller_prestadora::Inserir();
 
                 break;
-            /*
+
+
+//            case 'buscar':
+//                require_once('cms/controllers/controller_perfilPrestadora.php');
+//                require_once('cms/viewModel/view_prestadoraPerfil.php');
+//
+//              $controller_prestadora = new controllerPerfilPrestadora();
+//              $controller_prestadora::Buscar();
+//              break;
+
+            /*case 'editar':
+              $controller_prestadora = new controllerprestadora();
+              $controller_prestadora::Editar();
+              break;
+
+            case 'excluir':
+              $controller_prestadora = new controllerprestadora();
+              $controller_prestadora::Excluir();
+              break;
+              */
+                  break;
+          }
+        case 'Prestadoraperfil':
+         require_once('cms/controllers/controller_perfilPrestadora.php');
+         require_once('cms/viewModel/view_prestadoraPerfil.php');
+
+
+          switch ($modo) {
+
+//            case 'novo':
+//                //echo('dfgdfgdf');
+//                //header('location:../carbook.php');
+//
+//                $controller_prestadora = new controllerPrestadora();
+//                $controller_prestadora::Inserir();
+//
+//                break;
+
 
             case 'buscar':
-              $controller_prestadora = new controllerprestadora();
+
+
+              $controller_prestadora = new controllerPerfilPrestadora();
               $controller_prestadora::Buscar();
               break;
 
-            case 'editar':
+            /*case 'editar':
               $controller_prestadora = new controllerprestadora();
               $controller_prestadora::Editar();
               break;
@@ -212,6 +251,25 @@
               break;
 
             }
+            break;
+
+            case 'servicoPrestadora':
+            require_once('cms/controllers/prestadora_controller.php');
+            //  require_once('cms/viewModel/view_Prestadora_Filial_Servico.php');
+
+
+              switch ($modo) {
+                case 'salvarAgenda':
+
+
+
+
+                  $controller_prestadora = new controllerPrestadora();
+                  $controller_prestadora::salvarServicoVisita();
+                  break;
+
+              }
+
             break;
 
 

@@ -40,9 +40,23 @@
       return $servico::Select();
     }
 
-    public function ListarServicoFilial(){
+    public function ListarPorId($dados){
+      $idservico=$dados;
+
+    //  echo $idservico;
       $servico = new Servico;
-      return $servico::SelectServicoFilial();
+      $servico ->idServico=$idservico;
+
+  //    var_dump($servico);
+      return $servico::SelectByID($servico);
+
+    }
+
+    public function ListarServicoFilial($dados){
+
+      //$idFilial = $dados->idFilial;
+      $servico = new Servico;
+      return $servico::SelectServicoFilial($dados);
     }
 
     public function Buscar(){
@@ -99,9 +113,11 @@
     }
 
     public function Excluir(){
+      require_once("models/servicos_class.php");
+      $idServico=$_GET['id'];
       $servico = new Servico();
       //Carrefa o id do registro na classe contatos
-      $servico->idServico=$_GET['id'];
+      $servico->idServico= $idServico;
       //Chama o metodo de excluir na model
       $servico::Delete($servico);
     }

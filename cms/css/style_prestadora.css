@@ -1,11 +1,5 @@
 /*css*/
 
-.tbl_consulta_pretadora{
-  width: 1000px;
-  height: 450px;
-  background: green;
-  border-radius: 20px;
-}
 
 .titulo_prestadora{
   width: 700px;
@@ -31,15 +25,7 @@
     border-right:#eca028 2px solid;
 }
 
-.dados_prest_item_modo{
-  width: 200px;
-  height: 50px;
-  float: left;
-  text-align: center;
-  font-size: 25px;
-  /* background-color: green; */
 
-}
 
 .dados_prest_item{
   width: 200px;

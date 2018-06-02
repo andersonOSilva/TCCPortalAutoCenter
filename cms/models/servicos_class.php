@@ -5,6 +5,9 @@
       public $descricao;
       public $imagem;
 
+
+      public $idFilial;
+
     public function __construct(){
       require_once('bd_class.php');
     }
@@ -57,9 +60,14 @@
       }
     }
 
-    public function SelectServicoFilial(){
-      $sql="select * from tbl_servico where idServico not in (select sf.idServico from tbl_filial as f inner join tbl_filial_servico as s on f.idFilial=s.idFilial  inner join tbl_servico as sf on s.idServico=sf.idServico);";
 
+
+
+
+    public function SelectServicoFilial($dados){
+      $sql="select * from tbl_servico where idServico not in (select sf.idServico from tbl_filial as f inner join tbl_filial_servico as s on f.idFilial=s.idFilial  inner join tbl_servico as sf on s.idServico=sf.idServico where f.idFilial='".$dados."');";
+
+    //  echo $sql;
       $con=new Mysql_db();
       //Faz a conexão com o banco
       $pdoCon = $con->Conectar();
@@ -92,6 +100,8 @@
       $sql="SELECT * FROM tbl_servico WHERE idServico=$_servico->idServico";
       //Instancia a classe do banco de dados
       $con = new Mysql_db ();
+
+    //  echo $sql;
 
       //Chama o metodo de conexão, e guarda o retorno na variável
       $pdoCon = $con->Conectar();
@@ -136,30 +146,43 @@
               $con->Desconectar();
     }
 
-    public function Delete($_servico){
-      $sql = "DELETE FROM tbl_servico WHERE idServico = ?";
+    public function Delete($dados_servico){
+      $sql = "delete from  tbl_servico WHERE idServico=".$dados_servico->idServico;
 
-      //Instancia o banco de dados
-      $con = new Mysql_db();
+      $conex = new Mysql_db();
 
-      //Faz a conexão com o banco
-      $pdoCon = $con->Conectar();
+      $PDO_conex = $conex->Conectar();
 
-      //Prepata o statemant
-      $stmt = $pdoCon->prepare($sql);
+        if ($PDO_conex->query($sql)) {
+          echo "sucesso";
+        }else{
+          echo "erro ao deletar";
+        }
 
-      //Executa o script
-      if($stmt->execute([$_servico->idServico])){
+      $conex->Desconectar();
 
-        echo "<script>location.href='index.php?pag=servicos';</script>";
-
-    //  require_once 'conteudo_servico.php';
-      }else{
-        echo "Não foi possível excluir o registro do Banco de dados";
-      }
-
-      //Fecha a conexão com o banco
-      $con->Desconectar();
     }
+    //   //Instancia o banco de dados
+    //   $con = new Mysql_db();
+    //
+    //   //Faz a conexão com o banco
+    //   $pdoCon = $con->Conectar();
+    //
+    //   //Prepata o statemant
+    //   $stmt = $pdoCon->prepare($sql);
+    //
+    //   //Executa o script
+    //   if($stmt->execute([$_servico->idServico])){
+    //
+    //     echo "<script>location.href='index.php?pag=servicos';</script>";
+    //
+    // //  require_once 'conteudo_servico.php';
+    //   }else{
+    //     echo "Não foi possível excluir o registro do Banco de dados";
+    //   }
+    //
+    //   //Fecha a conexão com o banco
+    //   $con->Desconectar();
+    // }
   }
 ?>

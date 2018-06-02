@@ -55,15 +55,21 @@
     // Login de usuario do site
     public function LoginUser(){
       //$url = $_GET['url'];
-      $user = new cadUser();
-      $nomeUser = $_GET['user'];
-      $senha = $_GET['senha'];
+       $user = new cadUser();
+       //$nomeUser = $_GET['user'];
+       //$senha = $_GET['senha'];
+
+      $url = $_GET['url'];
+
+
+      $nomeUser = $_POST['txtUser'];
+      $senha = $_POST['txtSenha'];
 
       $user ->nomeUser =$nomeUser;
       $user ->senha =   $senha;
 
 
-      $user::LoginUser($user);
+      $user::LoginUser($user,$url);
     }
 
     // login apos o cadstro de usuario
@@ -82,9 +88,9 @@
 
     // buscar usuario por id especifico
     public function Buscar(){
-      $idUsuario=$_SESSION['idUsuario'];
+      //$idUsuario=$dados;
       // echo('controller cad user diz - amigo estou aqui');
-
+      $idUsuario=$_SESSION['idUsuario'];
       $user = new cadUser();
       $user->idUsuario=$idUsuario;
       return $user::selectById($user);

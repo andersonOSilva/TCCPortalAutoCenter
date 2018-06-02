@@ -18,6 +18,7 @@ require_once('../cms/controllers/prestadora_controller_endereco.php');
 
       <script src="../js/jquery7.min.js"></script>
   </head>
+    
   <body>
     <div class="principal">
 
@@ -35,7 +36,7 @@ require_once('../cms/controllers/prestadora_controller_endereco.php');
 //      } else if($pag=="Endereco" ){
 //        require_once 'cadastroEndereco.php';
 //        }
-            require_once 'cadastroPrestadoraEtapa1.php';
+            require_once 'cadastroPrestadoraPlano.php';
       if ($Prestadora->sucesso != Null){
         echo("view diz -amigo estou aqui");
 

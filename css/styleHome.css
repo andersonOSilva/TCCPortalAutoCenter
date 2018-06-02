@@ -58,7 +58,7 @@ body{
   max-width: 100%;
   height: 100vh;
   /* background-color: #ccc; */
-  background-image: url(../imagens/10.jpg);
+  background-image: url(../imagens/v8.gif);
   background-attachment:fixed;
     background-size: cover;
 
@@ -223,14 +223,14 @@ background-color: #eca023;
 
 .espaco_menu1{
   width: 1200px;
-  height: 70%;
+  height: 65%;
   /* background-color:green; */
   margin: auto;
 }
 
 .espaco_menu2{
   width: 1200px;
-  height: 30%;
+  height: 50%;
   /* background-color:green; */
   margin: auto;
 }
@@ -257,10 +257,11 @@ background-color: #eca023;
 
 .container_carrosel_menu{
   width: 84%;
-  height: 100%;
+  height: 50%;
   /* background-color: pink; */
   float: left;
-
+    margin-top: -1%
+/*  margin-bottom: 10px;*/
 }
 
 .container_carrosel_menu ul{
@@ -271,14 +272,17 @@ background-color: #eca023;
   list-style: none;
 }
 
-.container_carrosel_menu ul li{
-  width: 15%;
-  height: 100%;
-  margin-left: 1%;
-  /* background-color: red; */
-  float: left;
-  background-color: rgba(0, 0, 0, 0.5);
-  border-radius: 10px;
+.container_carrosel_menu ul li {
+    width: 15%;
+    height: 100%;
+    margin-left: 1%;
+    /* background-color: red; */
+    float: left;
+    background-color: rgb(0, 0, 0);
+    /* border: solid; */
+    box-shadow: 1px 2px 2px 2px #eca023;
+    /* background-color: black; */
+    border-radius: 10px;
 }
 
 .container_carrosel_menu ul li a{
@@ -288,7 +292,8 @@ background-color: #eca023;
 
 .titulo_menu_carrossel{
   width: 100%;
-  height: 30%;
+  height: 20%;
+  border-bottom:solid 1px #eca023;
   /* background-color: #fadaff; */
 }
 
@@ -298,12 +303,17 @@ background-color: #eca023;
   font-size: 130%;
   text-align: center;
   font-weight:bold;
+    background-color:black;
+/*    background-color:#eca023;*/
 }
 
 .descricao_menu_carrosel{
-  width: 100%;
-  height: 70%;
-  /* background-color: #cddccd; */
+    width: 100%;
+    height: 70%;
+    /* background-color: #cddccd; */
+    /* display: flex; */
+    /* content: close-quote; */
+    margin-top: 20%;
 }
 
 .descricao_menu_carrosel p{
@@ -330,6 +340,7 @@ background-color: #eca023;
    /* background-color: #13436B; */
    background-color: black;
 /*   opacity: 0.9;*/
+    margin-top: -1%
    color: #fff;
 }
 
@@ -356,7 +367,8 @@ background-color: #eca023;
   width: 100%;
   height: 50px;
   padding: 0px;
-  margin: 0px;
+/*  margin: 0px;*/
+    margin-bottom: 15PX;
   color: #fff;
   /*background-color: #f43f2f;*/
   /*border: 3px solid gold;*/
@@ -412,11 +424,16 @@ background-color: #eca023;
 .descricao_titulo_servico p a{
   text-decoration:none;
   color:#fff;
-  font-size: 20px;
+  font-size: 15px;
 }
 
-.descricao_titulo_servico p a:hover{
-  color: #BBA649;
+.descricao_titulo_servico p :hover{
+  color: #ECA023;
+}
+.descricao_titulo_servico:hover >.imagen_titulo_servico img{
+    display: none;
+
+
 }
 
 .descricao_servico{
@@ -443,7 +460,7 @@ background-color: #eca023;
  background-image: url(../imagens/6.jpg);
     background-size: cover;
 /*  background-color: rgb(41, 42, 43);*/
-
+    margin-top: -1%;
   background-attachment:fixed;
 }
 
@@ -797,12 +814,18 @@ margin-left: 1000px;
   display: none;
 }
 
+.comprar_produto img{
+  width: 40px;
+  height: 100%;
+  /* background-color: blue; */
+}
+
 #carrossel_produtos_principal li:hover{
   -webkit-box-shadow: 0 0 10px #eca020;
           box-shadow: 0 0 10px #eca020;
 }
 
-#carrossel_produtos_principal li a:hover>.comprar_produto {
+#carrossel_produtos_principal li:hover>.comprar_produto {
   display: block;
 }
 
@@ -830,6 +853,7 @@ margin-left: 1000px;
     background-size: cover;
     border-top: 5px solid #eca023;
     background-attachment: fixed;
+    margin-top: -1%
 }
 
 #CarBook{
@@ -887,6 +911,73 @@ margin-left: 1000px;
     margin-left: 40px;
 }
 
+/* Forum */
+
+.container_menu_forumHome{
+  width: 100%;
+  height: auto;
+  min-height: 580px;
+  background-color: #000;
+  border-top: 5px solid #eca023;
+  /* background-attachment: fixed; */
+        margin-top: -1%
+}
+
+#Forum{
+  max-width: 1200px;
+  height: auto;
+  min-height: 580px;
+  margin: auto;
+  /* background-color: green; */
+}
+
+.descricao_forumhome{
+  width: 600px;
+  height: auto;
+  min-height: 470px;
+  overflow: hidden;
+  margin-top: 40px;
+  /* background-color: blue; */
+  float: left;
+}
+
+
+.titulo_principal_servicos a{
+  text-decoration: none;
+  color: #fff;
+}
+
+.descricao_forumhome p{
+  margin: 0px;
+  padding-left:50px;
+  padding-right: 50px;
+  padding-top: 20px;
+  font-size: 20px;
+  text-align: left;
+/*    background-color: rgba(255,255,255,0.7);*/
+  background-color:  rgba(236, 160, 35,0.5);
+  color: black;
+    border-radius: 50px 10px 50px 50px;
+
+
+}
+
+.foto_forum{
+  width:600px;
+  height: auto;
+  min-height: 500px;
+  overflow: hidden;
+  /* background-color: pink; */
+  float: left;
+}
+
+.foto_forum img{
+  width: 100%;
+  height: 100%;
+  padding-top: 20px;
+    margin-left: 40px;
+}
+
 /* FaleConosco */
 
 .container_menu_FaleConosco{
@@ -899,6 +990,7 @@ margin-left: 1000px;
     background-position: center;
     background-size: cover;
     border-top: 5px solid #eca023;
+    margin-top: -1%
 }
 
 #FaleConosco{
@@ -947,7 +1039,7 @@ margin-left: 1000px;
     margin-top: 5px;
     border-radius: 10px;
     outline-color: #eca023
-    
+
 }
 
 .dados2{
@@ -1235,6 +1327,7 @@ textarea{
   border: none;
 }
 
+/*
 .rodape{
   width: 100%;
   height: auto;
@@ -1246,19 +1339,25 @@ background-color: #000;
 
 
 }
+*/
 
 footer{
-  max-width: 1200px;
+/*  max-width: 1200px;*/
   height: auto;
   min-height: 205px;
   margin: auto;
+    border-top: 5px solid #F09900;
+    background-color: black;
 }
 
 .detalhes_rodape{
-  width: 800px;
-  height: auto;
-  min-height: 200px;
-  float: left;
+  width: 500px;
+    height: auto;
+    min-height: 200px;
+    float: left;
+    margin-left: 35%;
+
+/*    background-color: aqua;*/
 }
 
 .detalhes_rodape ul{
@@ -1288,24 +1387,27 @@ footer{
   height: 100px;
   background-color: #000;
   margin-top: 100px;
+
+    display: flex;
 }
 
 .redes{
   transform: rotate(50deg);
   width: 60px;
   height: 40px;
-  background-color: red;
+  background-color: #F09900;
   margin-left: 20px;
   padding-top: 20px;
   float: left;
 }
 
 .aplicativo{
-  width: 100px;
-  height: 100%;
-  /*background-color: blue;*/
-  float: left;
-  margin-left: 50px;
+     width: 100px;
+    height: 100%;
+    /* background-color: blue; */
+    float: left;
+    margin-left: 50px;
+    margin-top: 50px;
 }
 
 
@@ -1313,13 +1415,15 @@ footer{
   width: 400px;
   height: auto;
   min-height: 200px;
-  background-color: #000;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  background-color: #fff;
   float: left;
 }
 
 .mapa{
   width:400px;
-  height:200px;
+  height:150px;
   border:0;
   margin: 0px;
   padding: 0px;

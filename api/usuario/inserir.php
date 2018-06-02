@@ -4,7 +4,7 @@
   $email = $_POST["email"];
   $usuario = $_POST["usuario"];
   $senha = $_POST["senha"];
-  $dtNasc = $_POST["dnNasc"];
+  $dtNasc = $_POST["dtNasc"];
 
   //Tratamento de datas
   $data=explode("/", $dtNasc);
@@ -19,12 +19,12 @@
   $con=new Mysql_db();
   $pdoCon = $con->Conectar();
 
-    addslashes($sql="INSERT INTO tbl_usuario set usuario = '$usuario', senha = '$senha', nome = '$nome', email = '$email', dtNasc = '$dtNasc'");
+    $sql="INSERT INTO tbl_usuario set usuario = '$usuario', senha = '$senha', nome = '$nome', cpf = '$cpf',email = '$email', dtNasc = '$dtNasc'";
 
     $con=new Mysql_db();
     $pdoCon = $con->Conectar();
 
-    if($pdoCon->query($sql);){
+    if($pdoCon->query($sql)){
 
       echo json_encode(
         array('sucesso' => true));

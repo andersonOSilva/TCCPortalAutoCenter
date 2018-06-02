@@ -53,6 +53,7 @@ class Menus
         $listMenus[$cont]->titulo=$rs['titulo'];
         $listMenus[$cont]->descricao=$rs['descricao'];
         $listMenus[$cont]->link=$rs['link'];
+        $listMenus[$cont]->idMenu=$rs['idMenu'];
 
         $cont+=1;
     }
@@ -87,7 +88,7 @@ class Menus
       $menus->descricao = $rs['descricao'];
     }
 
-    $con->Desconectar();
+    $conex->Desconectar();
 
     return $menus;
   }
@@ -95,9 +96,9 @@ class Menus
   public function Update($menus){
       $sql="update tbl_menus set titulo='".$menus->titulo."',
       descricao='".$menus->descricao."',
-       link='".$menu->link."' where idMenu=$menu->idMenu ";
+       link='".$menus->link."' where idMenu=$menus->idMenu ";
 
-       //echo $sql;
+       echo $sql;
 
        $conex = new Mysql_db();
 
@@ -115,8 +116,20 @@ class Menus
 
 
 
-  public function Delete(){
+  public function Delete($menus){
+    $sql="delete from tbl_menus where idMenu=".$menus->idMenu;
 
+    $conex = new Mysql_db();
+
+    $PDO_conex = $conex->Conectar();
+
+    if ($PDO_conex->query($sql)) {
+      echo "sucesso!";
+    }else{
+      echo "erro ao deletar";
+    }
+
+    $conex->Desconectar();
   }
 
 }

@@ -42,15 +42,15 @@
   min-height: 100px;
   /* background-color: #13436b; */
   /* background-color: #000; */
-    background-color: rgba(0,0,0,0.5);
+/*    background-color: rgba(0,0,0,0.5);*/
   position: fixed;
   z-index: 100;
   float: left;
 }
 
 #menu_navegacao{
-  max-width: 1200px;
-  min-height: auto;
+  max-width: 100%;
+  background-color: rgba(0,0,0,0.5);
   height: 100px;
   /* background-color: pink; */
   margin: auto;
@@ -61,12 +61,14 @@
   width: 200px;
   height: 100%;
    /* background-color: #BBA649; */
+    margin-left: 15%;
   float: left;
 }
 
 .logo img{
   width: 200px;
   height: 100%;
+  margin-top: -20px
 }
 
 .enfeite{
@@ -93,9 +95,10 @@
 }
 
 .menu_ancora_home{
-  width: 800px;
+  width: 1000px;
   height: 100%;
   margin: auto;
+  /* background-color: green; */
 
 }
 
@@ -122,7 +125,7 @@
 }
 
 .menu_ancora_itens_principal{
-  width: 600px;
+  width: 680px;
   height: 100%;
   float: left;
   /* background-color: blue; */
@@ -171,11 +174,11 @@ color: #fff;
 
 .login{
   width: 150px;
-  
+
   text-align: center;
 /*   background-color: green; */
   float: left;
-  
+
   margin-top: 10px;
 }
 .login p{
@@ -183,7 +186,7 @@ color: #fff;
   margin-top: 15px;
   margin-left: 2px;
   color: #fff;
-  text-decoration: none;  
+  text-decoration: none;
 }
 
 
@@ -362,7 +365,7 @@ color: #fff;
   border: 0;
   outline: 0;
   resize: none;
-  background-color: rgba(0,0,0,0);    
+  background-color: rgba(0,0,0,0);
 }
 #formBody input + label,
 #formBody textarea + label {
@@ -400,7 +403,7 @@ color: #fff;
 .buttom_enviar_login{
   width: 90px;
   height: 30px;
-   background-color: black; 
+   background-color: black;
   border-radius: 40px;
   margin-left: auto;
   margin-right: auto;
@@ -496,7 +499,7 @@ color: #fff;
   margin-left: auto;
   margin-right: auto;
     margin-top: 5px;
-    
+
   padding: 30px;
     padding-top: 0px;
 }
@@ -542,8 +545,8 @@ color: #fff;
   color: #666;
   height: 20px;
   padding: 5px 0;
-  
-    
+
+
   /* background-color: #f7f7f7; */
 }
 a{
@@ -554,7 +557,7 @@ a{
 #novo_cadastro_link div{
   margin-top: 1px;
   color: #666;
- 
+
 
 /*  text-underline-position: none;*/
   /* background-color: #f7f7f7; */
@@ -620,19 +623,19 @@ a{
 /*
 .tipo input[type='radio']{
     display: none;
-    
+
 }
 .tipo input[type='radio']+label:before {
     background-color: #eca023;
     height: 100px;
     width: 100px;
-    
+
 }
 .tipo input[type='radio']+label:checked {
     background-color: #000;
     height: 100px;
     width: 100px;
-    
+
 */
 
 

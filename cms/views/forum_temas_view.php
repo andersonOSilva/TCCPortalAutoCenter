@@ -1,8 +1,8 @@
 <div class="tbl_temas">
   <div class="cadastrar_novo_tema">
-      <form class="" action="index.html" method="post">
-        <input type="text" name="" value="" required placeholder="Nome do tema">
-        <input type="submit" name="btnEnviar" value="cadastrar">
+      <form class="" action="router.php?controller=forum&modo=novaCategoria" method="post">
+        <input type="text" name="txt_descricao" value="" required placeholder="Nome do tema">
+        <input type="submit" name="btnEnviar0" value="cadastrar">
       </form>
 
       <div class="titulo_temas_principal">
@@ -34,7 +34,7 @@
             <?php
                 $status= $List_returnForum[$cont]->status;
 
-                //echo $status;
+                // echo $status;
 
 
                 // quando o status for 1 ele desativa

@@ -39,7 +39,7 @@ class PrestadoraEndereco{
 
                   }
         $conex->Desconectar();
-        require_once 'cadprestadora/cadastroPrestadoraEtapa1.php';   
+        require_once 'cadprestadora/cadastroPrestadoraPlano.php';   
     }
     
 

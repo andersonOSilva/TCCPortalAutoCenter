@@ -1,0 +1,64 @@
+.conteudo_padrao_filial{
+  width: 100%;
+  height: 90%;
+  background-color: green;
+  float: left;
+}
+.filial{
+  margin: auto;
+  width: 100%;
+  height: auto;;
+  background-color: yellow;
+  min-height: 580px;
+}
+.titulo_filial{
+  width: 100%;
+  height: 50px;
+  background-color: magenta;
+
+}
+.titulo_filial p{
+  margin: auto;
+  padding: 0px;
+  font-size: 30px;
+}
+#form{
+  height: 800px;
+  width: 500px;
+  display: flex;
+
+}
+.filhaform{
+  height: 30px;
+  width: auto;
+}
+.buttom_salvar{
+  width: 100px;
+  height: 50px;
+  margin-top: 70px;
+  margin-left: auto;
+  margin-right: auto;
+}
+#btnSalvar{
+    width: 80px;
+    height: 30px;
+    background:red;
+    color:#fff;
+    box-shadow:0 5px 0 #00d103;
+    border:none;
+    cursor: pointer;
+    display:inline-block;
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+/*#segura{
+  width: 800px;
+  height: 800px;
+  background-color: red;
+}*/
+/*#titulo_filial{
+  width: 100%;
+  height: 30px;
+  /*background-color: yellow;
+}*/

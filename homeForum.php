@@ -1,3 +1,6 @@
+
+
+
 <!DOCTYPE html>
 <html lang="pt" dir="ltr">
   <head>
@@ -23,6 +26,11 @@
 
           $(".alert").click(function(){
              swal("OPSSS!", "Realize o login para participar do forum", "warning");
+
+          });
+
+          $(".alertPrestadora").click(function(){
+             swal("OPSSS!", "Realize o login como Usuario Para Participar", "warning");
 
           });
 
@@ -104,6 +112,13 @@
                   <div class="btnAbrirModal">
                     <a href="#"
                     <?php
+
+                    if (isset($_SESSION['idPrestadora'])){
+                      echo "class='alertPrestadora'";
+
+                    }
+
+
                     if (isset($_SESSION['idUsuario'])){
                       echo "class='novoForum'";
                       echo "onclick=pergunta()";
@@ -143,19 +158,7 @@
 
                   </div> -->
 
-                  <?php
-                  require_once("cms/controllers/forum_controller.php");
-                  require_once("cms/viewModel/view_forum.php");
-                  $controller_forumPesquisa= new controllerForum();
-                  $List_returnForumoesquisa=$controller_forumPesquisa::pesquisa();
 
-                //  var_dump($List_returnForumoesquisa);
-
-                if (isset($List_returnForumoesquisa)) {
-                  echo "lista";
-                }
-
-                   ?>
 
                   <?php
 

@@ -1,22 +1,26 @@
 /*Menus*/
 
+/* .conteudo_padrao{
+  background-color: magenta;
+} */
 .cabecalho_menus{
   width: 100%;
   height: 70px;
-  background-color: black;
-  color: aliceblue;
-  border-top:solid 2px #eca023; 
+  background-color: #000;
+  color: orange;
+  border-top:solid 2px #eca023;
 }
 
 .cadastros_menus{
-  width: 50%;
-  height: 500px;
+  width: 30%;
+  height: 200px;
   float: left;
   margin-left: 30px;
-  margin: 0px;
+   margin-top: 100px;
   padding: 0px;
-    
+
 /*  background-color: blue;*/
+  background-color:rgba(0,0,0,0.5);
 }
 .input textarea{
     box-shadow: 2px 2px 2px 2px #ccc;
@@ -25,15 +29,16 @@
     margin-top: 3px;
     box-shadow: 2px 2px 2px 2px #ccc;
     content: none;
-    
-    
+
+
 }
 .cad_titulo{
   width: 100%;
   height: 90px;
-  
+
   font-style: bold;
   font-size: 20px;
+  color: orange;
   /* background-color: #0fc; */
   /* padding-bottom: 10px; */
 }
@@ -44,26 +49,35 @@
   height: 70%;
   background-color: yellow;
   margin: auto;
- 
+
+
 }
 
 .cad_link{
   width: 100%;
   height: 70%;
-    font-size: 20px;
-  
+  font-size: 20px;
+  color: orange;
+
 /*  margin-top: 80px;*/
 /*  background-color: pink;*/
 }
 .principal{
 /*    background-color: aqua;*/
-    height: 300px;
-    width: auto;
+    height: 200px;
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    
-    
+    background-color: #000;
+/*    margin-left: 50px;*/
+/*    margin-top: 100px;*/
+/*    background-color: black;*/
+
+
+
+
+
 }
 .pricipalfilha{
      height: 32%;
@@ -71,31 +85,33 @@
 /*    background-color: aliceblue;*/
     margin-left: 10px;
     margin-top: 10px;
-    
-    
+    color: aliceblue;
+
+
 }
 .principal .pricipalfilha:nth-child(1) input{
 width: 100%;
+
 }
 .principal .pricipalfilha:nth-child(1){
     width: 150px;
-    
-    
+
+
 }
 .principal .pricipalfilha:nth-child(3) textarea{
     height: 100%;
     width: 100%;
-    
-    
+
+
 }
 .principal .pricipalfilha:nth-child(3){
 /*    margin-left: 80px;*/
 /*    background-color: antiquewhite;*/
     width: 300px;
-    
+
     margin-left: auto;
     margin-right: auto;
-    
+
 }
 .principal .pricipalfilha:nth-child(2) input{
     width: 100%;
@@ -104,17 +120,18 @@ width: 100%;
 /*    height: 100px;*/
     width: 100px;
 
-    
+
 }
 .principal .pricipalfilha:nth-child(4){
     margin-left: 100px;
     height: 100px;
-    
+
 }
 
 .buttom_enviar{
   width: 100px;
   height: 50px;
+  /* background-color: orange; */
 /*  margin-top: 70px;*/
 
 }
@@ -122,7 +139,7 @@ width: 100%;
 #btnEnviar{
   width: 80px;
   height: 30px;
-  background:green;
+  background:orange;
   color:#fff;
   box-shadow:0 5px 0 #00d103;
   border:none;
@@ -136,27 +153,37 @@ width: 100%;
 .listar_cadastros{
   width:50%;
   height: 400px;
-  background-color: yellow;
+  /*background-color: yellow;*/
+  /* background-color: rgba(0,0,0,0.5); */
   margin: auto;
+  margin-top: 100px;
   overflow-y: scroll;
+  border-bottom: solid 1px #000;
 }
 
 .tito_menu{
   max-width: 100%;
-  height: 10%;
+  height: 50px;
   /* border: 1px solid #000; */
-  background-color: #fff;
+  background-color: #000;
+  color: #fff;
   margin: auto;
+  text-align: justify;
 
 }
 
+
+
 .conteudo_tbl_menu{
-  width:22%;
-  height: 55%;
-  background-color: white;
+  width:20%;
+  height: 100%;
+  background-color: #000;
+  /* border-right:#eca023 solid 1px; */
   float: left;
   margin: auto;
   margin-left: 15px;
+  color: orange;
+  font-size: 20px;
 }
 
 .conteudo_tbl_menu p{
@@ -168,35 +195,43 @@ width: 100%;
 
 .conteudoMenu{
   width: 100%;
-  height: 90px;
-  background-color: green;
+  height: 140px;
+  /* background-color: green; */
   padding: 0px;
   margin: 0px;
+  border-bottom: solid 1px #000;
+  overflow:hidden;
+  float: left;
 }
+
 
 .item_menus{
   width: 20%;
-  height: 85%;
+  height: 30%;
   float: left;
-  background-color: orange;
+  /* background-color: red; */
+  /* background-color: rgba(236,160,35, 0.9); */
+  color: #000000;
   margin-left: 15px;
+  padding-top: 25px;
+  padding-bottom: 25px;
   margin-top: 10px;
   font-size: 20px;
   font-style: bold;
   text-align: center;
 }
-
 .descMenu{
   width: 75%;
   height: 85%;
   margin-top: 2%;
   margin-left: auto;
   margin-right: auto;
-  overflow: hidden;
+  /* overflow: hidden; */
 /*  background-color: red;*/
-  text-align: center;
   font-style: bold;
   font-size: 20px;
+  text-align:justify;
+  /* float:left; */
 }
 
 .segura_modo{
@@ -212,6 +247,7 @@ width: 100%;
   float: left;
   margin-left: 10px;
   text-align: center;
+  display: flex;
 }
 
 .modo img {

@@ -5,6 +5,34 @@
       <link rel="stylesheet" type="text/css" href="css/styleHome.css">
       <link rel="stylesheet" type="text/css" href="css/styleServico01.css">
       <link rel="stylesheet" type="text/css" href="css/styleMenus.css">
+      <script src="js/jquery-3.3.1.min.js"></script>
+
+      <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+      <script>
+
+          $(document).ready(function (){
+            $(".abrirModalServico").click(function(){
+               $(".vermais_servicos").slideToggle(2000);
+
+            });
+
+            $(".alert").click(function(){
+               swal("OPSSS!", "Realize o login como usuario", "warning");
+
+            });
+          });
+
+          function spm(idItem){
+              $.ajax({
+                  type: "POST",
+                  url: "servicosPrestadoraModal.php?idservico="+idItem,
+                  success: function(dados){
+                      $('.dadosDamodalServico').html(dados);
+                  }
+              });
+          }
+
+      </script>
   </head>
   <body>
     <div class="principal">
@@ -19,24 +47,45 @@
         <div id="suporte">
             <!-- area da imagem em destaque  -->
 
+            <?php
+
+            if (isset($_GET['idservico'])) {
+              $idservico=$_GET['idservico'];
+            }
+
+            require_once 'cms/controllers/servico_controller.php';
+            require_once 'cms/models/servicos_class.php';
+
+            $controller_servico = new controllerServico;
+
+            $list=$controller_servico::ListarPorId($idservico);
+
+            //var_dump($list);
+
+            $idServico=$list->idServico;
+            $nome=$list->nome;
+            $descricao=$list->descricao;
+            $imagem=$list->imagem;
+
+
+             ?>
+
             <div class="suporte_conteudo_servico">
               <div id="areaImagem">
 
 
                 <div class="img_servico">
-                      <img src="imagens/mecanica.jpg" alt="servico" >
+                      <img src="cms/<?php echo $imagem ?>" alt="servico" >
                 </div>
 
                 <div class="areaImagem_descricao">
-                    <p>Nome Servico de hidfhgd gdgd gdgd ruuu</p>
+                    <p><?php echo $nome ?></p>
                 </div>
 
               </div>
               <!-- area de descricao em destaque  -->
               <div id="areaDescricao">
-                  <p>  O Mecânico de Automóveis é o profissional responsável por cuidar da manutenção de veículos,
-                    motocicletas, motores e similares, desmontando, reparando, substituindo, ajustando e
-                    lubrificando o motor e peças anexas.</p>
+                  <p>  <?php echo $descricao ?></p>
               </div>
             </div>
 
@@ -44,167 +93,69 @@
         <!--suporta imagens e descricoes segundarias/ avaliacao e botao -->
         <div class="container_servico_suporte">
           <!-- segura as imagens e area de descricao  PRESTADORA-->
-          <div class="suporteSecundaria">
-            <div class="areaImagemSecundaria">
-                <img src="imagens/pres.jpg" alt="servico" >
-            </div>
-            <div class="areaDescricaoSecundaria">
-                <div class="titulo_Prestadora_servico">
-                    <h2>Nome da prestadora</h2>
-                </div>
+          <?php
+          require_once('cms/controllers/prestadora_controller.php');
+        //  require_once('controllers/prestadora_controller_endereco.php');
+        $controller_servico = new controllerPrestadora;
 
-                <div class="descricao_prestadora">
-                    <p>  Um Mecânico de Automóveis utiliza ferramentas e instrumentos apropriados, para recondicionar
-                       o veículo e assegurar seu funcionamento regular.
-                     </p>
-                </div>
+        $list=$controller_servico::ListarTodosServicos($idservico);
+        $cont=0;
+        //var_dump($list);
+        if (count($list) != 0) {
+          while ($cont<count($list)) {
+           ?>
 
-            </div>
-            <div class="classificacao">
-                <ul>
-                  <li class="color"></li>
-                  <li class="color"></li>
-                  <li class="color"></li>
-                  <li class="colornot"></li>
-                  <li class="colornot"></li>
-                </ul>
-            </div>
-            <div class="botao">
-              <a href="#">Ver mais</a>
-            </div>
+           <div class="suporteSecundaria">
+             <div class="areaImagemSecundaria">
+                 <img src="<?php echo $list[$cont]->fotoPrestadora ?>" alt="servico" >
+             </div>
+             <div class="areaDescricaoSecundaria">
+                 <div class="titulo_Prestadora_servico">
+                     <h2><?php echo $list[$cont]->nomeFantasia ?></h2>
+                 </div>
 
-          </div>
+                 <div class="descricao_prestadora">
+                     <p> <?php echo $list[$cont]->descricao ?>
+                      </p>
+                 </div>
 
-          <!-- segura as imagens e area de descricao  PRESTADORA-->
-          <div class="suporteSecundaria">
-            <div class="areaImagemSecundaria">
-                <img src="imagens/pres1.jpg" alt="servico" >
-            </div>
-            <div class="areaDescricaoSecundaria">
-                <div class="titulo_Prestadora_servico">
-                    <h2>Nome da prestadora</h2>
-                </div>
-
-                <div class="descricao_prestadora">
-                    <p>  Um Mecânico de Automóveis utiliza ferramentas e instrumentos apropriados, para recondicionar
-                       o veículo e assegurar seu funcionamento regular.
-                     </p>
-                </div>
-
-            </div>
-            <div class="classificacao">
-                <ul>
-                  <li class="color"></li>
-                  <li class="color"></li>
-                  <li class="color"></li>
-                  <li class="colornot"></li>
-                  <li class="colornot"></li>
-                </ul>
-            </div>
-            <div class="botao">
-              <a href="#">Ver mais</a>
-            </div>
-
-          </div>
+             </div>
+             <div class="classificacao">
+                 <ul>
+                   <li class="color"></li>
+                   <li class="color"></li>
+                   <li class="color"></li>
+                   <li class="colornot"></li>
+                   <li class="colornot"></li>
+                 </ul>
+             </div>
+             <div class="botao abrirModalServico" onclick="spm(<?php echo $idservico ?>)" >
+               <p>Ver mais</p>
 
 
-          <!-- segura as imagens e area de descricao  PRESTADORA-->
-          <div class="suporteSecundaria">
-            <div class="areaImagemSecundaria">
-                <img src="imagens/pres2.jpg" alt="servico" >
-            </div>
-            <div class="areaDescricaoSecundaria">
-                <div class="titulo_Prestadora_servico">
-                    <h2>Nome da prestadora</h2>
-                </div>
-
-                <div class="descricao_prestadora">
-                    <p>  Um Mecânico de Automóveis utiliza ferramentas e instrumentos apropriados, para recondicionar
-                       o veículo e assegurar seu funcionamento regular.
-                     </p>
-                </div>
-
-            </div>
-            <div class="classificacao">
-                <ul>
-                  <li class="color"></li>
-                  <li class="color"></li>
-                  <li class="color"></li>
-                  <li class="colornot"></li>
-                  <li class="colornot"></li>
-                </ul>
-            </div>
-            <div class="botao">
-              <a href="#">Ver mais</a>
-            </div>
-
-          </div>
+             </div>
 
 
-          <!-- segura as imagens e area de descricao  PRESTADORA-->
-          <div class="suporteSecundaria">
-            <div class="areaImagemSecundaria">
-                <img src="imagens/pres3.jpg" alt="servico" >
-            </div>
-            <div class="areaDescricaoSecundaria">
-                <div class="titulo_Prestadora_servico">
-                    <h2>Nome da prestadora</h2>
-                </div>
 
-                <div class="descricao_prestadora">
-                    <p>  Um Mecânico de Automóveis utiliza ferramentas e instrumentos apropriados, para recondicionar
-                       o veículo e assegurar seu funcionamento regular.
-                     </p>
-                </div>
+           </div>
 
-            </div>
-            <div class="classificacao">
-                <ul>
-                  <li class="color"></li>
-                  <li class="color"></li>
-                  <li class="color"></li>
-                  <li class="colornot"></li>
-                  <li class="colornot"></li>
-                </ul>
-            </div>
-            <div class="botao">
-              <a href="#">Ver mais</a>
-            </div>
+           <div class="vermais_servicos">
+              <div class="dadosDamodalServico">
 
-          </div>
+              </div>
+           </div>
+
+           <?php
+           $cont+=1;
+         }
+
+        }else {
+          echo "Nada encontrado";
+        }
+           ?>
 
 
-          <!-- segura as imagens e area de descricao  PRESTADORA-->
-          <div class="suporteSecundaria">
-            <div class="areaImagemSecundaria">
-                <img src="imagens/pres4.jpg" alt="servico" >
-            </div>
-            <div class="areaDescricaoSecundaria">
-                <div class="titulo_Prestadora_servico">
-                    <h2>Nome da prestadora</h2>
-                </div>
 
-                <div class="descricao_prestadora">
-                    <p>  Um Mecânico de Automóveis utiliza ferramentas e instrumentos apropriados, para recondicionar
-                       o veículo e assegurar seu funcionamento regular.
-                     </p>
-                </div>
-
-            </div>
-            <div class="classificacao">
-                <ul>
-                  <li class="color"></li>
-                  <li class="color"></li>
-                  <li class="color"></li>
-                  <li class="colornot"></li>
-                  <li class="colornot"></li>
-                </ul>
-            </div>
-            <div class="botao">
-              <a href="#">Ver mais</a>
-            </div>
-
-          </div>
 
         </div>
       </div>

@@ -7,7 +7,7 @@ $mensagen=Null;
 
     <div class="conteudo_padrao">
         <div class="tbl_consulta">
-              <div class="Titulo">
+              <div class="Titulo_faleconosco">
                   <ul>
                     <li>Nome</li>
                     <li>Email</li>

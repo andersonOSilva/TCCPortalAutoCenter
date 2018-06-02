@@ -15,7 +15,7 @@ Descrição:Tela de autenticação para o gerenciamento do portal(CMS).
       <div id="principal">
           <header class="cabecalho">
               <div id="logo">
-                <img src="../imagens/logos/possivellogo2.png" alt="" class="logo_image">
+                <img src="../imagens/logos/logo9.png" alt="" class="logo_image">
               </div>
               <div class="nome_logo">
                 <h1>Portal Auto Center</h1>

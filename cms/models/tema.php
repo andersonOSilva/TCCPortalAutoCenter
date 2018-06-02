@@ -12,7 +12,7 @@
 
     public function Inserttema($dados){
 
-      $sql="Insert into tbl_categoria_forum (descricao,statusCat)
+      $sql="Insert into tbl_categoria_forum (descricao,status)
             values('".$dados->descricao."',0)";
 
 
@@ -52,7 +52,7 @@
 
     public function InserttemaCms($dados){
 
-      $sql="Insert into tbl_categoria_forum (descricao,statusCat)
+      $sql="Insert into tbl_categoria_forum (descricao,status)
             values('".$dados->descricao."',0)";
 
 

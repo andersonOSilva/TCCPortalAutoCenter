@@ -37,6 +37,7 @@
   width: 100%;
   border: 0;
   outline: 0;
+  border: solid 1px #ccc;
   resize: none;
 }
 #formBody input + label,
@@ -77,8 +78,9 @@ body{
 .Principal_cms{
   width: 100%;
   height: 100vh;
-  background-color: red;
+/*  background-color: red;*/
 }
+
 
 .menu_cms{
   height: 100vh;
@@ -119,6 +121,7 @@ body{
 .item_menu{
   width: 100%;
   height: 6%;
+  background-color: black;
   border-bottom: 2px solid #2E353F;
 }
 
@@ -183,8 +186,10 @@ width: 98%;
 
 .conteudo_principal{
   width: 80%;
-  height: 85%;
-  background-color:#fff;
+  height: 100%;
+/*      background-image: url(../../imagens/11.jpg);*/
+    background-size: cover;
+    background-repeat: no-repeat;
   float: left;
 
 }
@@ -263,7 +268,7 @@ width: 98%;
 .conteudo_padrao{
    width: 100%;
    height: 90%;
-   background-color: #fff;
+/*   background-color: #fff;*/
    float: left;
 }
 
@@ -273,12 +278,17 @@ width: 98%;
 /*Fale Conosco*/
 
 .tbl_consulta{
-  width: 700px;
-  height: 300px;
-  /* background-color: green; */
+  width: 760px;
+/*    min-height: 500px;*/
+
+  height: 500px;
+   background-color: black;
   border-radius: 10%;
   border: 1px solid #000;
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 150px;
+    overflow-y: scroll;
 }
 
 .tbl_consulta_titulos{
@@ -286,6 +296,9 @@ width: 98%;
   height: 30px;
   border:1px solid;
   float: left;
+  background-color: black;
+    color: aliceblue;
+    border-right: solid 1px aliceblue;
 }
 
 .tbl_consulta_registros{
@@ -300,12 +313,48 @@ width: 98%;
   float: left;
 }
 
+.Titulo_faleconosco{
+  width: 690px;
+  height: 30px;
+  /* background-color: red; */
+/*  margin: auto;*/
+    margin-left: auto;
+    margin-right: auto;
+
+  padding-bottom: 10px;
+   background-color: black;
+    color: aliceblue;
+/*    border-right: solid 1px aliceblue;*/
+      border-top-left-radius: 50%;
+      border-top-right-radius: 50%;
+}
+
+Titulo_faleconosco ul{
+
+  padding: 0px;
+  margin: 0px;
+
+
+}
+.Titulo_faleconosco ul li{
+  width: 150px;
+  height: 30px;
+  margin-left: 10px;
+  float: left;
+  /* background-color: #fcfc00; */
+  text-align: center;
+  font-size: 30px;
+    list-style: none;
+}
 .Titulo{
   width: 800px;
   height: 30px;
   /* background-color: red; */
   margin: auto;
   padding-bottom: 10px;
+   background-color: black;
+    color: aliceblue;
+    border-right: solid 1px aliceblue;
 }
 
 .Titulo ul{
@@ -313,7 +362,9 @@ width: 98%;
   padding: 0px;
   margin: 0px;
 
+
 }
+
 
 
 .Titulo ul li{
@@ -327,15 +378,17 @@ width: 98%;
 }
 
 
+
 .conteudo{
-  width: 800px;
+  width: 99.5%;
   /*background-color:red;*/
   height: auto;
   min-height: 30px;
   overflow: hidden;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 10px;
+  margin-bottom: 0.5%;
+    background-color: aliceblue;
 }
 
 .conteudo ul{
@@ -347,7 +400,7 @@ width: 98%;
 
 
 .conteudo ul li{
-  width: 150px;
+  width: 175px;
   height: auto;
   min-height: 30px;
   overflow: hidden;
@@ -361,7 +414,7 @@ width: 98%;
 .segura_modo{
   width: 100px;
   height: 30px;
-  margin: auto;
+/*  margin: auto;*/
 }
 
 .modo{
@@ -400,6 +453,11 @@ width: 98%;
   padding-left: 5%;
 }
 
+.ativarDesativar{
+  margin-top: -53px;
+  margin-left:850px;
+}
+
 .conteudos_servico{
   min-height: 90%;
   width: 100%;
@@ -425,10 +483,14 @@ width: 98%;
 
 .listaServicos{
   height: 450px;
-  width: 100%;
+  width: 90%;
   background-color: #fff;
   margin: auto;
   overflow-y: scroll;
+  border-bottom: 1px #000 solid;
+
+
+
 }
 
 
@@ -448,13 +510,14 @@ width: 98%;
 
 
 .titulo_tbl_servico{
- width: 828px;
+ width: 100%;
   height: 50px;
-  background-color: #bd5a20a6;
-  color: aliceblue;
-
-    margin-top: 10px;
-    margin-left: 30px;
+  background-color: #000;
+  color: orange;
+  margin: auto;
+    margin-top: 2px;
+    /* margin-left: auto;
+    margin-right: auto; */
 
   /*margin-top: -175px;*/
     /*
@@ -489,6 +552,8 @@ width: 98%;
   height: 30%;
   /* background-color: green; */
   margin: auto;
+  border-bottom: 1px #000 solid;
+
 }
 
 .item_tblServico{
@@ -567,7 +632,9 @@ width: 98%;
   .abrir_modal{
     width: 50px;
     height: 50px;
-    background-color: red;
+    /* background-color: red; */
+    background-size: cover;
+    background-image: url("../../imagemServico/salvar.jpg");
   }
 
 
@@ -587,10 +654,11 @@ width: 98%;
   	width:100%;
   	height:100vh;
   	background: rgba(0, 0, 0, 0.7);
-  	position:fixed;
     /* margin: auto; */
   	display:none;
     z-index: 999;
+    float: left;
+    position: absolute;
 
 
   }
@@ -673,7 +741,7 @@ width: 98%;
 
 
 
-/* MENu */
+/* MENU */
 
 
 nav{
@@ -1075,16 +1143,16 @@ nav ul li a{
 .tbl_consulta_pretadora{
   width: 1000px;
   height: 450px;
-  background: green;
+  /*background: green;*/
   border-radius: 20px;
 }
 
 .titulo_prestadora{
-  width: 700px;
+  width: 100%;
   height: 50px;
   margin: auto;
   /* padding-bottom: 10px; */
-  background-color: pink;
+  /*background-color: pink;*/
 }
 
 
@@ -1105,7 +1173,7 @@ nav ul li a{
   float: left;
   text-align: center;
   font-size: 25px;
-  /* background-color: green; */
+  /*background-color: green;*/
 
 }
 
@@ -1140,6 +1208,8 @@ nav ul li a{
   /* background-color: #000; */
   margin-left: 20px;
   padding-top: 10px;
+  margin-top: 50px;
+
 }
 
 .status_prest_modo img{
@@ -1195,8 +1265,9 @@ nav ul li a{
    width: 100%;
   height: 70px;
   background-color: black;
-  color: aliceblue;
-  border-top:solid 2px #eca023;
+  color: #fff;
+  /*border-top:solid 2px #eca023;*/
+
 }
 
 .cadastro_carbook{
@@ -1206,7 +1277,7 @@ nav ul li a{
   margin-left: 30px;
   margin: 0px;
   padding: 0px;
-  background-color: blue;
+  /*background-color: blue;*/
 }
 
 .control_small{
@@ -1277,53 +1348,53 @@ nav ul li a{
 }
 
 /*lista de cadastros*/
-.listarCadastros{
-  width:85%;
-  height: 400px;
-  background-color: yellow;
-  margin: auto;
-  overflow-y: scroll;
-}
+
 
 .titulo_carbook{
   max-width: 100%;
-  height: 10%;
-  /* border: 1px solid #000; */
-  /* background-color: #fff; */
-  margin: auto;
+    height:80%;
+    /* border: 1px solid #000; */
+    background-color: #000;
+    margin: auto;
+    display: flex;
 
 }
 
 .conteudo_tbl_carbook{
-  width:30%;
-  height: 40px;
-  background-color: white;
-  float: left;
-  margin: auto;
-  margin-left: 15px;
+    min-width: 10%;
+    height: 100%;
+    background-color: red;
+    /*float: left;*/
+    margin: auto;
+    /*margin-left: 15px;*/
+    color: #fff;
 }
 
 .conteudo_tbl_carbook p{
   text-align: center;
   margin: 0px;
   padding: 0px;
-  font-size: 200%;
+  font-size: 100%;
 }
 
 .conteudoCarbook{
   width: 100%;
-  height: 90px;
-  background-color: green;
+  height: 100px;
+  /*background-color: black;*/
   padding: 0px;
   margin: 0px;
+  margin-top: 2px;
+    /*border: solid 1px black*/
+    border-bottom: solid 1px #000;
 }
 
 .item_carbook{
-  width: 30%;
-  height: 75%;
-  float: left;
-  /*background-color: orange;*/
-  margin-left: 15px;
+      width: 32.9%;
+    height: 100%;
+    float: left;
+    /*background-color: orange;*/
+    /* margin-left: 15px; */
+    /*border: solid black 1px;*/
 }
 
 .item_carbook p{
@@ -1336,17 +1407,30 @@ nav ul li a{
 
 .imgCarbook{
   width: 65%;
-  height: 85%;
+  /*height: 85%;*/
   margin-top: 2%;
   margin-left: auto;
   margin-right: auto;
-  background-color: red;
+  /*background-color: red;*/
 }
 
 .imgCarbook img{
   width: 100%;
   height: 100%;
 
+}
+
+.listarCadastros{
+    width: 90%;
+    max-height: 400px;
+    /* background-color: yellow; */
+    /*background-color: #eca023;*/
+    margin: auto;
+    margin-top: 100px;
+/*    border: solid 1px black;*/
+    overflow-y: scroll;
+    overflow-x: hidden;
+    border-bottom: 1px solid #000;
 }
 
 .descCarbook{
@@ -1356,7 +1440,7 @@ nav ul li a{
   margin-left: auto;
   margin-right: auto;
   overflow: hidden;
-  background-color: red;
+  /*background-color: red;*/
   text-align: center;
   font-style: bold;
   font-size: 20px;
@@ -1477,6 +1561,7 @@ nav ul li a{
   color: #e2e2e2;
 }
 
+/*  Cabeçalho Forum*/
 .tbl_temas{
   width: 100%;
   height: auto;
@@ -1488,9 +1573,12 @@ nav ul li a{
 
 
 .titulo_temas_principal{
-  width: 100%;
+  width: 900px;
   height: 50px;
-  /*background-color: pink;*/
+  background-color: #000;
+  /*margin-top: 15px;*/
+  margin: auto;
+  color: orange;
 }
 
 .titulo_temas_principal h1{
@@ -1500,13 +1588,43 @@ nav ul li a{
   text-align: center;
 }
 
+.segura{
+  width: 600px;
+  height: 200px;
+  /*background-color: red;*/
+  margin: auto;
+
+
+}
+#botao{
+  margin-left: 500px;
+}
+
+#desc{
+  margin-top: 5px;
+  margin-left: 16px;
+}
+.palavra{
+  margin-left: 20px;
+}
 .categoria_cadastrada{
   width: 100%;
   height: auto;
   min-height: 50px;
   overflow: hidden;
-  /*background-color: red;*/
+  /*background-color: magenta;*/
   margin-top: 10px;
+}
+
+.botoes{
+  margin-left: 760px;
+  margin-top: -98px;
+}
+.botoes img{
+  background-size: cover;
+  width: 35px;
+  height: 35px;
+  margin-top: 35px;
 }
 
 .nome_cat{
@@ -1530,19 +1648,20 @@ nav ul li a{
   /*background-color: brown;*/
 }
 
-.conteudo_cabecalho{
+.conteudo_{
   width: 100%;
   height: auto;
   overflow: hidden;
   min-height: 100vw;
+  margin-top: 20px;
   /*background-color: green;*/
 
 }
 
 .mostrar_dados{
-  background-color: #fff;
+  /*background-color: green;*/
   margin: auto;
-  width: 500px;
+  width: 900px;
   height: auto;
   min-height: 500px;
   overflow: hidden;
@@ -1555,6 +1674,8 @@ nav ul li a{
     overflow: hidden;
     /*background-color: blue;*/
     margin-top: 10px;
+    border-bottom: 1px #000 solid;
+
 }
 
 .titulo_cabecalho_forum{
@@ -1562,6 +1683,7 @@ nav ul li a{
   height: auto;
   min-height: 50px;
   overflow: hidden;
+  /*background-color: #fffc33;*/
 }
 
 .temas_cadastrados{
@@ -1652,3 +1774,263 @@ nav ul li a{
   height: 700px;
   margin: auto;
 }
+
+/* Menus Home */
+/*Menus*/
+
+/* .conteudo_padrao{
+  background-color: magenta;
+} */
+.cabecalho_menus{
+  width: 100%;
+  height: 70px;
+  background-color: #000;
+  color: orange;
+  border-top:solid 2px #eca023;
+}
+
+.cadastros_menus{
+  width: 30%;
+  height: 200px;
+  float: left;
+  margin-left: 30px;
+   margin-top: 100px;
+  padding: 0px;
+
+/*  background-color: blue;*/
+  background-color:rgba(0,0,0,0.5);
+}
+.input textarea{
+    box-shadow: 2px 2px 2px 2px #ccc;
+}
+.input{
+    margin-top: 3px;
+    box-shadow: 2px 2px 2px 2px #ccc;
+    content: none;
+
+
+}
+.cad_titulo{
+  width: 100%;
+  height: 90px;
+
+  font-style: bold;
+  font-size: 20px;
+  color: orange;
+  /* background-color: #0fc; */
+  /* padding-bottom: 10px; */
+}
+
+
+.cad_descricao{
+  width:100%;
+  height: 70%;
+  background-color: yellow;
+  margin: auto;
+
+
+}
+
+.cad_link{
+  width: 100%;
+  height: 70%;
+  font-size: 20px;
+  color: orange;
+
+/*  margin-top: 80px;*/
+/*  background-color: pink;*/
+}
+.principal{
+/*    background-color: aqua;*/
+    height: 200px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #000;
+/*    margin-left: 50px;*/
+/*    margin-top: 100px;*/
+/*    background-color: black;*/
+
+
+
+
+
+}
+.pricipalfilha{
+     height: 32%;
+    width: 32%;
+/*    background-color: aliceblue;*/
+    margin-left: 10px;
+    margin-top: 10px;
+    color: aliceblue;
+
+
+}
+.principal .pricipalfilha:nth-child(1) input{
+width: 100%;
+
+}
+.principal .pricipalfilha:nth-child(1){
+    width: 150px;
+
+
+}
+.principal .pricipalfilha:nth-child(3) textarea{
+    height: 100%;
+    width: 100%;
+
+
+}
+.principal .pricipalfilha:nth-child(3){
+/*    margin-left: 80px;*/
+/*    background-color: antiquewhite;*/
+    width: 300px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+}
+.principal .pricipalfilha:nth-child(2) input{
+    width: 100%;
+}
+.principal .pricipalfilha:nth-child(2){
+/*    height: 100px;*/
+    width: 100px;
+
+
+}
+.principal .pricipalfilha:nth-child(4){
+    margin-left: 100px;
+    height: 100px;
+
+}
+
+.buttom_enviar{
+  width: 100px;
+  height: 50px;
+  /* background-color: orange; */
+/*  margin-top: 70px;*/
+
+}
+
+#btnEnviar{
+  width: 80px;
+  height: 30px;
+  background:orange;
+  color:#fff;
+  box-shadow:0 5px 0 #00d103;
+  border:none;
+  cursor: pointer;
+  display:inline-block;
+  text-decoration: none;
+  border-radius: 10px;
+}
+
+
+.listar_cadastros{
+  width:50%;
+  height: 400px;
+  /*background-color: yellow;*/
+  /* background-color: rgba(0,0,0,0.5); */
+  margin: auto;
+  margin-top: 100px;
+  overflow-y: scroll;
+  border-bottom: solid 1px #000;
+}
+
+.tito_menu{
+  max-width: 100%;
+  height: 50px;
+  /* border: 1px solid #000; */
+  background-color: #000;
+  color: #fff;
+  margin: auto;
+  text-align: justify;
+
+}
+
+
+
+.conteudo_tbl_menu{
+  width:20%;
+  height: 100%;
+  background-color: #000;
+  /* border-right:#eca023 solid 1px; */
+  float: left;
+  margin: auto;
+  margin-left: 15px;
+  color: orange;
+  font-size: 20px;
+}
+
+.conteudo_tbl_menu p{
+  text-align: center;
+  margin: 0px;
+  padding: 0px;
+  font-size: 20px;
+}
+
+.conteudoMenu{
+  width: 100%;
+  height: 140px;
+  /* background-color: green; */
+  padding: 0px;
+  margin: 0px;
+  border-bottom: solid 1px #000;
+  overflow:hidden;
+  float: left;
+}
+
+
+.item_menus{
+  width: 20%;
+  height: 30%;
+  float: left;
+  /* background-color: red; */
+  /* background-color: rgba(236,160,35, 0.9); */
+  color: #000000;
+  margin-left: 15px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  margin-top: 10px;
+  font-size: 20px;
+  font-style: bold;
+  text-align: center;
+}
+.descMenu{
+  width: 75%;
+  height: 85%;
+  margin-top: 2%;
+  margin-left: auto;
+  margin-right: auto;
+  /* overflow: hidden; */
+/*  background-color: red;*/
+  font-style: bold;
+  font-size: 20px;
+  text-align:justify;
+  /* float:left; */
+}
+
+.segura_modo{
+  width: 50%;
+  height: 30px;
+  margin: auto;
+  padding-top: 10%;
+}
+
+.modo{
+  width: 30px;
+  height: 30px;
+  float: left;
+  margin-left: 10px;
+  text-align: center;
+  display: flex;
+}
+
+.modo img {
+  width: 30px;
+  height: 30px;
+
+}
+/**/

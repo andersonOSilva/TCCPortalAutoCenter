@@ -12,7 +12,7 @@
       </div>
 
       <div class="item_info">
-          <a href="#">Minha conta</a>
+          <a href="perfilUsuario.php">Minha conta</a>
       </div>
 
       <div class="item_info">
@@ -20,7 +20,7 @@
       </div>
 
       <div class="item_info">
-          <a href="#">Agenda</a>
+          <a href="agenda.php">Agenda</a>
       </div>
 
       <div class="item_info">

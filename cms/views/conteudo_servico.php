@@ -1,3 +1,21 @@
+<script>
+function Editar(idItem){
+            alert(idItem);
+            $.ajax({
+              type: "GET",
+              url: "views/servico_modal.php",
+              data: {modo:'buscar',id:idItem},
+              success: function(dados){
+                $('.modal_servico').html(dados);
+
+               alert(dados);
+              }
+
+            });
+          }
+ </script>
+
+
 <div class="listaServicos">
   <div class="titulo_tbl_servico">
     <div class="conteudo_tbl_servico">
@@ -14,21 +32,18 @@
 
   <?php
     //Inclui as classes
-    require_once 'controllers/servico_controller.php';
-    require_once 'models/servicos_class.php';
-
-    $controller_servico = new controllerServico;
-
+    require_once("controllers/servico_controller.php");
+    require_once("models/servicos_class.php");
+    $controller_servico = new controllerServico();
     $list=$controller_servico::Listar();
     $cont = 0;
-
     while ($cont <count($list)) {
 
-      if ($cont%2==0) {
-         $cor='cor1';
-       }else {
-         $cor='cor2';
-       }
+      // if ($cont%2==0) {
+      //    $cor='cor1';
+      //  }else {
+      //    $cor='cor2';
+      //  }
 
    ?>
 
@@ -55,7 +70,7 @@
 
           <div class="modo">
             <!-- <a href="router.php?controller=servicos&modo=excluir&id=<?php echo $list[$cont]->idServico ?>" onclick="return confirm('deseja realmente excluir');"> -->
-            <a href="#" class="excluir_servico" onclick="Excluir(<?php echo $list[$cont]->idServico?>)">
+            <a href="#" class="excluir_servico" onclick="Excluir(<?php echo $list[$cont]->idServico?>,'servicos','excluir','.conteudos_servico','views/conteudo_servico.php')">
                <img src="imagens/delet.png" alt="edit">
             </a>
           </div>

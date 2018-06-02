@@ -1,12 +1,14 @@
 <?php
 
   class controllerPerfilUser{
-    public function Buscar(){
-      $idUsuario=$_SESSION['idUsuario'];
-
+    public function buscarPerfilPorId(){
+      // require_once("models/perfilUser_class.php");
+      $usuario = null;
+      $idUsuario= $idUsuario;
       $usuario = new perfilUser();
       $usuario->idUsuario=$idUsuario;
-      return $usuario::ListarperfilUsuario($uuario);
+      $usuario->nome=$nome;
+      return $usuario::selectPerfilUser($usuario);
     }
   }
 

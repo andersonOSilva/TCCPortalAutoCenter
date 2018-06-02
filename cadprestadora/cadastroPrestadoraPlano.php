@@ -1,4 +1,33 @@
 
+    <style>
+        .seguraPlanos{
+            height: 200px;
+            width: 100%;
+            background-color: aqua;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .plano{
+            background-color: brown;
+            margin-top: auto;
+            
+            
+        }
+        .plano:nth-child(1){
+            background-color: aliceblue;
+        }
+/*
+        .seguraPlanos:nth-child(1) .plano{
+            background-color: black;
+            
+            
+        }
+*/
+        
+    </style>
+
+
+
     <div class="principal">
 
       <?php
@@ -139,6 +168,10 @@
                     </td>
                 </tr>
             </table>
--->
-      <?php   require_once 'rodape.php'; ?>
+
+-->       <footer>
+            <?php   require_once 'rodape.php'; ?>
+          
+          </footer>
+      
   </div>

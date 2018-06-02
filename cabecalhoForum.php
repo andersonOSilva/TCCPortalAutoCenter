@@ -16,7 +16,7 @@
          </div>
 
          <div class="regras_forum">
-             <p><?php echo $List_returnForum->descricao ?></p>
+             <p><?php echo (utf8_decode($List_returnForum->descricao)) ?></p>
          </div>
 
        <?php } ?>

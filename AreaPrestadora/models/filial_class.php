@@ -104,6 +104,44 @@
 
       }
 
+      public function InsertFilial($dados){
+        $sql = "insert into tbl_filial (nome,telefone) values
+        ('".$dados->nomeFilial."',
+        ('".$dados->telefone."');";
+
+        $conex = new Mysql_db();
+        $PDO_conex = $conex->Conectar();
+
+        if ($PDO_conex->query($sql)) {
+          // echo $sql;
+        }else{
+          echo "erro";
+        }
+
+        $conex->Desconectar();
+      }
+
+      // public function selectFilial(){
+      //   $sql="select * from tbl_filial order by idFilial desc;";
+      //   $conex = new Mysql_db();
+      //   $PDO_conex = $conex->Conectar();
+      //   $select = $PDO_conex->query($sql);
+      //   $cont =0;
+      //
+      //   while ($rs=$select->fetch(PDO::FETCH_ASSOC)) {
+      //     $list_Palavra[] = new filial;
+      //
+      //     $list_filial[$cont]->idFilial=$rs['idFilial'];
+      //     $list_filial[$cont]->palavrao=$rs['nome'];
+      //     $list_filial[$cont]->palavrao=$rs['telefone'];
+      //
+      //     $cont+=1;
+      //
+      // }
+      // if (isset ($list_filial)) {
+      //   return $list_filial;
+      // }
+      // }
 
     }
 

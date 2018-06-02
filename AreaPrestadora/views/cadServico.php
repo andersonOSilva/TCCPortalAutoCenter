@@ -51,7 +51,7 @@ $listFilial = $controller_filial ::SelecionarFilialPorID($idFilial);
 
         $controller_servico = new controllerServico;
 
-        $list=$controller_servico::ListarServicoFilial();
+        $list=$controller_servico::ListarServicoFilial($idFilial);
         $cont = 0;
         while ($cont<count($list)) {
        ?>

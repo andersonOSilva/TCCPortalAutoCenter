@@ -25,6 +25,8 @@
         public $Plano;
         public $preco;
         public $descricao;
+        public $nomeFantasia;
+        public $fotoPrestadora;
 
         public function __construct(){
           require_once('../models/bd_class.php');
@@ -33,7 +35,7 @@
         public function selecionarTudo($dados){
           $sql="select * from view_Prestadora_Filial where idPrestadora=".$dados->idPrestadora;
 
-          echo $sql;
+        //  echo $sql;
 
           $conex = new Mysql_db();
 
@@ -71,6 +73,8 @@
             $listFiliais[$cont]->Plano= $rs['Plano'];
             $listFiliais[$cont]->preco= $rs['preco'];
             $listFiliais[$cont]->descricao= $rs['descricao'];
+            $listFiliais[$cont]->nomeFantasia= $rs['nomeFantasia'];
+            $listFiliais[$cont]->fotoPrestadora= $rs['fotoPrestadora'];
 
 
 

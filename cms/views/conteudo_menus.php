@@ -8,7 +8,7 @@
   if(isset($_GET['modo'])){
     $modo = $_GET['modo'];
 
-    if($modo == "buscar"){
+    if($modo == "buscarid"){
 
       $id=$_GET['id'];
 
@@ -31,7 +31,7 @@
 
  ?>
 
- <script>
+ <!-- <script>
 
      $("#formBody").submit(function(event){
           //Recupera o id gravado no Form pelo atribute-id
@@ -63,7 +63,7 @@
 
      });
 
-</script>
+</script> -->
 
 <form id="formBody" action="" method="post" data-id="<?php echo($idMenu) ?>">
   <div class="principal">
@@ -72,9 +72,9 @@
 
         $modo=$_GET['modo'];
 
-          echo "Editar";
+          echo "Editar";echo $idMenu;
         }else{
-          echo "Novo";
+//          echo "Novo";
         }
      ?>
 
@@ -98,7 +98,7 @@
         <div class="cad_descricao">
 
           <textarea name="txt_descricao" id="DescricaoCarbook" maxlength="100"
-          rows="8" cols="70" placeholder="Descricao do Carbook" value="<?php echo $descricao?>" required class="input"></textarea>
+          rows="8" cols="70" placeholder="Descricao do Carbook" value="" required class="input"><?php echo $descricao?></textarea>
 
         </div>
       </div>
@@ -108,7 +108,22 @@
     <div class="pricipalfilha">
         <div class="buttom_enviar">
 
-          <input id="btnEnviar" type="submit" class="input" name="btnEnviar" value="Salvar" onclick="CadastroeEdicao('#formBody','menus','novo','.listar_cadastros','.cadastros_menus','views/listarMenus.php','views/conteudo_menus.php','0');">
+          <input id="btnEnviar" type="submit" class="input" name="btnEnviar"
+
+          <?php
+           if(isset($_GET['modo'])){
+           ?>
+           
+           value="Salvar Edicao" onclick="CadastroeEdicao('#formBody','menus','editar','.listar_cadastros','.cadastros_menus','views/listaMenuRecarregada.php','views/conteudo_menus.php',<?php echo $idMenu ?>);"
+           <?php
+           }else{
+            ?>
+            value="Salvar" onclick="CadastroeEdicao('#formBody','menus','novo','.listar_cadastros','.cadastros_menus','views/listaMenuRecarregada.php','views/conteudo_menus.php', '0');">
+
+            <?php
+           }
+             ?>
+
 
         </div>
     </div>

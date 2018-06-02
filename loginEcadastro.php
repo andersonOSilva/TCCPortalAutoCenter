@@ -47,7 +47,7 @@
 </script>
 
 <?php
-session_start();
+@session_start();
 if (isset($_GET['out'])) {
   session_destroy();
   $url = $_SERVER['HTTP_REFERER'];

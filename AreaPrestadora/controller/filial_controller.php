@@ -27,6 +27,16 @@
       return $filial::SelecionarServicosPorFilial($filial);
     }
 
+    public function NovaFilial(){
+      $filial = new filial();
+      $filial->nome=$_POST['txt_nome'];
+      $filial->telefone=$_POST['txt_telefone'];
+      $filial::InsertFilial($filial);
+    }
 
+    public function ListarFilial(){
+      $select_filial = new filial();
+      return $select_filial::selectFilial();
+    }
   }
  ?>

@@ -25,7 +25,7 @@ class controllerMenus
     }
 
     public function Buscar(){
-      $idMenu = $_GET['idMenu'];
+      $idMenu = $_GET['id'];
 
       $menus= new Menus();
       $menus->idMenu = $idMenu;
@@ -37,17 +37,28 @@ class controllerMenus
 
       $menus = new Menus();
 
+      $idMenu = $_GET['id'];
+
+      echo $idMenu;
+
+
       $menus->titulo=$_POST['txt_titulo'];
       $menus->descricao=$_POST['txt_descricao'];
       $menus->link=$_POST['txt_link'];
-      $menus->idMenu=$_GET['idMenu'];
+      $menus->idMenu=$idMenu;
 
       $menus::Update($menus);
 
     }
 
     public function Excluir(){
+      $idMenu=$_GET['id'];
 
+      $menus= new Menus();
+
+      $menus->idMenu = $idMenu;
+
+      $menus::Delete($menus);
     }
 
 }

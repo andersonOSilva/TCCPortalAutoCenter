@@ -18,14 +18,34 @@
       public $comentario;
       public $idComentarioTopico;
 
+
+
       // construtor da class de conexao
       public  function __construct(){
         require_once('bd_class.php');
       }
 
+      public function InsertCategoria($categoria){
+        $sql="insert into tbl_categoria_forum(descricao)
+        values('".$categoria->descricao."')";
+
+        // echo $sql;
+
+        $conex = new Mysql_db();
+
+        $PDO_conex = $conex->Conectar();
+
+        if ($PDO_conex->query($sql)) {
+          header("location:index.php?pag=forum");
+        }else{
+          echo "erro";
+        }
+
+        $conex->Desconectar();
+      }
 
       public function selectCat(){
-        addslashes($sql="select * from tbl_categoria_forum where statusCat=1");
+        addslashes($sql="select * from tbl_categoria_forum where status=1");
 
         ///echo $sql;
         $conex = new Mysql_db();
@@ -46,7 +66,7 @@
         $conex->Desconectar();
         if (isset ($list_Categoria)) {
           return $list_Categoria;
-            var_dump($list_Categoria);
+          //  var_dump($list_Categoria);
         }
 
       }

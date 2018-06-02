@@ -4,7 +4,9 @@
         <!-- <div class="enfeite">
             <img src="imagens/natal.png" alt="">
         </div> -->
-        <a href="#slide"><img src="imagens/logos/possivellogo2.png" alt="teste de logo" id="imgLogo"></a>
+        <a href="#slide">
+            <img src="imagens/logos/logo3.png" alt="teste de logo" id="imgLogo">
+          </a>
       </div>
 
       <div class="menu_ancora">
@@ -22,7 +24,7 @@
 
             <!-- Login -->
             <?php
-                require_once 'loginEcadastro.php';
+               require_once 'loginEcadastro.php';
 
               ?>
               <!-- <div class="mais">

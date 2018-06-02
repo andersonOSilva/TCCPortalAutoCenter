@@ -11,7 +11,7 @@ if (isset($_SESSION['idUsuario'])) {
 
 <div class="segura_perguntas">
     <div class="nova_pergunta">
-      <form id='formBody11'  method="post" action="router.php?controller=forum&modo=novaPergunta&idUsuario= <?php echo $idUsuario?>"  class="FrmPergunta" >
+      <form id='formBody11'  method="post" action="router.php?controller=forum&modo=novaPergunta&idUsuario=<?php echo $idUsuario?>"  class="FrmPergunta" >
 
           <select id="temas" class="dados_combo" name="slccategoria" onchange="optionCheck()">
 

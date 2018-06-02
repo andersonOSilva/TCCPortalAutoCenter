@@ -62,8 +62,8 @@ public function Delete($dados_controller){
 }
 
 public function EditarP($dados){
-  $sql="update tbl_palavra_proibida_forum set
-        palavra='".$dados->palavra."',
+  $sql="update tbl_palavra_proibida set
+        palavra='".$dados->palavra."'
         where idPalavra=".$dados->idPalavra;
         echo $sql;
         $conex = new Mysql_db();
@@ -108,65 +108,6 @@ $conex->Desconectar();
 
 }
 
-// public function BuscarPalavraId(){
-//   $sql= "tbl_palavra_proibida where idPalavra=".$dados_controller->idPalavra;
-//
-//   //echo $sql;
-//
-//   $conex = new Mysql_db();
-//   $PDO_conex = $conex->Conectar();
-//   $select = $PDO_conex->query($sql);
-//
-//
-//   if($rs=$select->fetch(PDO::FETCH_ASSOC)){
-//     $listBus = new Prestadora();
-//
-//     $listPrestadora->idPrestadora=$rs['idPrestadora'];
-//     $listPrestadora->razaoSocial=$rs['razaoSocial'];
-//     $listPrestadora->nomeFantasia=$rs['nomeFantasia'];
-//     $listPrestadora->fotoPrestadora=$rs['fotoPrestadora'];
-//     $listPrestadora->descricao=$rs['descricao'];
-//     $listPrestadora->telefone=$rs['telefone'];
-//     $listPrestadora->cnpj=$rs['cnpj'];
-//     $listPrestadora->idEnderecoPrestadora=$rs['idEndereco'];
-//     $listPrestadora->login=$rs['login'];
-//     $listPrestadora->senha=$rs['senha'];
-//     $listPrestadora->status=$rs['status'];
-//
-// }
 
-// public function DesativarPalavra($dadosPalavra){
-//   $sql="update  tbl_palavra_proibida SET status='0' where idPalavra=".$dadosPalavra->idPalavra;
-//
-//   echo $sql;
-//   $conex = new Mysql_db();
-//
-//   $PDO_conex = $conex->Conectar();
-//   if ($PDO_conex->query($sql)) {
-//       echo "sucesso";
-//   }else{
-//     echo "erro ao desativar";
-//   }
-//   $conex->Desconectar();
-// }
-//
-// public function AtivarPalavra($dadosPalavra){
-//   $sql="update  tbl_palavra_proibida_forum set status = 0;";
-//   echo $sql;
-//   $conex = new Mysql_db();
-//   $PDO_conex = $conex->Conectar();
-//   if ($PDO_conex->query($sql)) {
-//     $sql2="update  tbl_palavra_proibida SET status='1' where idPalavra=".$dadosPalavra->idPalavra;
-//     echo $sql2;
-//     $conex = new Mysql_db();
-//     $PDO_conex2 = $conex->Conectar();
-//     if ($PDO_conex2->query($sql2)) {
-//       echo "sucesso";
-//     }
-//   }else{
-//     echo "erro ao ativar";
-//   }
-//   $conex->Desconectar();
-// }
 }
 ?>

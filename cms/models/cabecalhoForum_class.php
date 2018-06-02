@@ -104,7 +104,7 @@
 
           $select="select * from tbl_cabecalho_forum where status=1";
 
-          echo $select;
+          //echo $select;
 
           $conex = new Mysql_db();
           $PDO_conex = $conex->Conectar();

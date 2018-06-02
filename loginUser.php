@@ -21,5 +21,6 @@
     </div>
 
     <div class="buttom_enviar_login">
-      <input id="btnLogarUser" type="button" name="btnEnviar" value="Logar" onclick="teste();">
+      <!-- colocar depois onclick="teste();" -->
+      <input id="btnLogarUser" type="submit" name="btnEnviar" value="Logar" >
     </div>

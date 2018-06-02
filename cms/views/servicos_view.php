@@ -30,18 +30,20 @@
                });
            }
 
-           function Editar(idItem){
-
-             $.ajax({
-               type: "GET",
-               url: "views/servico_modal.php",
-               data: {modo:'buscar',id:idItem},
-               success: function(dados){
-                 $('.modal_servico').html(dados);
-               }
-
-             });
-           }
+           // function Editar(idItem){
+           //   alert(idItem);
+           //   $.ajax({
+           //     type: "GET",
+           //     url: "views/servico_modal.php",
+           //     data: {modo:'buscar',id:idItem},
+           //     success: function(dados){
+           //       $('.modal_servico').html(dados);
+           //
+           //      alert(dados);
+           //     }
+           //
+           //   });
+           // }
 
            function Excluir(idIten){
 
@@ -84,6 +86,6 @@
     </div>
 
     <div class="abrir_modal" onclick="NovoServico();">
-
+      <!-- <img src="imagemServico/salvar.jpg" alt=""> -->
     </div>
 </div>
