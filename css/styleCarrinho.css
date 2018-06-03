@@ -1,0 +1,271 @@
+.principalCarrinho{
+  width: 100%;
+  height: auto;
+  min-height: 500px;
+  overflow: hidden;
+  /* background-color: blue; */
+}
+
+.produtosContainer{
+  max-width:1200px;
+  height: auto;
+  min-height: 500px;
+  overflow: hidden;
+  /* background-color: red; */
+  margin: auto;
+  margin-top: 100px;
+}
+
+.tituloProdutos{
+  width: 100%;
+  height: 50px;
+  /* background-color: green; */
+}
+
+.tituloProdutos h1{
+  color: #666;
+  font-size: 27px;
+  font-weight: 500;
+  margin: 0 0 40px;
+  line-height: 1.7em;
+}
+
+.itensTitulo{
+  width: 100%;
+  height: 30px;
+  background-color: #fff;
+  border-bottom: 2px solid #ccc;
+}
+
+.tituloItemProdutos{
+  width: 20%;
+  height: 20px;
+}
+
+.tituloItemProdutos{
+  width: 50%;
+  height: 20px;
+  line-height: 2.0em;
+  float: left;
+}
+
+.tituloItemProdutosPreco{
+  width: 15%;
+  height: 20px;
+  line-height: 2.0em;
+  float: left;
+  text-align: center;
+}
+
+.tituloItemProdutosQuantidade{
+  width: 20%;
+  height: 20px;
+  line-height: 2.0em;
+  float: left;
+  text-align: center;
+
+}
+
+.tituloItemProdutosSubTotal{
+  width: 15%;
+  height: 20px;
+  line-height: 2.0em;
+  float: left;
+  text-align: center;
+
+}
+
+.itemProdutos{
+  width: 100%;
+  height: auto;
+  min-height: 500px;
+  /* background-color: purple; */
+}
+
+.produtoItemDescricao{
+  width: 100%;
+  height: auto;
+  min-height: 100px;
+  /* background-color: #50a865; */
+  border-bottom: 2px solid #ccc;
+
+  float: left;
+}
+
+.descricaoProdutoPedido{
+  width: 50%;
+  height: auto;
+  min-height: 100px;
+  /* background-color: #5090a8; */
+  float: left;
+}
+
+.descricaoProdutoPedidoPreco{
+  width: 15%;
+  height: auto;
+  min-height: 100px;
+  /* background-color: #7050a8; */
+  float: left;
+}
+
+.descricaoProdutoPedidoQuantidade{
+  width: 20%;
+  height: auto;
+  min-height: 100px;
+  /* background-color: #a8509a; */
+  float: left;
+}
+
+.descricaoProdutoPedidoSubTotal{
+  width: 15%;
+  height: auto;
+  min-height: 100px;
+  /* background-color: #a85060; */
+  float: left;
+  overflow: hidden;
+}
+
+.produtoDetalhes{
+  width: 100%;
+  height: auto;
+  min-height: 100px;
+  /* background-color: #d3902c; */
+  overflow: hidden;
+}
+
+.imgProdutodetalhe{
+  width: 10%;
+  height: 60px;
+  /* background-color: blue; */
+  padding-left: 2%;
+  padding-top: 2%;
+  /* border-radius: 100%; */
+  float: left;
+}
+
+.imgProdutodetalhe img{
+  width: 90%;
+  height: 90%;
+  border-radius: 100%;
+  margin: auto;
+}
+
+.descricaoProdutoItem{
+  padding-top: 2%;
+  padding-left: 2%;
+  width:86%;
+  height: auto;
+  min-height: 90px;
+  /* background-color: #37d22c; */
+  float: left;
+}
+
+.textoDescricaoProduto{
+  width: 100%;
+  height: auto;
+  min-height: 40px;
+  font-size:15px;
+  overflow:hidden;
+}
+
+.textoDescricaoProduto p{
+  padding: 0px;
+  margin: 0px;
+}
+
+.textoDescricaoDestribuidor{
+  width: 100%;
+  height: auto;
+  min-height: 40px;
+  font-size:15px;
+  overflow:hidden;
+  color: blue;
+}
+
+.textoDescricaoDestribuidor p{
+  padding: 0px;
+  margin: 0px;
+}
+
+.abrirModal{
+  color: red;
+}
+
+.textoDescricaoPreco {
+     width: 100%;
+     height: 20px;
+     /* background: #6C7A89; */
+     padding-top:50%;
+     font-size: 20px;
+     /* font-weight: 100; */
+ }
+
+.textoDescricaoPreco{
+  padding: 0px;
+  margin: 0px;
+  text-align: center;
+  color: #4CAF50;
+}
+
+.TotalProdutos{
+  width: 100%;
+  height: auto;
+  min-height: 100px;
+  overflow: hidden;
+  /* background-color: purple; */
+}
+
+.espaco{
+  width: 50%;
+  height: auto;
+  min-height: 100px;
+  overflow: hidden;
+  /* background-color: blue; */
+  float: left;
+  padding-top: 10px;
+}
+
+.Totalgeral{
+  width: 100%;
+  height: 40px;
+  /* background-color: green; */
+}
+
+.detalhesValores{
+  width: 50%;
+  height: 100%;
+  /* background-color: #2bd160; */
+  float: left;
+  line-height: 2.0em;
+}
+
+.detalhesValores p{
+  padding: 0px;
+  margin: 0px;
+}
+
+.detalhesValores .precoTotal{
+  padding: 0px;
+  margin: 0px;
+  text-align: right;
+}
+
+.calculofrete{
+  width: 50%;
+  height: 100%;
+  margin-left: auto;
+  /* background-color: blue; */
+}
+
+.botaoEnviar{
+  width: 100%;
+  height: 50px;
+  margin: auto;
+  /* background-color: red; */
+  border-radius: 50px;
+}
+
+.txttCep{
+  width: 90px;
+  height: 30px;
+}

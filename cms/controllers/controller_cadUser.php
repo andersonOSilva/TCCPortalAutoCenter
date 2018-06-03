@@ -5,7 +5,7 @@
     public function Novo(){
 
       require_once 'cms/modulo.php';
-  $url = $_GET['url'];
+      $url = $_GET['url'];
       $user = new cadUser();
 
       //$user ->url = $url;

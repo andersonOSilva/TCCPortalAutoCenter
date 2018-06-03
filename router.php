@@ -272,6 +272,22 @@
 
             break;
 
+            // Produtos
+
+            case 'produtos':
+            require_once ('cms/controllers/controller_carrinho.php');
+            require_once ('cms/models/produto_class.php');
+
+              switch ($modo) {
+                case 'addCarrinho':
+                      $controller_produto = new controllerCarrinho();
+                      //$controller_produto::AddCarrinho();
+                  break;
+
+              }
+
+            break;
+
 
                   /*
 

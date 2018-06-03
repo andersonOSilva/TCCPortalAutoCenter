@@ -364,8 +364,8 @@
                            <?php
 
 
-                           require_once 'cms/controllers/produtos_controller.php';
-                           require_once 'cms/models/produto_class.php';
+                           require_once ('cms/controllers/produtos_controller.php');
+                           require_once ('cms/models/produto_class.php');
 
                            $controller_produtos = new controllerProdutos();
 
@@ -397,7 +397,7 @@
                                </a>
                                <div class="comprar_produto">
                                  <!-- <img src="imagens/cart.svg" alt=""> -->
-                                 <a href="homeforum.php">Adicionar no Carrinho</a>
+                                 <a href="router.php?controller=produtos&modo=addCarrinho&idProduto=<?php echo($listProdutos[$cont]->idProduto) ?>">Adicionar no Carrinho</a>
 
                                </div>
 
