@@ -27,6 +27,10 @@
                require_once 'loginEcadastro.php';
 
               ?>
+
+              <!-- <div class="caixa_de_ferramenta">
+                <img src="imagens/caixadeFerramentas.png" alt="caixa de ferramentas">
+              </div> -->
               <!-- <div class="mais">
                   <img src="imagens/menuIcon.png" alt="menu mais">
               </div> -->
@@ -37,7 +41,13 @@
           </div>
       </div>
     </nav>
+
+  
+
+
 </div>
+
+
 
 <?php
 

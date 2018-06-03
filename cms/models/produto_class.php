@@ -21,6 +21,7 @@
     public $fabricante;
     public $obs;
     public $descricao;
+    public $quantidadeProduto;
 
     public $quantidade;
 
@@ -63,6 +64,7 @@
         $list_produto[$count]->fabricante=$rs['fabricante'];
         $list_produto[$count]->obs=$rs['obs'];
         $list_produto[$count]->descricao=$rs['descricao'];
+        $list_produto[$count]->quantidadeProduto=$rs['quantidadeProduto'];
 
         $count+=1;
 
@@ -111,6 +113,8 @@
         $list_produto[$count]->fabricante=$rs['fabricante'];
         $list_produto[$count]->obs=$rs['obs'];
         $list_produto[$count]->descricao=$rs['descricao'];
+        $list_produto[$count]->quantidadeProduto=$rs['quantidadeProduto'];
+
 
         $list_produto[$count]->quantidade=$quantidade;
         return $list_produto;
@@ -128,6 +132,8 @@
 
       $conex->Desconectar();
     }
+
+    
 
   }
 

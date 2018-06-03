@@ -49,11 +49,12 @@
 }
 
 #menu_navegacao{
-  max-width: 100%;
+  max-width: 1200px;
   background-color: rgba(0,0,0,0.5);
   height: 100px;
   /* background-color: pink; */
   margin: auto;
+  /* float:left; */
 
 }
 
@@ -61,7 +62,7 @@
   width: 200px;
   height: 100%;
    /* background-color: #BBA649; */
-    margin-left: 15%;
+    /* margin-left: 15%; */
   float: left;
 }
 
@@ -882,4 +883,14 @@ a{
 .item_info a:hover{
 
   color: #eca023;
+}
+
+.carrinhoCompras{
+  width: 10%;
+  height: 100px;
+  margin-left: auto;
+  background-color: red;
+  float: left;
+  position: absolute;
+  z-index: 999;
 }

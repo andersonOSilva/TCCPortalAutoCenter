@@ -195,16 +195,89 @@
      width: 100%;
      height: 20px;
      /* background: #6C7A89; */
-     padding-top:50%;
+     padding-top:20%;
      font-size: 20px;
      /* font-weight: 100; */
  }
 
-.textoDescricaoPreco{
+.textoDescricaoPreco p{
   padding: 0px;
   margin: 0px;
   text-align: center;
   color: #4CAF50;
+}
+
+.textoDescricaoQuantidade {
+     width: 100%;
+     height: 50px;
+     /* background: #6C7A89; */
+     padding-top:10%;
+     font-size: 20px;
+     /* font-weight: 100; */
+ }
+
+ .QuantidadeProdutos{
+   width: 120px;
+   height: 40px;
+   border-radius: 10px;
+   border: 1px solid gold;
+   margin: auto;
+   text-align: center;
+ }
+
+.textoDescricaoQuantidade p{
+  padding: 0px;
+  margin: 0px;
+  text-align: center;
+  color: #4CAF50;
+}
+
+.del{
+  width: 20%;
+  height: 100%;
+  border-right: 1px solid gold;
+  float: left;
+
+  /* background-color: blue; */
+}
+
+.del a{
+  font-size: 30px;
+  font-weight: 400;
+  text-decoration:none;
+  margin: auto;
+  /* padding: 0px; */
+  outline-offset:2px;
+  padding-top: -30px;
+  vertical-align: baseline;
+
+}
+
+.quantidadeTotal{
+  width: 58%;
+  height: 100%;
+  float: left;
+  padding-top: 8%;
+}
+
+.add{
+  width: 20%;
+  height: 100%;
+  border-left: 1px solid gold;
+  float: left;
+  /* background-color: red; */
+}
+
+.add a{
+  font-size: 33px;
+  font-weight: 300;
+  text-decoration:none;
+  margin: auto;
+  /* padding: 0px; */
+  outline-offset:2px;
+  padding-top: -30px;
+  vertical-align: baseline;
+
 }
 
 .TotalProdutos{
@@ -268,4 +341,13 @@
 .txttCep{
   width: 90px;
   height: 30px;
+}
+
+
+.cursor{
+  cursor: not-allowed;
+}
+
+.Novocursor{
+  cursor: pointer;
 }

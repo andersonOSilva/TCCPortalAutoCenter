@@ -33,7 +33,3 @@
 
 
 </div>
-
-<div class="caixa_de_ferramenta">
-  <img src="imagens/caixadeFerramentas.png" alt="caixa de ferramentas">
-</div>

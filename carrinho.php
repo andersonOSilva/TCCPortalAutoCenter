@@ -19,8 +19,23 @@
        <div class="principalCarrinho">
           <div class="produtosContainer">
 
+
             <div class="tituloProdutos">
-              <h1>Meu carrinho (0 item)</h1>
+              <h1>Meu carrinho ( <?php
+              //session_start();
+
+              if (isset($_SESSION['totalProdutos'] )) {
+                if ($_SESSION['totalProdutos'] <= 1) {
+                  echo ($_SESSION['totalProdutos'].' iten');
+                }else {
+                  echo ($_SESSION['totalProdutos'].' itens');
+                }
+
+              }else {
+                echo "0 item";
+              }
+
+               ?>)</h1>
             </div>
 
             <div class="itensTitulo">
@@ -43,8 +58,6 @@
 
             <div class="itemProdutos">
 
-              <!-- TODO cloocar select aqui php -->
-
               <?php
 
                 require_once ('cms/controllers/controller_carrinho.php');
@@ -52,6 +65,11 @@
 
 
                 $retorno = $controller_produto::carrinho();
+
+              //  $retorno2 = $controller_produto::retornar();
+
+            //    echo $retorno2;
+
 
                 //var_dump($retorno);
                 /*
@@ -73,7 +91,6 @@
 
 
 
-              
             </div>
 
           </div>
