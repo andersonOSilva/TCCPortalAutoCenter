@@ -14,7 +14,18 @@
       // VERIFICAR SE EXISTE UMA SESSION
 
       if ($_SESSION) {
+
+        if (isset($_SESSION['idUsuario'])) {
+          $totalDados = count($_SESSION);
+          $dadosTotais = $totalDados - 2;
+        }
+
+
+
+        //echo $dadosTotais;
         // SEPARA NOME DE QUANTIDADE OU VALORES
+
+        echo "<form class='' action='router.php?controller=produtos&modo=finalizarCompra' method='post'>";
         foreach ($_SESSION as $nome => $quantidade) {
 
           if ($quantidade > 0) {
@@ -25,7 +36,9 @@
               // PEGA id DA SESSION
               $id = substr($nome,9,(strlen($nome) -9));
 
-            //  echo $id."</br>";
+
+
+              //echo $id."</br>";
 
 
               // MONTA O CARRINHO
@@ -35,7 +48,14 @@
             //  var_dump($retorno);
 
             $count=0;
+
+          //  $conta = 100;
             while ($count < count($retorno)) {
+
+              //$conta = $conta - 1;
+
+              //echo $conta;
+
             //  echo "</br> STRING </br>";
              $subtotal =$retorno[$count]->quantidade * $retorno[$count]->preco;
               //  echo ('nome: '.$retorno[$count]->nome. ' '.$retorno[$count]->quantidade.' x R$ '.number_format($retorno[$count]->preco ,2 ) .' = R$'. number_format($subtotal,2).'</br>');
@@ -56,10 +76,18 @@
                 }else {
                   $class2='Novocursor';
                 }
+                //
+                // $counta=1;
+                // while ($counta < $totalDados) {
+                //
+                //     echo $counta;
+                //
+                //   $counta+=1;
+                // }
 
 
-
-              echo ("
+              echo (
+                "
 
               <div class='produtoItemDescricao'>
                 <div class='descricaoProdutoPedido'>
@@ -125,8 +153,16 @@
                 </div>
               </div>
 
+              <!-- passando dados para cadastrar no banco -->
+
+              <input class='esconder' type='text' name='txtIdProduto".(@$counta = $counta -1 )."' value='".$id."'>
+              <input class='esconder' type='text' name='txtQuantidade".(@$counta2 = $counta2 -1 )."' value='".$retorno[$count]->quantidade."'>
+
+
 
               ");
+
+              //echo $count;
 
               $count+=1;
 
@@ -173,7 +209,7 @@
       }else{
         echo (" <div class='TotalProdutos'>
           <div class='espaco'>
-
+            <input class='esconder' type='text' name='txtDados' value='".$dadosTotais."'>
           </div>
 
           <div class='espaco'>
@@ -218,16 +254,19 @@
             </div>
 
             <div class='botaoEnviar'>
-              <button class='botaoEnviar' type='button' name='butto' >Finalizar compra</button>
+            <input class='botaoEnviar' type='submit' name='btnSalvarCarrinho' value='Finalizar Compra'>
             </div>
 
 
 
           </div>
-        </div> ");
+        </div>
+
+          </form>");
       }
 
       $_SESSION['totalProdutos'] = $totalProdutos;
+
 
       //echo $_SESSION[$totalProdutos];
 
@@ -241,15 +280,15 @@
 
   @session_start();
 
-  if (isset($_SESSION['idUsuario'])) {
-    $idUser = $_SESSION['idUsuario'];
-
-    session_destroy();
-    @session_start();
-
-    $_SESSION['idUsuario'] = $idUser;
-
-  }
+  // if (isset($_SESSION['idUsuario'])) {
+  //   $idUser = $_SESSION['idUsuario'];
+  //
+  //   session_destroy();
+  //   @session_start();
+  //
+  //   $_SESSION['idUsuario'] = $idUser;
+  //
+  // }
 
 
 

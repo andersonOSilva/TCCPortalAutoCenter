@@ -284,6 +284,14 @@
                       //$controller_produto::AddCarrinho();
                   break;
 
+
+              case 'finalizarCompra':
+                  require_once ('cms/controllers/produtos_controller.php');
+
+                    $controller_produto = new controllerProdutos();
+                    $controller_produto::finalizarCompra();
+                break;
+
               }
 
             break;

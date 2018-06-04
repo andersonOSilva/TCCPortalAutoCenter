@@ -24,6 +24,7 @@
     public $quantidadeProduto;
 
     public $quantidade;
+    public $contador = 1000;
 
 
     // construtor da class de conexao
@@ -42,6 +43,8 @@
 
       $count=0;
       while ($rs=$result->fetch(PDO::FETCH_ASSOC)) {
+
+
 
         $list_produto[$count] = new produtoClass;
 
@@ -90,6 +93,7 @@
       $PDO_conex = $conex->Conectar();
       $result = $PDO_conex->query($sql);
       $count=0;
+      $contador = 1000;
       while ($rs=$result->fetch(PDO::FETCH_ASSOC)) {
 
         $list_produto[$count] = new produtoClass;
@@ -117,14 +121,24 @@
 
 
         $list_produto[$count]->quantidade=$quantidade;
-        return $list_produto;
 
+        $list_produto[$count]->contador=$contador;
+
+
+        //  echo   $count;
+
+
+
+
+
+        $contador = $contador-1;
         $count+=1;
 
-        // if (isset ($list_produto)) {
-        //   //var_dump()
-        //   return $list_produto;
-        // }
+
+        if (isset ($list_produto)) {
+          //var_dump()
+          return $list_produto;
+        }
 
       }
 
@@ -133,7 +147,7 @@
       $conex->Desconectar();
     }
 
-    
+
 
   }
 
