@@ -15,7 +15,7 @@ require_once('cms/controllers/prestadora_controller_endereco.php');
       <link rel="stylesheet" type="text/css" href="css/styleCadPrestadora.css">
       <link rel="stylesheet" type="text/css" href="css/styleCadPrestadoraPlanos.css">
       <link rel="stylesheet" type="text/css" href="css/styleMenus.css">
-      
+
 
 
       <script src="js/jquery7.min.js"></script>
@@ -32,23 +32,14 @@ require_once('cms/controllers/prestadora_controller_endereco.php');
 
         <?php
 //         if($pag=="cadastro"){
-//                    
+//
 //
 //      } else if($pag=="Endereco" ){
 //        require_once 'cadastroEndereco.php';
 //        }
             require_once 'cadprestadora/cadastroPrestadoraEtapa1.php';
 //            require_once 'cadprestadora/cadastroPrestadoraPlano.php';
-      if ($Prestadora->sucesso != Null){
-        echo("view diz -amigo estou aqui");
-
-
-
-      }else{
-        echo("view diz -...");
-      }
-
-
+    
         ?>
 
         </div>

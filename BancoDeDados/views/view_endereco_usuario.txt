@@ -1,0 +1,19 @@
+CREATE 
+    ALGORITHM = UNDEFINED 
+    DEFINER = `i9autocenter`@`%` 
+    SQL SECURITY DEFINER
+VIEW `dbi9autocenter`.`view_endereco_usuario` AS
+    SELECT 
+        `e`.`idEnderecoUsuario` AS `idEnderecoUsuario`,
+        `e`.`logradouro` AS `logradouro`,
+        `e`.`numero` AS `numero`,
+        `e`.`complemento` AS `complemento`,
+        `e`.`bairro` AS `bairro`,
+        `e`.`cep` AS `cep`,
+        `e`.`idTipoEndereco` AS `idTipoEndereco`,
+        `e`.`idCidade` AS `idCidade`,
+        `e`.`idUsuario` AS `idUsuario`,
+        `tp`.`descricao` AS `descricao`
+    FROM
+        (`dbi9autocenter`.`tbl_endereco_usuario` `e`
+        JOIN `dbi9autocenter`.`tbl_tipo_endereco` `tp` ON ((`e`.`idTipoEndereco` = `tp`.`idTipoEndereco`)))

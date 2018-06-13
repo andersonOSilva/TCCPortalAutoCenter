@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 5.7.12, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 5.7.17, for Win64 (x86_64)
 --
--- Host: localhost    Database: db_portal
+-- Host: 192.168.1.1    Database: dbi9autocenter
 -- ------------------------------------------------------
--- Server version	5.7.10-log
+-- Server version	5.5.35-0+wheezy1
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -89,27 +89,30 @@ LOCK TABLES `tbl_avaliacao` WRITE;
 UNLOCK TABLES;
 
 --
--- Table structure for table `tbl_carbook`
+-- Table structure for table `tbl_cabecalho_forum`
 --
 
-DROP TABLE IF EXISTS `tbl_carbook`;
+DROP TABLE IF EXISTS `tbl_cabecalho_forum`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `tbl_carbook` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `imagem` text NOT NULL,
-  `descricao` text NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=365 DEFAULT CHARSET=utf8;
+CREATE TABLE `tbl_cabecalho_forum` (
+  `idcabecalho` int(11) NOT NULL AUTO_INCREMENT,
+  `titulo1` varchar(45) DEFAULT NULL,
+  `titulo2` varchar(45) DEFAULT NULL,
+  `descricao` varchar(10000) DEFAULT NULL,
+  `status` tinyint(1) DEFAULT NULL,
+  PRIMARY KEY (`idcabecalho`)
+) ENGINE=InnoDB AUTO_INCREMENT=310 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `tbl_carbook`
+-- Dumping data for table `tbl_cabecalho_forum`
 --
 
-LOCK TABLES `tbl_carbook` WRITE;
-/*!40000 ALTER TABLE `tbl_carbook` DISABLE KEYS */;
-/*!40000 ALTER TABLE `tbl_carbook` ENABLE KEYS */;
+LOCK TABLES `tbl_cabecalho_forum` WRITE;
+/*!40000 ALTER TABLE `tbl_cabecalho_forum` DISABLE KEYS */;
+INSERT INTO `tbl_cabecalho_forum` VALUES (22,'ttt','ttttttt','ttttttttttttt66666666',0),(23,'jjjjjj','jjjjjjj','jjjjjjjjj',0),(24,'1111','1111','11111',0),(25,'1111','1111','11111',0),(294,'000','00','000',0),(295,'mmm','mmm','mmmm',0),(296,'ççççç','ççççç','çççççççç',0),(297,'vvv','vvvv','vvvv',0),(298,'xxxxx','xxxxx','xxxxxxxxx',0),(299,'nnnn','nnn','nnnn',0),(300,'bbbb','bbbbb','bbbbbbbbb',0),(301,'bbbb','bbbbb','bbbbbbbbb',0),(302,'teste','teste','yesye',0),(303,'ffffffff','ffffffffff','ffffffffffffff',0),(304,'Wiki','Autocenter','Criticada insistentemente pelos setores conservadores do país, a organização é, na verdade, pouco conhecida pelos brasileiros. Para ajudar a compreender o que é e quais os seus objetivos, Fórum entrevistou Valter Pomar, secretário executivo do Foro de São Paulo entre os anos de 2005 e 2013. Por Criticada insistentemente pelos setores conservadores do país, a organização é, na verdade, pouco conhecida pelos brasileiros. Para ajudar a compreender o que é e quais os seus objetivos, Fórum entrevistou Valter Pomar, secretário executivo do Foro de São Paulo entre os anos de 2005 e 2013. Por ',1),(305,'Wiki','Autocenter','Criticada insistentemente pelos setores conservadores do país, a organização é, na verdade, pouco conhecida pelos brasileiros. Para ajudar a compreender o que é e quais os seus objetivos, Fórum entrevistou Valter Pomar, secretário executivo do Foro de São Paulo entre os anos de 2005 e 2013. Por Criticada insistentemente pelos setores conservadores do país, a organização é, na verdade, pouco conhecida pelos brasileiros. Para ajudar a compreender o que é e quais os seus objetivos, Fórum entrevistou Valter Pomar, secretário executivo do Foro de São Paulo entre os anos de 2005 e 2013. Por ',0),(306,'hh','rrrr','hg',0),(307,'Jhonatha','Silveira','mobile',0),(308,'Jhonatha','Silveira','mobile',0),(309,'Jhonatha','Silveira','mobileç',0);
+/*!40000 ALTER TABLE `tbl_cabecalho_forum` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -122,8 +125,9 @@ DROP TABLE IF EXISTS `tbl_categoria_forum`;
 CREATE TABLE `tbl_categoria_forum` (
   `idCategoriaForum` int(11) NOT NULL AUTO_INCREMENT,
   `descricao` varchar(45) NOT NULL,
+  `status` tinyint(1) DEFAULT NULL,
   PRIMARY KEY (`idCategoriaForum`)
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -132,7 +136,7 @@ CREATE TABLE `tbl_categoria_forum` (
 
 LOCK TABLES `tbl_categoria_forum` WRITE;
 /*!40000 ALTER TABLE `tbl_categoria_forum` DISABLE KEYS */;
-INSERT INTO `tbl_categoria_forum` VALUES (1,'Ajuda e Manual do Site '),(2,'Cambio, Embreagem ou Transmissão'),(3,'Catalogos e Manuais automotivos '),(4,'Consumo de combustível '),(5,'Defeitos Mecânicos do Motor'),(6,'Elétrica, Bateria, Partida e Sistema de Carga'),(7,'Falhas no funcionamento do Motor '),(8,'Lubrificação do motor '),(9,'Manutenções e Revisões '),(10,'Relacionamento Consumidor e Reparador'),(11,'Super aquecimento do Motor'),(12,'Suspensão e Direção ');
+INSERT INTO `tbl_categoria_forum` VALUES (1,'Ajuda e Manual do Site ',1),(2,'Cambio, Embreagem ou Transmissão',1),(3,'Catalogos e Manuais automotivos ',1),(4,'Consumo de combustível ',1),(5,'Defeitos Mecânicos do Motor',1),(6,'Elétrica, Bateria, Partida e Sistema de Carga',1),(7,'Falhas no funcionamento do Motor ',1),(8,'Lubrificação do motor ',1),(9,'Manutenções e Revisões ',1),(10,'Relacionamento Consumidor e Reparador',1),(11,'Super aquecimento do Motor',1),(12,'Suspensão e Direção ',1),(13,'teste de funcionamento',0);
 /*!40000 ALTER TABLE `tbl_categoria_forum` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -284,7 +288,7 @@ CREATE TABLE `tbl_comentario_topico` (
   KEY `fk_comentario_usuario_idx` (`idUsuario`),
   CONSTRAINT `fk_comentario_topico` FOREIGN KEY (`idTopico`) REFERENCES `tbl_topico_forum` (`idTopicoForum`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `fk_comentario_usuario` FOREIGN KEY (`idUsuario`) REFERENCES `tbl_usuario` (`idUsuario`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -293,7 +297,7 @@ CREATE TABLE `tbl_comentario_topico` (
 
 LOCK TABLES `tbl_comentario_topico` WRITE;
 /*!40000 ALTER TABLE `tbl_comentario_topico` DISABLE KEYS */;
-INSERT INTO `tbl_comentario_topico` VALUES (1,'nao sei',2,5),(2,'fyuy,',2,2);
+INSERT INTO `tbl_comentario_topico` VALUES (1,'nao sei, talves ele seja corinthiano.',7,2),(2,'camila e orrivel',7,1),(3,'QUERO MINHA PERNA DE VOLTA!!!!!!!!!!!',7,1),(4,'',7,1),(5,'jtyujdyjdyu5y6ue5u',12,6),(6,'Existe Jovem Padawan !!!',13,7),(7,'!!!!!!!!!!!!!!!!!!!!!!!!',13,7),(8,'nao sei!!!!!!!!!!!!!',7,8),(9,'ja levou ao mecanico?',7,9),(10,'cccccccc',7,10);
 /*!40000 ALTER TABLE `tbl_comentario_topico` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -352,7 +356,7 @@ CREATE TABLE `tbl_endereco_prestadora` (
   PRIMARY KEY (`idEnderecoPrestadora`),
   KEY `fk_cidade_prestadora_idx` (`idCidade`),
   CONSTRAINT `fk_cidade_prestadora` FOREIGN KEY (`idCidade`) REFERENCES `tbl_cidade` (`idCidade`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -361,7 +365,7 @@ CREATE TABLE `tbl_endereco_prestadora` (
 
 LOCK TABLES `tbl_endereco_prestadora` WRITE;
 /*!40000 ALTER TABLE `tbl_endereco_prestadora` DISABLE KEYS */;
-INSERT INTO `tbl_endereco_prestadora` VALUES (1,'sao luiz','99','pqturiguara','perto da casa do ze','06703315',1),(2,'8','510','shazam','bar da judite','06700331',1),(3,'8','510','shazam','bar da judite','06700331',1),(4,'8','510','shazam','bar da judite','06700331',1),(5,'s','2','b','q','06703-310',1);
+INSERT INTO `tbl_endereco_prestadora` VALUES (1,'sao luiz','99','pqturiguara','perto da casa do ze','06703315',1),(2,'8','510','shazam','bar da judite','06700331',1),(3,'8','510','shazam','bar da judite','06700331',1),(4,'8','510','shazam','bar da judite','06700331',1);
 /*!40000 ALTER TABLE `tbl_endereco_prestadora` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -374,9 +378,9 @@ DROP TABLE IF EXISTS `tbl_endereco_usuario`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `tbl_endereco_usuario` (
   `idEnderecoUsuario` int(11) NOT NULL AUTO_INCREMENT,
-  `logradouro` varchar(45) NOT NULL,
-  `numero` varchar(45) NOT NULL,
-  `complemento` varchar(45) DEFAULT NULL,
+  `logradouro` varchar(255) NOT NULL,
+  `numero` varchar(10) NOT NULL,
+  `complemento` varchar(255) DEFAULT NULL,
   `bairro` varchar(45) NOT NULL,
   `cep` varchar(9) NOT NULL,
   `idTipoEndereco` int(11) NOT NULL,
@@ -389,7 +393,7 @@ CREATE TABLE `tbl_endereco_usuario` (
   CONSTRAINT `fk_cidade_endereco` FOREIGN KEY (`idCidade`) REFERENCES `tbl_cidade` (`idCidade`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `fk_endereco_usuario` FOREIGN KEY (`idUsuario`) REFERENCES `tbl_usuario` (`idUsuario`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `fk_tipo_endereco_usuario` FOREIGN KEY (`idTipoEndereco`) REFERENCES `tbl_tipo_endereco` (`idTipoEndereco`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -398,6 +402,7 @@ CREATE TABLE `tbl_endereco_usuario` (
 
 LOCK TABLES `tbl_endereco_usuario` WRITE;
 /*!40000 ALTER TABLE `tbl_endereco_usuario` DISABLE KEYS */;
+INSERT INTO `tbl_endereco_usuario` VALUES (1,'Rua','460','Teste','Teste','06718-360',1,79,1),(2,'$logradouro','$numero','$complemento','$bairro','$cep',1,3,8),(3,'Rua Avenida Estrada','406','Nenhum','TCC Fail','06874-445',2,3597,8),(4,'This is America','1153','Amerrica','America','06667-896',3,4724,8),(8,'q','10','q','2123','12313-213',1,79,8);
 /*!40000 ALTER TABLE `tbl_endereco_usuario` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -439,7 +444,7 @@ CREATE TABLE `tbl_fale_conosco` (
   `email` varchar(150) NOT NULL,
   `mensagem` text NOT NULL,
   PRIMARY KEY (`idFaleConosco`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -448,7 +453,7 @@ CREATE TABLE `tbl_fale_conosco` (
 
 LOCK TABLES `tbl_fale_conosco` WRITE;
 /*!40000 ALTER TABLE `tbl_fale_conosco` DISABLE KEYS */;
-INSERT INTO `tbl_fale_conosco` VALUES (6,'Willian','willian@gmail.com','oi antonio'),(7,'teste','teste@gmail.com','oiroio'),(8,'oi','oi@gmail.com','funciona'),(10,'GAME PLAY','gameplay@show','eai gatinha');
+INSERT INTO `tbl_fale_conosco` VALUES (6,'Willian','willian@gmail.com','oi antonio'),(7,'teste','teste@gmail.com','oiroio'),(9,'jhon jhon','asdasd@fcadas','asdadas');
 /*!40000 ALTER TABLE `tbl_fale_conosco` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -467,6 +472,12 @@ CREATE TABLE `tbl_filial` (
   `idPlano` int(11) NOT NULL,
   `idEnderecoPrestadora` int(11) NOT NULL,
   `idPrestadora` int(11) NOT NULL,
+  `status` tinyint(1) DEFAULT NULL,
+  `statusServico` tinyint(1) DEFAULT NULL,
+  `statusProduto` tinyint(1) DEFAULT NULL,
+  `statusHome` tinyint(1) DEFAULT NULL,
+  `statusPagPrest` tinyint(1) DEFAULT NULL,
+  `statusPagSer` tinyint(1) DEFAULT NULL,
   PRIMARY KEY (`idFilial`),
   KEY `fk_prestadora_filial_idx` (`idPrestadora`),
   KEY `fk_endereco_filial_idx` (`idEnderecoPrestadora`),
@@ -474,7 +485,7 @@ CREATE TABLE `tbl_filial` (
   CONSTRAINT `fk_endereco_filial` FOREIGN KEY (`idEnderecoPrestadora`) REFERENCES `tbl_endereco_prestadora` (`idEnderecoPrestadora`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `fk_plano_filial` FOREIGN KEY (`idPlano`) REFERENCES `tbl_plano` (`idPlano`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `fk_prestadora_filial` FOREIGN KEY (`idPrestadora`) REFERENCES `tbl_prestadora` (`idPrestadora`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -483,7 +494,7 @@ CREATE TABLE `tbl_filial` (
 
 LOCK TABLES `tbl_filial` WRITE;
 /*!40000 ALTER TABLE `tbl_filial` DISABLE KEYS */;
-INSERT INTO `tbl_filial` VALUES (3,'BatatinhaBR','11 4611-8888','imagenPlano/1.png',39,1,1);
+INSERT INTO `tbl_filial` VALUES (3,'Auto center - Osasco','11 4611-8888','imagenPlano/1.png',39,1,1,1,1,1,1,NULL,NULL),(4,'Auto center - Carapicuiba','333333','imagenPlano/1.png',39,1,1,1,NULL,NULL,NULL,NULL,NULL),(5,'Auto center - Alphaville','49494','imagenPlano/1.png',39,1,1,1,1,1,1,1,1),(6,'Auto center - Jandira','995611543','imagenPlano/1.png',39,1,1,1,1,1,1,1,1);
 /*!40000 ALTER TABLE `tbl_filial` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -503,7 +514,7 @@ CREATE TABLE `tbl_filial_servico` (
   KEY `fk_servico_idx` (`idServico`),
   CONSTRAINT `fk_filial` FOREIGN KEY (`idFilial`) REFERENCES `tbl_filial` (`idFilial`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `fk_servico` FOREIGN KEY (`idServico`) REFERENCES `tbl_servico` (`idServico`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -512,6 +523,7 @@ CREATE TABLE `tbl_filial_servico` (
 
 LOCK TABLES `tbl_filial_servico` WRITE;
 /*!40000 ALTER TABLE `tbl_filial_servico` DISABLE KEYS */;
+INSERT INTO `tbl_filial_servico` VALUES (1,3,5),(2,3,11),(3,3,12),(4,3,13),(5,3,14),(6,3,15),(7,3,16),(8,3,17),(9,6,5),(10,6,11);
 /*!40000 ALTER TABLE `tbl_filial_servico` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -540,6 +552,32 @@ LOCK TABLES `tbl_fornecedor` WRITE;
 UNLOCK TABLES;
 
 --
+-- Table structure for table `tbl_forum`
+--
+
+DROP TABLE IF EXISTS `tbl_forum`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `tbl_forum` (
+  `idForum` int(11) NOT NULL AUTO_INCREMENT,
+  `imagem` varchar(50) NOT NULL,
+  `descricao` varchar(255) NOT NULL,
+  `status` tinyint(1) DEFAULT NULL,
+  PRIMARY KEY (`idForum`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `tbl_forum`
+--
+
+LOCK TABLES `tbl_forum` WRITE;
+/*!40000 ALTER TABLE `tbl_forum` DISABLE KEYS */;
+INSERT INTO `tbl_forum` VALUES (1,'imagenForum/forum.jpg','Compartilhe suas duvidas e ajude outros amantes de carros',1),(2,'imagenForum/06924651e359592af9bfb2463635d2a1.png','fonfon',0),(3,'imagenForum/06924651e359592af9bfb2463635d2a1.png','luana',0);
+/*!40000 ALTER TABLE `tbl_forum` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `tbl_foto_prestadora`
 --
 
@@ -553,7 +591,7 @@ CREATE TABLE `tbl_foto_prestadora` (
   PRIMARY KEY (`idFotoPrestadora`),
   KEY `fk_prestadota_foto_idx` (`idPrestadora`),
   CONSTRAINT `fk_prestadota_foto` FOREIGN KEY (`idPrestadora`) REFERENCES `tbl_prestadora` (`idPrestadora`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -562,6 +600,7 @@ CREATE TABLE `tbl_foto_prestadora` (
 
 LOCK TABLES `tbl_foto_prestadora` WRITE;
 /*!40000 ALTER TABLE `tbl_foto_prestadora` DISABLE KEYS */;
+INSERT INTO `tbl_foto_prestadora` VALUES (1,'imagens/10.jpg',20);
 /*!40000 ALTER TABLE `tbl_foto_prestadora` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -579,7 +618,7 @@ CREATE TABLE `tbl_foto_veiculo` (
   PRIMARY KEY (`idFotoVeiculo`),
   KEY `fk_foto_veiculo_idx` (`idVeiculo`),
   CONSTRAINT `fk_foto_veiculo` FOREIGN KEY (`idVeiculo`) REFERENCES `tbl_veiculo` (`idVeiculo`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -588,6 +627,7 @@ CREATE TABLE `tbl_foto_veiculo` (
 
 LOCK TABLES `tbl_foto_veiculo` WRITE;
 /*!40000 ALTER TABLE `tbl_foto_veiculo` DISABLE KEYS */;
+INSERT INTO `tbl_foto_veiculo` VALUES (1,'imagemVeiculo/mustang.jpg',1),(2,'imagemVeiculo/mustang.jpg',1),(3,'imagemVeiculo/mustang_vermelho.jpg',2);
 /*!40000 ALTER TABLE `tbl_foto_veiculo` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -617,7 +657,7 @@ CREATE TABLE `tbl_funcionario` (
   PRIMARY KEY (`idFuncionario`),
   KEY `fk_nivel_funcionario_idx` (`idNivelAcesso`),
   CONSTRAINT `fk_nivel_funcionario` FOREIGN KEY (`idNivelAcesso`) REFERENCES `tbl_nivel_acesso` (`idNivelAcesso`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -694,9 +734,10 @@ DROP TABLE IF EXISTS `tbl_home`;
 CREATE TABLE `tbl_home` (
   `idHome` int(11) NOT NULL AUTO_INCREMENT,
   `textoCarbook` text NOT NULL,
-  `videoCarbook` varchar(255) NOT NULL,
+  `videoCarbook` text NOT NULL,
+  `status` tinyint(1) DEFAULT NULL,
   PRIMARY KEY (`idHome`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -705,6 +746,7 @@ CREATE TABLE `tbl_home` (
 
 LOCK TABLES `tbl_home` WRITE;
 /*!40000 ALTER TABLE `tbl_home` DISABLE KEYS */;
+INSERT INTO `tbl_home` VALUES (5,'Compartilhe seu dia a dia com seu carro.','imagenCarbook/nome2.png',1),(6,'jhow','imagenCarbook/3a81b4227cff025aa3a198377f3a849b.jpg',0),(7,'andersin','imagenCarbook/c4ca4238a0b923820dcc509a6f75849b.jpg',0),(8,'jhonatha','imagenCarbook/c4ca4238a0b923820dcc509a6f75849b.jpg',0),(9,'lindaaaaaaaaaaaaaaaaaaaaaaaaaa\r\n','imagenCarbook/1c0ef710ebb4f1f1f2fef6a007d2dc68.jpg',0),(10,'bom diaa','imagenCarbook/3a81b4227cff025aa3a198377f3a849b.jpg',0),(11,'gnxncfnfc','imagenCarbook/d0ef51379636616a1e351fa3bec115e6.png',NULL);
 /*!40000 ALTER TABLE `tbl_home` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -719,7 +761,7 @@ CREATE TABLE `tbl_marca` (
   `idMarca` int(11) NOT NULL AUTO_INCREMENT,
   `nome` varchar(45) NOT NULL,
   PRIMARY KEY (`idMarca`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -728,6 +770,7 @@ CREATE TABLE `tbl_marca` (
 
 LOCK TABLES `tbl_marca` WRITE;
 /*!40000 ALTER TABLE `tbl_marca` DISABLE KEYS */;
+INSERT INTO `tbl_marca` VALUES (1,'Ford');
 /*!40000 ALTER TABLE `tbl_marca` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -756,6 +799,32 @@ INSERT INTO `tbl_marca_produto` VALUES (1,'Hitachi');
 UNLOCK TABLES;
 
 --
+-- Table structure for table `tbl_menus`
+--
+
+DROP TABLE IF EXISTS `tbl_menus`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `tbl_menus` (
+  `idMenu` int(11) NOT NULL AUTO_INCREMENT,
+  `titulo` varchar(45) NOT NULL,
+  `descricao` varchar(100) NOT NULL,
+  `link` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`idMenu`)
+) ENGINE=InnoDB AUTO_INCREMENT=33 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `tbl_menus`
+--
+
+LOCK TABLES `tbl_menus` WRITE;
+/*!40000 ALTER TABLE `tbl_menus` DISABLE KEYS */;
+INSERT INTO `tbl_menus` VALUES (4,'Carros','Troque agora se carro!! Confira as ofertas','carro.php'),(5,'CarBook','Ja pensou em ter um lugar para compartilhar coisas do seu carro? Confira!','carBook.php'),(6,'Sobre','Conheça mais sobre a portal Auto center.','sobre.php'),(8,'Prestadoras','Confira nossas principais parceiras.','Prestadoras.php'),(25,'forum','compartilhe suas ideias ','homeForum.php'),(32,'resre de menu','testde de aÂ´presentacao','homeForum.php');
+/*!40000 ALTER TABLE `tbl_menus` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `tbl_modelo`
 --
 
@@ -769,7 +838,7 @@ CREATE TABLE `tbl_modelo` (
   PRIMARY KEY (`idModelo`),
   KEY `fk_modelo_marca_idx` (`idMarca`),
   CONSTRAINT `fk_modelo_marca` FOREIGN KEY (`idMarca`) REFERENCES `tbl_marca` (`idMarca`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -778,6 +847,7 @@ CREATE TABLE `tbl_modelo` (
 
 LOCK TABLES `tbl_modelo` WRITE;
 /*!40000 ALTER TABLE `tbl_modelo` DISABLE KEYS */;
+INSERT INTO `tbl_modelo` VALUES (1,'Mustang',1);
 /*!40000 ALTER TABLE `tbl_modelo` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -992,6 +1062,31 @@ LOCK TABLES `tbl_pagamento_funcionario` WRITE;
 UNLOCK TABLES;
 
 --
+-- Table structure for table `tbl_palavra_proibida`
+--
+
+DROP TABLE IF EXISTS `tbl_palavra_proibida`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `tbl_palavra_proibida` (
+  `idPalavra` int(11) NOT NULL AUTO_INCREMENT,
+  `palavra` varchar(100) NOT NULL,
+  `status` tinyint(1) DEFAULT NULL,
+  PRIMARY KEY (`idPalavra`)
+) ENGINE=InnoDB AUTO_INCREMENT=110 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `tbl_palavra_proibida`
+--
+
+LOCK TABLES `tbl_palavra_proibida` WRITE;
+/*!40000 ALTER TABLE `tbl_palavra_proibida` DISABLE KEYS */;
+INSERT INTO `tbl_palavra_proibida` VALUES (93,'porra',NULL),(101,'viado',NULL),(105,'filho da puta',NULL),(108,'vagabunda',NULL),(109,'vaca',NULL);
+/*!40000 ALTER TABLE `tbl_palavra_proibida` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `tbl_pedido`
 --
 
@@ -1002,12 +1097,20 @@ CREATE TABLE `tbl_pedido` (
   `idPedido` int(11) NOT NULL AUTO_INCREMENT,
   `idProduto` int(11) NOT NULL,
   `idUsuario` int(11) NOT NULL,
+  `quantidade` int(11) DEFAULT NULL,
+  `idStatus` int(11) DEFAULT NULL,
+  `data` date DEFAULT NULL,
+  `idEnderecoUsuario` int(11) DEFAULT NULL,
   PRIMARY KEY (`idPedido`),
   KEY `fk_produto_pedido_idx` (`idProduto`),
   KEY `fk_pedido_usuario_idx` (`idUsuario`),
+  KEY `fk_produto_endereco_idx` (`idEnderecoUsuario`),
+  KEY `fk_produto_status_idx` (`idStatus`),
+  CONSTRAINT `fk_produto_status` FOREIGN KEY (`idStatus`) REFERENCES `tbl_status_compra` (`idStatus`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `fk_pedido_usuario` FOREIGN KEY (`idUsuario`) REFERENCES `tbl_usuario` (`idUsuario`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `fk_produto_endereco` FOREIGN KEY (`idEnderecoUsuario`) REFERENCES `tbl_endereco_usuario` (`idEnderecoUsuario`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `fk_produto_pedido` FOREIGN KEY (`idProduto`) REFERENCES `tbl_produto` (`idProduto`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=30 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1016,6 +1119,7 @@ CREATE TABLE `tbl_pedido` (
 
 LOCK TABLES `tbl_pedido` WRITE;
 /*!40000 ALTER TABLE `tbl_pedido` DISABLE KEYS */;
+INSERT INTO `tbl_pedido` VALUES (1,5,7,1,3,'2018-06-06',1),(2,4,7,1,3,'2018-06-06',1),(3,4,7,1,3,'2018-06-06',1),(4,4,7,1,3,'2018-06-07',1),(5,8,7,1,3,'2018-06-07',1),(6,3,7,1,3,'2018-06-07',1),(7,5,7,1,2,'2018-06-07',1),(8,5,7,1,2,'2018-06-07',1),(9,5,7,1,1,'2018-06-07',1),(10,5,7,1,1,'2018-06-07',1),(11,5,7,1,1,'2018-06-07',1),(12,5,8,1,1,'2018-06-07',1),(13,5,7,1,1,'2018-06-11',1),(18,7,7,1,1,'2018-06-12',1),(20,7,8,1,1,'2018-06-12',1),(21,3,8,1,1,'2018-06-12',1),(22,5,8,1,1,'2018-06-12',1),(23,7,8,1,1,'2018-06-12',1),(24,3,8,1,1,'2018-06-12',1),(25,5,8,1,1,'2018-06-12',1),(26,7,8,1,1,'2018-06-12',1),(27,3,8,1,1,'2018-06-12',1),(28,5,8,1,1,'2018-06-12',1),(29,5,7,1,1,'2018-06-12',1);
 /*!40000 ALTER TABLE `tbl_pedido` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1056,7 +1160,7 @@ CREATE TABLE `tbl_plano` (
   `descricao` text NOT NULL,
   `imagem` text NOT NULL,
   PRIMARY KEY (`idPlano`)
-) ENGINE=InnoDB AUTO_INCREMENT=69 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=64 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1065,7 +1169,7 @@ CREATE TABLE `tbl_plano` (
 
 LOCK TABLES `tbl_plano` WRITE;
 /*!40000 ALTER TABLE `tbl_plano` DISABLE KEYS */;
-INSERT INTO `tbl_plano` VALUES (39,'antonio willian',666.00,'qwerv ewgtwqbytbw','imagenPlano/CarCat.jpg'),(58,'gggggg',7.00,'sdtysbn  sur6 edi ','imagenPlano/blue.jpg'),(59,'trtrtr',87.00,'fy iy ydik dfyk dt','imagenPlano/higienizacao.jpg'),(63,'tdshm rdundyr',5455.00,'hg jy,oyiu','imagenPlano/f8611767a7b3d415b3609219e5d00f1c.jpg'),(67,'tdshm rdundyr',5455.00,'y tu irt ity ity ','imagenPlano/c4c72d981638ea3d372d03b615a5675a.png'),(68,'GAME PLAY',200.00,'hjdfuewfyi','imagenPlano/7e84b442f353cc4c27e90b0271e82b03.jpg');
+INSERT INTO `tbl_plano` VALUES (39,'antonio willian',666.00,'qwerv ewgtwqbytbw','imagenPlano/CarCat.jpg'),(58,'Antonio Chato',7.00,'cht','imagenPlano/blue.jpg'),(59,'trtrtr',87.00,'fy iy ydik dfyk dt','imagenPlano/higienizacao.jpg'),(60,'rrrrrrrrrrr',66.00,'tttttttt','imagenPlano/41e2a01db0b2804f198fcab2c08c5d1a.jpg'),(61,'rrrrrrrrrrr',66.00,'tttttttt','imagenPlano/41e2a01db0b2804f198fcab2c08c5d1a.jpg'),(62,'rrrrrrrrrrr',66.00,'tttttttt','Erro'),(63,'ddddddd',123.00,'ddddddddddd','imagenPlano/c4ca4238a0b923820dcc509a6f75849b.jpg');
 /*!40000 ALTER TABLE `tbl_plano` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1081,10 +1185,10 @@ CREATE TABLE `tbl_post` (
   `legenda` text,
   `fotoPost` varchar(255) DEFAULT NULL,
   `curtidas` int(11) DEFAULT NULL,
-  `idUsuario` int(11) NOT NULL,
+  `idVeiculo` int(11) NOT NULL,
   PRIMARY KEY (`idPost`),
-  KEY `fk_usuario_idx` (`idUsuario`),
-  CONSTRAINT `fk_usuario` FOREIGN KEY (`idUsuario`) REFERENCES `tbl_usuario` (`idUsuario`) ON DELETE NO ACTION ON UPDATE NO ACTION
+  KEY `fk_usuario_idx` (`idVeiculo`),
+  CONSTRAINT `fk_usuario` FOREIGN KEY (`idVeiculo`) REFERENCES `tbl_veiculo` (`idVeiculo`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -1107,17 +1211,16 @@ DROP TABLE IF EXISTS `tbl_prestadora`;
 CREATE TABLE `tbl_prestadora` (
   `idPrestadora` int(11) NOT NULL AUTO_INCREMENT,
   `razaoSocial` varchar(255) NOT NULL,
-  `nomeFantasia` varchar(2855) NOT NULL,
+  `nomeFantasia` varchar(255) NOT NULL,
   `fotoPrestadora` text NOT NULL,
   `descricao` text NOT NULL,
   `telefone` varchar(45) NOT NULL,
   `cnpj` varchar(18) NOT NULL,
-  `login` varchar(20) NOT NULL,
   `senha` varchar(6) NOT NULL,
   `status` tinyint(1) NOT NULL DEFAULT '1',
   `idEndereco` int(11) unsigned DEFAULT NULL,
   PRIMARY KEY (`idPrestadora`)
-) ENGINE=InnoDB AUTO_INCREMENT=97 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1126,8 +1229,37 @@ CREATE TABLE `tbl_prestadora` (
 
 LOCK TABLES `tbl_prestadora` WRITE;
 /*!40000 ALTER TABLE `tbl_prestadora` DISABLE KEYS */;
-INSERT INTO `tbl_prestadora` VALUES (1,'batatinha','potatocore','img/teste','dvbslvbkls ','11 4002-8922','123.123.123.123-5','teste','123',1,NULL),(20,'luanilsongameplays','jhonzingameplays','cms/imagenPlano/DANvROzUMAEl73r.jpg','sdadasd','011 6541-6414','321.321.654.321-54','yopresidente','123',1,1),(21,'potato','potato mais','cms/imagenPlano/DHIeR8GW0AAWvpj.jpg','dasdasd','011 6541-6414','321.321.654.321-54','yomito','132',1,1),(40,'potato','potato mais','cms/imagenPlano/5b823fd207f6c00c50d831dc2cede233.jpg','latest test','011 6541-6414','321.321.654.321-54','n fhn','123',1,NULL),(41,'potato','potato mais','cms/imagenPlano/cb68d713aad471a9b5aaff5fb5754166.jpg','cvsdc','011 6541-6414','321.321.654.321-54','camilagameplays','123',1,NULL),(42,'potato','potato mais','cms/imagenPlano/cb68d713aad471a9b5aaff5fb5754166.jpg','cvsdc','011 6541-6414','321.321.654.321-54','camilagameplays','123',1,NULL),(44,'potato','potato mais','cms/imagenPlano/5b823fd207f6c00c50d831dc2cede233.jpg','vsdvsd','011 6541-6414','321.321.654.321-54','camilagameplays','123',1,NULL),(45,'potato','potato mais','cms/imagenPlano/5b823fd207f6c00c50d831dc2cede233.jpg','asgfsd','011 6541-6414','321.321.654.321-54','teste setenta e 10','123',1,NULL),(51,'potato','chicken','','cascasd','011 2314-7984','312.654.789.312-21','123','1223',1,NULL),(52,'potato','chicken','','sacasc','011 2314-7984','312.654.789.312-21','123','123',1,NULL),(53,'potato','chicken','','xcasc','011 2314-7984','312.654.789.312-21','123','123',1,NULL),(54,'potato','chicken','','sdasd','011 2314-7984','312.654.789.312-21','123','465',1,NULL),(55,'potato','chicken','','sdasd','011 2314-7984','312.654.789.312-21','123','465',1,NULL),(56,'potato','chicken','','sdacv','011 2314-7984','312.654.789.312-21','123','123',1,NULL),(57,'potato','chicken','','fhngh','011 2314-7984','312.654.789.312-21','123','123',1,NULL),(58,'potato','chicken','','sdvsdf','011 2314-7984','312.654.789.312-21','123','123',1,NULL),(59,'potato','chicken','','dacsa','011 2314-7984','312.654.789.312-21','123','123',1,NULL),(60,'potato','chicken','','teste com endereco','011 2314-7984','312.654.789.312-21','123','123',1,NULL),(61,'potato','chicken','','csad','011 2314-7984','312.654.789.312-21','123','132',1,NULL),(62,'potato','chicken','','vsdvcs','011 2314-7984','312.654.789.312-21','123','123',1,NULL),(63,'potato','chicken','','cdsc','011 2314-7984','312.654.789.312-21','123','123',1,NULL),(64,'potato','chicken','','sadsa','011 2314-7984','312.654.789.312-21','123','dsad',1,NULL),(65,'potato','chicken','','acxsa','011 2314-7984','312.654.789.312-21','123','senha',1,NULL),(66,'potato','chicken','','sdas','011 2314-7984','312.654.789.312-21','123','123',1,NULL),(67,'potato','chicken','','fdfd','011 2314-7984','312.654.789.312-21','teste 584','123',1,NULL),(68,'potato','chicken','','dxsa','011 2314-7984','312.654.789.312-21','teste 583','123',1,NULL),(69,'potato','chicken','','testeduardin','011 2314-7984','312.654.789.312-21','duardinshow','789',1,NULL),(70,'potato','potato mais','','vsdcv','011 6541-6414','321.321.654.321-54','camilagameplays','123',1,NULL),(71,'potato','potato mais','','asd','011 6541-6414','321.321.654.321-54','teste pro endereco','456',1,NULL),(72,'potato','potato mais','','dasdas','011 6541-6414','321.321.654.321-54','teste endereco','456',1,NULL),(73,'potato','scas','cms/imagenPlano/fd456406745d816a45cae554c788e754.jpg','teste endereco','011 6541-6414','321.321.654.321-54','camilagameplays','123',1,NULL),(74,'potato','potato mais','','sdasd','011 6541-6414','66666666666','camilagameplays','123',1,NULL),(75,'potato','potato mais','','cdadc','011 6541-6414','321.321.654.321-54','camilagameplays','123',1,NULL),(76,'potato','potato mais','','dcasc','011 6541-6414','321.321.654.321-54','camilagameplays','123',1,NULL),(77,'potato','potato mais','','casc','011 6541-6414','321.321.654.321-54','camilagameplays','123',1,NULL),(78,'potato','potato mais','','adsa','','321.321.654.321-54','camilagameplays','123',1,NULL),(79,'potato','potato mais','','asxsa','011 6541-6414','321.321.654.321-54','camilagameplays','123',1,NULL),(80,'potato','potato mais','','cdacs','11 6541-6541','321.321.654.321-54','camilagameplays','123',1,NULL),(81,'potato','potato mais','','sa','011 6541-6414','321.321.654.321-54','camilagameplays','123',1,NULL),(82,'','','','','','','','',1,NULL),(83,'','','','','','','','',1,NULL),(84,'potato','potato mais','','dasda','011 6541-6414','321.321.654.321-54','camilagameplays','123',1,NULL),(85,'potato','potato mais','cms/imagenPlano/5b823fd207f6c00c50d831dc2cede233.jpg','dxdas','011 6541-6414','321.321.654.321-54','camilagameplays','123',1,NULL),(86,'','','','','','','','',1,NULL),(87,'','','','','','','','',1,NULL),(88,'','','','','','','','',1,NULL),(89,'potato','potato mais','cms/imagenPlano/522d64e05a28403087143d606fc8df29.jpg','teste endereco','011 6541-6414','66666666666','cacsa','123',1,NULL),(90,'potato','potato mais','','eqfew','011 6541-6414','321.321.654.321-54','camilagameplays','123',1,NULL),(91,'potato','potato mais','','das','011 6541-6414','321.321.654.321-54','cacsa','123',1,NULL),(92,'potato','potato mais','','scascasd','011 6541-6414','321.321.654.321-54','camilagameplays','123',1,NULL),(93,'azu','rosa','','j','011 6541-8794','654.645.465.654-78','teste 16/04','123',1,NULL),(94,'azu','rosa','','asdsa','011 6541-8794','654.645.465.654-78','teste 16/04','123',1,NULL),(95,'azu','sadas','','xac','011 6541-8794','654.645.465.654-78','teste 16/04','123',1,NULL),(96,'azu','sadas','','xasa','011 6541-8794','654.645.465.654-78','teste 16/04','123',1,NULL);
+INSERT INTO `tbl_prestadora` VALUES (1,'Auto center ltda','Auto center','cms/imagenPlano/CarCat.jpg','dvbslvbkls ','11 4002-8922','123.123.123.123-5','123',1,1),(20,'luanilsongameplays','jhonzingameplays','cms/imagenPlano/517334870.jpg','sdadasd','011 6541-6414','321.321.654.321-54','123',1,2),(21,'potato','potato mais','cms/imagenPlano/CarCat.jpg','dasdasd','011 6541-6414','321.321.654.321-54','132',1,3),(22,'azul','quero ver','','ixxcorrrega ','011 6541-8794','654.645.465.654-78','123',1,4),(23,'Auto Center Ltda','Auto Center','nada','teste','teste','teste','teste',0,1);
 /*!40000 ALTER TABLE `tbl_prestadora` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `tbl_prestadora_servico`
+--
+
+DROP TABLE IF EXISTS `tbl_prestadora_servico`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `tbl_prestadora_servico` (
+  `idPrestadoraServico` int(11) NOT NULL AUTO_INCREMENT,
+  `idServico` int(11) DEFAULT NULL,
+  `idPrestadora` int(11) DEFAULT NULL,
+  PRIMARY KEY (`idPrestadoraServico`),
+  KEY `fk_servico_prestadora_idx` (`idPrestadora`),
+  KEY `fk_prestadora_servico_idx` (`idServico`),
+  CONSTRAINT `fk_prestadora_servico` FOREIGN KEY (`idServico`) REFERENCES `tbl_servico` (`idServico`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `fk_servico_prestadora` FOREIGN KEY (`idPrestadora`) REFERENCES `tbl_prestadora` (`idPrestadora`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `tbl_prestadora_servico`
+--
+
+LOCK TABLES `tbl_prestadora_servico` WRITE;
+/*!40000 ALTER TABLE `tbl_prestadora_servico` DISABLE KEYS */;
+INSERT INTO `tbl_prestadora_servico` VALUES (1,17,20),(2,17,21);
+/*!40000 ALTER TABLE `tbl_prestadora_servico` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -1141,19 +1273,28 @@ CREATE TABLE `tbl_produto` (
   `idProduto` int(11) NOT NULL AUTO_INCREMENT,
   `nome` varchar(100) NOT NULL,
   `preco` float(8,2) NOT NULL,
-  `descricao` text NOT NULL,
+  `marca` varchar(50) NOT NULL,
   `idSubcategoria` int(11) NOT NULL,
-  `idMarcaProduto` int(11) NOT NULL,
   `idFilial` int(11) NOT NULL,
   `imagem` varchar(255) NOT NULL,
+  `imagem1` varchar(225) NOT NULL,
+  `imagem2` varchar(255) NOT NULL,
+  `imagem3` varchar(255) NOT NULL,
+  `tipo` varchar(45) NOT NULL,
+  `modelo` varchar(50) NOT NULL,
+  `durabilidade` varchar(45) NOT NULL,
+  `dt_fabrica` date NOT NULL,
+  `garantia` varchar(45) NOT NULL,
+  `fabricante` varchar(45) NOT NULL,
+  `obs` varchar(45) DEFAULT NULL,
+  `descricao` text,
+  `quantidadeProduto` int(11) DEFAULT NULL,
   PRIMARY KEY (`idProduto`),
   KEY `fk_produto_filial_idx` (`idFilial`),
-  KEY `fk_produto_marca_idx` (`idMarcaProduto`),
   KEY `fk_sub_categoria_produto_idx` (`idSubcategoria`),
   CONSTRAINT `fk_produto_filial` FOREIGN KEY (`idFilial`) REFERENCES `tbl_filial` (`idFilial`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT `fk_produto_marca` FOREIGN KEY (`idMarcaProduto`) REFERENCES `tbl_marca_produto` (`idMarcaProduto`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `fk_sub_categoria_produto` FOREIGN KEY (`idSubcategoria`) REFERENCES `tbl_sub_categoria` (`idSubCategoria`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1162,7 +1303,7 @@ CREATE TABLE `tbl_produto` (
 
 LOCK TABLES `tbl_produto` WRITE;
 /*!40000 ALTER TABLE `tbl_produto` DISABLE KEYS */;
-INSERT INTO `tbl_produto` VALUES (3,'Serra 3511 Hitachi',259.99,'YEAAAAAAAAh',1,1,3,'imagenPlano/2.jpg');
+INSERT INTO `tbl_produto` VALUES (3,'Motor dourado',259.99,'CarProdutos',1,3,'imagenProduto/pecas-para-carro-jardim-primavera-zona-sul.jpg','','','','0000-00-00','AX1825','10 anos','0000-00-00','1 ano','MotorSport','Motor de carros de corrida','Produto importado com 1200 cavalos',45),(4,'Carroceria',150.99,'CarProdutos',1,3,'imagenProduto/pecas-para-carro-nacional-em-francisco-beltrao.jpg','','','','0000-00-00','Modelo 3D autoCad','10 anos','0000-00-00','1 ano','All Might Car','LoL','Descrição do produto',2),(5,'Roda',222.00,'CarProdutos',1,3,'imagenProduto/Loja-de-pecas-e-tintas-para-carros-em-Curitiba-e-Sao-Jose-dos-Pinhais.png','imagenProduto/c4ca4238a0b923820dcc509a6f75849b.jpg','imagenProduto/45c48cce2e2d7fbdea1afc51c7c6ad26.jpg','imagenProduto/45c48cce2e2d7fbdea1afc51c7c6ad26.jpg','rrrrrr','Aro xyz','Infinito','2018-05-17','6 meses','El Rei das Rodas','Isso é mesmo importante?','Isso nem é só a roda, porém eu já coloquei todos os dados pra mudar agora vai dar trabalho',4),(6,'Freio Abs',111.00,'UltraCar',1,3,'imagenProduto/depositphotos_81670288-stock-illustration-vector-car-spares-concept-with.jpg','imagenProduto/45c48cce2e2d7fbdea1afc51c7c6ad26.jpg','imagenProduto/45c48cce2e2d7fbdea1afc51c7c6ad26.jpg','imagenProduto/c81e728d9d4c2f636f067f89cc14862c.jpg','1111111','Freio','Até você estragar','2018-05-24','1 ano','FreioMotors','Freio com várias ferramentas em volta','Acho que tudo já ta bem claro',7),(7,'Peça de Carro',111.00,'UltraCar',1,3,'imagenProduto/2157d562033dbfc.jpg','imagenProduto/45c48cce2e2d7fbdea1afc51c7c6ad26.jpg','imagenProduto/45c48cce2e2d7fbdea1afc51c7c6ad26.jpg','imagenProduto/c81e728d9d4c2f636f067f89cc14862c.jpg','1111111','2018','Muito Tempo','2018-05-24','6 meses','EA Sports','Nada Muda','Item encontrado no NFS',11),(8,'Volante',10.22,'UltraCar',1,3,'imagenProduto/images.jpg','imagenProduto/1679091c5a880faf6fb5e6087eb1b2dc.jpg','imagenProduto/8f14e45fceea167a5a36dedd4bea2543.jpg','imagenProduto/e6d96502596d7e7887b76646c5f615d9.jpg','fon','Astra2000','2 anos','2014-10-26','4 anos','Cardrop','Produto altamente confortavel','Volante perfeito para curvas dificilmente perfeitas',4);
 /*!40000 ALTER TABLE `tbl_produto` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1308,7 +1449,7 @@ CREATE TABLE `tbl_servico` (
   `descricao` text NOT NULL,
   `imagem` varchar(255) NOT NULL,
   PRIMARY KEY (`idServico`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1317,7 +1458,7 @@ CREATE TABLE `tbl_servico` (
 
 LOCK TABLES `tbl_servico` WRITE;
 /*!40000 ALTER TABLE `tbl_servico` DISABLE KEYS */;
-INSERT INTO `tbl_servico` VALUES (4,'toda vez que vc me disser','sdtrteryery','imagenPlano/Captura de Tela (1).png'),(5,'llll','erteryetyrty','imagenPlano/0de1790c415ea19bc854794cc9761f98.jpg'),(7,'teste','tu drui 7r75 ir57','imagenPlano/f8611767a7b3d415b3609219e5d00f1c.jpg'),(8,'teste','y srtu6 ruirdt6ui tf7','imagenPlano/26cae7718c32180a7a0f8e19d6d40a59.png');
+INSERT INTO `tbl_servico` VALUES (5,'TROCA DE RODAS','esteve aqui','imagenServico/d0ef51379636616a1e351fa3bec115e6.png'),(11,'TROCA DE OLEO','gggggggg editado','imagenServico/d0ef51379636616a1e351fa3bec115e6.png'),(12,'AUTOELETRICO','tetetetetetete','imagenServico/d0ef51379636616a1e351fa3bec115e6.png'),(13,'FUNILARIA','dwaefawrtsey','imagenServico/d0ef51379636616a1e351fa3bec115e6.png'),(14,'PINTURA','123','imagenServico/d0ef51379636616a1e351fa3bec115e6.png'),(15,'RETIFICA DE MOTOR','asdasdas','imagenServico/d0ef51379636616a1e351fa3bec115e6.png'),(16,'TUNING','dasdasd','imagenServico/d0ef51379636616a1e351fa3bec115e6.png'),(17,'CARROCERIA ','sdasd','imagenServico/d0ef51379636616a1e351fa3bec115e6.png');
 /*!40000 ALTER TABLE `tbl_servico` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1360,7 +1501,7 @@ CREATE TABLE `tbl_sobre_empresa` (
   `slogan` text NOT NULL,
   `ativo` varchar(1) NOT NULL,
   PRIMARY KEY (`idSobreEmpresa`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1369,7 +1510,7 @@ CREATE TABLE `tbl_sobre_empresa` (
 
 LOCK TABLES `tbl_sobre_empresa` WRITE;
 /*!40000 ALTER TABLE `tbl_sobre_empresa` DISABLE KEYS */;
-INSERT INTO `tbl_sobre_empresa` VALUES (1,'SoftI9 é uma empresa que atua na área da tecnologia, criada em 2016,','buscando inovar a cada projeto, tornando-os os únicos no mercado,','surgiu em uma comunidade de tecnologia onde eram compartilhados códigos e projetos,','m compartilhados códigos e projetos,','Se você adora o seu carro, deixe que nós cuidamos de tudo para você','1');
+INSERT INTO `tbl_sobre_empresa` VALUES (1,'SoftI9 é uma empresa que atua na área da tecnologia, criada em 2016,','buscando inovar a cada projeto, tornando-os os únicos no mercado,','surgiu em uma comunidade de tecnologia onde eram compartilhados códigos e projetos,','m compartilhados códigos e projetos,','Se você adora o seu carro, deixe que nós cuidamos de tudo para você','1'),(2,'peguei o insertpeguei o insertpeguei o insertpeguei o insertpeguei o insertpeguei o insertpeguei o insert','peguei o insertpeguei o insertpeguei o insertpeguei o insertpeguei o insert','peguei o insertpeguei o insertpeguei o inserteguei o insert','peguei o insertpeguei o insepeguei o insert','peguei o insertpeguei o insertpeguei o insertpeguei o insertpeguei o insertpeguei o insertpeguei o insertpeguei o insertpeguei o insert','0');
 /*!40000 ALTER TABLE `tbl_sobre_empresa` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1381,10 +1522,10 @@ DROP TABLE IF EXISTS `tbl_status_compra`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `tbl_status_compra` (
-  `idStatus` int(11) NOT NULL,
+  `idStatus` int(11) NOT NULL AUTO_INCREMENT,
   `status` varchar(45) NOT NULL,
   PRIMARY KEY (`idStatus`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1393,6 +1534,7 @@ CREATE TABLE `tbl_status_compra` (
 
 LOCK TABLES `tbl_status_compra` WRITE;
 /*!40000 ALTER TABLE `tbl_status_compra` DISABLE KEYS */;
+INSERT INTO `tbl_status_compra` VALUES (1,'pago'),(2,'enviado'),(3,'entregue');
 /*!40000 ALTER TABLE `tbl_status_compra` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1435,6 +1577,7 @@ CREATE TABLE `tbl_sub_categoria` (
   `idSubCategoria` int(11) NOT NULL AUTO_INCREMENT,
   `descricao` varchar(45) NOT NULL,
   `idCategoriaProduto` int(11) NOT NULL,
+  `status` tinyint(1) NOT NULL,
   PRIMARY KEY (`idSubCategoria`),
   KEY `fk_categoria_idx` (`idCategoriaProduto`),
   CONSTRAINT `fk_categoria` FOREIGN KEY (`idCategoriaProduto`) REFERENCES `tbl_categoria_produto` (`idCategoriaProduto`) ON DELETE NO ACTION ON UPDATE NO ACTION
@@ -1447,7 +1590,7 @@ CREATE TABLE `tbl_sub_categoria` (
 
 LOCK TABLES `tbl_sub_categoria` WRITE;
 /*!40000 ALTER TABLE `tbl_sub_categoria` DISABLE KEYS */;
-INSERT INTO `tbl_sub_categoria` VALUES (1,'Serras Giratórias',1);
+INSERT INTO `tbl_sub_categoria` VALUES (1,'Serras Giratórias',1,1);
 /*!40000 ALTER TABLE `tbl_sub_categoria` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1518,7 +1661,7 @@ CREATE TABLE `tbl_topico_forum` (
   KEY `fk_catagoria_topico_idx` (`idCategoriaForum`),
   CONSTRAINT `fk_catagoria_topico` FOREIGN KEY (`idCategoriaForum`) REFERENCES `tbl_categoria_forum` (`idCategoriaForum`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `fk_topico_usuario` FOREIGN KEY (`idUsuario`) REFERENCES `tbl_usuario` (`idUsuario`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1527,7 +1670,7 @@ CREATE TABLE `tbl_topico_forum` (
 
 LOCK TABLES `tbl_topico_forum` WRITE;
 /*!40000 ALTER TABLE `tbl_topico_forum` DISABLE KEYS */;
-INSERT INTO `tbl_topico_forum` VALUES (1,'Trocar regularmente o óleo e o filtro do motor do seu carro é uma das coisas mais importantes que você pode fazer para manter o automóvel rodando bem. Ao longo do tempo, o óleo vai se decompor, e seu filtro ficará entupido de contaminantes. Deppppp',2,2),(2,'meu carro ta roubando combustivel o que fazer?',4,4),(3,'Here we go with the icons related to Menu. All icons are created by the Icons8 designers, therefore they have the same style and quality. Each Menu icon is a flat icon.',7,5),(4,'Pq o antonio é tao chato?',8,6),(5,'Here we go with the icons related to Menu. All icons are created by the Icons8 designers, therefore they have the same style and quality. Each Menu icon is a flat icon bbbb bbbb bbbbbb.',6,6),(6,'Here we go with the icons related to Menu. All icons are created by the Icons8 designers, therefore they have the same style and quality. Each Menu ',1,5);
+INSERT INTO `tbl_topico_forum` VALUES (1,'Trocar regularmente o óleo e o filtro do motor do seu carro é uma das coisas mais importantes que você pode fazer para manter o automóvel rodando bem. Ao longo do tempo, o óleo vai se decompor, e seu filtro ficará entupido de contaminantes. Deppppp',2,2),(2,'meu carro ta roubando combustivel o que fazer?',4,4),(3,'Here we go with the icons related to Menu. All icons are created by the Icons8 designers, therefore they have the same style and quality. Each Menu icon is a flat icon.',7,5),(4,'Pq o antonio é tao chato?',8,6),(5,'Here we go with the icons related to Menu. All icons are created by the Icons8 designers, therefore they have the same style and quality. Each Menu icon is a flat icon bbbb bbbb bbbbbb.',6,6),(6,'Here we go with the icons related to Menu. All icons are created by the Icons8 designers, therefore they have the same style and quality. Each Menu ',1,5),(7,'existe?',8,12),(8,'Baby Baby diO BIRULEIBE LEIBE?',7,13),(9,'moton nao funciona mais!!!',7,7),(10,'ta funcionando',13,7);
 /*!40000 ALTER TABLE `tbl_topico_forum` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1547,10 +1690,10 @@ CREATE TABLE `tbl_usuario` (
   `dtNasc` date NOT NULL,
   `cpf` varchar(15) NOT NULL,
   `fotoUser` varchar(1200) DEFAULT NULL,
-  `status` tinyint(1) DEFAULT NULL,
+  `statusUser` tinyint(1) DEFAULT '1',
   PRIMARY KEY (`idUsuario`),
   UNIQUE KEY `usuario_UNIQUE` (`usuario`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1559,7 +1702,7 @@ CREATE TABLE `tbl_usuario` (
 
 LOCK TABLES `tbl_usuario` WRITE;
 /*!40000 ALTER TABLE `tbl_usuario` DISABLE KEYS */;
-INSERT INTO `tbl_usuario` VALUES (1,'camila','milla','1234','milla@caah.com','2000-02-24','47292701850',NULL,NULL),(2,'Camila Cruz','Caah','12345','princesa@maravilhosa','2000-02-24','344.556.677-88','cms/imagemUser/8ad2a3101164b40043a3f511730b44bb.png',NULL),(4,'joao martins d','joa0123','1234','ghas@ooo','1965-02-01','010.101.010-10','cms/imagemUser/48d6215903dff56238e52e8891380c8f.jpg',NULL),(5,'marquinhos aut','marq03022','123456','ghas@ooo','1989-05-02','785.420.136-52','cms/imagemUser/acd113387a1fead81b84ffc885aeff47.jpg',NULL),(6,'parasita da si','parasita0102','12345','parasita@oortt','1999-02-26','568.247.151-85','cms/imagemUser/6c315afc1fc0e75a57ced56b738b0d3a.jpg',NULL),(7,'Antonio willian','Willi321','1234','Antwillian2000@gmail.com','2000-02-01','010.203.020-10','cms/imagemUser/48d6215903dff56238e52e8891380c8f.jpg',NULL),(8,'Gabriel de Melo Marcondes','biel','123','gabriel-santos1313@hotmail.com','1999-10-13','500.695.508-24','cms/imagemUser/48d6215903dff56238e52e8891380c8f.jpg',NULL);
+INSERT INTO `tbl_usuario` VALUES (1,'camila','milla','1234','milla@caah.com','2000-02-24','47292701850',NULL,1),(2,'Camila Cruz','Caah','12345','princesa@maravilhosa','2000-02-24','344.556.677-88','cms/imagemUser/8ad2a3101164b40043a3f511730b44bb.png',1),(4,'joao martins d','joa0123','1234','ghas@ooo','1965-02-01','010.101.010-10','cms/imagemUser/48d6215903dff56238e52e8891380c8f.jpg',1),(5,'marquinhos aut','marq03022','123456','ghas@ooo','1989-05-02','785.420.136-52','cms/imagemUser/acd113387a1fead81b84ffc885aeff47.jpg',1),(6,'parasita da si','parasita0102','12345','parasita@oortt','1999-02-26','568.247.151-85','cms/imagemUser/6c315afc1fc0e75a57ced56b738b0d3a.jpg',1),(7,'Antonio willian','Willi321','1234','Antwillian2000@gmail.com','2000-02-01','010.203.020-10','cms/imagemUser/48d6215903dff56238e52e8891380c8f.jpg',1),(8,'Gabriel de Melo Marcondes','biel','123','gabriel-santos1','2000-05-27','500.695.508-24','cms/imagemUser/48d6215903dff56238e52e8891380c8f.jpg',1),(9,'Camila Cruz Malaquias','camila','123456','camilinha@gameplay','2000-02-24','472.927.018-50','cms/imagemUser/f8611767a7b3d415b3609219e5d00f1c.jpg',1),(10,'marquinhos autffffff','0000','0000','uuuuuuuuuu@ffffffffff','2000-01-01','111.111.111-11','cms/imagemUser/f8611767a7b3d415b3609219e5d00f1c.jpg',1),(11,'iiiiiiii iiiiiiiiiiiiiiiiiiiiiiiiii','00000','1111','iiiiiiiiiiiii@uuuuuuuuuuu','2000-01-02','656.565.656-56','cms/imagemUser/f8611767a7b3d415b3609219e5d00f1c.jpg',1),(12,'João Victor','joao','123','joao@teste.cpm','2000-04-29','000.000.000-00','cms/imagemUser/48d6215903dff56238e52e8891380c8f.jpg',1),(13,'Mat Mat Mat','Godzilla','123','matmat@gmgmg.com','2000-04-25','411.111.111-44','cms/imagemUser/9f2d3ae40c6ac7ebb1f720e32ba6c808.jpg',1),(14,'Caique M. Oliveira','caique','123','caique.m.oliveira.br@gmail.com','2000-03-08','443.156.218-46','cms/imagemUser/198230d4d1d7623dc821e7899de5f6f3.png',0),(15,'','','','','1915-01-09','',NULL,1),(17,'nome','usuario','senha','email','1915-01-09','cpf',NULL,1),(18,'Jhonatha','EuFracassei','Jhoe1234','jhoe@gmail.com','2000-05-08','111.111.111-11',NULL,1),(19,'antonio willian','willi1234','1234','antwillian2014@gmail.com','2000-03-12','111.111.111-11','cms/imagemUser/8f14e45fceea167a5a36dedd4bea2543.jpg',1),(20,'Jose armando ','jose','123','dddddd@ffffff','2000-02-02','033.555.353-10','Erro',1);
 /*!40000 ALTER TABLE `tbl_usuario` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1583,7 +1726,7 @@ CREATE TABLE `tbl_veiculo` (
   KEY `fk_veiculo_modelo_idx` (`idModelo`),
   CONSTRAINT `fk_veiculo_modelo` FOREIGN KEY (`idModelo`) REFERENCES `tbl_modelo` (`idModelo`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `fk_veiculo_usuario` FOREIGN KEY (`idUsuario`) REFERENCES `tbl_usuario` (`idUsuario`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1592,6 +1735,7 @@ CREATE TABLE `tbl_veiculo` (
 
 LOCK TABLES `tbl_veiculo` WRITE;
 /*!40000 ALTER TABLE `tbl_veiculo` DISABLE KEYS */;
+INSERT INTO `tbl_veiculo` VALUES (1,'MEC-4518',2017,'Azul',1,8,'Não Possui'),(2,'CDR-0978',2017,'vermelho',1,8,'Não Possui');
 /*!40000 ALTER TABLE `tbl_veiculo` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1612,7 +1756,7 @@ CREATE TABLE `tbl_visita` (
   KEY `fk_visita_servico_idx` (`idServicoFilial`),
   CONSTRAINT `fk_usuario_visita` FOREIGN KEY (`idUsuario`) REFERENCES `tbl_usuario` (`idUsuario`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `fk_visita_servico` FOREIGN KEY (`idServicoFilial`) REFERENCES `tbl_filial_servico` (`idFilialServico`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1621,34 +1765,232 @@ CREATE TABLE `tbl_visita` (
 
 LOCK TABLES `tbl_visita` WRITE;
 /*!40000 ALTER TABLE `tbl_visita` DISABLE KEYS */;
+INSERT INTO `tbl_visita` VALUES (1,'2018-05-09',1,4),(2,'2018-05-22',7,10),(3,'2018-05-16',7,2),(4,'2018-05-30',7,10),(5,'2018-05-30',7,10),(6,'2018-05-23',7,2),(7,'2018-05-16',7,2),(8,'2018-06-29',7,5),(9,'2018-06-13',7,6),(10,'2018-06-14',7,3),(11,'2018-06-21',7,8);
 /*!40000 ALTER TABLE `tbl_visita` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
--- Temporary view structure for view `view_carroeusuario`
+-- Temporary view structure for view `veiw_teste`
 --
 
-DROP TABLE IF EXISTS `view_carroeusuario`;
-/*!50001 DROP VIEW IF EXISTS `view_carroeusuario`*/;
+DROP TABLE IF EXISTS `veiw_teste`;
+/*!50001 DROP VIEW IF EXISTS `veiw_teste`*/;
 SET @saved_cs_client     = @@character_set_client;
 SET character_set_client = utf8;
-/*!50001 CREATE VIEW `view_carroeusuario` AS SELECT 
+/*!50001 CREATE VIEW `veiw_teste` AS SELECT 
+ 1 AS `idFotoVeiculo`,
+ 1 AS `foto`,
+ 1 AS `idVeiculo`*/;
+SET character_set_client = @saved_cs_client;
+
+--
+-- Temporary view structure for view `view_confirmarcompra`
+--
+
+DROP TABLE IF EXISTS `view_confirmarcompra`;
+/*!50001 DROP VIEW IF EXISTS `view_confirmarcompra`*/;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
+/*!50001 CREATE VIEW `view_confirmarcompra` AS SELECT 
+ 1 AS `idPedido`,
+ 1 AS `idProduto`,
  1 AS `idUsuario`,
- 1 AS `nome_pessoa`,
- 1 AS `usuario`,
- 1 AS `cpf`,
- 1 AS `email`,
- 1 AS `dtNasc`,
- 1 AS `fotoUser`,
- 1 AS `status`,
- 1 AS `placa`,
- 1 AS `idVeiculo`,
- 1 AS `ano`,
- 1 AS `cor`,
- 1 AS `modelo`,
- 1 AS `idModelo`,
+ 1 AS `quantidade`,
+ 1 AS `idStatus`,
+ 1 AS `data`,
+ 1 AS `nome`,
+ 1 AS `preco`,
  1 AS `marca`,
- 1 AS `idMarca`*/;
+ 1 AS `idSubcategoria`,
+ 1 AS `idFilial`,
+ 1 AS `imagem`,
+ 1 AS `imagem1`,
+ 1 AS `imagem2`,
+ 1 AS `imagem3`,
+ 1 AS `tipo`,
+ 1 AS `modelo`,
+ 1 AS `durabilidade`,
+ 1 AS `dt_fabrica`,
+ 1 AS `garantia`,
+ 1 AS `fabricante`,
+ 1 AS `obs`,
+ 1 AS `descricao`,
+ 1 AS `quantidadeProduto`,
+ 1 AS `filial`,
+ 1 AS `Cliente`,
+ 1 AS `email`,
+ 1 AS `idEnderecoUsuario`,
+ 1 AS `logradouro`,
+ 1 AS `numero`,
+ 1 AS `complemento`,
+ 1 AS `bairro`,
+ 1 AS `cep`,
+ 1 AS `idTipoEndereco`,
+ 1 AS `idCidade`*/;
+SET character_set_client = @saved_cs_client;
+
+--
+-- Temporary view structure for view `view_endereco_usuario`
+--
+
+DROP TABLE IF EXISTS `view_endereco_usuario`;
+/*!50001 DROP VIEW IF EXISTS `view_endereco_usuario`*/;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
+/*!50001 CREATE VIEW `view_endereco_usuario` AS SELECT 
+ 1 AS `idEnderecoUsuario`,
+ 1 AS `logradouro`,
+ 1 AS `numero`,
+ 1 AS `complemento`,
+ 1 AS `bairro`,
+ 1 AS `cep`,
+ 1 AS `idTipoEndereco`,
+ 1 AS `idCidade`,
+ 1 AS `idUsuario`,
+ 1 AS `descricao`*/;
+SET character_set_client = @saved_cs_client;
+
+--
+-- Temporary view structure for view `view_prestadora_filial`
+--
+
+DROP TABLE IF EXISTS `view_prestadora_filial`;
+/*!50001 DROP VIEW IF EXISTS `view_prestadora_filial`*/;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
+/*!50001 CREATE VIEW `view_prestadora_filial` AS SELECT 
+ 1 AS `idPrestadora`,
+ 1 AS `NomePrestadora`,
+ 1 AS `idFilial`,
+ 1 AS `nomeFilial`,
+ 1 AS `telefone`,
+ 1 AS `fotoFilial`,
+ 1 AS `status`,
+ 1 AS `statusServico`,
+ 1 AS `statusProduto`,
+ 1 AS `statusHome`,
+ 1 AS `statusPagPrest`,
+ 1 AS `statusPagSer`,
+ 1 AS `idEnderecoPrestadora`,
+ 1 AS `logradouro`,
+ 1 AS `numero`,
+ 1 AS `bairro`,
+ 1 AS `cep`,
+ 1 AS `idCidade`,
+ 1 AS `cidade`,
+ 1 AS `idEstado`,
+ 1 AS `estado`,
+ 1 AS `idPlano`,
+ 1 AS `Plano`,
+ 1 AS `preco`,
+ 1 AS `descricao`*/;
+SET character_set_client = @saved_cs_client;
+
+--
+-- Temporary view structure for view `view_prestadora_filial_servico_endereco`
+--
+
+DROP TABLE IF EXISTS `view_prestadora_filial_servico_endereco`;
+/*!50001 DROP VIEW IF EXISTS `view_prestadora_filial_servico_endereco`*/;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
+/*!50001 CREATE VIEW `view_prestadora_filial_servico_endereco` AS SELECT 
+ 1 AS `idFilial`,
+ 1 AS `Nomefilial`,
+ 1 AS `telefoneFilial`,
+ 1 AS `fotoFilial`,
+ 1 AS `idEnderecoPrestadora`,
+ 1 AS `statusfilial`,
+ 1 AS `idPrestadora`,
+ 1 AS `razaoSocial`,
+ 1 AS `nomeFantasia`,
+ 1 AS `fotoPrestadora`,
+ 1 AS `descricao`,
+ 1 AS `telefone`,
+ 1 AS `cnpj`,
+ 1 AS `senha`,
+ 1 AS `status`,
+ 1 AS `idEndereco`,
+ 1 AS `statusPrestadora`,
+ 1 AS `idFilialServico`,
+ 1 AS `idServico`,
+ 1 AS `NomeSrevivo`,
+ 1 AS `descricaoFilial`,
+ 1 AS `imagem`,
+ 1 AS `logradouro`,
+ 1 AS `numero`,
+ 1 AS `bairro`,
+ 1 AS `referencia`,
+ 1 AS `cep`,
+ 1 AS `nomeCidade`,
+ 1 AS `estadoNome`,
+ 1 AS `sigla`*/;
+SET character_set_client = @saved_cs_client;
+
+--
+-- Temporary view structure for view `view_prestadora_servico`
+--
+
+DROP TABLE IF EXISTS `view_prestadora_servico`;
+/*!50001 DROP VIEW IF EXISTS `view_prestadora_servico`*/;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
+/*!50001 CREATE VIEW `view_prestadora_servico` AS SELECT 
+ 1 AS `idFilial`,
+ 1 AS `Nomefilial`,
+ 1 AS `telefoneFilial`,
+ 1 AS `fotoFilial`,
+ 1 AS `idEnderecoPrestadora`,
+ 1 AS `statusfilial`,
+ 1 AS `idPrestadora`,
+ 1 AS `razaoSocial`,
+ 1 AS `nomeFantasia`,
+ 1 AS `fotoPrestadora`,
+ 1 AS `descricao`,
+ 1 AS `telefone`,
+ 1 AS `cnpj`,
+ 1 AS `senha`,
+ 1 AS `status`,
+ 1 AS `idEndereco`,
+ 1 AS `statusPrestadora`,
+ 1 AS `idFilialServico`,
+ 1 AS `idServico`,
+ 1 AS `NomeSrevivo`,
+ 1 AS `descricaoFilial`,
+ 1 AS `imagem`*/;
+SET character_set_client = @saved_cs_client;
+
+--
+-- Temporary view structure for view `view_prod_status`
+--
+
+DROP TABLE IF EXISTS `view_prod_status`;
+/*!50001 DROP VIEW IF EXISTS `view_prod_status`*/;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
+/*!50001 CREATE VIEW `view_prod_status` AS SELECT 
+ 1 AS `idUsuario`,
+ 1 AS `idProduto`,
+ 1 AS `idStatus`,
+ 1 AS `status`,
+ 1 AS `nome`*/;
+SET character_set_client = @saved_cs_client;
+
+--
+-- Temporary view structure for view `view_servico_filial`
+--
+
+DROP TABLE IF EXISTS `view_servico_filial`;
+/*!50001 DROP VIEW IF EXISTS `view_servico_filial`*/;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
+/*!50001 CREATE VIEW `view_servico_filial` AS SELECT 
+ 1 AS `idFilialServico`,
+ 1 AS `idFilial`,
+ 1 AS `nomeFilial`,
+ 1 AS `idServico`,
+ 1 AS `nome`,
+ 1 AS `descricao`*/;
 SET character_set_client = @saved_cs_client;
 
 --
@@ -1670,6 +2012,81 @@ SET character_set_client = utf8;
 SET character_set_client = @saved_cs_client;
 
 --
+-- Temporary view structure for view `view_veiculo`
+--
+
+DROP TABLE IF EXISTS `view_veiculo`;
+/*!50001 DROP VIEW IF EXISTS `view_veiculo`*/;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
+/*!50001 CREATE VIEW `view_veiculo` AS SELECT 
+ 1 AS `idVeiculo`,
+ 1 AS `placa`,
+ 1 AS `ano`,
+ 1 AS `cor`,
+ 1 AS `idModelo`,
+ 1 AS `idUsuario`,
+ 1 AS `acessorios`,
+ 1 AS `modelo`,
+ 1 AS `marca`,
+ 1 AS `foto`*/;
+SET character_set_client = @saved_cs_client;
+
+--
+-- Temporary view structure for view `view_visita_marcada`
+--
+
+DROP TABLE IF EXISTS `view_visita_marcada`;
+/*!50001 DROP VIEW IF EXISTS `view_visita_marcada`*/;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
+/*!50001 CREATE VIEW `view_visita_marcada` AS SELECT 
+ 1 AS `dtVisita`,
+ 1 AS `idVisita`,
+ 1 AS `idUsuario`,
+ 1 AS `user`,
+ 1 AS `usuario`,
+ 1 AS `senha`,
+ 1 AS `email`,
+ 1 AS `dtNasc`,
+ 1 AS `cpf`,
+ 1 AS `fotoUser`,
+ 1 AS `statusUser`,
+ 1 AS `idFilialServico`,
+ 1 AS `idServico`,
+ 1 AS `nome`,
+ 1 AS `descricao`,
+ 1 AS `imagem`,
+ 1 AS `idFilial`,
+ 1 AS `filialNome`,
+ 1 AS `telefone`*/;
+SET character_set_client = @saved_cs_client;
+
+--
+-- Temporary view structure for view `viewperfilprestadora`
+--
+
+DROP TABLE IF EXISTS `viewperfilprestadora`;
+/*!50001 DROP VIEW IF EXISTS `viewperfilprestadora`*/;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
+/*!50001 CREATE VIEW `viewperfilprestadora` AS SELECT 
+ 1 AS `idPrestadora`,
+ 1 AS `nomeFantasia`,
+ 1 AS `fotoPrestadora`,
+ 1 AS `descricao`,
+ 1 AS `telefone`,
+ 1 AS `logradouro`,
+ 1 AS `numero`,
+ 1 AS `bairro`,
+ 1 AS `referencia`,
+ 1 AS `cep`,
+ 1 AS `cidade`,
+ 1 AS `estado`,
+ 1 AS `Filial`*/;
+SET character_set_client = @saved_cs_client;
+
+--
 -- Final view structure for view `respostaperguntaforum_view`
 --
 
@@ -1681,17 +2098,17 @@ SET character_set_client = @saved_cs_client;
 /*!50001 SET character_set_results     = utf8 */;
 /*!50001 SET collation_connection      = utf8_general_ci */;
 /*!50001 CREATE ALGORITHM=UNDEFINED */
-/*!50013 DEFINER=`root`@`%` SQL SECURITY DEFINER */
+/*!50013 DEFINER=`i9autocenter`@`%` SQL SECURITY DEFINER */
 /*!50001 VIEW `respostaperguntaforum_view` AS select `t`.`idTopicoForum` AS `idTopicoForum`,`c`.`idComentarioTopico` AS `idComentarioTopico`,`c`.`comentario` AS `comentario`,`u`.`usuario` AS `usuario`,`u`.`fotoUser` AS `fotoUser`,`u`.`idUsuario` AS `idUsuario` from ((`tbl_comentario_topico` `c` join `tbl_usuario` `u` on((`u`.`idUsuario` = `c`.`idUsuario`))) join `tbl_topico_forum` `t` on((`c`.`idTopico` = `t`.`idTopicoForum`))) */;
 /*!50001 SET character_set_client      = @saved_cs_client */;
 /*!50001 SET character_set_results     = @saved_cs_results */;
 /*!50001 SET collation_connection      = @saved_col_connection */;
 
 --
--- Final view structure for view `view_carroeusuario`
+-- Final view structure for view `veiw_teste`
 --
 
-/*!50001 DROP VIEW IF EXISTS `view_carroeusuario`*/;
+/*!50001 DROP VIEW IF EXISTS `veiw_teste`*/;
 /*!50001 SET @saved_cs_client          = @@character_set_client */;
 /*!50001 SET @saved_cs_results         = @@character_set_results */;
 /*!50001 SET @saved_col_connection     = @@collation_connection */;
@@ -1699,8 +2116,134 @@ SET character_set_client = @saved_cs_client;
 /*!50001 SET character_set_results     = utf8 */;
 /*!50001 SET collation_connection      = utf8_general_ci */;
 /*!50001 CREATE ALGORITHM=UNDEFINED */
-/*!50013 DEFINER=`root`@`%` SQL SECURITY DEFINER */
-/*!50001 VIEW `view_carroeusuario` AS select `u`.`idUsuario` AS `idUsuario`,`u`.`nome` AS `nome_pessoa`,`u`.`usuario` AS `usuario`,`u`.`cpf` AS `cpf`,`u`.`email` AS `email`,`u`.`dtNasc` AS `dtNasc`,`u`.`fotoUser` AS `fotoUser`,`u`.`status` AS `status`,`v`.`placa` AS `placa`,`v`.`idVeiculo` AS `idVeiculo`,`v`.`ano` AS `ano`,`v`.`cor` AS `cor`,`m`.`nome` AS `modelo`,`m`.`idModelo` AS `idModelo`,`ma`.`nome` AS `marca`,`ma`.`idMarca` AS `idMarca` from (((`tbl_usuario` `u` join `tbl_veiculo` `v` on((`u`.`idUsuario` = `v`.`idUsuario`))) join `tbl_modelo` `m` on((`v`.`idModelo` = `m`.`idModelo`))) join `tbl_marca` `ma` on((`m`.`idMarca` = `ma`.`idMarca`))) */;
+/*!50013 DEFINER=`i9autocenter`@`%` SQL SECURITY DEFINER */
+/*!50001 VIEW `veiw_teste` AS select 1 AS `idFotoVeiculo`,1 AS `foto`,1 AS `idVeiculo` */;
+/*!50001 SET character_set_client      = @saved_cs_client */;
+/*!50001 SET character_set_results     = @saved_cs_results */;
+/*!50001 SET collation_connection      = @saved_col_connection */;
+
+--
+-- Final view structure for view `view_confirmarcompra`
+--
+
+/*!50001 DROP VIEW IF EXISTS `view_confirmarcompra`*/;
+/*!50001 SET @saved_cs_client          = @@character_set_client */;
+/*!50001 SET @saved_cs_results         = @@character_set_results */;
+/*!50001 SET @saved_col_connection     = @@collation_connection */;
+/*!50001 SET character_set_client      = utf8 */;
+/*!50001 SET character_set_results     = utf8 */;
+/*!50001 SET collation_connection      = utf8_general_ci */;
+/*!50001 CREATE ALGORITHM=UNDEFINED */
+/*!50013 DEFINER=`i9autocenter`@`%` SQL SECURITY DEFINER */
+/*!50001 VIEW `view_confirmarcompra` AS select `p`.`idPedido` AS `idPedido`,`p`.`idProduto` AS `idProduto`,`p`.`idUsuario` AS `idUsuario`,`p`.`quantidade` AS `quantidade`,`p`.`idStatus` AS `idStatus`,`p`.`data` AS `data`,`pr`.`nome` AS `nome`,`pr`.`preco` AS `preco`,`pr`.`marca` AS `marca`,`pr`.`idSubcategoria` AS `idSubcategoria`,`pr`.`idFilial` AS `idFilial`,`pr`.`imagem` AS `imagem`,`pr`.`imagem1` AS `imagem1`,`pr`.`imagem2` AS `imagem2`,`pr`.`imagem3` AS `imagem3`,`pr`.`tipo` AS `tipo`,`pr`.`modelo` AS `modelo`,`pr`.`durabilidade` AS `durabilidade`,`pr`.`dt_fabrica` AS `dt_fabrica`,`pr`.`garantia` AS `garantia`,`pr`.`fabricante` AS `fabricante`,`pr`.`obs` AS `obs`,`pr`.`descricao` AS `descricao`,`pr`.`quantidadeProduto` AS `quantidadeProduto`,`f`.`nome` AS `filial`,`u`.`nome` AS `Cliente`,`u`.`email` AS `email`,`e`.`idEnderecoUsuario` AS `idEnderecoUsuario`,`e`.`logradouro` AS `logradouro`,`e`.`numero` AS `numero`,`e`.`complemento` AS `complemento`,`e`.`bairro` AS `bairro`,`e`.`cep` AS `cep`,`e`.`idTipoEndereco` AS `idTipoEndereco`,`e`.`idCidade` AS `idCidade` from ((((`tbl_pedido` `p` join `tbl_produto` `pr` on((`p`.`idProduto` = `pr`.`idProduto`))) join `tbl_filial` `f` on((`pr`.`idFilial` = `f`.`idFilial`))) join `tbl_usuario` `u` on((`u`.`idUsuario` = `p`.`idUsuario`))) join `tbl_endereco_usuario` `e` on((`p`.`idEnderecoUsuario` = `e`.`idEnderecoUsuario`))) */;
+/*!50001 SET character_set_client      = @saved_cs_client */;
+/*!50001 SET character_set_results     = @saved_cs_results */;
+/*!50001 SET collation_connection      = @saved_col_connection */;
+
+--
+-- Final view structure for view `view_endereco_usuario`
+--
+
+/*!50001 DROP VIEW IF EXISTS `view_endereco_usuario`*/;
+/*!50001 SET @saved_cs_client          = @@character_set_client */;
+/*!50001 SET @saved_cs_results         = @@character_set_results */;
+/*!50001 SET @saved_col_connection     = @@collation_connection */;
+/*!50001 SET character_set_client      = utf8 */;
+/*!50001 SET character_set_results     = utf8 */;
+/*!50001 SET collation_connection      = utf8_general_ci */;
+/*!50001 CREATE ALGORITHM=UNDEFINED */
+/*!50013 DEFINER=`i9autocenter`@`%` SQL SECURITY DEFINER */
+/*!50001 VIEW `view_endereco_usuario` AS select `e`.`idEnderecoUsuario` AS `idEnderecoUsuario`,`e`.`logradouro` AS `logradouro`,`e`.`numero` AS `numero`,`e`.`complemento` AS `complemento`,`e`.`bairro` AS `bairro`,`e`.`cep` AS `cep`,`e`.`idTipoEndereco` AS `idTipoEndereco`,`e`.`idCidade` AS `idCidade`,`e`.`idUsuario` AS `idUsuario`,`tp`.`descricao` AS `descricao` from (`tbl_endereco_usuario` `e` join `tbl_tipo_endereco` `tp` on((`e`.`idTipoEndereco` = `tp`.`idTipoEndereco`))) */;
+/*!50001 SET character_set_client      = @saved_cs_client */;
+/*!50001 SET character_set_results     = @saved_cs_results */;
+/*!50001 SET collation_connection      = @saved_col_connection */;
+
+--
+-- Final view structure for view `view_prestadora_filial`
+--
+
+/*!50001 DROP VIEW IF EXISTS `view_prestadora_filial`*/;
+/*!50001 SET @saved_cs_client          = @@character_set_client */;
+/*!50001 SET @saved_cs_results         = @@character_set_results */;
+/*!50001 SET @saved_col_connection     = @@collation_connection */;
+/*!50001 SET character_set_client      = utf8 */;
+/*!50001 SET character_set_results     = utf8 */;
+/*!50001 SET collation_connection      = utf8_general_ci */;
+/*!50001 CREATE ALGORITHM=UNDEFINED */
+/*!50013 DEFINER=`i9autocenter`@`%` SQL SECURITY DEFINER */
+/*!50001 VIEW `view_prestadora_filial` AS select `p`.`idPrestadora` AS `idPrestadora`,`p`.`nomeFantasia` AS `NomePrestadora`,`f`.`idFilial` AS `idFilial`,`f`.`nome` AS `nomeFilial`,`f`.`telefone` AS `telefone`,`f`.`fotoFilial` AS `fotoFilial`,`f`.`status` AS `status`,`f`.`statusServico` AS `statusServico`,`f`.`statusProduto` AS `statusProduto`,`f`.`statusHome` AS `statusHome`,`f`.`statusPagPrest` AS `statusPagPrest`,`f`.`statusPagSer` AS `statusPagSer`,`e`.`idEnderecoPrestadora` AS `idEnderecoPrestadora`,`e`.`logradouro` AS `logradouro`,`e`.`numero` AS `numero`,`e`.`bairro` AS `bairro`,`e`.`cep` AS `cep`,`c`.`idCidade` AS `idCidade`,`c`.`nome` AS `cidade`,`es`.`idEstado` AS `idEstado`,`es`.`nome` AS `estado`,`pl`.`idPlano` AS `idPlano`,`pl`.`nome` AS `Plano`,`pl`.`preco` AS `preco`,`pl`.`descricao` AS `descricao` from (((((`tbl_prestadora` `p` join `tbl_filial` `f` on((`p`.`idPrestadora` = `f`.`idPrestadora`))) join `tbl_endereco_prestadora` `e` on((`f`.`idEnderecoPrestadora` = `e`.`idEnderecoPrestadora`))) join `tbl_cidade` `c` on((`e`.`idCidade` = `c`.`idCidade`))) join `tbl_estado` `es` on((`c`.`idEstado` = `es`.`idEstado`))) join `tbl_plano` `pl` on((`f`.`idPlano` = `pl`.`idPlano`))) */;
+/*!50001 SET character_set_client      = @saved_cs_client */;
+/*!50001 SET character_set_results     = @saved_cs_results */;
+/*!50001 SET collation_connection      = @saved_col_connection */;
+
+--
+-- Final view structure for view `view_prestadora_filial_servico_endereco`
+--
+
+/*!50001 DROP VIEW IF EXISTS `view_prestadora_filial_servico_endereco`*/;
+/*!50001 SET @saved_cs_client          = @@character_set_client */;
+/*!50001 SET @saved_cs_results         = @@character_set_results */;
+/*!50001 SET @saved_col_connection     = @@collation_connection */;
+/*!50001 SET character_set_client      = utf8 */;
+/*!50001 SET character_set_results     = utf8 */;
+/*!50001 SET collation_connection      = utf8_general_ci */;
+/*!50001 CREATE ALGORITHM=UNDEFINED */
+/*!50013 DEFINER=`i9autocenter`@`%` SQL SECURITY DEFINER */
+/*!50001 VIEW `view_prestadora_filial_servico_endereco` AS select `vps`.`idFilial` AS `idFilial`,`vps`.`Nomefilial` AS `Nomefilial`,`vps`.`telefoneFilial` AS `telefoneFilial`,`vps`.`fotoFilial` AS `fotoFilial`,`vps`.`idEnderecoPrestadora` AS `idEnderecoPrestadora`,`vps`.`statusfilial` AS `statusfilial`,`vps`.`idPrestadora` AS `idPrestadora`,`vps`.`razaoSocial` AS `razaoSocial`,`vps`.`nomeFantasia` AS `nomeFantasia`,`vps`.`fotoPrestadora` AS `fotoPrestadora`,`vps`.`descricao` AS `descricao`,`vps`.`telefone` AS `telefone`,`vps`.`cnpj` AS `cnpj`,`vps`.`senha` AS `senha`,`vps`.`status` AS `status`,`vps`.`idEndereco` AS `idEndereco`,`vps`.`statusPrestadora` AS `statusPrestadora`,`vps`.`idFilialServico` AS `idFilialServico`,`vps`.`idServico` AS `idServico`,`vps`.`NomeSrevivo` AS `NomeSrevivo`,`vps`.`descricaoFilial` AS `descricaoFilial`,`vps`.`imagem` AS `imagem`,`ep`.`logradouro` AS `logradouro`,`ep`.`numero` AS `numero`,`ep`.`bairro` AS `bairro`,`ep`.`referencia` AS `referencia`,`ep`.`cep` AS `cep`,`c`.`nome` AS `nomeCidade`,`es`.`nome` AS `estadoNome`,`es`.`sigla` AS `sigla` from (((`view_prestadora_servico` `vps` join `tbl_endereco_prestadora` `ep` on((`vps`.`idEnderecoPrestadora` = `ep`.`idEnderecoPrestadora`))) join `tbl_cidade` `c` on((`ep`.`idCidade` = `c`.`idCidade`))) join `tbl_estado` `es` on((`es`.`idEstado` = `c`.`idEstado`))) */;
+/*!50001 SET character_set_client      = @saved_cs_client */;
+/*!50001 SET character_set_results     = @saved_cs_results */;
+/*!50001 SET collation_connection      = @saved_col_connection */;
+
+--
+-- Final view structure for view `view_prestadora_servico`
+--
+
+/*!50001 DROP VIEW IF EXISTS `view_prestadora_servico`*/;
+/*!50001 SET @saved_cs_client          = @@character_set_client */;
+/*!50001 SET @saved_cs_results         = @@character_set_results */;
+/*!50001 SET @saved_col_connection     = @@collation_connection */;
+/*!50001 SET character_set_client      = utf8 */;
+/*!50001 SET character_set_results     = utf8 */;
+/*!50001 SET collation_connection      = utf8_general_ci */;
+/*!50001 CREATE ALGORITHM=UNDEFINED */
+/*!50013 DEFINER=`i9autocenter`@`%` SQL SECURITY DEFINER */
+/*!50001 VIEW `view_prestadora_servico` AS select `f`.`idFilial` AS `idFilial`,`f`.`nome` AS `Nomefilial`,`f`.`telefone` AS `telefoneFilial`,`f`.`fotoFilial` AS `fotoFilial`,`f`.`idEnderecoPrestadora` AS `idEnderecoPrestadora`,`f`.`status` AS `statusfilial`,`p`.`idPrestadora` AS `idPrestadora`,`p`.`razaoSocial` AS `razaoSocial`,`p`.`nomeFantasia` AS `nomeFantasia`,`p`.`fotoPrestadora` AS `fotoPrestadora`,`p`.`descricao` AS `descricao`,`p`.`telefone` AS `telefone`,`p`.`cnpj` AS `cnpj`,`p`.`senha` AS `senha`,`p`.`status` AS `status`,`p`.`idEndereco` AS `idEndereco`,`p`.`status` AS `statusPrestadora`,`fs`.`idFilialServico` AS `idFilialServico`,`s`.`idServico` AS `idServico`,`s`.`nome` AS `NomeSrevivo`,`s`.`descricao` AS `descricaoFilial`,`s`.`imagem` AS `imagem` from (((`tbl_filial` `f` join `tbl_prestadora` `p` on((`f`.`idPrestadora` = `p`.`idPrestadora`))) join `tbl_filial_servico` `fs` on((`f`.`idFilial` = `fs`.`idFilial`))) join `tbl_servico` `s` on((`fs`.`idServico` = `s`.`idServico`))) where ((`f`.`status` = 1) and (`p`.`status` = 1)) */;
+/*!50001 SET character_set_client      = @saved_cs_client */;
+/*!50001 SET character_set_results     = @saved_cs_results */;
+/*!50001 SET collation_connection      = @saved_col_connection */;
+
+--
+-- Final view structure for view `view_prod_status`
+--
+
+/*!50001 DROP VIEW IF EXISTS `view_prod_status`*/;
+/*!50001 SET @saved_cs_client          = @@character_set_client */;
+/*!50001 SET @saved_cs_results         = @@character_set_results */;
+/*!50001 SET @saved_col_connection     = @@collation_connection */;
+/*!50001 SET character_set_client      = utf8 */;
+/*!50001 SET character_set_results     = utf8 */;
+/*!50001 SET collation_connection      = utf8_general_ci */;
+/*!50001 CREATE ALGORITHM=UNDEFINED */
+/*!50013 DEFINER=`i9autocenter`@`%` SQL SECURITY DEFINER */
+/*!50001 VIEW `view_prod_status` AS select `p`.`idUsuario` AS `idUsuario`,`p`.`idProduto` AS `idProduto`,`p`.`idStatus` AS `idStatus`,`s`.`status` AS `status`,`pr`.`nome` AS `nome` from ((`tbl_pedido` `p` join `tbl_produto` `pr` on((`pr`.`idProduto` = `p`.`idProduto`))) join `tbl_status_compra` `s` on((`p`.`idStatus` = `s`.`idStatus`))) */;
+/*!50001 SET character_set_client      = @saved_cs_client */;
+/*!50001 SET character_set_results     = @saved_cs_results */;
+/*!50001 SET collation_connection      = @saved_col_connection */;
+
+--
+-- Final view structure for view `view_servico_filial`
+--
+
+/*!50001 DROP VIEW IF EXISTS `view_servico_filial`*/;
+/*!50001 SET @saved_cs_client          = @@character_set_client */;
+/*!50001 SET @saved_cs_results         = @@character_set_results */;
+/*!50001 SET @saved_col_connection     = @@collation_connection */;
+/*!50001 SET character_set_client      = utf8 */;
+/*!50001 SET character_set_results     = utf8 */;
+/*!50001 SET collation_connection      = utf8_general_ci */;
+/*!50001 CREATE ALGORITHM=UNDEFINED */
+/*!50013 DEFINER=`i9autocenter`@`%` SQL SECURITY DEFINER */
+/*!50001 VIEW `view_servico_filial` AS select `fs`.`idFilialServico` AS `idFilialServico`,`f`.`idFilial` AS `idFilial`,`f`.`nome` AS `nomeFilial`,`s`.`idServico` AS `idServico`,`s`.`nome` AS `nome`,`s`.`descricao` AS `descricao` from ((`tbl_filial_servico` `fs` join `tbl_filial` `f` on((`fs`.`idFilial` = `f`.`idFilial`))) join `tbl_servico` `s` on((`fs`.`idServico` = `s`.`idServico`))) */;
 /*!50001 SET character_set_client      = @saved_cs_client */;
 /*!50001 SET character_set_results     = @saved_cs_results */;
 /*!50001 SET collation_connection      = @saved_col_connection */;
@@ -1717,8 +2260,62 @@ SET character_set_client = @saved_cs_client;
 /*!50001 SET character_set_results     = utf8 */;
 /*!50001 SET collation_connection      = utf8_general_ci */;
 /*!50001 CREATE ALGORITHM=UNDEFINED */
-/*!50013 DEFINER=`root`@`%` SQL SECURITY DEFINER */
+/*!50013 DEFINER=`i9autocenter`@`%` SQL SECURITY DEFINER */
 /*!50001 VIEW `view_usuarioforum` AS select `f`.`idTopicoForum` AS `idTopicoForum`,`f`.`pergunta` AS `pergunta`,`f`.`idCategoriaForum` AS `idCategoriaForum`,`cf`.`descricao` AS `descricao`,`u`.`idUsuario` AS `idUsuario`,`u`.`usuario` AS `usuario`,`u`.`fotoUser` AS `fotoUser` from ((`tbl_topico_forum` `f` join `tbl_categoria_forum` `cf`) join `tbl_usuario` `u` on((`f`.`idUsuario` = `u`.`idUsuario`))) where (`f`.`idCategoriaForum` = `cf`.`idCategoriaForum`) */;
+/*!50001 SET character_set_client      = @saved_cs_client */;
+/*!50001 SET character_set_results     = @saved_cs_results */;
+/*!50001 SET collation_connection      = @saved_col_connection */;
+
+--
+-- Final view structure for view `view_veiculo`
+--
+
+/*!50001 DROP VIEW IF EXISTS `view_veiculo`*/;
+/*!50001 SET @saved_cs_client          = @@character_set_client */;
+/*!50001 SET @saved_cs_results         = @@character_set_results */;
+/*!50001 SET @saved_col_connection     = @@collation_connection */;
+/*!50001 SET character_set_client      = utf8 */;
+/*!50001 SET character_set_results     = utf8 */;
+/*!50001 SET collation_connection      = utf8_general_ci */;
+/*!50001 CREATE ALGORITHM=UNDEFINED */
+/*!50013 DEFINER=`i9autocenter`@`%` SQL SECURITY DEFINER */
+/*!50001 VIEW `view_veiculo` AS select 1 AS `idVeiculo`,1 AS `placa`,1 AS `ano`,1 AS `cor`,1 AS `idModelo`,1 AS `idUsuario`,1 AS `acessorios`,1 AS `modelo`,1 AS `marca`,1 AS `foto` */;
+/*!50001 SET character_set_client      = @saved_cs_client */;
+/*!50001 SET character_set_results     = @saved_cs_results */;
+/*!50001 SET collation_connection      = @saved_col_connection */;
+
+--
+-- Final view structure for view `view_visita_marcada`
+--
+
+/*!50001 DROP VIEW IF EXISTS `view_visita_marcada`*/;
+/*!50001 SET @saved_cs_client          = @@character_set_client */;
+/*!50001 SET @saved_cs_results         = @@character_set_results */;
+/*!50001 SET @saved_col_connection     = @@collation_connection */;
+/*!50001 SET character_set_client      = utf8 */;
+/*!50001 SET character_set_results     = utf8 */;
+/*!50001 SET collation_connection      = utf8_general_ci */;
+/*!50001 CREATE ALGORITHM=UNDEFINED */
+/*!50013 DEFINER=`i9autocenter`@`%` SQL SECURITY DEFINER */
+/*!50001 VIEW `view_visita_marcada` AS select `v`.`dtVisita` AS `dtVisita`,`v`.`idVisita` AS `idVisita`,`u`.`idUsuario` AS `idUsuario`,`u`.`nome` AS `user`,`u`.`usuario` AS `usuario`,`u`.`senha` AS `senha`,`u`.`email` AS `email`,`u`.`dtNasc` AS `dtNasc`,`u`.`cpf` AS `cpf`,`u`.`fotoUser` AS `fotoUser`,`u`.`statusUser` AS `statusUser`,`sf`.`idFilialServico` AS `idFilialServico`,`s`.`idServico` AS `idServico`,`s`.`nome` AS `nome`,`s`.`descricao` AS `descricao`,`s`.`imagem` AS `imagem`,`f`.`idFilial` AS `idFilial`,`f`.`nome` AS `filialNome`,`f`.`telefone` AS `telefone` from ((((`tbl_visita` `v` join `tbl_usuario` `u` on((`u`.`idUsuario` = `v`.`idUsuario`))) join `tbl_filial_servico` `sf` on((`sf`.`idFilialServico` = `v`.`idServicoFilial`))) join `tbl_servico` `s` on((`s`.`idServico` = `sf`.`idServico`))) join `tbl_filial` `f` on((`f`.`idFilial` = `sf`.`idFilial`))) */;
+/*!50001 SET character_set_client      = @saved_cs_client */;
+/*!50001 SET character_set_results     = @saved_cs_results */;
+/*!50001 SET collation_connection      = @saved_col_connection */;
+
+--
+-- Final view structure for view `viewperfilprestadora`
+--
+
+/*!50001 DROP VIEW IF EXISTS `viewperfilprestadora`*/;
+/*!50001 SET @saved_cs_client          = @@character_set_client */;
+/*!50001 SET @saved_cs_results         = @@character_set_results */;
+/*!50001 SET @saved_col_connection     = @@collation_connection */;
+/*!50001 SET character_set_client      = utf8 */;
+/*!50001 SET character_set_results     = utf8 */;
+/*!50001 SET collation_connection      = utf8_general_ci */;
+/*!50001 CREATE ALGORITHM=UNDEFINED */
+/*!50013 DEFINER=`i9autocenter`@`%` SQL SECURITY DEFINER */
+/*!50001 VIEW `viewperfilprestadora` AS select `p`.`idPrestadora` AS `idPrestadora`,`p`.`nomeFantasia` AS `nomeFantasia`,`p`.`fotoPrestadora` AS `fotoPrestadora`,`p`.`descricao` AS `descricao`,`p`.`telefone` AS `telefone`,`e`.`logradouro` AS `logradouro`,`e`.`numero` AS `numero`,`e`.`bairro` AS `bairro`,`e`.`referencia` AS `referencia`,`e`.`cep` AS `cep`,`c`.`nome` AS `cidade`,`es`.`sigla` AS `estado`,`pf`.`nome` AS `Filial` from ((((`tbl_prestadora` `p` join `tbl_endereco_prestadora` `e`) join `tbl_cidade` `c`) join `tbl_estado` `es`) join `tbl_filial` `pf`) where ((`p`.`idEndereco` = `e`.`idEnderecoPrestadora`) and (`c`.`idCidade` = `e`.`idCidade`) and (`es`.`idEstado` = `c`.`idEstado`)) */;
 /*!50001 SET character_set_client      = @saved_cs_client */;
 /*!50001 SET character_set_results     = @saved_cs_results */;
 /*!50001 SET collation_connection      = @saved_col_connection */;
@@ -1732,4 +2329,4 @@ SET character_set_client = @saved_cs_client;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-04-16 11:28:28
+-- Dump completed on 2018-06-13  8:42:23

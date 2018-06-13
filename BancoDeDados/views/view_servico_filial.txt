@@ -1,0 +1,16 @@
+CREATE 
+    ALGORITHM = UNDEFINED 
+    DEFINER = `i9autocenter`@`%` 
+    SQL SECURITY DEFINER
+VIEW `dbi9autocenter`.`view_servico_filial` AS
+    SELECT 
+        `fs`.`idFilialServico` AS `idFilialServico`,
+        `f`.`idFilial` AS `idFilial`,
+        `f`.`nome` AS `nomeFilial`,
+        `s`.`idServico` AS `idServico`,
+        `s`.`nome` AS `nome`,
+        `s`.`descricao` AS `descricao`
+    FROM
+        ((`dbi9autocenter`.`tbl_filial_servico` `fs`
+        JOIN `dbi9autocenter`.`tbl_filial` `f` ON ((`fs`.`idFilial` = `f`.`idFilial`)))
+        JOIN `dbi9autocenter`.`tbl_servico` `s` ON ((`fs`.`idServico` = `s`.`idServico`)))

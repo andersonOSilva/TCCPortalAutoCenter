@@ -14,7 +14,7 @@
       Public $descricao;
       Public $telefone;
       Public $cnpj;
-      Public $login;
+
       Public $senha;
       Public $status;
       Public $idEndereco;
@@ -82,7 +82,7 @@
           $listFiliais[$cont]->descricao= $rs['descricao'];
           $listFiliais[$cont]->telefone= $rs['telefone'];
           $listFiliais[$cont]->cnpj= $rs['cnpj'];
-          $listFiliais[$cont]->login= $rs['login'];
+          //$listFiliais[$cont]->login= $rs['login'];
           $listFiliais[$cont]->senha= $rs['senha'];
           $listFiliais[$cont]->senha= $rs['senha'];
           $listFiliais[$cont]->idEndereco= $rs['idEndereco'];
@@ -138,7 +138,7 @@
           $listFiliais[$cont]->descricao= $rs['descricao'];
           $listFiliais[$cont]->telefone= $rs['telefone'];
           $listFiliais[$cont]->cnpj= $rs['cnpj'];
-          $listFiliais[$cont]->login= $rs['login'];
+          //$listFiliais[$cont]->login= $rs['login'];
           $listFiliais[$cont]->senha= $rs['senha'];
           $listFiliais[$cont]->senha= $rs['senha'];
           $listFiliais[$cont]->idEndereco= $rs['idEndereco'];

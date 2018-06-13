@@ -230,7 +230,9 @@ background-color: #eca023;
 
 .espaco_menu2{
   width: 1200px;
-  height: 50%;
+  height: 40%;
+
+/*    padding: 50px;*/
   /* background-color:green; */
   margin: auto;
 }
@@ -257,7 +259,7 @@ background-color: #eca023;
 
 .container_carrosel_menu{
   width: 84%;
-  height: 50%;
+  height: 70%;
   /* background-color: pink; */
   float: left;
     margin-top: -1%
@@ -365,7 +367,7 @@ background-color: #eca023;
 
 .titulo_principal_servicos{
   width: 100%;
-  height: 50px;
+/*  height: 50px;*/
   padding: 0px;
 /*  margin: 0px;*/
     margin-bottom: 15PX;
@@ -460,7 +462,7 @@ background-color: #eca023;
  background-image: url(../imagens/6.jpg);
     background-size: cover;
 /*  background-color: rgb(41, 42, 43);*/
-    margin-top: -1%;
+    margin-top: -2%;
   background-attachment:fixed;
 }
 
@@ -920,7 +922,7 @@ margin-left: 1000px;
   background-color: #000;
   border-top: 5px solid #eca023;
   /* background-attachment: fixed; */
-        margin-top: -1%
+        margin-top: -2%;
 }
 
 #Forum{
@@ -990,7 +992,7 @@ margin-left: 1000px;
     background-position: center;
     background-size: cover;
     border-top: 5px solid #eca023;
-    margin-top: -1%
+    margin-top: -2%;
 }
 
 #FaleConosco{
@@ -1391,16 +1393,59 @@ footer{
     display: flex;
 }
 
-.redes{
+
+.redes {
   transform: rotate(50deg);
-  width: 60px;
-  height: 40px;
-  background-color: #F09900;
-  margin-left: 20px;
-  padding-top: 20px;
-  float: left;
+width: 66px;
+height: 52px;
+background-color: #F09900;
+margin-left: 33px;
+padding-top: 10px;
+padding-bottom: 10px;
+padding-left: 2.5px;
+padding-right: 2.5px;
+
+
+float: left;
+display: flex;
+    align-items: center;
+    justify-content: center;
+/* align-items: center; */
+/*background-position-y: center;*/
+/* justify-content: center; */
+transition: 2s;
 }
 
+.redes:nth-child(1){
+    padding: 0px;
+    height: 70px;
+    width: 66px;
+}
+.redes:nth-child(1):hover{
+  transition: 1s;
+  transform: rotate(0deg);
+  background-color: blue;
+  margin-left: 20px;
+/*    padding: 0px;*/
+}
+.redes:nth-child(2):hover{
+  transition: 1s;
+  transform: rotate(0deg);
+  background-color: brown;
+  margin-left: 20px;
+}
+.redes:nth-child(3):hover{
+  transition: 1s;
+  transform: rotate(0deg);
+  background-color: yellow;
+  margin-left: 20px;
+}
+.redes:nth-child(4):hover{
+  transition: 1s;
+  transform: rotate(0deg);
+  background-color: cyan;
+  margin-left: 20px;
+}
 .aplicativo{
      width: 100px;
     height: 100%;

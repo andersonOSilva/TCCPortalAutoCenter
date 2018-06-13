@@ -150,11 +150,11 @@
 
               switch ($pag) {
                 case 'home':
-                  require_once 'views/cadServico.php';
+                  require_once 'views/homeP.php';
                   break;
 
               case 'produto':
-                require_once 'views/cadProduto_view.php';
+                require_once 'views/controleCompras.php';
                 break;
 
               case 'servico':

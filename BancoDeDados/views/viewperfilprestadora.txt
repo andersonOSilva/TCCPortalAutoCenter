@@ -1,0 +1,29 @@
+CREATE 
+    ALGORITHM = UNDEFINED 
+    DEFINER = `i9autocenter`@`%` 
+    SQL SECURITY DEFINER
+VIEW `dbi9autocenter`.`viewperfilprestadora` AS
+    SELECT 
+        `p`.`idPrestadora` AS `idPrestadora`,
+        `p`.`nomeFantasia` AS `nomeFantasia`,
+        `p`.`fotoPrestadora` AS `fotoPrestadora`,
+        `p`.`descricao` AS `descricao`,
+        `p`.`telefone` AS `telefone`,
+        `e`.`logradouro` AS `logradouro`,
+        `e`.`numero` AS `numero`,
+        `e`.`bairro` AS `bairro`,
+        `e`.`referencia` AS `referencia`,
+        `e`.`cep` AS `cep`,
+        `c`.`nome` AS `cidade`,
+        `es`.`sigla` AS `estado`,
+        `pf`.`nome` AS `Filial`
+    FROM
+        ((((`dbi9autocenter`.`tbl_prestadora` `p`
+        JOIN `dbi9autocenter`.`tbl_endereco_prestadora` `e`)
+        JOIN `dbi9autocenter`.`tbl_cidade` `c`)
+        JOIN `dbi9autocenter`.`tbl_estado` `es`)
+        JOIN `dbi9autocenter`.`tbl_filial` `pf`)
+    WHERE
+        ((`p`.`idEndereco` = `e`.`idEnderecoPrestadora`)
+            AND (`c`.`idCidade` = `e`.`idCidade`)
+            AND (`es`.`idEstado` = `c`.`idEstado`))

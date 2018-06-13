@@ -75,7 +75,7 @@
       // select usuario pergunta
 
       public function selectUserPerg(){
-        $sql="select * from view_UsuarioForum order by idTopicoForum desc;";
+        $sql="select * from view_usuarioforum order by idTopicoForum desc;";
 
 
         $conex = new Mysql_db();
@@ -112,7 +112,7 @@
       // select resposta por id de pergunta
 
       public function selectRespostas($dadosForum){
-        $sql="select * from respostaPerguntaForum_view where idTopicoForum=".$dadosForum->idTopicoForum;
+        $sql="select * from respostaperguntaforum_view where idTopicoForum=".$dadosForum->idTopicoForum;
 
        //echo $sql;
 
@@ -203,7 +203,7 @@
       }
 
       public function selectUserPergPorId($dadosForum){
-        $sql="select * from view_UsuarioForum Where idTopicoForum=".$dadosForum->idTopicoForum;
+        $sql="select * from view_usuarioforum Where idTopicoForum=".$dadosForum->idTopicoForum;
 
         //echo $sql;
         $conex = new Mysql_db();

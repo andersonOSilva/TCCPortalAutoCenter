@@ -43,7 +43,7 @@
                    <div class="menu_ancora_itens">
                      <nav class="menu_ancora_itens_principal">
                        <ul>
-                         <li><a class="scroll" href="#Servicos">Serviços</a></li>
+
                          <li><a class="scroll" href="#Servicos">Serviços</a></li>
                          <li><a class="scroll" href="#Prestadoras">Prestadoras</a></li>
                          <li><a class="scroll" href="#Produtos">Produtos</a></li>

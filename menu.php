@@ -5,7 +5,7 @@
             <img src="imagens/natal.png" alt="">
         </div> -->
         <a href="#slide">
-            <img src="imagens/logos/logo3.png" alt="teste de logo" id="imgLogo">
+            <img src="imagens/logos/logo9.png" alt="teste de logo" id="imgLogo">
           </a>
       </div>
 

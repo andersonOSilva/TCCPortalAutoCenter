@@ -1,0 +1,15 @@
+CREATE 
+    ALGORITHM = UNDEFINED 
+    DEFINER = `i9autocenter`@`%` 
+    SQL SECURITY DEFINER
+VIEW `dbi9autocenter`.`view_prod_status` AS
+    SELECT 
+        `p`.`idUsuario` AS `idUsuario`,
+        `p`.`idProduto` AS `idProduto`,
+        `p`.`idStatus` AS `idStatus`,
+        `s`.`status` AS `status`,
+        `pr`.`nome` AS `nome`
+    FROM
+        ((`dbi9autocenter`.`tbl_pedido` `p`
+        JOIN `dbi9autocenter`.`tbl_produto` `pr` ON ((`pr`.`idProduto` = `p`.`idProduto`)))
+        JOIN `dbi9autocenter`.`tbl_status_compra` `s` ON ((`p`.`idStatus` = `s`.`idStatus`)))

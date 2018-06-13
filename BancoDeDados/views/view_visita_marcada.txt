@@ -1,0 +1,31 @@
+CREATE 
+    ALGORITHM = UNDEFINED 
+    DEFINER = `i9autocenter`@`%` 
+    SQL SECURITY DEFINER
+VIEW `dbi9autocenter`.`view_visita_marcada` AS
+    SELECT 
+        `v`.`dtVisita` AS `dtVisita`,
+        `v`.`idVisita` AS `idVisita`,
+        `u`.`idUsuario` AS `idUsuario`,
+        `u`.`nome` AS `user`,
+        `u`.`usuario` AS `usuario`,
+        `u`.`senha` AS `senha`,
+        `u`.`email` AS `email`,
+        `u`.`dtNasc` AS `dtNasc`,
+        `u`.`cpf` AS `cpf`,
+        `u`.`fotoUser` AS `fotoUser`,
+        `u`.`statusUser` AS `statusUser`,
+        `sf`.`idFilialServico` AS `idFilialServico`,
+        `s`.`idServico` AS `idServico`,
+        `s`.`nome` AS `nome`,
+        `s`.`descricao` AS `descricao`,
+        `s`.`imagem` AS `imagem`,
+        `f`.`idFilial` AS `idFilial`,
+        `f`.`nome` AS `filialNome`,
+        `f`.`telefone` AS `telefone`
+    FROM
+        ((((`dbi9autocenter`.`tbl_visita` `v`
+        JOIN `dbi9autocenter`.`tbl_usuario` `u` ON ((`u`.`idUsuario` = `v`.`idUsuario`)))
+        JOIN `dbi9autocenter`.`tbl_filial_servico` `sf` ON ((`sf`.`idFilialServico` = `v`.`idServicoFilial`)))
+        JOIN `dbi9autocenter`.`tbl_servico` `s` ON ((`s`.`idServico` = `sf`.`idServico`)))
+        JOIN `dbi9autocenter`.`tbl_filial` `f` ON ((`f`.`idFilial` = `sf`.`idFilial`)))

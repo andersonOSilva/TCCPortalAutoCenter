@@ -22,7 +22,7 @@
       public function SelecionarFilialPorID($dados){
 
 
-        $sql="select * from view_Prestadora_Filial where idPrestadora=".$dados->idPrestadora;
+        $sql="select * from view_prestadora_filial where idPrestadora=".$dados->idPrestadora;
 
         //echo $sql;
 
@@ -65,7 +65,7 @@
       public function selecionarFilialPorIdTBL($dados){
         $sql="select * from tbl_filial where idFilial=".$dados->idFilial;
 
-        echo $sql;
+      //  echo $sql;
 
         $conex = new Mysql_db();
 

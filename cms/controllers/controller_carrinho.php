@@ -8,6 +8,8 @@
       $total = 0;
       $totalProdutos = 0;
 
+
+
       require_once ('cms/models/produto_class.php');
 
       $produtoClass = new produtoClass;
@@ -17,7 +19,14 @@
 
         if (isset($_SESSION['idUsuario'])) {
           $totalDados = count($_SESSION);
-          $dadosTotais = $totalDados - 2;
+          @$dadosTotais = $totalDados - 2;
+
+          // echo $dadosTotais;
+        }else {
+          $totalDados = count($_SESSION);
+          @$dadosTotais = $totalDados - 2;
+
+        //  echo $dadosTotais;
         }
 
 

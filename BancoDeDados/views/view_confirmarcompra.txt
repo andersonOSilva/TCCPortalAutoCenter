@@ -1,0 +1,47 @@
+CREATE 
+    ALGORITHM = UNDEFINED 
+    DEFINER = `i9autocenter`@`%` 
+    SQL SECURITY DEFINER
+VIEW `dbi9autocenter`.`view_confirmarcompra` AS
+    SELECT 
+        `p`.`idPedido` AS `idPedido`,
+        `p`.`idProduto` AS `idProduto`,
+        `p`.`idUsuario` AS `idUsuario`,
+        `p`.`quantidade` AS `quantidade`,
+        `p`.`idStatus` AS `idStatus`,
+        `p`.`data` AS `data`,
+        `pr`.`nome` AS `nome`,
+        `pr`.`preco` AS `preco`,
+        `pr`.`marca` AS `marca`,
+        `pr`.`idSubcategoria` AS `idSubcategoria`,
+        `pr`.`idFilial` AS `idFilial`,
+        `pr`.`imagem` AS `imagem`,
+        `pr`.`imagem1` AS `imagem1`,
+        `pr`.`imagem2` AS `imagem2`,
+        `pr`.`imagem3` AS `imagem3`,
+        `pr`.`tipo` AS `tipo`,
+        `pr`.`modelo` AS `modelo`,
+        `pr`.`durabilidade` AS `durabilidade`,
+        `pr`.`dt_fabrica` AS `dt_fabrica`,
+        `pr`.`garantia` AS `garantia`,
+        `pr`.`fabricante` AS `fabricante`,
+        `pr`.`obs` AS `obs`,
+        `pr`.`descricao` AS `descricao`,
+        `pr`.`quantidadeProduto` AS `quantidadeProduto`,
+        `f`.`nome` AS `filial`,
+        `u`.`nome` AS `Cliente`,
+        `u`.`email` AS `email`,
+        `e`.`idEnderecoUsuario` AS `idEnderecoUsuario`,
+        `e`.`logradouro` AS `logradouro`,
+        `e`.`numero` AS `numero`,
+        `e`.`complemento` AS `complemento`,
+        `e`.`bairro` AS `bairro`,
+        `e`.`cep` AS `cep`,
+        `e`.`idTipoEndereco` AS `idTipoEndereco`,
+        `e`.`idCidade` AS `idCidade`
+    FROM
+        ((((`dbi9autocenter`.`tbl_pedido` `p`
+        JOIN `dbi9autocenter`.`tbl_produto` `pr` ON ((`p`.`idProduto` = `pr`.`idProduto`)))
+        JOIN `dbi9autocenter`.`tbl_filial` `f` ON ((`pr`.`idFilial` = `f`.`idFilial`)))
+        JOIN `dbi9autocenter`.`tbl_usuario` `u` ON ((`u`.`idUsuario` = `p`.`idUsuario`)))
+        JOIN `dbi9autocenter`.`tbl_endereco_usuario` `e` ON ((`p`.`idEnderecoUsuario` = `e`.`idEnderecoUsuario`)))

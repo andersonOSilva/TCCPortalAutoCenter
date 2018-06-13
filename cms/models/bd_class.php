@@ -7,25 +7,13 @@
     private $dataBaseName;
 
 
-    public function __construct(){
-
-      // $this->server = "localhost";/*localhost*/
-      //
-      // // $this->server = "localhost";/*localhost*/
-      //
-      //$this->user = "root";
-      // $this->password = "bcd127";
-      // $this->dataBaseName = "dbportal";
+public function __construct(){
 
 
-
-      // $this->server = "10.107.144.17";/*localhost*/
-
-        $this->server = "localhost";/*localhost*/
-
-      $this->user = "root";
-      $this->password = "bcd127";
-      $this->dataBaseName = "dbportal";
+      $this->server = "192.168.1.1";
+      $this->user = "i9autocenter";
+      $this->password = "inf4softi9";
+     $this->dataBaseName = "dbi9autocenter";
 
     }
     public function Conectar(){

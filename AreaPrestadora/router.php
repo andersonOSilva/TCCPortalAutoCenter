@@ -12,6 +12,20 @@ switch ($_GET["controller"]) {
         $controller_produto::Novo();
 
         break;
+
+        case 'atualizarStatus':
+          $controller_produto = new controllerProduto();
+          $controller_produto::atualizarStatus();
+
+          break;
+
+          case 'atualizarStatus2':
+            $controller_produto = new controllerProduto();
+            $controller_produto::atualizarStatus2();
+
+            break;
+
+
     }
     break;
 

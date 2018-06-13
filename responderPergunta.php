@@ -6,6 +6,8 @@
     <link rel="stylesheet" type="text/css" href="css/styleMenus.css">
     <link rel="stylesheet" type="text/css" href="css/styleHome.css">
     <link rel="stylesheet" type="text/css" href="css/styleForum.css">
+      <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet">
       <script src="js/jquery-3.3.1.min.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   </head>

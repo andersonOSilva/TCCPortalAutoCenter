@@ -1,0 +1,41 @@
+CREATE 
+    ALGORITHM = UNDEFINED 
+    DEFINER = `i9autocenter`@`%` 
+    SQL SECURITY DEFINER
+VIEW `dbi9autocenter`.`view_prestadora_filial_servico_endereco` AS
+    SELECT 
+        `vps`.`idFilial` AS `idFilial`,
+        `vps`.`Nomefilial` AS `Nomefilial`,
+        `vps`.`telefoneFilial` AS `telefoneFilial`,
+        `vps`.`fotoFilial` AS `fotoFilial`,
+        `vps`.`idEnderecoPrestadora` AS `idEnderecoPrestadora`,
+        `vps`.`statusfilial` AS `statusfilial`,
+        `vps`.`idPrestadora` AS `idPrestadora`,
+        `vps`.`razaoSocial` AS `razaoSocial`,
+        `vps`.`nomeFantasia` AS `nomeFantasia`,
+        `vps`.`fotoPrestadora` AS `fotoPrestadora`,
+        `vps`.`descricao` AS `descricao`,
+        `vps`.`telefone` AS `telefone`,
+        `vps`.`cnpj` AS `cnpj`,
+        `vps`.`senha` AS `senha`,
+        `vps`.`status` AS `status`,
+        `vps`.`idEndereco` AS `idEndereco`,
+        `vps`.`statusPrestadora` AS `statusPrestadora`,
+        `vps`.`idFilialServico` AS `idFilialServico`,
+        `vps`.`idServico` AS `idServico`,
+        `vps`.`NomeSrevivo` AS `NomeSrevivo`,
+        `vps`.`descricaoFilial` AS `descricaoFilial`,
+        `vps`.`imagem` AS `imagem`,
+        `ep`.`logradouro` AS `logradouro`,
+        `ep`.`numero` AS `numero`,
+        `ep`.`bairro` AS `bairro`,
+        `ep`.`referencia` AS `referencia`,
+        `ep`.`cep` AS `cep`,
+        `c`.`nome` AS `nomeCidade`,
+        `es`.`nome` AS `estadoNome`,
+        `es`.`sigla` AS `sigla`
+    FROM
+        (((`dbi9autocenter`.`view_prestadora_servico` `vps`
+        JOIN `dbi9autocenter`.`tbl_endereco_prestadora` `ep` ON ((`vps`.`idEnderecoPrestadora` = `ep`.`idEnderecoPrestadora`)))
+        JOIN `dbi9autocenter`.`tbl_cidade` `c` ON ((`ep`.`idCidade` = `c`.`idCidade`)))
+        JOIN `dbi9autocenter`.`tbl_estado` `es` ON ((`es`.`idEstado` = `c`.`idEstado`)))

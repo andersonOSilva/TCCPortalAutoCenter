@@ -5,7 +5,6 @@
     public $razaoSocial;
     public $nomefantasia;
     public $fotoPrestadora;
-    public $login;
     public $descricao;
     public $telefone;
     public $cnpj;
@@ -37,7 +36,7 @@
                 $conex = new Mysql_db();
                 $PDO_conex = $conex->Conectar();
 
-              $sqlPrestadora = "insert into tbl_prestadora (razaoSocial,nomefantasia,fotoPrestadora,telefone,descricao,cnpj,login,senha)
+              $sqlPrestadora = "insert into tbl_prestadora (razaoSocial,nomefantasia,fotoPrestadora,telefone,descricao,cnpj,senha)
               values('".$dados_prestadora->razaoSocial."',
                     '".$dados_prestadora->nomefantasia."',
                     '".$dados_prestadora->fotoPrestadora."',
@@ -45,8 +44,6 @@
                     '".$dados_prestadora->telefone."',
                     '".$dados_prestadora->descricao."',
                     '".$dados_prestadora->cnpj."',
-
-                    '".$dados_prestadora->login."',
                     '".$dados_prestadora->senha."')";
 //                    echo($sqlPrestadora);
 
@@ -60,7 +57,7 @@
 
                     if ($sucesso==true) {
                       $sqlselectPrestadora = "select * FROM db_portal.tbl_prestadora where
-                       login ='".$dados_prestadora->login."'
+                       cnpj ='".$dados_prestadora->cnpj."'
                       And  senha=".$dados_prestadora->senha.";";
 
 //                      echo($sqlselectPrestadora);
@@ -141,7 +138,6 @@
                 `fotoPrestadora`='".$PrestadoraEnderecoID->idPrestadoraEndereco."',
                 `telefone`='".$PrestadoraEnderecoID->idPrestadoraEndereco."',
                 `cnpj`='".$PrestadoraEnderecoID->idPrestadoraEndereco."',
-                `login`='".$PrestadoraEnderecoID->idPrestadoraEndereco."',
                 `senha`='".$PrestadoraEnderecoID->idPrestadoraEndereco."',
                 WHERE `idPrestadora`='".$PrestadoraID->idPrestadora."';";
                 $PDO_conex->query($sqlPrestadoraUpdate);
@@ -182,7 +178,6 @@
         $listPrestadora[$cont]->telefone=$rs['telefone'];
         $listPrestadora[$cont]->cnpj=$rs['cnpj'];
         $listPrestadora[$cont]->idEnderecoPrestadora=$rs['idEndereco'];
-        $listPrestadora[$cont]->login=$rs['login'];
         $listPrestadora[$cont]->senha=$rs['senha'];
         $listPrestadora[$cont]->status=$rs['status'];
 
@@ -280,7 +275,6 @@
             $listPrestadora->telefone=$rs['telefone'];
             $listPrestadora->cnpj=$rs['cnpj'];
             $listPrestadora->idEnderecoPrestadora=$rs['idEndereco'];
-            $listPrestadora->login=$rs['login'];
             $listPrestadora->senha=$rs['senha'];
             $listPrestadora->status=$rs['status'];
 
@@ -320,7 +314,6 @@
             $listPrestadora->telefone=$rs['telefone'];
             $listPrestadora->cnpj=$rs['cnpj'];
             $listPrestadora->idEnderecoPrestadora=$rs['idEndereco'];
-            $listPrestadora->login=$rs['login'];
             $listPrestadora->senha=$rs['senha'];
             $listPrestadora->status=$rs['status'];
 

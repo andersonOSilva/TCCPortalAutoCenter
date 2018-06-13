@@ -1,0 +1,16 @@
+CREATE 
+    ALGORITHM = UNDEFINED 
+    DEFINER = `i9autocenter`@`%` 
+    SQL SECURITY DEFINER
+VIEW `dbi9autocenter`.`respostaperguntaforum_view` AS
+    SELECT 
+        `t`.`idTopicoForum` AS `idTopicoForum`,
+        `c`.`idComentarioTopico` AS `idComentarioTopico`,
+        `c`.`comentario` AS `comentario`,
+        `u`.`usuario` AS `usuario`,
+        `u`.`fotoUser` AS `fotoUser`,
+        `u`.`idUsuario` AS `idUsuario`
+    FROM
+        ((`dbi9autocenter`.`tbl_comentario_topico` `c`
+        JOIN `dbi9autocenter`.`tbl_usuario` `u` ON ((`u`.`idUsuario` = `c`.`idUsuario`)))
+        JOIN `dbi9autocenter`.`tbl_topico_forum` `t` ON ((`c`.`idTopico` = `t`.`idTopicoForum`)))

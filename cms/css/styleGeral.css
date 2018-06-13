@@ -102,14 +102,25 @@ body{
   padding-top: 5%;
   padding-left: 5%;
 }
+/**/
 
 .titulo_menu{
   width: 100%;
-  height: 7%;
+  min-height: 7%;
   background-color: #0f0e0e;
 
 }
+.titulo_menu:hover>.item_menu{
+  /*display: block;*/
+  background-color: black;
+  border-bottom: 2px solid #2E353F;
+  width: 100%;
+  height: 100%;
+  opacity: 1.0;
+  transition: 1.3s;
 
+
+}
 .titulo_menu p{
   margin: 0;
   padding-top: 3%;
@@ -118,11 +129,14 @@ body{
   color: #DADADA;
 }
 
-.item_menu{
-  width: 100%;
-  height: 6%;
-  background-color: black;
-  border-bottom: 2px solid #2E353F;
+
+.item_menu {
+    width: 0px;
+    height: 0px;
+    opacity: 0.0;
+    transition: 0.5s;
+    /*display: none;*/
+
 }
 
 .item_menu:hover{
@@ -311,6 +325,16 @@ width: 98%;
   height: 30px;
   border:1px solid;
   float: left;
+}
+
+.tituloFaleConosco{
+  width: 100%;
+  height: 15%;
+  background-color: #000;
+  color: #fff;
+  margin-top: -20px;
+  font-size: 30px;
+  border-top: 3px solid #eca023;
 }
 
 .Titulo_faleconosco{
@@ -1141,21 +1165,56 @@ nav ul li a{
 /*Prestadora*/
 
 .tbl_consulta_pretadora{
-  width: 1000px;
+  width: 100%;
   height: 450px;
   /*background: green;*/
   border-radius: 20px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+
 }
 
-.titulo_prestadora{
+.tituloPrestadora{
+  width: 100%;
+  height: 15%;
+  background-color: #000;
+  color: #fff;
+  border-top: 3px solid #eca023;
+  font-size: 30px;
+}
+
+/*.titulo_prestadora{
   width: 100%;
   height: 50px;
   margin: auto;
+   padding-bottom: 10px;
+  background-color: pink;
+}*/
+
+.titulo_prestadora{
+  width: 80%;
+  height: 50px;
+  margin: auto;
   /* padding-bottom: 10px; */
-  /*background-color: pink;*/
+  background-color: black;
+  color: #fff;
+  /*border-top:#eca028 2px solid;*/
+/*  border-right:#eca028 2px solid;*/
+  margin-top: 10px;
+
 }
 
 
+/*.dados_prest{
+  width: 200px;
+  height: 40px;
+  float: left;
+  text-align: center;
+  font-size: 25px;
+   background-color: blue;
+  padding-top: 10px;
+  font-weight: bold;
+}*/
 .dados_prest{
   width: 200px;
   height: 40px;
@@ -1165,6 +1224,8 @@ nav ul li a{
   /* background-color: blue; */
   padding-top: 10px;
   font-weight: bold;
+  /*border-right:#eca028 2px solid;*/
+
 }
 
 .dados_prest_item_modo{
@@ -1173,10 +1234,9 @@ nav ul li a{
   float: left;
   text-align: center;
   font-size: 25px;
-  /*background-color: green;*/
+  /* background-color: green; */
 
 }
-
 .dados_prest_item{
   width: 200px;
   height: 40px;
@@ -1187,12 +1247,22 @@ nav ul li a{
   padding-top: 10px;
 }
 
+/*.dados_prest_item{
+  width: 200px;
+  height: 40px;
+  float: left;
+  text-align: center;
+  font-size: 20px;
+  background-color: red;
+  padding-top: 10px;
+}*/
+
 .dados_prest_modo{
   width: 200px;
   height: 50px;
   float: left;
   text-align: center;
-  /* background-color: blue; */
+  /*background-color: red; */
 }
 
 .status_prest{
@@ -1209,6 +1279,7 @@ nav ul li a{
   margin-left: 20px;
   padding-top: 10px;
   margin-top: 50px;
+  margin-left: 10px;
 
 }
 
@@ -1219,10 +1290,20 @@ nav ul li a{
 }
 
 
-.conteudo_prestadora{
+/*.conteudo_prestadora{
   width: 700px;
   height: auto;
   background-color: red;
+   overflow-y: auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+}*/
+
+.conteudo_prestadora{
+  width: 700px;
+  height: auto;
+  /*background-color: red;*/
   /* overflow-y: auto; */
   margin-left: auto;
   margin-right: auto;
@@ -1363,7 +1444,7 @@ nav ul li a{
 .conteudo_tbl_carbook{
     min-width: 10%;
     height: 100%;
-    background-color: red;
+    /*background-color: red;*/
     /*float: left;*/
     margin: auto;
     /*margin-left: 15px;*/
@@ -1785,7 +1866,7 @@ nav ul li a{
   width: 100%;
   height: 70px;
   background-color: #000;
-  color: orange;
+  color: #fff;
   border-top:solid 2px #eca023;
 }
 
@@ -1816,7 +1897,7 @@ nav ul li a{
 
   font-style: bold;
   font-size: 20px;
-  color: orange;
+  color: #fff;
   /* background-color: #0fc; */
   /* padding-bottom: 10px; */
 }
@@ -1835,7 +1916,7 @@ nav ul li a{
   width: 100%;
   height: 70%;
   font-size: 20px;
-  color: orange;
+  color: #fff;
 
 /*  margin-top: 80px;*/
 /*  background-color: pink;*/
@@ -1960,7 +2041,7 @@ width: 100%;
   float: left;
   margin: auto;
   margin-left: 15px;
-  color: orange;
+  color: #fff;
   font-size: 20px;
 }
 

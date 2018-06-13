@@ -1,6 +1,5 @@
 <?php
   class controller_filial{
-
     public function inserir(){
        $filial = new filial_servico();
        echo "string";
@@ -38,5 +37,29 @@
       $select_filial = new filial();
       return $select_filial::selectFilial();
     }
+
+
+    public function BuscarProdutos($idFilial){
+      $select_produtos = new CompraProduto();
+      $select_produtos->idFilial=$idFilial;
+      return $select_produtos::SelecionarProdutos($select_produtos);
+    }
+
+
+    public function BuscarProdutos2($idFilial){
+      $select_produtos = new CompraProduto();
+      $select_produtos->idFilial=$idFilial;
+      return $select_produtos::SelecionarProdutos2($select_produtos);
+    }
+
+    public function BuscarProdutosCliente($idFilial){
+      $select_produtos = new CompraProduto();
+      $select_produtos->idUsuario=$idFilial;
+      return $select_produtos::BuscarProdutosCliente($select_produtos);
+    }
+
+
+
+
   }
  ?>

@@ -1,0 +1,36 @@
+CREATE 
+    ALGORITHM = UNDEFINED 
+    DEFINER = `i9autocenter`@`%` 
+    SQL SECURITY DEFINER
+VIEW `dbi9autocenter`.`view_prestadora_servico` AS
+    SELECT 
+        `f`.`idFilial` AS `idFilial`,
+        `f`.`nome` AS `Nomefilial`,
+        `f`.`telefone` AS `telefoneFilial`,
+        `f`.`fotoFilial` AS `fotoFilial`,
+        `f`.`idEnderecoPrestadora` AS `idEnderecoPrestadora`,
+        `f`.`status` AS `statusfilial`,
+        `p`.`idPrestadora` AS `idPrestadora`,
+        `p`.`razaoSocial` AS `razaoSocial`,
+        `p`.`nomeFantasia` AS `nomeFantasia`,
+        `p`.`fotoPrestadora` AS `fotoPrestadora`,
+        `p`.`descricao` AS `descricao`,
+        `p`.`telefone` AS `telefone`,
+        `p`.`cnpj` AS `cnpj`,
+        `p`.`senha` AS `senha`,
+        `p`.`status` AS `status`,
+        `p`.`idEndereco` AS `idEndereco`,
+        `p`.`status` AS `statusPrestadora`,
+        `fs`.`idFilialServico` AS `idFilialServico`,
+        `s`.`idServico` AS `idServico`,
+        `s`.`nome` AS `NomeSrevivo`,
+        `s`.`descricao` AS `descricaoFilial`,
+        `s`.`imagem` AS `imagem`
+    FROM
+        (((`dbi9autocenter`.`tbl_filial` `f`
+        JOIN `dbi9autocenter`.`tbl_prestadora` `p` ON ((`f`.`idPrestadora` = `p`.`idPrestadora`)))
+        JOIN `dbi9autocenter`.`tbl_filial_servico` `fs` ON ((`f`.`idFilial` = `fs`.`idFilial`)))
+        JOIN `dbi9autocenter`.`tbl_servico` `s` ON ((`fs`.`idServico` = `s`.`idServico`)))
+    WHERE
+        ((`f`.`status` = 1)
+            AND (`p`.`status` = 1))

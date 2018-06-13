@@ -98,7 +98,7 @@
             <div id="conteudo_agenda_pai">
 
 
-                <div class="conteudo_agenda_filha">
+                <!-- <div class="conteudo_agenda_filha">
                     <div class="compromissos">
                         <h1>Servico</h1>
                         <h2>Dia</h2>
@@ -107,41 +107,56 @@
 
                     </div>
 
-                       
-                </div>
+
+                </div> -->
 <!--
                 <div class="titulo">
                 Visitas passadas
 
                 </div>
+
+
 -->
+                <?php
+
+                if (isset($_SESSION['idUsuario'])) {
+                    $id = $_SESSION['idUsuario'];
+                }
+
+                require_once 'cms/controllers/prestadora_controller.php';
+                require_once 'cms/viewModel/servico_marcado.php';
+
+                $controller_servico = new controllerPrestadora();
+
+                $controller_servico=$controller_servico::ListarDaview();
+                $cont = 0;
+
+                if (count($controller_servico) == 0) {
+                  echo "nenhuma Visita Marcada";
+                }else{
+
+                while ($cont < count($controller_servico)) {
+
+                ?>
 
                 <div class="conteudo_agenda_filha">
                     <div class="compromissos">
-                        <h1>Servico</h1>
-                        <h2>Dia</h2>
-                        <h3>Carro</h3>
-                        <h3>Estabelecimento</h3>
+                        <h1><?php echo $controller_servico[$cont]->dtNasc?></h1>
+                        <h2><?php echo (utf8_decode($controller_servico[$cont]->nome)) ?></h2>
+                        <h3><?php echo (utf8_decode($controller_servico[$cont]->filialNome)) ?></h3>
+                        <h3> <?php echo $controller_servico[$cont]->filialNome ?></h3>
 
                     </div>
-                    <div class="compromissos">
-                        <h1>Servico</h1>
-                        <h2>Dia</h2>
-                        <h3>Carro</h3>
-                        <h3>Estabelecimento</h3>
 
-
-                    </div>
-                    <div class="compromissos">
-                        <h1>Servico</h1>
-                        <h2>Dia</h2>
-                        <h3>Carro</h3>
-                        <h3>Estabelecimento</h3>
-
-
-                    </div>
 
                 </div>
+
+                <?php
+
+                $cont+=1;
+              }
+            }
+                 ?>
 
 
 

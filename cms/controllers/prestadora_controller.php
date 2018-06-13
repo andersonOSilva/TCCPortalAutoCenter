@@ -336,6 +336,23 @@ class controllerPrestadora{
       return $Prestadora::selecionarTudoDeServicoComEndereco($Prestadora);
     }
 
+    public function ListarDaview(){
+      require_once 'cms/viewModel/servico_marcado.php';
+      $controller= new servico_marcado();
+
+    //  $idUser = $_SESSION['idUsuario'];
+
+      //echo $idUser;
+
+    //  if (isset($_SESSION('idUsuario'))) {
+        $controller->$idUsuario= $_SESSION['idUsuario'];
+    //  }
+
+      $controller::SelecionarMarcadas($controller);
+
+
+    }
+
 
 
     }

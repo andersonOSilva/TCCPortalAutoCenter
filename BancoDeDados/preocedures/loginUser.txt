@@ -1,0 +1,7 @@
+CREATE DEFINER=`i9autocenter`@`%` PROCEDURE `loginUser`(IN _usuario VARCHAR(45),IN _senha VARCHAR(16),out _idUsuario tinyint(255))
+BEGIN
+    
+     SELECT idUsuario FROM tbl_usuario WHERE _usuario = usuario AND _senha =senha into _idUsuario;
+	
+	
+    END

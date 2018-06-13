@@ -128,6 +128,31 @@ class controllerProduto
 
   }
 
+  public function atualizarStatus() {
+    require_once('models_views/compra_produto_class.php');
+
+    $controller = new CompraProduto;
+
+   $idPedido= $_GET['idPedido'];
+
+   //echo $idPedido;
+   $controller ->idPedido=$idPedido;
+   $controller::atualizarStatus($controller);
+  }
+
+
+  public function atualizarStatus2() {
+    require_once('models_views/compra_produto_class.php');
+
+    $controller = new CompraProduto;
+
+   $idPedido= $_GET['idPedido'];
+
+   //echo $idPedido;
+   $controller ->idPedido=$idPedido;
+   $controller::atualizarStatus2($controller);
+  }
+
 }
 
 

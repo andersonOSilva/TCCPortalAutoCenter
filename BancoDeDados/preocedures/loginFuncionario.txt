@@ -1,0 +1,4 @@
+CREATE DEFINER=`i9autocenter`@`%` PROCEDURE `loginFuncionario`(in _usuario varchar(100), in _senha varchar(100), out _idFuncionario tinyint(1))
+BEGIN
+	select idFuncionario FROM tbl_funcionario Where usuario=_usuario and senha=_senha into _idFuncionario;
+END

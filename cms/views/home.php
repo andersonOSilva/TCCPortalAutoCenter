@@ -37,50 +37,49 @@
 
       <div class="titulo_menu">
           <p>Marketing</p>
-      </div>
+          <div class="item_menu">
+            <p> <a href="?pag=menus">Menus</a></p>
+          </div>
 
-      <div class="item_menu">
-        <p> <a href="?pag=menus">Menus</a></p>
-      </div>
+          <div class="item_menu">
+            <p> <a href="?pag=fale">Fale conosco</a></p>
+          </div>
 
-      <div class="item_menu">
-        <p> <a href="?pag=fale">Fale conosco</a></p>
-      </div>
+          <div class="item_menu">
+            <p> <a href="?pag=servicos">Servicos</a></p>
+          </div>
 
-      <div class="item_menu">
-        <p> <a href="?pag=servicos">Servicos</a></p>
-      </div>
+          <div class="item_menu">
+            <p> <a href="?pag=carbook">CarBook</a></p>
+          </div>
 
-      <div class="item_menu">
-        <p> <a href="?pag=carbook">CarBook</a></p>
+          <div class="item_menu">
+            <p> <a href="?pag=forumHome">Fórum Home</a></p>
+          </div>
       </div>
-
-      <div class="item_menu">
-        <p> <a href="?pag=forumHome">Fórum Home</a></p>
-      </div>
-
+      <!--  -->
       <div class="titulo_menu">
           <p>Administrativo</p>
+          <div class="item_menu">
+            <p> <a href="?pag=plano">Plano</a></p>
+          </div>
+
+          <div class="item_menu">
+            <p><a href="?pag=prestadora">Prestadora</a></p>
+          </div>
+
+          <div class="item_menu">
+            <p><a href="?pag=usuario">Usuário</a></p>
+          </div>
+
+          <div class="item_menu">
+            <p><a href="?pag=forum">Forum</a></p>
+          </div>
+          <div class="item_menu">
+            <p><a href="?pag=sobre">Sobre</a></p>
+          </div>
       </div>
 
-      <div class="item_menu">
-        <p> <a href="?pag=plano">Plano</a></p>
-      </div>
-
-      <div class="item_menu">
-        <p><a href="?pag=prestadora">Prestadora</a></p>
-      </div>
-
-      <div class="item_menu">
-        <p><a href="?pag=usuario">Usuário</a></p>
-      </div>
-
-      <div class="item_menu">
-        <p><a href="?pag=forum">Forum</a></p>
-      </div>
-      <div class="item_menu">
-        <p><a href="?pag=sobre">Sobre</a></p>
-      </div>
 
 
 

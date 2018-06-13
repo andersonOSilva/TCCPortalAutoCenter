@@ -1,0 +1,7 @@
+CREATE DEFINER=`i9autocenter`@`%` PROCEDURE `loginPrestadora`(IN _cnpj VARCHAR(45),IN _senha VARCHAR(16),out _idPrestadora tinyint(255))
+BEGIN
+    
+     SELECT idPrestadora FROM tbl_prestadora WHERE _cnpj = cnpj AND _senha =senha and status=1 into _idPrestadora;
+	
+	
+    END
